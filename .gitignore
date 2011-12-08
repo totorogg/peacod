@@ -1,0 +1,6 @@
+# compiled class file
+*.class
+
+#eclispe project file
+.classpath
+.project
