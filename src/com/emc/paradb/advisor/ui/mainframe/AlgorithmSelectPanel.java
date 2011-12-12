@@ -47,7 +47,7 @@ public class AlgorithmSelectPanel extends JTabbedPane {
 		atcPanel.registerTable(algorithmTable);
 		
 		JPanel tabbedPanel = new JPanel();
-		tabbedPanel.setPreferredSize(new Dimension(250, 400));
+		tabbedPanel.setPreferredSize(new Dimension(200, 400));
 		this.add(tabbedPanel, "Algorithms");
 		
 		tabbedPanel.setLayout(new BorderLayout());
@@ -71,7 +71,7 @@ class AlgorithmTableControlPanel extends JPanel
 	public AlgorithmTableControlPanel(){
 		this.setBorder(BorderFactory.createEtchedBorder());
 		Box box = Box.createHorizontalBox();
-		box.add(Box.createHorizontalStrut(200));
+		box.add(Box.createHorizontalStrut(180));
 		box.add(load);
 		
 		load.setPreferredSize(new Dimension(ABORT, 20));
@@ -92,6 +92,9 @@ class AlgorithmTableControlPanel extends JPanel
 		this.algorithmTable = aTable;
 	}
 }
+
+
+
 class AlgorithmTable extends JTable
 {
 	private final int columnSize = 3;
@@ -102,16 +105,6 @@ class AlgorithmTable extends JTable
 		dm.setColumnIdentifiers(new Object[]{ "Algorithm", "Use", "Advance" });
 
 		this.setModel(dm);
-	
-		this.getColumn("Advance").setCellRenderer(new AlgorithmButtonRenderer());
-		this.getColumn("Advance").setCellEditor(new ButtonEditor(new JCheckBox()));
-		this.getColumn("Advance").setPreferredWidth(80);
-
-		this.getColumn("Use").setCellRenderer(this.getDefaultRenderer(Boolean.class));
-		this.getColumn("Use").setCellEditor(this.getDefaultEditor(Boolean.class));
-		this.getColumn("Use").setPreferredWidth(40);
-		
-		this.getColumn("Algorithm").setPreferredWidth(80);
 
 		setVisible(true);
 	}
@@ -128,13 +121,20 @@ class AlgorithmTable extends JTable
 			data[i][1] = new Boolean(false);
 			data[i][2] = new String("Config");
 		}
-		dm.addRow(data);
+		
+		//dm.addRow(data);
+		dm.setDataVector(data, new Object[]{ "Algorithm", "Use", "Advance" });
+		this.setModel(dm);
 		
 		this.getColumn("Advance").setCellRenderer(new AlgorithmButtonRenderer());
 		this.getColumn("Advance").setCellEditor(new ButtonEditor(new JCheckBox()));
+		this.getColumn("Advance").setPreferredWidth(80);
 
 		this.getColumn("Use").setCellRenderer(this.getDefaultRenderer(Boolean.class));
 		this.getColumn("Use").setCellEditor(this.getDefaultEditor(Boolean.class));
+		this.getColumn("Use").setPreferredWidth(40);
+		
+		this.getColumn("Algorithm").setPreferredWidth(80);
 	}
 
 }
