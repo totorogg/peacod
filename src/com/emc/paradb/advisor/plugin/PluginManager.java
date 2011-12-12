@@ -1,6 +1,5 @@
 package com.emc.paradb.advisor.plugin;
 
-import java.io.File;
 import java.util.List;
 
 

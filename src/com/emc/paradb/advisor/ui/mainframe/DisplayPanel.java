@@ -3,21 +3,24 @@ package com.emc.paradb.advisor.ui.mainframe;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
+import com.emc.paradb.advisor.ui.data_distribution.DataDistributionPanel;
+import com.emc.paradb.advisor.ui.data_migration.DataMigrationPanel;
+import com.emc.paradb.advisor.ui.transaction_distribution.TransactionDistributionPanel;
+import com.emc.paradb.advisor.ui.workload_distribution.WorkloadDistributionPanel;
+
 
 public class DisplayPanel extends JTabbedPane
 {
-	
-	JPanel dataDistribution = new JPanel();
-	JPanel workloadDistribution = new JPanel();
-	JPanel distTranCount = new JPanel();
-	JPanel dataMigration = new JPanel();
+	DataDistributionPanel dataDistributionPanel = new DataDistributionPanel();
+	WorkloadDistributionPanel workloadDistributionPanel = new WorkloadDistributionPanel();
+	TransactionDistributionPanel tranDistPanel = new TransactionDistributionPanel();
+	DataMigrationPanel dataMigrationPanel = new DataMigrationPanel();
 	
 	public DisplayPanel(){
 		
-		this.add(dataDistribution, "Data Dist.");
-		this.add(workloadDistribution, "Workload Dist.");
-		this.add(distTranCount, "No. of Dist. Tran.");
-		this.add(dataMigration, "Data Migration");
-
+		this.add(dataDistributionPanel, "Data Dist.");
+		this.add(workloadDistributionPanel, "Workload Dist.");
+		this.add(tranDistPanel, "No. of Dist. Tran.");
+		this.add(dataMigrationPanel, "Data Migration");
 	}
 }
