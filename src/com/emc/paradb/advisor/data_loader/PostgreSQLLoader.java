@@ -5,39 +5,47 @@ import java.sql.DriverManager;
 
 
 
-public class PostgreSQLLoader
+public class PostgreSQLLoader extends DataLoader
 {
-	private String selectedBM = null;
-	private String IP = "10.32.216.106";
-	private String port = "12345";
-	private String user = "postgres";
-	private String password = "";
 	private String db = null;
-	Connection conn = null;
+	private Connection conn = null;
+	private PGMetaLoader pgMetaLoader = null;
+	//PGDataLoader pgDataLoader = null;
 	
 	public PostgreSQLLoader(String selectedBM) throws Exception{
-		
-		this.selectedBM = selectedBM;
+		super(selectedBM);
 		
 		if(selectedBM.equalsIgnoreCase("tpc-c"))
-		{
 			db = "dbt2";
-		}
 		else
-		{
 			throw new Exception("other benchmark not implemeneted yet");
-		}
-		
-		getConnection();
+
+		conn = PGConnector.getConnection(db);
 	}
 	
-	public void loadData()
+	public float getProgress()
 	{
-		
-		
+		return pgMetaLoader.getProgress();
 	}
+	public void load()
+	{
+		pgMetaLoader = new PGMetaLoader(conn);
+		pgMetaLoader.load();
+		//PGDataLoader pgDataLoader = new PGDataLoader(conn);
+		//pgDataLoader.load();
+	}
+}
+
+class PGConnector
+{
+	private static String IP = "10.32.216.106";
+	private static String port = "12345";
+	private static String user = "postgres";
+	private static String password = "";
 	
-	public Connection getConnection()
+	static Connection conn = null;
+	
+	public static Connection getConnection(String db)
 	{		
 		try
 		{

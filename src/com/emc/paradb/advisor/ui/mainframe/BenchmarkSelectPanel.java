@@ -1,6 +1,7 @@
 package com.emc.paradb.advisor.ui.mainframe;
 
 import java.awt.FlowLayout;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +18,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
 import com.emc.paradb.advisor.data_loader.DataLoader;
+import com.emc.paradb.advisor.data_loader.PostgreSQLLoader;
 import com.emc.paradb.advisor.workload_loader.WorkloadLoader;
 
 public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
@@ -70,6 +72,8 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		buttonBox.add(stopButton);
 		bmBox.add(buttonBox);
 		
+		loadProgress.setString("progress...");
+		loadProgress.setStringPainted(true);
 		bmBox.add(Box.createVerticalStrut(10));
 		bmBox.add(loadProgress);
 		
@@ -88,32 +92,47 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 			{
 				try
 				{
+					int progress = 0;
 					String selectedDB = dbComboBox.getSelectedItem().toString();
 					String selectedBM = bmComboBox.getSelectedItem().toString();
 					
 					//load workload for the selected benchmark
 					WorkloadLoader workloadLoader = new WorkloadLoader(selectedBM);
-					workloadLoader.load();
+					workloadLoader.load();					
 					
-					while(true)
+					loadProgress.setString("workload loading...");
+					loadProgress.setStringPainted(true);
+					while(progress != 100)
 					{
-						int progress = (int)(workloadLoader.getProgress() * 100);
+						progress = (int)(workloadLoader.getProgress() * 100);
 						loadProgress.setValue(progress);
-						if(progress > 99)
-							break;
-						this.sleep(10);
+						this.sleep(50);
 					}
 
 					//load data from the selected data source
-					DataLoader dataLoader = new DataLoader(selectedDB, selectedBM);
+					PostgreSQLLoader dataLoader = new PostgreSQLLoader(selectedBM);
 					dataLoader.load();
 					
+					progress = 0;
+					loadProgress.setValue(progress);
+					loadProgress.setString("data loading...");
+					loadProgress.setStringPainted(true);
+					while(progress != 100)
+					{
+						dataLoader.getProgress();
+						progress = (int)(dataLoader.getProgress() * 100);
+						loadProgress.setValue(progress);
+						this.sleep(50);
+					}
+					
+					loadProgress.setString("finished");
+					loadProgress.setStringPainted(true);
 
 				}
 				catch(Exception e)
 				{
 					System.out.println(e.getMessage());
-					e.getStackTrace();
+					System.out.println(e.getStackTrace());
 				}
 				
 				

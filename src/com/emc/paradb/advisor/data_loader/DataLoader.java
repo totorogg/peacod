@@ -4,29 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 
-public class DataLoader
+public abstract class DataLoader
 {
-	private String selectedDB = null;
+	private float progress = 0;
 	private String selectedBM = null;
 	
-	public DataLoader(String selectedDB, String selectedBM)
+	public DataLoader(String selectedBM)
 	{	
 		this.selectedBM = selectedBM;
-		this.selectedDB = selectedDB;
 	}
 	
-	public void load() throws Exception
-	{
-		if(selectedDB.equals("PostgreSQL"))
-		{
-			PostgreSQLLoader pgLoader = new PostgreSQLLoader(selectedBM);
-			pgLoader.loadData();
-		}
-		else if(selectedDB.equals("MySQL"))
-		{
-			throw new Exception("No support for MySQL yet");
-		}
-	}
+	public abstract float getProgress();
 }
 
 
