@@ -13,8 +13,8 @@ public class AlgorithmFactory
 	
 	static
 	{
-		PlugInterface navieAlgorithm = new NaiveAlgorithm();
-		buildInAlgorithms.add(navieAlgorithm);
+		//PlugInterface navieAlgorithm = new NaiveAlgorithm();
+		//buildInAlgorithms.add(navieAlgorithm);
 	}
 	
 	public static void addPlugAlgorithm(PlugInterface aAlgorithm)

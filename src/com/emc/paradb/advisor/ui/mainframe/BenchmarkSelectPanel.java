@@ -134,6 +134,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					}
 					
 					List<PlugInterface> algorithms = AlgorithmFactory.getBuildInAlgorithm();
+					algorithms.addAll(AlgorithmFactory.getPlugAlgorithm());
 					for(PlugInterface aAlgorithm : algorithms)
 					{
 						Workload<Transaction> workload = workloadLoader.getWorkload();
@@ -141,7 +142,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 						aAlgorithm.accept(workload, dbData, 10);
 						HashMap<String, String> tableKeyMap = aAlgorithm.getPartitionKey();
 						HashMap<KeyValuePair, Integer> keyValueNodeMap = aAlgorithm.getPlacement();
-						/* for test
+						///* for test
 						for(String table : tableKeyMap.keySet())
 						{
 							System.out.println(table + ": " + tableKeyMap.get(table));
@@ -150,7 +151,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 						{
 							System.out.println(kvPair.getKey() +","+ kvPair.getValue() +": "+ 
 												keyValueNodeMap.get(kvPair));
-						}*/
+						}//*/
 					}
 					loadProgress.setString("finished");
 					loadProgress.setStringPainted(true);

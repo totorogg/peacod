@@ -146,9 +146,11 @@ class AlgorithmTable extends JTable
 		int row = pluginInterfaces.size();
 		Object data[][] = new Object[row][columnSize];
 		
-		for(int i = 0; i < row; i++){
-			
-			data[i][0] = new String("Algorithm" + i);
+		for(int i = 0; i < row; i++)
+		{		
+			String interfaceName = getInterfaceName(pluginInterfaces.get(i));
+	
+			data[i][0] = new String(interfaceName);
 			data[i][1] = new Boolean(false);
 			data[i][2] = new String("Config");
 		}
@@ -166,6 +168,13 @@ class AlgorithmTable extends JTable
 		this.getColumn("Use").setPreferredWidth(40);
 		
 		this.getColumn("Algorithm").setPreferredWidth(80);
+	}
+	protected String getInterfaceName(PlugInterface aInterface)
+	{
+		String url = aInterface.getClass().getName();
+		int start = url.lastIndexOf(".");
+		String name = url.substring(start + 1);
+		return name;
 	}
 
 }
