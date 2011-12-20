@@ -29,7 +29,7 @@ public class PostgreSQLLoader extends DataLoader
 	}
 	public void load()
 	{
-		pgMetaLoader = new PGMetaLoader(conn);
+		pgMetaLoader = new PGMetaLoader(conn, dbData.getMetaData());
 		pgMetaLoader.load();
 		//PGDataLoader pgDataLoader = new PGDataLoader(conn);
 		//pgDataLoader.load();

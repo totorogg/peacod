@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
@@ -17,8 +19,14 @@ import javax.swing.JRadioButton;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
+import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
+import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.DataLoader;
 import com.emc.paradb.advisor.data_loader.PostgreSQLLoader;
+import com.emc.paradb.advisor.plugin.KeyValuePair;
+import com.emc.paradb.advisor.plugin.PlugInterface;
+import com.emc.paradb.advisor.workload_loader.Transaction;
+import com.emc.paradb.advisor.workload_loader.Workload;
 import com.emc.paradb.advisor.workload_loader.WorkloadLoader;
 
 public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
@@ -106,7 +114,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					{
 						progress = (int)(workloadLoader.getProgress() * 100);
 						loadProgress.setValue(progress);
-						this.sleep(50);
+						Thread.sleep(50);
 					}
 
 					//load data from the selected data source
@@ -122,17 +130,36 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 						dataLoader.getProgress();
 						progress = (int)(dataLoader.getProgress() * 100);
 						loadProgress.setValue(progress);
-						this.sleep(50);
+						Thread.sleep(50);
 					}
 					
+					List<PlugInterface> algorithms = AlgorithmFactory.getBuildInAlgorithm();
+					for(PlugInterface aAlgorithm : algorithms)
+					{
+						Workload<Transaction> workload = workloadLoader.getWorkload();
+						DBData dbData = dataLoader.getDBData();
+						aAlgorithm.accept(workload, dbData, 10);
+						HashMap<String, String> tableKeyMap = aAlgorithm.getPartitionKey();
+						HashMap<KeyValuePair, Integer> keyValueNodeMap = aAlgorithm.getPlacement();
+						/* for test
+						for(String table : tableKeyMap.keySet())
+						{
+							System.out.println(table + ": " + tableKeyMap.get(table));
+						}
+						for(KeyValuePair kvPair : keyValueNodeMap.keySet())
+						{
+							System.out.println(kvPair.getKey() +","+ kvPair.getValue() +": "+ 
+												keyValueNodeMap.get(kvPair));
+						}*/
+					}
 					loadProgress.setString("finished");
 					loadProgress.setStringPainted(true);
-
+					
 				}
 				catch(Exception e)
 				{
-					System.out.println(e.getMessage());
-					System.out.println(e.getStackTrace());
+					System.out.println("error in the main process");
+					e.printStackTrace();
 				}
 				
 				

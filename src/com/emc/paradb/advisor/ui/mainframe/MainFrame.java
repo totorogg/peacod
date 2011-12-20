@@ -8,9 +8,9 @@ import javax.swing.JFrame;
 public class MainFrame extends JFrame
 {
 	
-	private DisplayPanel displayPanel; 
-	private BenchmarkSelectPanel benchmarkSelectPanel;
-	private AlgorithmSelectPanel algorithmSelectPanel;
+	private static DisplayPanel displayPanel; 
+	private static BenchmarkSelectPanel benchmarkSelectPanel;
+	private static AlgorithmSelectPanel algorithmSelectPanel;
 	
 	public static void main(String[] argv){
 		
@@ -19,7 +19,7 @@ public class MainFrame extends JFrame
 	}
 	
 	public MainFrame(){
-
+		
 		displayPanel = new DisplayPanel();
 		algorithmSelectPanel = new AlgorithmSelectPanel();
 		benchmarkSelectPanel = new BenchmarkSelectPanel();
@@ -27,6 +27,7 @@ public class MainFrame extends JFrame
 		this.setSize(800, 400);
 		this.setTitle("Sharding Advisor");
 		this.setLayout(new BorderLayout());
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		this.add(displayPanel, BorderLayout.CENTER);
 		this.add(algorithmSelectPanel, BorderLayout.EAST);

@@ -20,15 +20,19 @@ class PGMetaLoader
 	private float progress = 0;
 	private Connection conn = null;
 	//all the tables in the schemas
-	private Vector<TableNode> tables = new Vector<TableNode>();
+	private Vector<TableNode> tables = null;
 	
 	
 	
-	public PGMetaLoader(Connection conn)
+	public PGMetaLoader(Connection conn, Vector<TableNode> tables)
 	{
+		this.tables = tables;
 		this.conn = conn;
 	}
-	
+	public Vector<TableNode> getMetaData()
+	{
+		return tables;
+	}
 	public float getProgress()
 	{
 		return progress;
@@ -160,133 +164,5 @@ class PGMetaLoader
 }
 
 
-class TableNode
-{
-	private Connection conn = null;
-	private String name;
-	private int length;
 
-	//the attributes corresponding to the table
-	private Vector<TableAttributes> tableAttributes = new Vector<TableAttributes>();
-	//an adjacent list. Each list node contains a refed tableNode, refKeys and refed Keys
-	private Vector<Vector<Object>> FKRef = new Vector<Vector<Object>>();
-	
-	public TableNode(String newName, Connection conn){
-		
-		this.conn = conn;
-		name = newName;
-		try{
-			Statement stmt = conn.createStatement();
-			//get the name of its attributes
-			ResultSet result = stmt.executeQuery("SELECT column_name "+
-												 "FROM information_schema.columns "+
-												 "WHERE table_name ='"+newName+"';");
-			while(result.next()){
-				tableAttributes.add(new TableAttributes(newName, result.getString(1), conn));
-			}
-			
-			//get the table length;
-			result = stmt.executeQuery("select count(*) from "+newName+";");
-			result.next();
-			length = Integer.valueOf(result.getString(1));
-			
-		}catch(SQLException e){
-			System.out.println(e.getMessage());
-		}
-	}
 
-	public String getName(){
-		return name;
-	}
-	public int getLength(){
-		return length;
-	}
-	
-	public boolean addRefed(Vector<Object> newNode)
-	{
-		return FKRef.add(newNode);
-	}
-	
-	public boolean deleteRefed(TableNode delNode){
-		
-		for(int i = 0; i < FKRef.size(); i++)
-			if(FKRef.get(i).get(0).equals(delNode))
-			{
-				FKRef.remove(i);
-				return true;
-			}
-		
-		return false;
-	}
-	
-
-	public boolean equals(Object node)
-	{	
-		if(this.name.equals( ((TableNode)node).getName()))
-			return true;
-		else
-			return false;
-	}
-
-	public Vector<TableAttributes> getAttributes(){
-		return tableAttributes;
-	}
-
-}
-
-class TableAttributes
-{
-	private Connection conn = null;
-	
-	public TableAttributes(String table, String name, Connection conn)
-	{	
-		this.conn = conn;
-		attrName = name;
-		setCardinaligy(table, name);
-	}
-	private boolean setCardinaligy(String table, String name)
-	{
-		try{
-			Statement stmt = conn.createStatement();
-			ResultSet result = stmt.executeQuery("select count(distinct("+name+")) from "+table+" as t1;");
-			result.next();
-			Cardinality = Integer.valueOf(result.getString(1));
-			return true;
-		}catch(SQLException e){
-			System.out.println(e.getMessage());
-		}
-		return false;
-	}
-	
-	private boolean setColMeta(String table, String col)
-	{
-		try{
-			DatabaseMetaData meta = conn.getMetaData();
-			ResultSet result = meta.getColumns(null, null, table, col);
-			
-			String[][] data = new String[1][6];
-			while(result.next()){
-				data[0][0] = result.getString(3);
-				data[0][1] = result.getString(4);
-				data[0][2] = result.getString(6);
-				data[0][3] = result.getString(7);
-				data[0][4] = result.getString(17);
-				data[0][5] = result.getString(18);
-			}
-		}catch(SQLException e){
-			System.out.println(e.getMessage());
-			return false;
-		}
-		return true;
-	}
-
-	public int getCardinality(){
-		return Cardinality;
-	}
-	public String getName(){
-		return attrName;
-	}
-	
-	private String attrName;//name of the attribute
-	private int Cardinality;//number of different value the attribute has
-}

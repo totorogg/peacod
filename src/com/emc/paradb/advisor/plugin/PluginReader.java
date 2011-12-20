@@ -43,11 +43,14 @@ public class PluginReader {
 		
 		pluginInterfaceList = new ArrayList<PlugInterface>();
 		
-		StringBuffer pluginDirPath = new StringBuffer(System.getProperty("user.dir")).append("\\plugin");			
+		StringBuffer pluginDirPath = new StringBuffer(System.getProperty("user.dir")).append("/plugin");			
 		
-		try{
+		try
+		{
 			search(pluginDirPath.toString());
-		}catch(Exception e){
+		}
+		catch(Exception e)
+		{
 			System.out.println(e.getMessage());
 		}
 	}
@@ -55,21 +58,20 @@ public class PluginReader {
 	public void search(String directory) throws Exception{
 			
 		File dir = new File(directory);
-		if (dir.isFile()) {
+		if (dir.isFile())
 			return;
-		}
 		
 		File[] files = dir.listFiles(new JarFilter());
-		for (File f : files) {
-			
+		for (File f : files) 
+		{	
 			JarFile jarFile = new JarFile(f.getAbsolutePath());
 
 			ConfigXML configXML = new ConfigXML();
 			List<PluginInfo> plugInfoList = configXML.parse(jarFile);
 
 			//List<String> classNames = getClassNames(jarFile);
-			for (PluginInfo aPlugin : plugInfoList) {
-				
+			for (PluginInfo aPlugin : plugInfoList) 
+			{	
 				addURL(f.toURI().toURL());
 				
 				String interfaceURL = new String(aPlugin.path + "." + aPlugin.className);
@@ -78,34 +80,33 @@ public class PluginReader {
 				Class clazz = getClass(f, interfaceURL);
 				Class[] interfaces = clazz.getInterfaces();
 				
-				for (Class c : interfaces) {
-					if (c.getName().equals("com.emc.paradb.advisor.plugin.PlugInterface")) {
+				for (Class c : interfaces) 
+				{
+					if (c.getName().equals("com.emc.paradb.advisor.plugin.PlugInterface"))
 						pluginInterfaceList.add((PlugInterface)clazz.newInstance());
-					}
 				}
 			}
 		}
 	}
 
-	protected List<String> getClassNames(JarInputStream jarFile) throws IOException{
-		
+	protected List<String> getClassNames(JarInputStream jarFile) throws IOException
+	{	
 		ArrayList<String> classes = new ArrayList<String>();
 		JarEntry jarEntry;
 
-		while (true) {
-			jarEntry = jarFile.getNextJarEntry();
-			if (jarEntry == null) {
-				break;
-			}
-			if (jarEntry.getName().endsWith(".class")) {					
+		jarEntry = jarFile.getNextJarEntry();
+		while (jarEntry !=null) 
+		{
+			if (jarEntry.getName().endsWith(".class"))					
 				classes.add(jarEntry.getName().replaceAll("/", "\\."));
-			}
+				
+			jarEntry = jarFile.getNextJarEntry();
 		}
 		return classes;
 	}
 
-	public Class getClass(File jarEntry, String className) throws Exception{
-		
+	public Class getClass(File jarEntry, String className) throws Exception
+	{	
 		URLClassLoader clazzLoader;
 
 		String entryPath = jarEntry.getAbsolutePath();
@@ -118,22 +119,25 @@ public class PluginReader {
 		return clazz;
 	}
 
-	public void addURL(URL url){
-		
+	public void addURL(URL url)
+	{	
 		URLClassLoader sysLoader = (URLClassLoader) ClassLoader.getSystemClassLoader();
 		URL urls[] = sysLoader.getURLs();
-		for (int i = 0; i < urls.length; i++) {
-			if (urls[i].toString().equalsIgnoreCase(url.toString())) {
+		for (int i = 0; i < urls.length; i++) 
+		{
+			if (urls[i].toString().equalsIgnoreCase(url.toString()))
 				return;
-			}
 		}
 	
 		Class sysclass = URLClassLoader.class;
-		try {
+		try 
+		{
 			Method method = sysclass.getDeclaredMethod("addURL", parameters);
 			method.setAccessible(true);
 			method.invoke(sysLoader, new Object[]{url});
-		} catch (Throwable t) {
+		} 
+		catch (Throwable t)
+		{
 			t.printStackTrace();
 		}
 	}
@@ -207,13 +211,5 @@ class PluginInfo
 	public String className = null;
 	public String interf = null;
 }
-
-
-
-
-
-
-
-
 
 

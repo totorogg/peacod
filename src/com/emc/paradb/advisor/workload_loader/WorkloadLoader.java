@@ -33,7 +33,11 @@ public class WorkloadLoader
 	{
 		return progress;
 	}
-
+	public Workload<Transaction> getWorkload()
+	{
+		return workload;
+	}
+	
 	
 	public void load()
 	{
@@ -42,7 +46,7 @@ public class WorkloadLoader
 			{
 				try 
 				{
-					String filePath = System.getProperty("user.dir") + "\\workload\\" + fileName;
+					String filePath = System.getProperty("user.dir") + "/workload/" + fileName;
 					File file = new File(filePath);
 					BufferedReader reader = new BufferedReader(new FileReader(file));
 
@@ -119,48 +123,6 @@ public class WorkloadLoader
 	}
 }
 
-class Workload<T> extends Vector<T>
-{
-	private int transactionCount = 0;
-	
-	public Workload()
-	{
-		super();
-
-	}
-	
-	public boolean add(T tran)
-	{
-		transactionCount++;
-		return super.add(tran);
-	}
-}
-
-class Transaction<T> extends Vector<T>
-{
-	private int statementCount = 0;
-	private int selectCount = 0;
-	private int updateCount = 0;
-	private int insertCount = 0;
-	private int deleteCount = 0;
-
-	
-	public boolean add(T statement)
-	{
-		statementCount++;
-		if(statement instanceof SelectAnalysisInfo)
-			selectCount++;
-		else if(statement instanceof UpdateAnalysisInfo)
-			updateCount++;
-		else if(statement instanceof InsertAnalysisInfo)
-			insertCount++;
-		else if(statement instanceof DeleteAnalysisInfo)
-			deleteCount++;
-		
-		return super.add(statement);
-	}
-	
-}
 
 
 

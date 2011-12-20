@@ -23,28 +23,36 @@ import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.UIManager;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableModel;
 
+import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.PluginManager;
 
 
-public class AlgorithmSelectPanel extends JTabbedPane {
-
-
-	public AlgorithmSelectPanel() {
-		
+public class AlgorithmSelectPanel extends JTabbedPane
+{
+	private AlgorithmTableControlPanel atcPanel = null;
+	
+	public AlgorithmSelectPanel() 
+	{	
 		//create the algorithm table
 		AlgorithmTable algorithmTable = new AlgorithmTable();
+		
+		
 		JScrollPane jsp = new JScrollPane(algorithmTable);
 		jsp.setPreferredSize(new Dimension(200, 300));
 		
 		//create a control panel for the algorithmTable
-		AlgorithmTableControlPanel atcPanel = new AlgorithmTableControlPanel();
+		atcPanel = new AlgorithmTableControlPanel();
 		atcPanel.registerTable(algorithmTable);
+		algorithmTable.getModel().addTableModelListener(atcPanel);
 		
 		JPanel tabbedPanel = new JPanel();
 		tabbedPanel.setPreferredSize(new Dimension(200, 400));
@@ -54,19 +62,20 @@ public class AlgorithmSelectPanel extends JTabbedPane {
 		tabbedPanel.add(atcPanel, BorderLayout.NORTH);
 		tabbedPanel.add(jsp, BorderLayout.CENTER);
 	}
-
-	public void display() {
-
-	}
 	
+	public AlgorithmTableControlPanel getAlgorithmControlPanel()
+	{
+		return atcPanel;
+	}
 }
 
 
 
-class AlgorithmTableControlPanel extends JPanel
+class AlgorithmTableControlPanel extends JPanel  implements TableModelListener
 {
 	private JButton load = new JButton("Load");
 	private AlgorithmTable algorithmTable = null;
+	private List<PlugInterface> pluginInterfaces = null;
 	
 	public AlgorithmTableControlPanel(){
 		this.setBorder(BorderFactory.createEtchedBorder());
@@ -82,7 +91,7 @@ class AlgorithmTableControlPanel extends JPanel
 			
 			public void actionPerformed(ActionEvent e){
 				
-				List<PlugInterface> pluginInterfaces = PluginManager.loadPlugin();
+				pluginInterfaces = PluginManager.loadPlugin();
 				algorithmTable.setData(pluginInterfaces);
 			}
 		});
@@ -90,6 +99,28 @@ class AlgorithmTableControlPanel extends JPanel
 	
 	public void registerTable(AlgorithmTable aTable){
 		this.algorithmTable = aTable;
+	}
+
+	@Override
+	//monitor the check box, adjust the algorithms in the algorithm Factory
+	public void tableChanged(TableModelEvent e) 
+	{
+		// TODO Auto-generated method stub
+		int row = e.getFirstRow();
+		int column = e.getColumn();
+		if(row < 0 || column != 1)
+			return;
+		TableModel model = (TableModel)e.getSource();
+		Boolean checkBox = (Boolean)model.getValueAt(row, column);
+		
+		PlugInterface selectedInterface = pluginInterfaces.get(row);
+		
+		if(checkBox.booleanValue() == true)
+			AlgorithmFactory.addPlugAlgorithm(selectedInterface);
+		else
+			AlgorithmFactory.removePlugAlgorithm(selectedInterface);
+		
+		AlgorithmFactory.ListInterfaces();
 	}
 }
 
@@ -99,19 +130,19 @@ class AlgorithmTable extends JTable
 {
 	private final int columnSize = 3;
 	private DefaultTableModel dm = new DefaultTableModel();
+	private List<PlugInterface> pluginList = null;
 	
 	public AlgorithmTable(){	
 		
 		dm.setColumnIdentifiers(new Object[]{ "Algorithm", "Use", "Advance" });
-
 		this.setModel(dm);
-
 		setVisible(true);
 	}
 	
 	
-	public void setData(List<PlugInterface> pluginInterfaces){
-		
+	public void setData(List<PlugInterface> pluginInterfaces)
+	{
+		pluginList = pluginInterfaces;
 		int row = pluginInterfaces.size();
 		Object data[][] = new Object[row][columnSize];
 		
@@ -129,7 +160,7 @@ class AlgorithmTable extends JTable
 		this.getColumn("Advance").setCellRenderer(new AlgorithmButtonRenderer());
 		this.getColumn("Advance").setCellEditor(new ButtonEditor(new JCheckBox()));
 		this.getColumn("Advance").setPreferredWidth(80);
-
+		
 		this.getColumn("Use").setCellRenderer(this.getDefaultRenderer(Boolean.class));
 		this.getColumn("Use").setCellEditor(this.getDefaultEditor(Boolean.class));
 		this.getColumn("Use").setPreferredWidth(40);
