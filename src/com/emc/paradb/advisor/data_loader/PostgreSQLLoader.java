@@ -8,7 +8,6 @@ import java.sql.DriverManager;
 public class PostgreSQLLoader extends DataLoader
 {
 	private String db = null;
-	private Connection conn = null;
 	private PGMetaLoader pgMetaLoader = null;
 	//PGDataLoader pgDataLoader = null;
 	

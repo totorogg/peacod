@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 public abstract class DataLoader
 {
 	protected DBData dbData = new DBData();
+	protected Connection conn = null;
 	protected float progress = 0;
 	protected String selectedBM = null;
 	
@@ -14,7 +15,10 @@ public abstract class DataLoader
 	{	
 		this.selectedBM = selectedBM;
 	}
-
+	public Connection getConn()
+	{
+		return conn;
+	}
 	public DBData getDBData()
 	{
 		return dbData;

@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
 
@@ -139,7 +140,9 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					{
 						Workload<Transaction> workload = workloadLoader.getWorkload();
 						DBData dbData = dataLoader.getDBData();
-						aAlgorithm.accept(workload, dbData, 10);
+						Connection conn = dataLoader.getConn();
+						
+						aAlgorithm.accept(conn, workload, dbData, 10);
 						HashMap<String, String> tableKeyMap = aAlgorithm.getPartitionKey();
 						HashMap<KeyValuePair, Integer> keyValueNodeMap = aAlgorithm.getPlacement();
 						///* for test
