@@ -10,6 +10,7 @@ public class DBData
 	{
 		return tables;
 	}
+	
 	public void setMeta(Vector<TableNode> tables)
 	{
 		this.tables = tables;

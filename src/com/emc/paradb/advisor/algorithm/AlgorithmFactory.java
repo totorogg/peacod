@@ -8,38 +8,47 @@ import com.emc.paradb.advisor.plugin.PlugInterface;
 
 public class AlgorithmFactory
 {
-	private static List<PlugInterface> plugAlgorithms = new ArrayList<PlugInterface>();
-	private static List<PlugInterface> buildInAlgorithms = new ArrayList<PlugInterface>();
+	private static List<PlugInterface> algorithms = new ArrayList<PlugInterface>();
+	private static List<PlugInterface> selectedAlgorithms = new ArrayList<PlugInterface>();
 	
 	static
 	{
-		//PlugInterface navieAlgorithm = new NaiveAlgorithm();
-		//buildInAlgorithms.add(navieAlgorithm);
+		PlugInterface countMaxRR = new CountMaxRR();
+
+		algorithms.add(countMaxRR);
 	}
-	
-	public static void addPlugAlgorithm(PlugInterface aAlgorithm)
+	public static void ListAlgorithms()
 	{
-		plugAlgorithms.add(aAlgorithm);
-	}
-	public static void removePlugAlgorithm(PlugInterface aAlgorithm)
-	{
-		plugAlgorithms.remove(aAlgorithm);
-	}
-	
-	public static List<PlugInterface> getPlugAlgorithm()
-	{
-		return plugAlgorithms;
-	}
-	public static List<PlugInterface> getBuildInAlgorithm()
-	{
-		return buildInAlgorithms;
-	}
-	
-	public static void ListInterfaces()
-	{
-		for(PlugInterface aAlgorithm : plugAlgorithms)
-		{
+		for(PlugInterface aAlgorithm : algorithms)
 			System.out.println(aAlgorithm);
-		}
 	}
+	public static List<PlugInterface> getAlgorithms()
+	{
+		return algorithms;
+	}
+	public static void addAlgorithms(List<PlugInterface> newAlgorithms)
+	{
+		algorithms.addAll(newAlgorithms);
+	}
+	
+	
+	public static void addSelected(PlugInterface aAlgorithm)
+	{
+		selectedAlgorithms.add(aAlgorithm);
+	}
+	public static void removeSelected(PlugInterface aAlgorithm)
+	{
+		selectedAlgorithms.remove(aAlgorithm);
+	}
+	public static void ListSelectedAlgorithms()
+	{
+		for(PlugInterface aAlgorithm : selectedAlgorithms)
+			System.out.println(aAlgorithm);
+	}
+	public static List<PlugInterface> getSelectedAlgorithms()
+	{
+		return selectedAlgorithms;
+	}
+	
+
 }

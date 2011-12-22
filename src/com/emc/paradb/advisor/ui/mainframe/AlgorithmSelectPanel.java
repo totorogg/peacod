@@ -45,7 +45,6 @@ public class AlgorithmSelectPanel extends JTabbedPane
 		//create the algorithm table
 		AlgorithmTable algorithmTable = new AlgorithmTable();
 		
-		
 		JScrollPane jsp = new JScrollPane(algorithmTable);
 		jsp.setPreferredSize(new Dimension(200, 300));
 		
@@ -75,7 +74,7 @@ class AlgorithmTableControlPanel extends JPanel  implements TableModelListener
 {
 	private JButton load = new JButton("Load");
 	private AlgorithmTable algorithmTable = null;
-	private List<PlugInterface> pluginInterfaces = null;
+
 	
 	public AlgorithmTableControlPanel(){
 		this.setBorder(BorderFactory.createEtchedBorder());
@@ -89,10 +88,10 @@ class AlgorithmTableControlPanel extends JPanel  implements TableModelListener
 		
 		load.addActionListener(new ActionListener(){
 			
-			public void actionPerformed(ActionEvent e){
-				
-				pluginInterfaces = PluginManager.loadPlugin();
-				algorithmTable.setData(pluginInterfaces);
+			public void actionPerformed(ActionEvent e)
+			{
+				AlgorithmFactory.addAlgorithms(PluginManager.loadPlugin());
+				algorithmTable.setData(AlgorithmFactory.getAlgorithms());
 			}
 		});
 	}
@@ -113,14 +112,14 @@ class AlgorithmTableControlPanel extends JPanel  implements TableModelListener
 		TableModel model = (TableModel)e.getSource();
 		Boolean checkBox = (Boolean)model.getValueAt(row, column);
 		
-		PlugInterface selectedInterface = pluginInterfaces.get(row);
+		PlugInterface selectedInterface = AlgorithmFactory.getAlgorithms().get(row);
 		
 		if(checkBox.booleanValue() == true)
-			AlgorithmFactory.addPlugAlgorithm(selectedInterface);
+			AlgorithmFactory.addSelected(selectedInterface);
 		else
-			AlgorithmFactory.removePlugAlgorithm(selectedInterface);
+			AlgorithmFactory.removeSelected(selectedInterface);
 		
-		AlgorithmFactory.ListInterfaces();
+		AlgorithmFactory.ListSelectedAlgorithms();
 	}
 }
 
@@ -130,7 +129,6 @@ class AlgorithmTable extends JTable
 {
 	private final int columnSize = 3;
 	private DefaultTableModel dm = new DefaultTableModel();
-	private List<PlugInterface> pluginList = null;
 	
 	public AlgorithmTable(){	
 		
@@ -142,7 +140,6 @@ class AlgorithmTable extends JTable
 	
 	public void setData(List<PlugInterface> pluginInterfaces)
 	{
-		pluginList = pluginInterfaces;
 		int row = pluginInterfaces.size();
 		Object data[][] = new Object[row][columnSize];
 		

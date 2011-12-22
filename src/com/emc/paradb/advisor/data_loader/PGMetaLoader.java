@@ -57,8 +57,6 @@ class PGMetaLoader
 				
 					while(result.next())
 					{
-						progress = (float)result.getRow()/rowCount;
-						
 						String refTable = result.getString(1);
 						String refedTable = result.getString(2);
 						
@@ -82,8 +80,9 @@ class PGMetaLoader
 							
 						if(!tables.contains(refedNode))
 							tables.add(refedNode);
+						
+						progress = (float)result.getRow()/rowCount;
 					}
-					progress = 1;
 				}
 				catch(SQLException e)
 				{

@@ -134,11 +134,10 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 						Thread.sleep(50);
 					}
 					
-					List<PlugInterface> algorithms = AlgorithmFactory.getBuildInAlgorithm();
-					algorithms.addAll(AlgorithmFactory.getPlugAlgorithm());
+					List<PlugInterface> algorithms = AlgorithmFactory.getSelectedAlgorithms();
 					for(PlugInterface aAlgorithm : algorithms)
 					{
-						Workload<Transaction> workload = workloadLoader.getWorkload();
+						Workload<Transaction<Object>> workload = workloadLoader.getWorkload();
 						DBData dbData = dataLoader.getDBData();
 						Connection conn = dataLoader.getConn();
 						
@@ -165,8 +164,6 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					System.out.println("error in the main process");
 					e.printStackTrace();
 				}
-				
-				
 			}
 		}.start();	
 	}

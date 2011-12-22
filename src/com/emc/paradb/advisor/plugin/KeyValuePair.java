@@ -1,7 +1,7 @@
 package com.emc.paradb.advisor.plugin;
 
 
-public class KeyValuePair<Key, Value>
+public class KeyValuePair
 {
 	private String key;
 	private String value;
@@ -26,13 +26,17 @@ public class KeyValuePair<Key, Value>
 			return true;
 		if(obj == null)
 			return false;
-		if(!(obj instanceof KeyValuePair<?, ?>))
+		if(!(obj instanceof KeyValuePair))
 			return false;
 	
-		KeyValuePair<String, String> kvPair = (KeyValuePair<String, String>)obj;
+		KeyValuePair kvPair = (KeyValuePair)obj;
 		if(kvPair.getKey().equals(key) && kvPair.getValue().equals(value))
 			return true;
 		
 		return false;
+	}
+	public int hashCode()
+	{
+		return 7 * key.hashCode() + 13 * value.hashCode();
 	}
 }

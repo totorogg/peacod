@@ -5,12 +5,20 @@ import java.util.Vector;
 
 public class Transaction<T> extends Vector<T>
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int statementCount = 0;
 	private int selectCount = 0;
 	private int updateCount = 0;
 	private int insertCount = 0;
 	private int deleteCount = 0;
-
+	
+	public Transaction()
+	{
+		super();
+	}
 	
 	public boolean add(T statement)
 	{

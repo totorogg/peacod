@@ -21,7 +21,7 @@ public class WorkloadLoader
 {
 	private String fileName = "workload.log";
 	private String selectedBM = null;
-	private Workload<Transaction> workload = new Workload<Transaction>();
+	private Workload<Transaction<Object>> workload = new Workload<Transaction<Object>>();
 	private float progress = 0;
 	
 	public WorkloadLoader(String selectedBM)
@@ -33,7 +33,7 @@ public class WorkloadLoader
 	{
 		return progress;
 	}
-	public Workload<Transaction> getWorkload()
+	public Workload<Transaction<Object>> getWorkload()
 	{
 		return workload;
 	}

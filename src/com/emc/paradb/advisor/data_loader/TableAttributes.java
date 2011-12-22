@@ -7,13 +7,23 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 
 
 public class TableAttributes
 {
 	private Connection conn = null;
+	private String attrName;//name of the attribute
+	private int Cardinality;//number of different value the attribute has
+	private Set<AttributeValue> values = null;
 	
+	private class ValueCount<Object, Integer>
+	{
+		
+	}
 	public TableAttributes(String table, String name, Connection conn)
 	{	
 		this.conn = conn;
@@ -55,6 +65,30 @@ public class TableAttributes
 		}
 		return true;
 	}
+	private Set<AttributeValue> getAttrValue()
+	{
+		return values;
+	}
+	private boolean setAttrValue(String tableName)
+	{
+		values = new HashSet<AttributeValue>();
+		try
+		{
+			Statement stmt = conn.createStatement();
+			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s", attrName, tableName, attrName));
+			while(result.next())
+			{
+				values.add( new AttributeValue(result.getString(1), result.getInt(2)));
+			}
+		}
+		catch(SQLException e)
+		{
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
 
 	public int getCardinality(){
 		return Cardinality;
@@ -62,7 +96,4 @@ public class TableAttributes
 	public String getName(){
 		return attrName;
 	}
-	
-	private String attrName;//name of the attribute
-	private int Cardinality;//number of different value the attribute has
 }
