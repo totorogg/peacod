@@ -4,48 +4,53 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.emc.paradb.advisor.plugin.PlugInterface;
+import com.emc.paradb.advisor.plugin.Plugin;
 
 
 public class AlgorithmFactory
 {
-	private static List<PlugInterface> algorithms = new ArrayList<PlugInterface>();
-	private static List<PlugInterface> selectedAlgorithms = new ArrayList<PlugInterface>();
+	private static List<Plugin> algorithms = new ArrayList<Plugin>();
+	private static List<Plugin> selectedAlgorithms = new ArrayList<Plugin>();
 	
 	static
 	{
-		PlugInterface countMaxRR = new CountMaxRR();
-
+		Plugin countMaxRR = new Plugin();
+		countMaxRR.setInterface(new CountMaxRR());
+		countMaxRR.setInfo("com.emc.paradb.advisor.algorithm.CountMaxRR",
+							"getPartitionKey()", "getNode()",
+							"this algorithm select the keys that are most frequently accessed, and partition them in roundRobin manner");
 		algorithms.add(countMaxRR);
 	}
 	public static void ListAlgorithms()
 	{
-		for(PlugInterface aAlgorithm : algorithms)
-			System.out.println(aAlgorithm);
+		for(Plugin aAlgorithm : algorithms)
+			System.out.println(aAlgorithm.getID());
 	}
-	public static List<PlugInterface> getAlgorithms()
+	
+	public static List<Plugin> getAlgorithms()
 	{
 		return algorithms;
 	}
-	public static void addAlgorithms(List<PlugInterface> newAlgorithms)
+	
+	public static void addAlgorithms(List<Plugin> newAlgorithms)
 	{
 		algorithms.addAll(newAlgorithms);
 	}
 	
-	
-	public static void addSelected(PlugInterface aAlgorithm)
+	public static void addSelected(Plugin aAlgorithm)
 	{
 		selectedAlgorithms.add(aAlgorithm);
 	}
-	public static void removeSelected(PlugInterface aAlgorithm)
+	public static void removeSelected(Plugin aAlgorithm)
 	{
 		selectedAlgorithms.remove(aAlgorithm);
 	}
 	public static void ListSelectedAlgorithms()
 	{
-		for(PlugInterface aAlgorithm : selectedAlgorithms)
-			System.out.println(aAlgorithm);
+		for(Plugin aAlgorithm : selectedAlgorithms)
+			System.out.println(aAlgorithm.getID());
 	}
-	public static List<PlugInterface> getSelectedAlgorithms()
+	public static List<Plugin> getSelectedAlgorithms()
 	{
 		return selectedAlgorithms;
 	}

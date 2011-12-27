@@ -5,17 +5,17 @@ import java.util.List;
 
 public class PluginManager
 {
-	
+	public static List<Plugin> plugins = null;
 	public static List<PlugInterface> pluginInterfaces = null;
 	
 	public PluginManager(){
 		
 	}
-	public static List<PlugInterface> loadPlugin(){
+	public static List<Plugin> loadPlugin(){
 
 		PluginReader pluginReader = new PluginReader();
-		pluginInterfaces = pluginReader.getPluginCollection();	
+		plugins = pluginReader.getPluginCollection();	
 		
-		return pluginInterfaces;
+		return plugins;
 	}
 }

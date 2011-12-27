@@ -36,15 +36,14 @@ public class PluginReader {
 
 	// Parameters
 	private static final Class[] parameters = new Class[] { URL.class };
-	private List<PlugInterface> pluginInterfaceList = null;
+	private List<Plugin> plugins = null;
 	
 
 	public PluginReader(){
 		
-		pluginInterfaceList = new ArrayList<PlugInterface>();
+		plugins = new ArrayList<Plugin>();
 		
 		StringBuffer pluginDirPath = new StringBuffer(System.getProperty("user.dir")).append("/plugin");			
-		
 		try
 		{
 			search(pluginDirPath.toString());
@@ -64,26 +63,26 @@ public class PluginReader {
 		File[] files = dir.listFiles(new JarFilter());
 		for (File f : files) 
 		{	
+			
 			JarFile jarFile = new JarFile(f.getAbsolutePath());
-
 			ConfigXML configXML = new ConfigXML();
-			List<PluginInfo> plugInfoList = configXML.parse(jarFile);
-
-			//List<String> classNames = getClassNames(jarFile);
-			for (PluginInfo aPlugin : plugInfoList) 
-			{	
-				addURL(f.toURI().toURL());
+			PluginInfo plugInfo = configXML.parse(jarFile);
+			
+			Plugin aPlugin = new Plugin();
+			aPlugin.setInfo(plugInfo);
+			
+			addURL(f.toURI().toURL());
+			
+			String interfaceURL = new String(plugInfo.path + "." + plugInfo.className);
+			Class<?> clazz = getClass(f, interfaceURL);
+			Class[] interfaces = clazz.getInterfaces();
 				
-				String interfaceURL = new String(aPlugin.path + "." + aPlugin.className);
-				interfaceURL = interfaceURL.substring(0, interfaceURL.length() - 6);
-				
-				Class clazz = getClass(f, interfaceURL);
-				Class[] interfaces = clazz.getInterfaces();
-				
-				for (Class c : interfaces) 
+			for (Class<?> c : interfaces) 
+			{
+				if (c.getName().equals("com.emc.paradb.advisor.plugin.PlugInterface"))
 				{
-					if (c.getName().equals("com.emc.paradb.advisor.plugin.PlugInterface"))
-						pluginInterfaceList.add((PlugInterface)clazz.newInstance());
+					aPlugin.setInterface((PlugInterface)clazz.newInstance());
+					plugins.add(aPlugin);
 				}
 			}
 		}
@@ -105,16 +104,17 @@ public class PluginReader {
 		return classes;
 	}
 
-	public Class getClass(File jarEntry, String className) throws Exception
+	public Class<?> getClass(File jarEntry, String className) throws Exception
 	{	
 		URLClassLoader clazzLoader;
 
 		String entryPath = jarEntry.getAbsolutePath();
 		entryPath = "jar:file://" + entryPath + "//";
-	
+		
 		URL url = new File(entryPath).toURI().toURL();
+		
 		clazzLoader = new URLClassLoader(new URL[]{url});
-		Class clazz = clazzLoader.loadClass(className);
+		Class<?> clazz = clazzLoader.loadClass(className);
 			
 		return clazz;
 	}
@@ -129,7 +129,7 @@ public class PluginReader {
 				return;
 		}
 	
-		Class sysclass = URLClassLoader.class;
+		Class<URLClassLoader> sysclass = URLClassLoader.class;
 		try 
 		{
 			Method method = sysclass.getDeclaredMethod("addURL", parameters);
@@ -142,14 +142,9 @@ public class PluginReader {
 		}
 	}
 
-	
-	
-	public List<PlugInterface> getPluginCollection() {
-		return pluginInterfaceList;
-	}
 
-	public void setPluginInterfaceList(List<PlugInterface> pluginInterfaceList) {
-		this.pluginInterfaceList = pluginInterfaceList;
+	public List<Plugin> getPluginCollection() {
+		return plugins;
 	}
 }
 
@@ -158,9 +153,9 @@ public class PluginReader {
 
 class ConfigXML 
 {
-	private List<PluginInfo> pluginInfoList = new ArrayList<PluginInfo>();
+	private PluginInfo pluginInfo = new PluginInfo();
 	
-	public List<PluginInfo> parse(JarFile jarFile){
+	public PluginInfo parse(JarFile jarFile){
 		
 		
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -169,30 +164,28 @@ class ConfigXML
 		
 		JarEntry jarEntry = jarFile.getJarEntry("config.xml");
 		
-		try {
+		try 
+		{
 			dBuilder = dbFactory.newDocumentBuilder();
-			doc = dBuilder.parse(jarFile.getInputStream(jarEntry));
-			
-		} catch (Exception e) {
+			doc = dBuilder.parse(jarFile.getInputStream(jarEntry));	
+		} 
+		catch (Exception e) 
+		{
 			System.out.println(e.getMessage());
 		}
 		
 		doc.getDocumentElement().normalize();	
 		
 		NodeList nodeList = doc.getElementsByTagName("plugin");
-		for(int i = 0; i < nodeList.getLength(); i++){
+		Element aElement = (Element)nodeList.item(0);
 			
-			Element aElement = (Element)nodeList.item(i);
-			
-			PluginInfo aPlugin = new PluginInfo();
-			aPlugin.className = getTagValue("class", aElement);
-			aPlugin.path = getTagValue("path", aElement);
-			aPlugin.interf = getTagValue("interface", aElement);
-			
-			pluginInfoList.add(aPlugin);
-		}
-		
-		return pluginInfoList;
+		pluginInfo.className = getTagValue("class", aElement);
+		pluginInfo.path = getTagValue("path", aElement);
+		pluginInfo.interf = getTagValue("interface", aElement);
+		pluginInfo.partitionMethod = getTagValue("partitionMethod", aElement);
+		pluginInfo.placementMethod = getTagValue("placementMethod", aElement);
+		pluginInfo.description = getTagValue("description", aElement);
+		return pluginInfo;
 	}
 	
 	public static String getTagValue(String tagName, Element aElement){
@@ -208,8 +201,11 @@ class ConfigXML
 class PluginInfo
 {
 	public String path = null;
-	public String className = null;
 	public String interf = null;
+	public String className = null;
+	public String partitionMethod = null;
+	public String placementMethod = null;
+	public String description = null;
 }
 
 

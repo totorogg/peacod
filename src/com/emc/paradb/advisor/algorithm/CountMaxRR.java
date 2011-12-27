@@ -27,6 +27,7 @@ public class CountMaxRR implements PlugInterface
 	Connection conn = null;
 	Workload<Transaction<Object>> workload = null;
 	DBData dbData = null;
+	RoundRobin RR = null;
 	int nodes = 0;
 	
 	HashMap<KeyValuePair, Integer> kvnMap = new HashMap<KeyValuePair, Integer>();
@@ -44,7 +45,7 @@ public class CountMaxRR implements PlugInterface
 		try 
 		{
 			setPartitionKey();
-			setPlacement();
+			RR = new RoundRobin(nodes);
 		} 
 		catch (Exception e) 
 		{
@@ -52,11 +53,6 @@ public class CountMaxRR implements PlugInterface
 			e.printStackTrace();
 		}	
 		return true;
-	}
-
-	@Override
-	public HashMap<KeyValuePair, Integer> getPlacement() {
-		return kvnMap;
 	}
 
 	@Override
@@ -162,20 +158,7 @@ public class CountMaxRR implements PlugInterface
 		else
 			keyCount.put(key, keyCount.get(key) + 1);
 	}
-	
-	protected void setPlacement()
-	{
-		for(String table : tableKeyMap.keySet())
-		{
-			int node =  0;
-			List<KeyValuePair> keyValueList = getKeyValuePair(table, tableKeyMap.get(table));
-			for(KeyValuePair kvPair : keyValueList)
-			{
-				kvnMap.put(kvPair, node);
-				node = (node + 1) % nodes;
-			}
-		}
-	}
+
 	
 	protected List<KeyValuePair> getKeyValuePair(String table, String key)
 	{
@@ -196,5 +179,20 @@ public class CountMaxRR implements PlugInterface
 			e.printStackTrace();
 		}
 		return keyValueList;
+	}
+
+	@Override
+	/**
+	 * this function simply return a int number per call. the number will increase by one every call.
+	 */
+	public int getNode() {
+		// TODO Auto-generated method stub
+		return RR.getPlacement();
+	}
+
+	@Override
+	public HashMap<KeyValuePair, Integer> getPlacement() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

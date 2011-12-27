@@ -1,5 +1,7 @@
 package com.emc.paradb.advisor.ui.mainframe;
 
+import java.awt.Dimension;
+
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
@@ -17,6 +19,8 @@ public class DisplayPanel extends JTabbedPane
 	DataMigrationPanel dataMigrationPanel = new DataMigrationPanel();
 	
 	public DisplayPanel(){
+		this.setPreferredSize(new Dimension(500, 400));
+		this.setMinimumSize(new Dimension(300, 400));
 		
 		this.add(dataDistributionPanel, "Data Dist.");
 		this.add(workloadDistributionPanel, "Workload Dist.");
