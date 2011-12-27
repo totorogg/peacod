@@ -24,6 +24,7 @@ public class WorkloadDistributionPanel extends JPanel
 	public WorkloadDistributionPanel(){
 		this.setLayout(new BorderLayout());
 		this.add(box, BorderLayout.CENTER);
+		this.add(new JLabel("description: The number of data accessed by transactions on each node"), BorderLayout.NORTH);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
 		List<Integer> data = new ArrayList<Integer>();

@@ -27,7 +27,7 @@ public class MainFrame extends JFrame
 		benchmarkSelectPanel = new BenchmarkSelectPanel();
 		
 		this.setSize(900, 400);
-		this.setTitle("Sharding Advisor");
+		this.setTitle("PEACOD");
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
@@ -36,6 +36,6 @@ public class MainFrame extends JFrame
 		splitPane.setDividerSize(5);
 		
 		this.add(splitPane, BorderLayout.CENTER);
-		this.add(benchmarkSelectPanel, BorderLayout.EAST);
+		this.add(benchmarkSelectPanel, BorderLayout.WEST);
 	}
 }

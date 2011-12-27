@@ -21,8 +21,10 @@ public class DataDistributionPanel extends JPanel
 	private JLabel dataChart = null;
 	private Box box = Box.createHorizontalBox();
 	
-	public DataDistributionPanel(){
+	public DataDistributionPanel()
+	{
 		this.setLayout(new BorderLayout());
+		this.add(new JLabel("description: The volumn of data on each node"), BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		

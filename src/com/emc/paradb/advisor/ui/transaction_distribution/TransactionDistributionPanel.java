@@ -25,8 +25,10 @@ public class TransactionDistributionPanel extends JPanel
 	private JLabel tranDistChart = null;
 	private Box box = Box.createHorizontalBox();
 	
-	public TransactionDistributionPanel(){
+	public TransactionDistributionPanel()
+	{
 		this.setLayout(new BorderLayout());
+		this.add(new JLabel("description: Cross-node transaction ratio and # of nodes transactions access"), BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		

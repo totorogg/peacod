@@ -16,8 +16,10 @@ public class DataMigrationPanel extends JPanel
 	private JLabel workloadChart = new JLabel("building");
 	private Box box = Box.createHorizontalBox();
 	
-	public DataMigrationPanel(){
+	public DataMigrationPanel()
+	{
 		this.setLayout(new BorderLayout());
+		this.add(new JLabel("description: Portion of data to be migrated on each node when new nodes are added"), BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
