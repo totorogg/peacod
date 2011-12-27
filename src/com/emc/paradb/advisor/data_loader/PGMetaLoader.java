@@ -6,8 +6,10 @@ import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
@@ -105,8 +107,8 @@ class PGMetaLoader
 	{
 		ResultSet result = null;
 		Vector<Object> adjacentListNode = new Vector<Object>();
-		Set<String> refKeys = new HashSet<String>();
-		Set<String> refedKeys = new HashSet<String>();
+		List<String> refKeys = new ArrayList<String>();
+		List<String> refedKeys = new ArrayList<String>();
 		
 
 		try {

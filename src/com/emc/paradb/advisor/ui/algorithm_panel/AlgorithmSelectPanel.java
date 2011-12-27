@@ -1,6 +1,7 @@
 package com.emc.paradb.advisor.ui.algorithm_panel;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JPanel;

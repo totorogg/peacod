@@ -121,6 +121,8 @@ public class Controller
 	
 	public static boolean loadAlgorithm()
 	{
+		AlgorithmFactory.removeAll();
+		AlgorithmFactory.loadBuildin();
 		AlgorithmFactory.addAlgorithms(PluginManager.loadPlugin());
 		loadAlgorithm = true;
 		return true;

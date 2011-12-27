@@ -12,13 +12,18 @@ public class AlgorithmFactory
 	private static List<Plugin> algorithms = new ArrayList<Plugin>();
 	private static List<Plugin> selectedAlgorithms = new ArrayList<Plugin>();
 	
+	private static Plugin countMaxRR = new Plugin();
+	//load the build-in algorithms
 	static
 	{
-		Plugin countMaxRR = new Plugin();
 		countMaxRR.setInterface(new CountMaxRR());
 		countMaxRR.setInfo("com.emc.paradb.advisor.algorithm.CountMaxRR",
 							"getPartitionKey()", "getNode()",
 							"this algorithm select the keys that are most frequently accessed, and partition them in roundRobin manner");
+	}
+	
+	public static void loadBuildin()
+	{
 		algorithms.add(countMaxRR);
 	}
 	public static void ListAlgorithms()
@@ -26,7 +31,6 @@ public class AlgorithmFactory
 		for(Plugin aAlgorithm : algorithms)
 			System.out.println(aAlgorithm.getID());
 	}
-	
 	public static List<Plugin> getAlgorithms()
 	{
 		return algorithms;
@@ -36,7 +40,10 @@ public class AlgorithmFactory
 	{
 		algorithms.addAll(newAlgorithms);
 	}
-	
+	public static void removeAll()
+	{
+		algorithms = new ArrayList<Plugin>();
+	}
 	public static void addSelected(Plugin aAlgorithm)
 	{
 		selectedAlgorithms.add(aAlgorithm);

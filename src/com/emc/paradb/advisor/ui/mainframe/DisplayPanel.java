@@ -20,7 +20,7 @@ public class DisplayPanel extends JTabbedPane
 	
 	public DisplayPanel(){
 		this.setPreferredSize(new Dimension(500, 400));
-		this.setMinimumSize(new Dimension(300, 400));
+		this.setMinimumSize(new Dimension(100, 400));
 		
 		this.add(dataDistributionPanel, "Data Dist.");
 		this.add(workloadDistributionPanel, "Workload Dist.");
