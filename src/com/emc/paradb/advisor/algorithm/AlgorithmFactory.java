@@ -13,6 +13,7 @@ public class AlgorithmFactory
 	private static List<Plugin> selectedAlgorithms = new ArrayList<Plugin>();
 	
 	private static Plugin countMaxRR = new Plugin();
+	private static Plugin schemaHash = new Plugin();
 	//load the build-in algorithms
 	static
 	{
@@ -20,11 +21,17 @@ public class AlgorithmFactory
 		countMaxRR.setInfo("com.emc.paradb.advisor.algorithm.CountMaxRR",
 							"getPartitionKey()", "getNode()",
 							"this algorithm select the keys that are most frequently accessed, and partition them in roundRobin manner");
+	
+		schemaHash.setInterface(new SchemaHash());
+		schemaHash.setInfo("com.emc.paradb.advisor.algorithm.SchemaHash",
+							"getPartitionKey()", "getPartitionKey()",
+							"this algorithm select partition key based on database schema. primary key in \"root table\" is the basic partition key");
 	}
 	
 	public static void loadBuildin()
 	{
 		algorithms.add(countMaxRR);
+		algorithms.add(schemaHash);
 	}
 	public static void ListAlgorithms()
 	{

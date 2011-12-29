@@ -52,7 +52,7 @@ public class MainFrame extends JFrame
 		algorithmSelectPanel = new AlgorithmSelectPanel();
 		benchmarkSelectPanel = new BenchmarkSelectPanel();
 		
-		this.setSize(900, 400);
+		this.setSize(900, 350);
 		this.setTitle("PEACOD");
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -84,7 +84,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		Box workloadBox = Box.createHorizontalBox();
 		workloadBox.add(workloadText);
 		workloadBox.add(Box.createHorizontalStrut(10));
-		workloadBox.add(new JLabel("Xact"));
+		workloadBox.add(new JLabel("Xacts"));
 		bmBox.add(workloadBox);
 		
 		bmBox.add(Box.createVerticalStrut(5));
@@ -110,7 +110,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(nodeCountText);
 		
 
-		bmBox.add(Box.createVerticalStrut(10));
+		bmBox.add(Box.createVerticalStrut(6));
 		
 		Box buttonBox = Box.createHorizontalBox();
 	
@@ -147,7 +147,4 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 			}
 		}.start();
 	}
-
-	
-	
 }

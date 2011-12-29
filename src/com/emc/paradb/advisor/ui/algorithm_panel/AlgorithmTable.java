@@ -90,7 +90,6 @@ class AlgorithmTable extends JTable
 	//if a different is selected, the corresponding description should also be changed
 	public void valueChanged(ListSelectionEvent e)
 	{
-		
 		super.valueChanged(e);
 		
 		if(e.getValueIsAdjusting())
@@ -98,7 +97,7 @@ class AlgorithmTable extends JTable
 		
 		ListSelectionModel rowSM = (ListSelectionModel)e.getSource();
 		int selectedIndex = rowSM.getMinSelectionIndex();
-		if(selectedIndex != lastSelectedRow)
+		if(selectedIndex != lastSelectedRow && selectedIndex >= 0)
 		{
 			lastSelectedRow = selectedIndex;
 			Plugin aPlugin= Controller.getAlgorithm(selectedIndex);

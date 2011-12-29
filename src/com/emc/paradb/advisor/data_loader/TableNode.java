@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.HashMap;
 import java.util.Vector;
 
 
@@ -16,7 +17,8 @@ public class TableNode
 	private int length;
 
 	//the attributes corresponding to the table
-	private Vector<TableAttributes> tableAttributes = new Vector<TableAttributes>();
+	private HashMap<String, TableAttributes> tableAttributeMap = new HashMap<String, TableAttributes>();
+	private Vector<TableAttributes> attributes = new Vector<TableAttributes>();
 	//an adjacent list. Each list node contains a refed tableNode, refKeys and refed Keys
 	private Vector<Vector<Object>> FKRef = new Vector<Vector<Object>>();
 	
@@ -30,8 +32,11 @@ public class TableNode
 			ResultSet result = stmt.executeQuery("SELECT column_name "+
 												 "FROM information_schema.columns "+
 												 "WHERE table_name ='"+newName+"';");
-			while(result.next()){
-				tableAttributes.add(new TableAttributes(newName, result.getString(1), conn));
+			while(result.next())
+			{
+				TableAttributes aAttr = new TableAttributes(newName, result.getString(1), conn);
+				tableAttributeMap.put(result.getString(1), aAttr);
+				attributes.add(aAttr);
 			}
 			
 			//get the table length;
@@ -43,7 +48,10 @@ public class TableNode
 			System.out.println(e.getMessage());
 		}
 	}
-
+	public Vector<Vector<Object>> getFKRef()
+	{
+		return FKRef;
+	}
 	public String getName(){
 		return name;
 	}
@@ -77,8 +85,12 @@ public class TableNode
 			return false;
 	}
 
-	public Vector<TableAttributes> getAttributes(){
-		return tableAttributes;
+	public HashMap<String, TableAttributes> getAttributes(){
+		return tableAttributeMap;
+	}
+	public Vector<TableAttributes> getAttrVector()
+	{
+		return attributes;
 	}
 
 }

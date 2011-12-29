@@ -1,6 +1,7 @@
 package com.emc.paradb.advisor.ui.algorithm_panel;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JButton;
@@ -18,9 +19,12 @@ public class AlgorithmDescriptionPanel extends JPanel
 	{
 		description.setLineWrap(true);
 		description.setBackground(null);
+		JScrollPane jsp = new JScrollPane(description);
+		jsp.getViewport().setBackground(Color.WHITE);
+		
 		this.setPreferredSize(new Dimension(200, 100));
 		this.setLayout(new BorderLayout());
-		this.add(description, BorderLayout.NORTH);
+		this.add(jsp, BorderLayout.CENTER);
 		this.setVisible(true);
 	}
 	

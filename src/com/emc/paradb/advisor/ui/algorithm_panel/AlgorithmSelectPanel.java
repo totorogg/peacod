@@ -23,6 +23,7 @@ public class AlgorithmSelectPanel extends JTabbedPane
 		algorithmTable = new AlgorithmTable();
 		algorithmTable.registerDescriptionPanel(adPanel);
 		JScrollPane tableSP= new JScrollPane(algorithmTable);
+		tableSP.getViewport().setBackground(Color.WHITE);
 		tableSP.setPreferredSize(new Dimension(200, 200));
 		
 		//create a control panel for the algorithmTable

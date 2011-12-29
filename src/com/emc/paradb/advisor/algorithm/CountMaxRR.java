@@ -122,27 +122,22 @@ public class CountMaxRR implements PlugInterface
 	
 	protected void updateTableKeyCount(HashMap<String, HashMap<String, Integer>> tableKeyCount, String key) throws Exception
 	{
-		String table = null;
-			
-		for(TableNode tableNode : dbData.getMetaData())
+		String table = null;	
+		HashMap<String, TableNode> tables = dbData.getMetaData();
+		
+		for(TableNode tableNode : tables.values())
 		{
-
-			for(TableAttributes tableAttribute :  tableNode.getAttributes())
+			HashMap<String, TableAttributes> attributes = tableNode.getAttributes();
+			if(attributes.get(key) != null)
 			{
-				if(key.equals(tableAttribute.getName()))
-				{
-					table = tableNode.getName();
-					
-					//goto findTableName;
-				}
+				table = tableNode.getName();
+				break;
 			}
 		}
+		
 		//findTableName:
 		if(table == null)
-		{
 			System.out.println(String.format("%s cannot find %s", table, key));
-			
-		}
 		
 		HashMap<String, Integer> keyCount;
 		if(!tableKeyCount.containsKey(table))

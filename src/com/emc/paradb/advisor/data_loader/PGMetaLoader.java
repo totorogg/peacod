@@ -22,16 +22,16 @@ class PGMetaLoader
 	private float progress = 0;
 	private Connection conn = null;
 	//all the tables in the schemas
-	private Vector<TableNode> tables = null;
+	private HashMap<String, TableNode> tables = null;
 	
 	
 	
-	public PGMetaLoader(Connection conn, Vector<TableNode> tables)
+	public PGMetaLoader(Connection conn, HashMap<String, TableNode> tables)
 	{
 		this.tables = tables;
 		this.conn = conn;
 	}
-	public Vector<TableNode> getMetaData()
+	public HashMap<String, TableNode> getMetaData()
 	{
 		return tables;
 	}
@@ -40,6 +40,7 @@ class PGMetaLoader
 		return progress;
 	}
 	
+	//note that this function has to be adjust to make sure that nodes not participating in fk refenrence are added
 	public void load()
 	{
 		new Thread()
@@ -49,42 +50,47 @@ class PGMetaLoader
 				try
 				{
 					Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+					//select all the table names
+					ResultSet tableResult = stmt.executeQuery("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';");
+
+					tableResult.last();
+					int currentPos = 0;
+					int rowCount = tableResult.getRow();
+					rowCount *= 2;
+					tableResult.beforeFirst();
+					
+					//get all the TableNodes
+					while(tableResult.next())
+					{
+						String name = tableResult.getString(1);
+						TableNode aTableNode = new TableNode(name, conn);
+						tables.put(name, aTableNode);
+						progress = (float)(++currentPos)/rowCount;
+					}
+					
+					//add the FK reference among nodes
 					//select the reference table and the referenced table;
 					ResultSet result = stmt.executeQuery
 								 ("select t1.relname as ref, t2.relname as refed from pg_class as t1, pg_class as t2, (select conrelid as oid, confrelid as roid from pg_constraint where contype='f') as t3 where t1.oid = t3.oid and t2.oid = t3.roid;");
 					
-					result.last();
-					int rowCount = result.getRow();
-					result.beforeFirst();
-				
 					while(result.next())
 					{
 						String refTable = result.getString(1);
 						String refedTable = result.getString(2);
 						
-						TableNode refNode = new TableNode(refTable, conn);
-						TableNode refedNode = new TableNode(refedTable, conn);
+						TableNode refNode = tables.get(refTable);
+						TableNode refedNode = tables.get(refedTable);
 						
 						//get FK reference keys for the two tables
 						Set<String> refKey = new HashSet<String>();
 						Set<String> refedKey = new HashSet<String>();
 						//adjacentListNode (refedTableNode<TableNode>, refKeys<Set<String>>, refedKeys)
-						Vector<Object> adjacentListNode = getFKRef(refNode, refedNode);
-						
-						//store the reference as adjacent list
-						if(!tables.contains(refNode))
-						{
-							tables.add(refNode);
-							refNode.addRefed(adjacentListNode);
-						}
-						else
-							tables.get(tables.indexOf(refNode)).addRefed(adjacentListNode);
-							
-						if(!tables.contains(refedNode))
-							tables.add(refedNode);
-						
-						progress = (float)result.getRow()/rowCount;
+						Vector<Object> adjacentListNode = getFKRef(refNode, refedNode);						
+						refNode.addRefed(adjacentListNode);
+
+						progress = (float)(++currentPos)/rowCount;
 					}
+					progress = 1;
 				}
 				catch(SQLException e)
 				{
@@ -95,7 +101,7 @@ class PGMetaLoader
 	}
 
 
-	public Vector<TableNode> getTables() {
+	public HashMap<String, TableNode> getTables() {
 		return tables;
 	}
 
