@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
@@ -55,14 +56,16 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	
 	private JTextField workloadText = new JTextField("100");
 	
-	private JButton startButton = new JButton("Start");
-	private JButton stopButton = new JButton("Stop");
+	private JButton startButton = new JButton("Analyze");
+	private JButton stopButton = new JButton("Recommend");
 	
 	private JProgressBar loadProgress = new JProgressBar(0, 100);
 	
 	public BenchmarkSelectPanel()
 	{
-
+		benchmarkSelectPanel.setLayout(new BoxLayout(benchmarkSelectPanel, BoxLayout.Y_AXIS));
+		benchmarkSelectPanel.setPreferredSize(new Dimension(135, ABORT));
+		benchmarkSelectPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
 		
 		bmComboBox = new JComboBox(bmString);
 		bmComboBox.setSelectedIndex(0);
@@ -110,7 +113,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(nodeCountText);
 		
 
-		bmBox.add(Box.createVerticalStrut(6));
+		bmBox.add(Box.createVerticalStrut(5));
 		
 		Box buttonBox = Box.createHorizontalBox();
 	
@@ -121,14 +124,15 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 
 		bmBox.add(Box.createVerticalStrut(10));
 		buttonBox.add(startButton);
-		buttonBox.add(Box.createHorizontalStrut(10));
+		startButton.setMargin(new Insets(2,3,2,3));
+		buttonBox.add(Box.createHorizontalStrut(5));
 		buttonBox.add(stopButton);
+		stopButton.setMargin(new Insets(2,3,2,3));
 		buttonBox.add(Box.createHorizontalGlue());
 		bmBox.add(buttonBox);
 		
 		benchmarkSelectPanel.add(bmBox);
 		this.add(benchmarkSelectPanel, "Benchmarks");
-		
 		startButton.addActionListener(this);
 	}
 

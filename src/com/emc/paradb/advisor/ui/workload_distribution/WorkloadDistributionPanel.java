@@ -1,6 +1,7 @@
 package com.emc.paradb.advisor.ui.workload_distribution;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -24,7 +26,9 @@ public class WorkloadDistributionPanel extends JPanel
 	public WorkloadDistributionPanel(){
 		this.setLayout(new BorderLayout());
 		this.add(box, BorderLayout.CENTER);
-		this.add(new JLabel("description: The number of data accessed by transactions on each node"), BorderLayout.NORTH);
+		JTextArea description = new JTextArea("DESCRIPTION: The number of data accessed by transactions on each node");
+		description.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		this.add(description, BorderLayout.NORTH);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
 		List<Integer> data = new ArrayList<Integer>();

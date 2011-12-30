@@ -3,6 +3,7 @@ package com.emc.paradb.advisor.ui.data_distribution;
 import javax.swing.JPanel;
 
 import java.awt.BorderLayout;
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,8 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.JFreeChart;
@@ -24,7 +27,13 @@ public class DataDistributionPanel extends JPanel
 	public DataDistributionPanel()
 	{
 		this.setLayout(new BorderLayout());
-		this.add(new JLabel("description: The volumn of data on each node"), BorderLayout.NORTH);
+		JTextArea description = new JTextArea("DESCRIPTION: It describes how even data is distributed on each nodes.\n" +
+				"When a single algorithm is selected, Y axis denotes the volumn of data, X axis denotes the nodes.\n" +
+				"When several algorithms are selected, Y axis ...........................................");
+		description.setLineWrap(true);
+		description.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		
+		this.add(description, BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
@@ -58,7 +67,7 @@ class DataChart {
 			categoryDataset.setValue(tuples.get(i), ""+i, table);
 		}
 
-		JFreeChart chart = ChartFactory.createBarChart("Data Distribution", // Title
+		JFreeChart chart = ChartFactory.createBarChart("", // Title
 				"Node", // X-Axis label
 				"Data (Tuples)", // Y-Axis label
 				categoryDataset, // Dataset, 

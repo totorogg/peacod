@@ -52,7 +52,7 @@ public class MainFrame extends JFrame
 		algorithmSelectPanel = new AlgorithmSelectPanel();
 		benchmarkSelectPanel = new BenchmarkSelectPanel();
 		
-		this.setSize(900, 350);
+		this.setSize(800, 360);
 		this.setTitle("PEACOD");
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -62,6 +62,7 @@ public class MainFrame extends JFrame
 		splitPane.setDividerSize(5);
 		
 		this.add(splitPane, BorderLayout.CENTER);
+		splitPane.setDividerLocation(470);
 		this.add(benchmarkSelectPanel, BorderLayout.WEST);
 	}
 }

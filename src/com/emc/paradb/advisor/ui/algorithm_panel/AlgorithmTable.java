@@ -44,7 +44,7 @@ class AlgorithmTable extends JTable
 		for(int i = 0; i < row; i++)
 		{		
 			String name = pluginInterfaces.get(i).getID();
-			name = name.substring(name.lastIndexOf("."));
+			name = name.substring(name.lastIndexOf(".") + 1);
 			data[i][0] = new String(name);
 			data[i][1] = new Boolean(false);
 			data[i][2] = new String("Config");
