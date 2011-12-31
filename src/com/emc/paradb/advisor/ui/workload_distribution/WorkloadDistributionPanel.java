@@ -27,7 +27,6 @@ public class WorkloadDistributionPanel extends JPanel
 		this.setLayout(new BorderLayout());
 		this.add(box, BorderLayout.CENTER);
 		JTextArea description = new JTextArea("DESCRIPTION: The number of data accessed by transactions on each node");
-		description.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		this.add(description, BorderLayout.NORTH);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		

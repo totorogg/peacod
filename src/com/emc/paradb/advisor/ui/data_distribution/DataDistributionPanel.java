@@ -27,11 +27,8 @@ public class DataDistributionPanel extends JPanel
 	public DataDistributionPanel()
 	{
 		this.setLayout(new BorderLayout());
-		JTextArea description = new JTextArea("DESCRIPTION: It describes how even data is distributed on each nodes.\n" +
-				"When a single algorithm is selected, Y axis denotes the volumn of data, X axis denotes the nodes.\n" +
-				"When several algorithms are selected, Y axis ...........................................");
+		JTextArea description = new JTextArea("DESCRIPTION: It describes how even data is distributed on each nodes.\n");
 		description.setLineWrap(true);
-		description.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		
 		this.add(description, BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);

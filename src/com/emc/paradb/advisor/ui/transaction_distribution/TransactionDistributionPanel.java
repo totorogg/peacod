@@ -5,6 +5,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Insets;
 import java.awt.Paint;
+import java.awt.font.TextAttribute;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +21,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import javax.swing.text.MutableAttributeSet;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
@@ -44,16 +52,21 @@ public class TransactionDistributionPanel extends JPanel
 	{
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
-		JTextArea description = new JTextArea("DESCRIPTION:\n" +
-											  "Left Pie shows the ratio between distributed and non-distributed Xacts\n" +
-											  "Right Pie shows the ratio among node number that a distributed transaction can access");
-		description.setLineWrap(true);
-		description.setFont(new Font("Times New Roman", Font.PLAIN, 12));
+		JTextPane description = new JTextPane();
+		MutableAttributeSet set = new SimpleAttributeSet();
+		StyleConstants.setLineSpacing(set, -0.4f);
+		StyleConstants.setFontFamily(set, "Comic Sans MS");
+		description.setParagraphAttributes(set, true);
 		
+		description.setText("DESCRIPTION:\n" +
+				  "Left Pie shows the ratio between distributed and non-distributed Xacts. " +
+				  "Right Pie shows the ratio among node number that a distributed transaction can access.");
+		description.setEditable(false);
+
 		this.add(description);
-		this.add(Box.createVerticalStrut(30));
+		this.add(Box.createVerticalStrut(45));
 		this.add(box);
-		this.add(Box.createVerticalStrut(30));
+		this.add(Box.createVerticalStrut(45));
 		
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
@@ -64,7 +77,6 @@ public class TransactionDistributionPanel extends JPanel
 			data.add(10);
 			nodeAccess.put(i, 100);
 		}
-
 		setChart(data, nodeAccess);
 	}
 	
@@ -73,7 +85,7 @@ public class TransactionDistributionPanel extends JPanel
 		PieDataset result = createDataset1();
 		PieDataset result2 = createDataset2();
 		
-		JFreeChart chart = createChart(result, "Dist./NonDist.", true);
+		JFreeChart chart = createChart(result, "Distributed/NonDistributed", true);
 		JFreeChart chart2 = createChart(result2, "Transaction Coverage(Node)", false);
 		
 		
@@ -116,13 +128,21 @@ public class TransactionDistributionPanel extends JPanel
 	        true,
 	        false
 	    );
-	    
+	    chart.getTitle().setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
+	    chart.setBorderVisible(false);
+	    chart.setBorderPaint(null);
+
 	    PiePlot plot = (PiePlot) chart.getPlot();
-	    plot.setLabelFont(new Font("Times New Roman", Font.PLAIN, 16));
+	    plot.setLabelFont(new Font("Comic Sans MS", Font.PLAIN, 12));
 	    plot.setSimpleLabels(simple);
-	    
+	    plot.setOutlineVisible(false);
+	    plot.setLabelGenerator(new StandardPieSectionLabelGenerator(
+                "{0} {2}",
+                NumberFormat.getNumberInstance(),
+                new DecimalFormat("0%")));
 	    plot.setDirection(Rotation.CLOCKWISE);
 	    plot.setBackgroundPaint(Color.white);
+	    plot.setInteriorGap(0.06f);
 	    return chart;
 	}
 	

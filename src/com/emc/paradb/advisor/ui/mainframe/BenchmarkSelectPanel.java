@@ -56,7 +56,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	
 	private JTextField workloadText = new JTextField("100");
 	
-	private JButton startButton = new JButton("Analyze");
+	private JButton startButton = new JButton("Evaluate");
 	private JButton stopButton = new JButton("Recommend");
 	
 	private JProgressBar loadProgress = new JProgressBar(0, 100);
@@ -64,7 +64,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	public BenchmarkSelectPanel()
 	{
 		benchmarkSelectPanel.setLayout(new BoxLayout(benchmarkSelectPanel, BoxLayout.Y_AXIS));
-		benchmarkSelectPanel.setPreferredSize(new Dimension(135, ABORT));
+		benchmarkSelectPanel.setPreferredSize(new Dimension(145, ABORT));
 		benchmarkSelectPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
 		
 		bmComboBox = new JComboBox(bmString);
@@ -102,7 +102,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		dataSetBox.add(Box.createHorizontalStrut(10));
 		dataSetBox.add(new JLabel("GB"));
 		bmBox.add(dataSetBox);
-
+		
 		bmBox.add(Box.createVerticalStrut(5));
 		JTextArea nodeLabel = new JTextArea("Node Number");
 		nodeLabel.setBackground(null);
@@ -112,16 +112,15 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		nodeCountText.setMargin(new Insets(2, 5, 2, 5));
 		bmBox.add(nodeCountText);
 		
-
 		bmBox.add(Box.createVerticalStrut(5));
-		
+			
 		Box buttonBox = Box.createHorizontalBox();
-	
+		
 		loadProgress.setString("progress...");
 		loadProgress.setStringPainted(true);
 		bmBox.add(Box.createVerticalStrut(10));
 		bmBox.add(loadProgress);
-
+		
 		bmBox.add(Box.createVerticalStrut(10));
 		buttonBox.add(startButton);
 		startButton.setMargin(new Insets(2,3,2,3));
@@ -130,7 +129,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		stopButton.setMargin(new Insets(2,3,2,3));
 		buttonBox.add(Box.createHorizontalGlue());
 		bmBox.add(buttonBox);
-		
+		bmBox.add(Box.createVerticalStrut(15));
 		benchmarkSelectPanel.add(bmBox);
 		this.add(benchmarkSelectPanel, "Benchmarks");
 		startButton.addActionListener(this);
