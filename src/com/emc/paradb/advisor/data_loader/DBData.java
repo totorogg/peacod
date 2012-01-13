@@ -1,7 +1,6 @@
 package com.emc.paradb.advisor.data_loader;
 
 import java.util.HashMap;
-import java.util.Vector;
 
 public class DBData
 {

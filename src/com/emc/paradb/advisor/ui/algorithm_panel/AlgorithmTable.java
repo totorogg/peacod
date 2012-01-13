@@ -18,7 +18,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
 
-import com.emc.paradb.advisor.controller.Controller;
+import com.emc.paradb.advisor.controller.AlgorithmController;
+import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.plugin.Plugin;
 
 class AlgorithmTable extends JTable
@@ -30,7 +31,7 @@ class AlgorithmTable extends JTable
 	
 	public AlgorithmTable(){	
 		
-		dm.setColumnIdentifiers(new Object[]{ "Algorithm", "Use", "Advance" });
+		dm.setColumnIdentifiers(new Object[]{ "Scheme", "Use", "Advance" });
 		this.setModel(dm);
 		setVisible(true);
 	}
@@ -47,11 +48,11 @@ class AlgorithmTable extends JTable
 			name = name.substring(name.lastIndexOf(".") + 1);
 			data[i][0] = new String(name);
 			data[i][1] = new Boolean(false);
-			data[i][2] = new String("Config");
+			data[i][2] = new String("setting");
 		}
 		
 		//dm.addRow(data);
-		dm.setDataVector(data, new Object[]{ "Algorithm", "Use", "Advance" });
+		dm.setDataVector(data, new Object[]{ "Scheme", "Use", "Advance" });
 		this.setModel(dm);
 		
 		this.getColumn("Advance").setCellRenderer(new AlgorithmButtonRenderer());
@@ -62,7 +63,7 @@ class AlgorithmTable extends JTable
 		this.getColumn("Use").setCellEditor(this.getDefaultEditor(Boolean.class));
 		this.getColumn("Use").setPreferredWidth(40);
 		
-		this.getColumn("Algorithm").setPreferredWidth(80);
+		this.getColumn("Scheme").setPreferredWidth(80);
 	}
 	
 	public void registerDescriptionPanel(AlgorithmDescriptionPanel adPanel)
@@ -84,7 +85,7 @@ class AlgorithmTable extends JTable
 		TableModel model = (TableModel)e.getSource();
 		Boolean checkBox = (Boolean)model.getValueAt(row, column);
 			
-		Controller.updateSelectedAlgorithm(row, checkBox.booleanValue());
+		AlgorithmController.updateSelectedAlgorithm(row, checkBox.booleanValue());
 	}
 	
 	//if a different is selected, the corresponding description should also be changed
@@ -100,7 +101,7 @@ class AlgorithmTable extends JTable
 		if(selectedIndex != lastSelectedRow && selectedIndex >= 0)
 		{
 			lastSelectedRow = selectedIndex;
-			Plugin aPlugin= Controller.getAlgorithm(selectedIndex);
+			Plugin aPlugin= AlgorithmController.getAlgorithm(selectedIndex);
 			adPanel.setText(aPlugin.getDescription());
 		}
 	}

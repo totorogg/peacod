@@ -1,15 +1,35 @@
 package com.emc.paradb.advisor.plugin;
 
 
+/**
+ * note that we only take "key" and "value" into account when considering hashCode and equals
+ * @author panx1
+ *
+ */
 public class KeyValuePair
 {
-	private String key;
-	private String value;
+	private String table = null;
+	private String key = null;
+	private String value = null;
+	private long cardinality = 0;
+	
 	
 	public KeyValuePair(String key, String value)
 	{
 		this.key = key;
 		this.value = value;
+	}
+	public KeyValuePair(String table, String key, String value)
+	{
+		this.table = table;
+		this.key = key;
+		this.value = value;
+	}
+	public KeyValuePair(String key, String value, long card)
+	{
+		this.key = key;
+		this.value = value;
+		this.cardinality = card;
 	}
 	public String getKey()
 	{
@@ -19,7 +39,14 @@ public class KeyValuePair
 	{
 		return value;
 	}
-	
+	public long getCard()
+	{
+		return cardinality;
+	}
+	public String getTable()
+	{
+		return table;
+	}
 	public boolean equals(Object obj)
 	{
 		if(this == obj)
@@ -30,7 +57,8 @@ public class KeyValuePair
 			return false;
 	
 		KeyValuePair kvPair = (KeyValuePair)obj;
-		if(kvPair.getKey().equals(key) && kvPair.getValue().equals(value))
+		if(kvPair.getKey().equals(key) && 
+		   kvPair.getValue().equals(value))
 			return true;
 		
 		return false;

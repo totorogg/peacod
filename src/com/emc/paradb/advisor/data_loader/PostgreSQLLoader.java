@@ -9,13 +9,11 @@ public class PostgreSQLLoader extends DataLoader
 {
 	private String db = null;
 	private PGMetaLoader pgMetaLoader = null;
-	//PGDataLoader pgDataLoader = null;
 	
-	public PostgreSQLLoader(String selectedBM) throws Exception{
-		super(selectedBM);
-		
+	public PostgreSQLLoader(String selectedBM) throws Exception
+	{
 		if(selectedBM.equalsIgnoreCase("tpc-c"))
-			db = "dbt2";
+			db = "dbt2_large";
 		else
 			throw new Exception("other benchmark not implemeneted yet");
 
@@ -51,7 +49,6 @@ class PGConnector
 			Class.forName("org.postgresql.Driver").newInstance();
 			conn = DriverManager.getConnection(
 					String.format("jdbc:postgresql://%s:%s/%s", IP, port, db), user, password);
-			
 		}
 		catch(Exception e)
 		{

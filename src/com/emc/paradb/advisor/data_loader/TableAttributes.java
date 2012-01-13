@@ -20,10 +20,7 @@ public class TableAttributes
 	private int Cardinality;//number of different value the attribute has
 	private Set<AttributeValue> values = null;
 	
-	private class ValueCount<Object, Integer>
-	{
-		
-	}
+
 	public TableAttributes(String table, String name, Connection conn)
 	{	
 		this.conn = conn;

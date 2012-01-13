@@ -56,7 +56,7 @@ class PGMetaLoader
 					tableResult.last();
 					int currentPos = 0;
 					int rowCount = tableResult.getRow();
-					rowCount *= 2;
+					rowCount++;
 					tableResult.beforeFirst();
 					
 					//get all the TableNodes
@@ -88,7 +88,6 @@ class PGMetaLoader
 						Vector<Object> adjacentListNode = getFKRef(refNode, refedNode);						
 						refNode.addRefed(adjacentListNode);
 
-						progress = (float)(++currentPos)/rowCount;
 					}
 					progress = 1;
 				}

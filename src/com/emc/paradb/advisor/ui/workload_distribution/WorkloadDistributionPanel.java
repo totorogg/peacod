@@ -17,6 +17,9 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+import com.emc.paradb.advisor.controller.EvaluateController;
+import com.emc.paradb.advisor.ui.data_distribution.DataDistributionCB;
+
 
 public class WorkloadDistributionPanel extends JPanel
 {
@@ -30,31 +33,23 @@ public class WorkloadDistributionPanel extends JPanel
 		this.add(description, BorderLayout.NORTH);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
-		List<Integer> data = new ArrayList<Integer>();
-		
-		for(int i = 0; i < 10; i++){
-			data.add(10);
-		}
-		setChart(data);
+		EvaluateController.RegisterWorkloadDistributionCB(new WorkloadDistributionCB()
+		{
+			public void draw(List<Long> data)
+			{
+				box.removeAll();
+				
+				workloadChart = WorkloadChart.createChart(data);
+				box.add(Box.createHorizontalGlue());
+				box.add(workloadChart);
+				box.add(Box.createHorizontalGlue());
+			}
+		});
 	}
-	
-	public void setChart(List<Integer> data){
-		
-		workloadChart = WorkloadChart.createChart(data);
-		box.add(Box.createHorizontalGlue());
-		box.add(workloadChart);
-		box.add(Box.createHorizontalGlue());
-	}
-	
-	
 }
-
-
-
-
-class WorkloadChart {
-	
-	public static JLabel createChart(List<Integer> tuples){
+class WorkloadChart 
+{	
+	public static JLabel createChart(List<Long> tuples){
 		
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
@@ -72,7 +67,6 @@ class WorkloadChart {
 		
 		return lb;
 	}
-
 }
 
 

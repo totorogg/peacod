@@ -18,8 +18,19 @@ public interface PlugInterface
 	
 	//placement methods, plug-in should implement one and only one of the placement method
 	//the implemented method should by noted in the xml's <placementmethod> tag
-	public HashMap<KeyValuePair, Integer> getPlacement();
-	public int getNode();
+	//note that it return -1 to indicate it cannot get node number;
+	//note that it return -2 to indicate every node is OK (replicated)
+	public int getNode(KeyValuePair kvPair);
+	
+	//insert methods, plug-in should implement one insert method, return the node to insert
+	//note that it return -1 to indicate it cannot get node number;
+	//note that it return -2 to indicate every node is OK (replicated)
+	public int insert(KeyValuePair kvPair);
+	
+	//insert methods, plug-in should implement one remove method, return the node to remove
+	//note that it return -1 to indicate it cannot get node number;
+	//note that it return -2 to indicate every node is OK (replicated)
+	public int remove(KeyValuePair kvPair);
 }
 
 

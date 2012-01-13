@@ -1,11 +1,7 @@
 package com.emc.paradb.advisor.ui.transaction_distribution;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Insets;
-import java.awt.Paint;
-import java.awt.font.TextAttribute;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -20,32 +16,27 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.text.MutableAttributeSet;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.labels.PieSectionLabelGenerator;
 import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
-import org.jfree.chart.plot.AbstractPieLabelDistributor;
 import org.jfree.chart.plot.PieLabelDistributor;
 import org.jfree.chart.plot.PiePlot;
-import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
-import org.jfree.ui.RectangleInsets;
 import org.jfree.util.Rotation;
+
+import com.emc.paradb.advisor.controller.EvaluateController;
 
 
 
 public class TransactionDistributionPanel extends JPanel
 {
-	private JLabel tranDistChart = null;
 	private Box box = Box.createHorizontalBox();
 	
 	public TransactionDistributionPanel()
@@ -58,63 +49,67 @@ public class TransactionDistributionPanel extends JPanel
 		StyleConstants.setFontFamily(set, "Comic Sans MS");
 		description.setParagraphAttributes(set, true);
 		
-		description.setText("DESCRIPTION:\n" +
-				  "Left Pie shows the ratio between distributed and non-distributed Xacts. " +
-				  "Right Pie shows the ratio among node number that a distributed transaction can access.");
+		description.setText("Description:\n  This metric measures how many distributed transactions have resulted from partitioning. Since distributed transactions incur dominant execution cost, a fewer number of them implies the better scheme performance." +
+							"The left figure shows the distributed transactions’ ratio by the selected scheme. The right figure shows the ratios of node number which a distributed transaction can access.");
 		description.setEditable(false);
 
+		Box labelBox = Box.createHorizontalBox();
+		JLabel label = new JLabel("Partition scheme: CountMaxRR");
+		labelBox.add(label);
+		labelBox.add(Box.createHorizontalGlue());
 		this.add(description);
-		this.add(Box.createVerticalStrut(45));
+		this.add(Box.createVerticalStrut(10));
+		this.add(labelBox);
+		this.add(Box.createVerticalStrut(15));
 		this.add(box);
-		this.add(Box.createVerticalStrut(45));
-		
+		this.add(Box.createVerticalStrut(5));
+				
 		this.setBorder(BorderFactory.createEtchedBorder());
+
 		
-		List<Integer> data = new ArrayList<Integer>();
-		HashMap<Integer, Integer> nodeAccess = new HashMap<Integer, Integer>();
-		
-		for(int i = 0; i < 10; i++){
-			data.add(10);
-			nodeAccess.put(i, 100);
-		}
-		setChart(data, nodeAccess);
+		EvaluateController.RegisterTransactionDistributionCB(new TransactionDistributionCB()
+		{
+			@Override
+			public void draw(int dist, int nonDist, Map<Integer, Integer> nodeAccess) 
+			{
+				// TODO Auto-generated method stub
+				
+				PieDataset result = createDistNonDistDataset(dist, nonDist);
+				PieDataset result2 = createNodeAccessDataset(nodeAccess);
+				
+				JFreeChart chart = createChart(result, "Distributed/NonDistributed", true);
+				JFreeChart chart2 = createChart(result2, "Nodes Coverage of Distributed Transactions", false);
+				
+				chart2.removeLegend();
+				
+				ChartPanel chartPanel = new ChartPanel(chart);
+				ChartPanel chartPanel2 = new ChartPanel(chart2);
+				
+				box.removeAll();
+				box.add(Box.createHorizontalGlue());
+				box.add(chartPanel);
+				box.add(chartPanel2);
+				box.add(Box.createHorizontalGlue());
+			}
+		});
 	}
 	
-	public void setChart(List<Integer> data, Map<Integer, Integer> nodeAccess){
-		
-		PieDataset result = createDataset1();
-		PieDataset result2 = createDataset2();
-		
-		JFreeChart chart = createChart(result, "Distributed/NonDistributed", true);
-		JFreeChart chart2 = createChart(result2, "Transaction Coverage(Node)", false);
-		
-		
-		chart2.removeLegend();
-		
-		ChartPanel chartPanel = new ChartPanel(chart);
-		ChartPanel chartPanel2 = new ChartPanel(chart2);
-		
-		box.add(Box.createHorizontalGlue());
-		box.add(chartPanel);
-		box.add(chartPanel2);
-		box.add(Box.createHorizontalGlue());
-	}
-	private  PieDataset createDataset1() 
+	private  PieDataset createDistNonDistDataset(int dist, int nonDist) 
 	{
         DefaultPieDataset result = new DefaultPieDataset();
-        result.setValue("Distributed", 60);
-        result.setValue("Non-Distributed", 40);
+        result.setValue("Distributed", dist);
+        result.setValue("Non-Distributed", nonDist);
         return result;
     }
 	
-	private  PieDataset createDataset2() 
+	private  PieDataset createNodeAccessDataset(Map<Integer, Integer> nodeAccess) 
 	{
         DefaultPieDataset result = new DefaultPieDataset();
 		
-        for(int i = 1; i < 5; i++){
-        	
-			result.setValue(String.format("%s", i) , i * 10);
-		}
+        for(Integer node : nodeAccess.keySet())
+        {
+        	result.setValue(String.format("%s", node) , nodeAccess.get(node));
+        }      
         return result;
     }
 	
@@ -128,7 +123,7 @@ public class TransactionDistributionPanel extends JPanel
 	        true,
 	        false
 	    );
-	    chart.getTitle().setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
+	    chart.getTitle().setFont(new Font("Comic Sans MS", Font.BOLD, 18));
 	    chart.setBorderVisible(false);
 	    chart.setBorderPaint(null);
 
@@ -161,8 +156,8 @@ public class TransactionDistributionPanel extends JPanel
 
 
 
-class DistNonDistChart {
-	
+class DistNonDistChart 
+{	
 	public static JLabel createChart(int nonDist, int dist){
 		
 		DefaultPieDataset ds = new DefaultPieDataset();
@@ -174,11 +169,10 @@ class DistNonDistChart {
 		
 		return lb;
 	}
-
 }
 
-class DistChart {
-
+class DistChart 
+{
 	public static JLabel createChart(Map<Integer, Integer> nodeAccess) {
 		
 		DefaultPieDataset ds = new DefaultPieDataset();
@@ -197,5 +191,4 @@ class DistChart {
 
 		return lb;
 	}
-
 }

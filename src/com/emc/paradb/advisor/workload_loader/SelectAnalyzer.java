@@ -131,8 +131,8 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 			Column cr = (Column)aEqualTo.getRightExpression();
 			
 			WhereKey newWk = null;
-			for(WhereKey wk : info.getWhereKeys()){
-					
+			for(WhereKey wk : info.getWhereKeys())
+			{	
 				if(wk.getKeyName().equals(cl.getColumnName())){
 					newWk = new WhereKey();
 					newWk.setTableName(cr.getTable().getName());
@@ -148,7 +148,8 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 					break;
 				}			
 			}
-			if(newWk != null){
+			if(newWk != null)
+			{
 				info.getWhereKeys().add(newWk);	
 			}
 		}

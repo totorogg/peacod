@@ -37,7 +37,7 @@ public class AlgorithmSelectPanel extends JTabbedPane
 		tabbedPanel.add(adPanel, BorderLayout.SOUTH);
 		tabbedPanel.setPreferredSize(new Dimension(200, 400));
 		tabbedPanel.setMinimumSize(new Dimension(150, 400));
-		this.add(tabbedPanel, "Algorithms");
+		this.add(tabbedPanel, "Schemes");
 	}
 	
 	public AlgorithmTable getAlgorithmTable()

@@ -14,6 +14,7 @@ public class AlgorithmFactory
 	
 	private static Plugin countMaxRR = new Plugin();
 	private static Plugin schemaHash = new Plugin();
+	private static Plugin consistentHash = new Plugin();
 	private static Plugin PKHash = new Plugin();
 	private static Plugin PKRange = new Plugin();
 	private static Plugin PKRoundRobin = new Plugin();
@@ -28,54 +29,59 @@ public class AlgorithmFactory
 		countMaxRR.setInterface(new CountMaxRR());
 		countMaxRR.setInfo("com.emc.paradb.advisor.algorithm.CountMaxRR",
 							"getPartitionKey()", "getNode()",
-							"this algorithm select the keys that are most frequently accessed, and partition them in roundRobin manner");
+							"This scheme select the keys that are most frequently accessed, and partition them in roundRobin manner.");
 	
 		schemaHash.setInterface(new SchemaHash());
 		schemaHash.setInfo("com.emc.paradb.advisor.algorithm.SchemaHash",
-							"getPartitionKey()", "getPartitionKey()",
-							"this algorithm select partition key based on database schema. primary key in \"root table\" is the basic partition key");
+							"getPartitionKey()", "getNode()",
+							"This algorithm select partition key based on database schema. primary key in \"root table\" is the basic partition key.");
 	
+		consistentHash.setInterface(new SchemaHash());
+		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
+							"getPartitionKey()", "getNode()",
+							"This algorithm partition the key based on consistent hashing.");
 	
 		PKHash.setInterface(new SchemaHash());
 		PKHash.setInfo("com.emc.paradb.advisor.algorithm.PKHash",
-							"getPartitionKey()", "getPartitionKey()",
-							"this algorithm select primary key as partition key and place values via hash function");
+							"getPartitionKey()", "getNode()",
+							"This algorithm select primary key as partition key and place values via hash function.");
 	
 		PKRange.setInterface(new SchemaHash());
 		PKRange.setInfo("com.emc.paradb.advisor.algorithm.PKRange",
-							"getPartitionKey()", "getPartitionKey()",
-							"this algorithm select primary key as partition key and place values based on their range");
+							"getPartitionKey()", "getNode()",
+							"This algorithm select primary key as partition key and place values based on their range.");
 	
 		PKRoundRobin.setInterface(new SchemaHash());
 		PKRoundRobin.setInfo("com.emc.paradb.advisor.algorithm.PKRoundRobin",
-							"getPartitionKey()", "getPartitionKey()",
-							"this algorithm select primary key as partition key and place values via round robin function");
+							"getPartitionKey()", "getNode()",
+							"This algorithm select primary key as partition key and place values via round robin function.");
 	
 		Dynamo.setInterface(new SchemaHash());
 		Dynamo.setInfo("com.emc.paradb.advisor.algorithm.Dynamo",
-							"getPartitionKey()", "getPartitionKey()",
-							"according to dynamo paper");
+							"getPartitionKey()", "getNode()",
+							"According to dynamo paper.");
 	
 		AllReplicate.setInterface(new SchemaHash());
 		AllReplicate.setInfo("com.emc.paradb.advisor.algorithm.AllReplicate",
-							"getPartitionKey()", "getPartitionKey()",
-							"the algorithm replicate table to all nodes");
+							"getPartitionKey()", "getNode()",
+							"The algorithm replicate table to all nodes.");
 	
 		AllMidterm.setInterface(new SchemaHash());
 		AllMidterm.setInfo("com.emc.paradb.advisor.algorithm.AllMidterm",
-							"getPartitionKey()", "getPartitionKey()",
-							"this algorithm analyse predicates in a workload and partition by the midterm ranges");
+							"getPartitionKey()", "getNode()",
+							"This algorithm analyse predicates in a workload and partition by the midterm ranges.");
 	
 		semiSchema.setInterface(new SchemaHash());
 		semiSchema.setInfo("com.emc.paradb.advisor.algorithm.SemiSchema",
-							"getPartitionKey()", "getPartitionKey()",
-							"this algorithm partition the root table based on predicates in workload and partition other tables by fk references");
+							"getPartitionKey()", "getNode()",
+							"This algorithm partition the root table based on predicates in workload and partition other tables by fk references.");
 	}
 	
 	public static void loadBuildin()
 	{
 		algorithms.add(countMaxRR);
 		algorithms.add(schemaHash);
+		algorithms.add(consistentHash);
 		algorithms.add(PKHash);
 		algorithms.add(PKRange);
 		algorithms.add(PKRoundRobin);

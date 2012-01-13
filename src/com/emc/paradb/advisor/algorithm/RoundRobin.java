@@ -1,22 +1,32 @@
 package com.emc.paradb.advisor.algorithm;
 
-
+/**
+ * a util class provides the round robin function
+ * @author panx1
+ *
+ */
 public class RoundRobin
 {
 	private int nodes = 0;
-	private int curNode = 0;
-	
 	public RoundRobin(int nodes)
 	{
 		this.nodes = nodes;
 	}
 	/**
-	 * the RoundRobin class will record the current node
-	 * the next time you call getPlacement(), it will return (current node + 1)%nodes
+	 * we define the round robin as value % node, a special case of hash
 	 * @return
 	 */
-	public int getPlacement()
+	public int getPlacement(String value)
 	{
-		return (curNode++) % nodes;
+		int node = 0;
+		try
+		{
+			node = Integer.valueOf(value) % nodes;
+		}
+		catch(NumberFormatException e)
+		{
+			node = value.hashCode() % nodes;
+		}
+		return node;		
 	}
 }

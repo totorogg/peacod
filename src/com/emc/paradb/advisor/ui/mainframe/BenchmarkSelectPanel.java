@@ -29,6 +29,8 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
 import com.emc.paradb.advisor.controller.Controller;
+import com.emc.paradb.advisor.controller.EvaluateController;
+import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.DataLoader;
 import com.emc.paradb.advisor.data_loader.PostgreSQLLoader;
@@ -52,12 +54,12 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	
 	private JTextField dataSetText = new JTextField("10");
 	
-	private JTextField nodeCountText = new JTextField("5");
+	private JTextField nodeCountText = new JTextField("7");
 	
-	private JTextField workloadText = new JTextField("100");
+	private JTextField workloadText = new JTextField("1000");
 	
-	private JButton startButton = new JButton("Evaluate");
-	private JButton stopButton = new JButton("Recommend");
+	private JButton evaluateButton = new JButton("Evaluate");
+	private JButton recommendButton = new JButton("Recommend");
 	
 	private JProgressBar loadProgress = new JProgressBar(0, 100);
 	
@@ -122,32 +124,48 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(loadProgress);
 		
 		bmBox.add(Box.createVerticalStrut(10));
-		buttonBox.add(startButton);
-		startButton.setMargin(new Insets(2,3,2,3));
+		buttonBox.add(evaluateButton);
+		evaluateButton.setMargin(new Insets(2,3,2,3));
 		buttonBox.add(Box.createHorizontalStrut(5));
-		buttonBox.add(stopButton);
-		stopButton.setMargin(new Insets(2,3,2,3));
+		buttonBox.add(recommendButton);
+		recommendButton.setMargin(new Insets(2,3,2,3));
 		buttonBox.add(Box.createHorizontalGlue());
 		bmBox.add(buttonBox);
 		bmBox.add(Box.createVerticalStrut(15));
 		benchmarkSelectPanel.add(bmBox);
 		this.add(benchmarkSelectPanel, "Benchmarks");
-		startButton.addActionListener(this);
+		
+		evaluateButton.addActionListener(this);
+		recommendButton.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) 
 	{
 		// TODO Auto-generated method stub
-		new Thread()
+		if(arg0.getSource() == evaluateButton)
 		{
-			public void run()
+			new Thread()
 			{
-				String selectedDB = dbComboBox.getSelectedItem().toString();
-				String selectedBM = bmComboBox.getSelectedItem().toString();
-				
-				Controller.start(selectedDB, selectedBM, loadProgress);
-			}
-		}.start();
+				public void run()
+				{
+					String selectedDB = dbComboBox.getSelectedItem().toString();
+					String selectedBM = bmComboBox.getSelectedItem().toString();
+					int nodes = Integer.valueOf(nodeCountText.getText().toString());
+					PrepareController.start(selectedDB, selectedBM, nodes,loadProgress);
+				}
+			}.start();
+		}
+		else if(arg0.getSource() == recommendButton)
+		{
+			new Thread()
+			{
+				public void run()
+				{
+					int nodes = Integer.valueOf(nodeCountText.getText().toString());
+					EvaluateController.recommend(nodes);
+				}
+			}.start();
+		}
 	}
 }

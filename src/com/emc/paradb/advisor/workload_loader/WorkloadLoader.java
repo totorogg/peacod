@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.HashMap;
 import java.util.Set;
 import java.util.Vector;
 
+import com.emc.paradb.advisor.controller.Controller;
+import com.emc.paradb.advisor.data_loader.TableAttributes;
+import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.workload_loader.SelectAnalyzer;
 
 import net.sf.jsqlparser.statement.Statement;
@@ -57,7 +61,7 @@ public class WorkloadLoader
 					while((line = reader.readLine()) != null)
 					{
 						readLength += line.getBytes().length;
-						progress = (float)readLength/file.length();
+						progress = (float)readLength/(file.length() * 1.1f);
 						if(line.equalsIgnoreCase("-"))
 						{
 							tran = new Transaction<Object>();
@@ -91,11 +95,13 @@ public class WorkloadLoader
 							InsertAnalysisInfo sqlInfo = analyzer.analyze((Insert)statement);
 							tran.add(sqlInfo);
 						}
-
+						
 					}
+					//filled some entries in workload (e.g. when a=1, we should add table.a = 1).
+					fix();
 					progress = 1;
 					/*for test
-					for(Transaction aTran : workload)
+					for(Transaction<Object> aTran : workload)
 					{
 						for(Object statement : aTran)
 						{
@@ -111,6 +117,7 @@ public class WorkloadLoader
 							}
 						}
 					}*/
+					reader.close();
 				} 
 				catch (Exception e) 
 				{
@@ -120,6 +127,66 @@ public class WorkloadLoader
 				}
 			}
 		}.start();
+	}
+	
+	protected void fix()
+	{
+		for(Transaction<Object> aTran : workload)
+		{
+			for(Object statement : aTran)
+			{
+				if(statement instanceof SelectAnalysisInfo)
+				{
+					SelectAnalysisInfo select = (SelectAnalysisInfo)statement;
+					
+					for(WhereKey key : select.getWhereKeys())		
+						updateWhereKey(key);	
+					
+				}
+				else if(statement instanceof UpdateAnalysisInfo)
+				{
+					UpdateAnalysisInfo update = (UpdateAnalysisInfo)statement;
+					for(WhereKey key : update.getWhereKeys())
+						updateWhereKey(key);	
+					
+				}
+				else if(statement instanceof InsertAnalysisInfo)
+				{
+					//insert should always has the table name
+				}
+				else if(statement instanceof DeleteAnalysisInfo)
+				{
+					DeleteAnalysisInfo delete = (DeleteAnalysisInfo)statement;
+					for(WhereKey key : delete.getWhereKeys())
+						updateWhereKey(key);
+				}
+			}
+		}
+	}
+	
+	protected void updateWhereKey(WhereKey key)
+	{
+		if(key.getTableName() != null)
+			return;
+		
+		String table = null;	
+		HashMap<String, TableNode> tables = Controller.getData().getMetaData();
+		
+		for(TableNode tableNode : tables.values())
+		{
+			HashMap<String, TableAttributes> attributes = tableNode.getAttributes();
+			if(attributes.get(key.getKeyName()) != null)
+			{
+				table = tableNode.getName();
+				break;
+			}
+		}
+		
+		//findTableName:
+		if(table == null)
+			System.out.println(String.format("%s cannot find %s", table, key));
+		
+		key.setTableName(table);
 	}
 }
 

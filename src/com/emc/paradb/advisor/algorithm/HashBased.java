@@ -1,6 +1,10 @@
 package com.emc.paradb.advisor.algorithm;
 
-
+/**
+ * a util class provides the hash function
+ * @author panx1
+ *
+ */
 public class HashBased
 {
 	private int nodes = 0;

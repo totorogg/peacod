@@ -1,10 +1,11 @@
 package com.emc.paradb.advisor.workload_loader;
 
+
 public class WhereKey {
 	
-	String tableName;
-	String keyName;
-	Object keyValue;
+	String tableName = null;
+	String keyName = null;
+	Object keyValue = null;
 	
 	public Object getKeyValue() {
 		return keyValue;
@@ -26,7 +27,8 @@ public class WhereKey {
 	}
 	
 	@Override
-	public int hashCode() {
+	public int hashCode() 
+	{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((keyName == null) ? 0 : keyName.hashCode());
@@ -34,7 +36,10 @@ public class WhereKey {
 				+ ((tableName == null) ? 0 : tableName.hashCode());
 		return result;
 	}
-	
+	public String toString()
+	{
+		return tableName + ":" + keyName + ":" + keyValue;
+	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

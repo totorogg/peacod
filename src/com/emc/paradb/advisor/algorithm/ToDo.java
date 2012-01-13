@@ -13,29 +13,4 @@ import com.emc.paradb.advisor.workload_loader.Workload;
 public class ToDo extends NaiveAlgorithm
 {
 
-	@Override
-	public boolean accept(Connection conn,
-			Workload<Transaction<Object>> workload, DBData dbData, int nodes) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public HashMap<String, String> getPartitionKey() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public HashMap<KeyValuePair, Integer> getPlacement() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int getNode() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 }

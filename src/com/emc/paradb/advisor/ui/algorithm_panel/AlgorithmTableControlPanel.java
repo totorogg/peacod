@@ -13,6 +13,7 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.TableModel;
 
 import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
+import com.emc.paradb.advisor.controller.AlgorithmController;
 import com.emc.paradb.advisor.controller.Controller;
 
 
@@ -26,7 +27,7 @@ public class AlgorithmTableControlPanel extends JPanel
 	public AlgorithmTableControlPanel(){
 		this.setBorder(BorderFactory.createEtchedBorder());
 		Box box = Box.createHorizontalBox();
-		box.add(Box.createHorizontalStrut(180));
+		box.add(Box.createHorizontalStrut(160));
 		box.add(load);
 		
 		load.setPreferredSize(new Dimension(ABORT, 20));
@@ -37,7 +38,7 @@ public class AlgorithmTableControlPanel extends JPanel
 		{	
 			public void actionPerformed(ActionEvent e)
 			{
-				Controller.loadAlgorithm();				
+				AlgorithmController.loadAlgorithm();				
 				algorithmTable.setData(AlgorithmFactory.getAlgorithms());
 			}
 		});

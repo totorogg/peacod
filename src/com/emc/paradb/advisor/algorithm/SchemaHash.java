@@ -7,6 +7,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.SortedMap;
+import java.util.TreeMap;
 import java.util.Vector;
 
 import com.emc.paradb.advisor.data_loader.DBData;
@@ -16,16 +18,29 @@ import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
-
+/**
+ * this class select a base table first. The base table should be a most influential table.
+ * If table A references table B, we said table B has influentiality 1.
+ * If another table references A, than B should have influentiality 2.
+ * e.g. warehouse table has the highest influentiality.
+ * 
+ * then it partition the base table by its primary key. all other tables reference it
+ * are partitioned by the foreign keys referencing its parent table (e.g. base table)
+ * 
+ * this class implements the getPartitionKey and getPlacement.
+ * therefore, it should know a value of a key goes to which node.
+ * 
+ * @author panx1
+ *
+ */
 public class SchemaHash implements PlugInterface
 {
 	Connection conn = null;
 	Workload<Transaction<Object>> workload = null;
 	DBData dbData = null;
-	RoundRobin RR = null;
+	HashBased hash = null;
 	int nodes = 0;
 	
-	HashMap<KeyValuePair, Integer> kvnMap = new HashMap<KeyValuePair, Integer>();
 	HashMap<String, String> tableKeyMap = new HashMap<String, String>();
 	
 	@Override
@@ -40,7 +55,7 @@ public class SchemaHash implements PlugInterface
 		try
 		{
 			setPartition();
-			setPlacement();
+			hash = new HashBased(nodes);
 		}
 		catch(Exception e)
 		{
@@ -50,14 +65,18 @@ public class SchemaHash implements PlugInterface
 		return true;
 	}
 	
+	//set the partition, record them in tableKeyMap
 	protected void setPartition()
 	{
-		HashMap<String, TableNode> tables = dbData.getMetaData();
 		Vector<Object> influenceNode = null;
+		HashMap<String, TableNode> tables = dbData.getMetaData();
 		HashMap<String, Vector<Object>> influenceList = null;
 		HashMap<String, HashMap<String, Vector<Object>>> influenceTree = 
 				new HashMap<String, HashMap<String, Vector<Object>>>();
 		
+		
+		for(String table : tables.keySet())
+			influenceTree.put(table, new HashMap<String, Vector<Object>>());
 		
 		for(TableNode table : tables.values())
 		{
@@ -73,13 +92,7 @@ public class SchemaHash implements PlugInterface
 			for(Vector<Object> refedNode : fkRef)
 			{
 				TableNode refed = (TableNode)refedNode.get(0);
-				if(influenceTree.get(refed.getName()) == null)
-				{
-					influenceList = new HashMap<String, Vector<Object>>();
-					influenceTree.put(refed.getName(), influenceList);
-				}
-				else
-					influenceList = influenceTree.get(refed.getName());
+				influenceList = influenceTree.get(refed.getName());
 				
 				influenceNode = new Vector<Object>();
 				influenceNode.add(refedNode.get(2));
@@ -91,15 +104,18 @@ public class SchemaHash implements PlugInterface
 		while( influenceTree.size() > 0)
 		{
 			String startTable = null;
+			int max = Integer.MIN_VALUE;
 			for(String table : influenceTree.keySet())
 			{
-				int max = Integer.MIN_VALUE;
-				if(influenceTree.get(table).size() > max)
+				int size = getInfluence(table, influenceTree);	
+				if(size > max)
 				{
 					startTable = table;
-					max = influenceTree.get(table).size();
+					max = size;
 				}
 			}
+			//here we choose the first attribute, we should select the primary key in future work
+			tableKeyMap.put(startTable, tables.get(startTable).getAttrVector().get(0).getName());
 			influenceList = influenceTree.get(startTable);
 			if(influenceList.size() < 1)
 				break;
@@ -113,8 +129,21 @@ public class SchemaHash implements PlugInterface
 			}
 			influenceTree.remove(startTable);
 		}
+		tableKeyMap.put("item", "replicate");
 	}
-	
+	private int getInfluence(String table, HashMap<String, HashMap<String, Vector<Object>>> influenceTree)
+	{
+		HashMap<String, Vector<Object>> influenceList = influenceTree.get(table);
+		int descendants = 1;
+		
+		if(influenceList == null || influenceList.size() == 0)
+			return descendants;
+		
+		for(String child : influenceList.keySet())
+			descendants += getInfluence(child, influenceTree);
+		
+		return descendants;
+	}
 	private void getKeyRecursive(String startTable, String partitionKey, HashMap<String, HashMap<String, Vector<Object>>> influenceTree)
 	{
 		HashMap<String, Vector<Object>> influenceList = influenceTree.get(startTable);
@@ -133,34 +162,23 @@ public class SchemaHash implements PlugInterface
 		}
 		influenceTree.remove(startTable);
 	}
+	
 	@Override
 	public HashMap<String, String> getPartitionKey() {
 		// TODO Auto-generated method stub
 		return tableKeyMap;
 	}
 
-	protected void setPlacement()
-	{
-		HashBased hash = new HashBased(nodes);
-		
-		for(String table : tableKeyMap.keySet())
-		{
-			String key = tableKeyMap.get(table);
-			List<KeyValuePair> keyValues = getKeyValuePair(table, key);
-			for(KeyValuePair kvPair : keyValues)
-				kvnMap.put(kvPair, hash.getPlacement(kvPair.getValue()));
-		}
-	}
 	protected List<KeyValuePair> getKeyValuePair(String table, String key)
 	{
 		List<KeyValuePair> keyValueList = new ArrayList<KeyValuePair>();
 		try
 		{
 			Statement stmt = conn.createStatement();
-			ResultSet result = stmt.executeQuery(String.format("select %s from %s group by %s", key, table, key));
+			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s order by %s", key, table, key, key));
 			while(result.next())
 			{
-				KeyValuePair kvPair = new KeyValuePair(key, result.getString(1));
+				KeyValuePair kvPair = new KeyValuePair(key, result.getString(1), result.getInt(2));
 				keyValueList.add(kvPair);
 			}
 		}
@@ -172,14 +190,24 @@ public class SchemaHash implements PlugInterface
 		return keyValueList;
 	}
 	@Override
-	public HashMap<KeyValuePair, Integer> getPlacement() {
+	public int insert(KeyValuePair kvPair) {
 		// TODO Auto-generated method stub
-		return kvnMap;
+		return -1;
 	}
 
 	@Override
-	public int getNode() {
+	public int remove(KeyValuePair kvPair) {
 		// TODO Auto-generated method stub
-		return 0;
+		return -1;
+	}
+
+	@Override
+	public int getNode(KeyValuePair kvPair) {
+		// TODO Auto-generated method stub
+		String value = kvPair.getValue();
+		if(value != null)
+			return hash.getPlacement(value);
+		else
+			return -1;
 	}
 }

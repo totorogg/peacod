@@ -6,24 +6,25 @@ import java.sql.DriverManager;
 
 public abstract class DataLoader
 {
-	protected DBData dbData = new DBData();
-	protected Connection conn = null;
-	protected float progress = 0;
-	protected String selectedBM = null;
+	protected static DBData dbData = new DBData();
+	protected static Connection conn = null;
+	protected static float progress = 0;
+	protected static String selectedBM = null;
 	
-	public DataLoader(String selectedBM)
+	public static void setBenchMark(String selectedBM)
 	{	
-		this.selectedBM = selectedBM;
+		DataLoader.selectedBM = selectedBM;
 	}
-	public Connection getConn()
+	public static Connection getConn()
 	{
 		return conn;
 	}
-	public DBData getDBData()
+	public static DBData getDBData()
 	{
 		return dbData;
 	}
 	public abstract float getProgress();
+	public abstract void load();
 }
 
 

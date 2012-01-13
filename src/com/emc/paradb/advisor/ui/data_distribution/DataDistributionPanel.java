@@ -19,6 +19,8 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+import com.emc.paradb.advisor.controller.EvaluateController;
+
 public class DataDistributionPanel extends JPanel
 {
 	private JLabel dataChart = null;
@@ -27,6 +29,7 @@ public class DataDistributionPanel extends JPanel
 	public DataDistributionPanel()
 	{
 		this.setLayout(new BorderLayout());
+
 		JTextArea description = new JTextArea("DESCRIPTION: It describes how even data is distributed on each nodes.\n");
 		description.setLineWrap(true);
 		
@@ -34,28 +37,25 @@ public class DataDistributionPanel extends JPanel
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
-		List<Long> data = new ArrayList<Long>();
 		
-		for(int i = 0; i < 10; i++){
-			data.add(10L);
-		}
-		setChart(data);
+		EvaluateController.RegisterDataDistributionCB(new DataDistributionCB()
+		{
+			public void draw(List<Long> data)
+			{
+				box.removeAll();
+				
+				dataChart = DataChart.createChart(data);
+				box.add(Box.createHorizontalGlue());
+				box.add(dataChart);
+				box.add(Box.createHorizontalGlue());
+			}
+		});
 	}
-	
-	public void setChart(List<Long> data){
-		
-		dataChart = DataChart.createChart(data);
-		box.add(Box.createHorizontalGlue());
-		box.add(dataChart);
-		box.add(Box.createHorizontalGlue());
-	}
-	
-	
 }
 
 
-class DataChart {
-	
+class DataChart 
+{
 	public static JLabel createChart(List<Long> tuples){
 
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
@@ -75,5 +75,4 @@ class DataChart {
 		
 		return lb;
 	}
-
 }
