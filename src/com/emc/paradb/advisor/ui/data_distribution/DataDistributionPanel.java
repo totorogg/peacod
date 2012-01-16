@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.BorderFactory;
@@ -19,6 +20,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
+import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.controller.EvaluateController;
 
 public class DataDistributionPanel extends JPanel
@@ -38,7 +40,7 @@ public class DataDistributionPanel extends JPanel
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
 		
-		EvaluateController.RegisterDataDistributionCB(new DataDistributionCB()
+		DisplayController.registerDataDistributionCB(new DataDistributionCB()
 		{
 			public void draw(List<Long> data)
 			{
@@ -48,6 +50,19 @@ public class DataDistributionPanel extends JPanel
 				box.add(Box.createHorizontalGlue());
 				box.add(dataChart);
 				box.add(Box.createHorizontalGlue());
+				box.repaint();
+			}
+
+			@Override
+			public void draw(HashMap<String, Float> dDVarMap) {
+				// TODO Auto-generated method stub
+				box.removeAll();
+				
+				dataChart = DataChart.createChart(dDVarMap);
+				box.add(Box.createHorizontalGlue());
+				box.add(dataChart);
+				box.add(Box.createHorizontalGlue());
+				box.repaint();
 			}
 		});
 	}
@@ -75,4 +90,29 @@ class DataChart
 		
 		return lb;
 	}
+	
+	public static JLabel createChart(HashMap<String, Float> dDVarMap)
+	{
+		
+		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+		String table = "";
+		for(String algorithm : dDVarMap.keySet())
+		{
+			int index = algorithm.lastIndexOf(".");
+			String name = algorithm.substring(index + 1);
+			categoryDataset.setValue(dDVarMap.get(algorithm), "", name);
+		}
+
+		JFreeChart chart = ChartFactory.createBarChart("Distribution Variance", // Title
+				"Algorithms", // X-Axis label
+				"Variance", // Y-Axis label
+				categoryDataset, // Dataset, 
+				PlotOrientation.VERTICAL, false, true, false);
+		
+		JLabel lb = new JLabel();
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(400,180)));
+		
+		return lb;
+	}
+	
 }

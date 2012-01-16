@@ -6,7 +6,6 @@ import java.util.List;
 public class PluginManager
 {
 	public static List<Plugin> plugins = null;
-	public static List<PlugInterface> pluginInterfaces = null;
 	
 	public PluginManager(){
 		

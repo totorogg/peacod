@@ -13,7 +13,7 @@ public class PostgreSQLLoader extends DataLoader
 	public PostgreSQLLoader(String selectedBM) throws Exception
 	{
 		if(selectedBM.equalsIgnoreCase("tpc-c"))
-			db = "dbt2_large";
+			db = "dbt2";
 		else
 			throw new Exception("other benchmark not implemeneted yet");
 

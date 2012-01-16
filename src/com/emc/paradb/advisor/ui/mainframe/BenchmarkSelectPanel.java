@@ -58,15 +58,14 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	
 	private JTextField workloadText = new JTextField("1000");
 	
-	private JButton evaluateButton = new JButton("Evaluate");
-	private JButton recommendButton = new JButton("Recommend");
+	private JButton prepareButton = new JButton("Prepare");
 	
 	private JProgressBar loadProgress = new JProgressBar(0, 100);
 	
 	public BenchmarkSelectPanel()
 	{
 		benchmarkSelectPanel.setLayout(new BoxLayout(benchmarkSelectPanel, BoxLayout.Y_AXIS));
-		benchmarkSelectPanel.setPreferredSize(new Dimension(145, ABORT));
+		benchmarkSelectPanel.setPreferredSize(new Dimension(140, ABORT));
 		benchmarkSelectPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
 		
 		bmComboBox = new JComboBox(bmString);
@@ -124,26 +123,23 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(loadProgress);
 		
 		bmBox.add(Box.createVerticalStrut(10));
-		buttonBox.add(evaluateButton);
-		evaluateButton.setMargin(new Insets(2,3,2,3));
-		buttonBox.add(Box.createHorizontalStrut(5));
-		buttonBox.add(recommendButton);
-		recommendButton.setMargin(new Insets(2,3,2,3));
+		buttonBox.add(prepareButton);
 		buttonBox.add(Box.createHorizontalGlue());
+		prepareButton.setMargin(new Insets(2,3,2,3));
+		
 		bmBox.add(buttonBox);
 		bmBox.add(Box.createVerticalStrut(15));
 		benchmarkSelectPanel.add(bmBox);
 		this.add(benchmarkSelectPanel, "Benchmarks");
 		
-		evaluateButton.addActionListener(this);
-		recommendButton.addActionListener(this);
+		prepareButton.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) 
 	{
 		// TODO Auto-generated method stub
-		if(arg0.getSource() == evaluateButton)
+		if(arg0.getSource() == prepareButton)
 		{
 			new Thread()
 			{
@@ -152,20 +148,25 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					String selectedDB = dbComboBox.getSelectedItem().toString();
 					String selectedBM = bmComboBox.getSelectedItem().toString();
 					int nodes = Integer.valueOf(nodeCountText.getText().toString());
-					PrepareController.start(selectedDB, selectedBM, nodes,loadProgress);
-				}
-			}.start();
-		}
-		else if(arg0.getSource() == recommendButton)
-		{
-			new Thread()
-			{
-				public void run()
-				{
-					int nodes = Integer.valueOf(nodeCountText.getText().toString());
-					EvaluateController.recommend(nodes);
+					PrepareController.start(selectedDB, selectedBM, nodes, progressCB);
 				}
 			}.start();
 		}
 	}
+	
+	private ProgressCB progressCB = new ProgressCB(){
+
+		@Override
+		public void setProgress(int progress) {
+			// TODO Auto-generated method stub
+			loadProgress.setValue(progress);
+		}
+
+		@Override
+		public void setState(String state) {
+			// TODO Auto-generated method stub
+			loadProgress.setString(state);
+			loadProgress.setStringPainted(true);
+		}
+	};
 }

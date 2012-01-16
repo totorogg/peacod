@@ -20,7 +20,8 @@ public class DisplayPanel extends JTabbedPane
 	DataMigrationPanel dataMigrationPanel = new DataMigrationPanel();
 	SummaryPanel summaryPanel = new SummaryPanel();
 	
-	public DisplayPanel(){
+	public DisplayPanel()
+	{
 		this.setPreferredSize(new Dimension(600, 400));
 		this.setMinimumSize(new Dimension(300, 400));
 		

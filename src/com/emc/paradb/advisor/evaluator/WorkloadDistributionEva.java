@@ -22,16 +22,20 @@ import com.emc.paradb.advisor.workload_loader.Workload;
 
 public class WorkloadDistributionEva extends Evaluator
 {
-	private static int dist = 0;
-	private static int nonDist = 0;
-	private static int nodes = 0;
+	private static int dist;
+	private static int nonDist;
+	private static int nodes;
 	private static Plugin aPlugin = null;
-	private static HashMap<Integer, Integer> distCountMap = new HashMap<Integer, Integer>();
-	private static List<Long> workloadDistList= new ArrayList<Long>();
-	private static HashMap<String, String> tableKeyMap;
+	private static HashMap<Integer, Integer> distCountMap = null;
+	private static List<Long> workloadDistList = null;
+	private static HashMap<String, String> tableKeyMap = null;
 	
 	public static void evaluate(Plugin aPlugin, int nodes)
 	{
+		dist = 0;
+		nonDist = 0;
+		distCountMap = new HashMap<Integer, Integer>();
+		workloadDistList= new ArrayList<Long>();	
 		WorkloadDistributionEva.aPlugin = aPlugin;
 		Workload<Transaction<Object>> workload = Controller.getWorkload();
 		tableKeyMap = aPlugin.getInstance().getPartitionKey();
@@ -92,15 +96,7 @@ public class WorkloadDistributionEva extends Evaluator
 		}
 		
 		if(distCount > 1)
-		{
 			dist++;
-			for(Object stmt : tran)
-			{
-				SelectAnalysisInfo select = (SelectAnalysisInfo)stmt;
-				System.out.println(select.getWhereKeys());
-				System.out.println(select.getTables());
-			}
-		}
 		else
 			nonDist++;
 

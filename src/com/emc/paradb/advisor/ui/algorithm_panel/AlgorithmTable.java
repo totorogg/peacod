@@ -19,6 +19,7 @@ import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
 
 import com.emc.paradb.advisor.controller.AlgorithmController;
+import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.plugin.Plugin;
 
@@ -102,7 +103,9 @@ class AlgorithmTable extends JTable
 		{
 			lastSelectedRow = selectedIndex;
 			Plugin aPlugin= AlgorithmController.getAlgorithm(selectedIndex);
+			
 			adPanel.setText(aPlugin.getDescription());
+			DisplayController.display(selectedIndex);
 		}
 	}
 }

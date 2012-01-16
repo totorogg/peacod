@@ -3,6 +3,7 @@ package com.emc.paradb.advisor.ui.workload_distribution;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.BorderFactory;
@@ -17,8 +18,7 @@ import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-import com.emc.paradb.advisor.controller.EvaluateController;
-import com.emc.paradb.advisor.ui.data_distribution.DataDistributionCB;
+import com.emc.paradb.advisor.controller.DisplayController;
 
 
 public class WorkloadDistributionPanel extends JPanel
@@ -33,7 +33,7 @@ public class WorkloadDistributionPanel extends JPanel
 		this.add(description, BorderLayout.NORTH);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
-		EvaluateController.RegisterWorkloadDistributionCB(new WorkloadDistributionCB()
+		DisplayController.registerWorkloadDistributionCB(new WorkloadDistributionCB()
 		{
 			public void draw(List<Long> data)
 			{
@@ -43,6 +43,19 @@ public class WorkloadDistributionPanel extends JPanel
 				box.add(Box.createHorizontalGlue());
 				box.add(workloadChart);
 				box.add(Box.createHorizontalGlue());
+				box.updateUI();
+			}
+
+			@Override
+			public void draw(HashMap<String, Float> wDVarMap) {
+				// TODO Auto-generated method stub
+				box.removeAll();
+				
+				workloadChart = WorkloadChart.createChart(wDVarMap);
+				box.add(Box.createHorizontalGlue());
+				box.add(workloadChart);
+				box.add(Box.createHorizontalGlue());
+				box.repaint();
 			}
 		});
 	}
@@ -59,6 +72,30 @@ class WorkloadChart
 		JFreeChart chart = ChartFactory.createBarChart("Workload Distribution", // Title
 				"Node", // X-Axis label
 				"Data (Tuples)", // Y-Axis label
+				categoryDataset, // Dataset, 
+				PlotOrientation.VERTICAL, false, true, false);
+		
+		JLabel lb = new JLabel();
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(400,180)));
+		
+		return lb;
+	}
+	
+	public static JLabel createChart(HashMap<String, Float> wDVarMap)
+	{
+		
+		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+		String table = "";
+		for(String algorithm : wDVarMap.keySet())
+		{
+			int index = algorithm.lastIndexOf(".");
+			String name = algorithm.substring(index + 1);
+			categoryDataset.setValue(wDVarMap.get(algorithm), "", name);
+		}
+
+		JFreeChart chart = ChartFactory.createBarChart("Distribution Variance", // Title
+				"Algorithms", // X-Axis label
+				"Variance", // Y-Axis label
 				categoryDataset, // Dataset, 
 				PlotOrientation.VERTICAL, false, true, false);
 		

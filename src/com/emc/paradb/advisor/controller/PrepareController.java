@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 
 import javax.swing.JOptionPane;
-import javax.swing.JProgressBar;
 
 import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
 import com.emc.paradb.advisor.data_loader.DBData;
@@ -16,6 +15,7 @@ import com.emc.paradb.advisor.plugin.KeyValuePair;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
 import com.emc.paradb.advisor.plugin.PluginManager;
+import com.emc.paradb.advisor.ui.mainframe.ProgressCB;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 import com.emc.paradb.advisor.workload_loader.WorkloadLoader;
@@ -33,9 +33,10 @@ public class PrepareController extends Controller
 	 * @param selectedBM
 	 * @param loadProgress
 	 */
-	public static void start(String selectedDB, String selectedBM, int nodeNumber,JProgressBar loadProgress)
+	public static void start(String selectedDB, String selectedBM, int nodeNumber, ProgressCB progressCB)
 	{
 		nodes = nodeNumber;
+		progressBar = progressCB;
 		
 		try {
 			int progress = 0;
@@ -52,15 +53,14 @@ public class PrepareController extends Controller
 					System.out.println("unknown database selected");
 					return;
 				}
-				loadProgress.setValue(progress);
-				loadProgress.setString("data loading...");
-				loadProgress.setStringPainted(true);
+				progressBar.setProgress(progress);
+				progressBar.setState("data loading...");
 				
 				while (progress != 100) 
 				{
 					dataLoader.getProgress();
 					progress = (int) (dataLoader.getProgress() * 100);
-					loadProgress.setValue(progress);
+					progressBar.setProgress(progress);
 					Thread.sleep(50);
 				}
 				
@@ -70,38 +70,17 @@ public class PrepareController extends Controller
 				workloadLoader = new WorkloadLoader(selectedBM);
 				workloadLoader.load();
 
-				loadProgress.setString("workload loading...");
-				loadProgress.setStringPainted(true);
+				progressBar.setState("workload loading...");
 				while (progress != 100) 
 				{
 					progress = (int) (workloadLoader.getProgress() * 100);
-					loadProgress.setValue(progress);
+					progressBar.setProgress(progress);
 					Thread.sleep(50);
 				}
 				prepared = true;
 			}
 
-			
-			List<Plugin> algorithms = AlgorithmFactory.getSelectedAlgorithms();
-			for (Plugin aAlgorithm : algorithms) 
-			{
-				PlugInterface instance = aAlgorithm.getInstance();
-				Workload<Transaction<Object>> workload = workloadLoader.getWorkload();
-				DBData dbData = DataLoader.getDBData();
-				Connection conn = DataLoader.getConn();
-
-				instance.accept(conn, workload, dbData, nodes);
-				
-				// for test
-				HashMap<String, String> tableKeyMap = instance.getPartitionKey();
-
-				for (String table : tableKeyMap.keySet()) 
-				{
-					System.out.println(table + ": " + tableKeyMap.get(table));
-				}
-			}
-			loadProgress.setString("finished");
-			loadProgress.setStringPainted(true);
+			progressBar.setState("finished");
 		} 
 		catch (Exception e) 
 		{

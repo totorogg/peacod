@@ -31,6 +31,7 @@ import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 import org.jfree.util.Rotation;
 
+import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.controller.EvaluateController;
 
 
@@ -38,7 +39,7 @@ import com.emc.paradb.advisor.controller.EvaluateController;
 public class TransactionDistributionPanel extends JPanel
 {
 	private Box box = Box.createHorizontalBox();
-	
+
 	public TransactionDistributionPanel()
 	{
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -67,7 +68,7 @@ public class TransactionDistributionPanel extends JPanel
 		this.setBorder(BorderFactory.createEtchedBorder());
 
 		
-		EvaluateController.RegisterTransactionDistributionCB(new TransactionDistributionCB()
+		DisplayController.registerTransactionDistributionCB(new TransactionDistributionCB()
 		{
 			@Override
 			public void draw(int dist, int nonDist, Map<Integer, Integer> nodeAccess) 
@@ -90,6 +91,7 @@ public class TransactionDistributionPanel extends JPanel
 				box.add(chartPanel);
 				box.add(chartPanel2);
 				box.add(Box.createHorizontalGlue());
+				box.updateUI();
 			}
 		});
 	}
@@ -141,54 +143,6 @@ public class TransactionDistributionPanel extends JPanel
 	    return chart;
 	}
 	
-	class MyPieLabelDistributor extends PieLabelDistributor
-	{
-		public MyPieLabelDistributor(int count)
-		{
-			super(count);
-			this.adjustInwards();
-			this.spreadEvenly(0.1, 0.2);
-		}
-	}
+	
 }
 
-
-
-
-
-class DistNonDistChart 
-{	
-	public static JLabel createChart(int nonDist, int dist){
-		
-		DefaultPieDataset ds = new DefaultPieDataset();
-		ds.setValue(String.format("Non-distributed %d", nonDist), nonDist);
-		ds.setValue(String.format("Distributed %d", dist), dist);
-		JFreeChart chart = ChartFactory.createPieChart("Dist-Nondist Trans.", ds, true, true, false);
-		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(220,200)));
-		
-		return lb;
-	}
-}
-
-class DistChart 
-{
-	public static JLabel createChart(Map<Integer, Integer> nodeAccess) {
-		
-		DefaultPieDataset ds = new DefaultPieDataset();
-		Set<Integer> ks = nodeAccess.keySet();
-		for (int k : ks) {
-			if (k != 1) {
-				int a = nodeAccess.get(k);
-				ds.setValue(String.format("%d %d", k, a), a);
-			}
-		}
-		JFreeChart chart = ChartFactory.createPieChart("Tran Dist",
-				ds, false, true, false);
-
-		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(220, 200)));
-
-		return lb;
-	}
-}
