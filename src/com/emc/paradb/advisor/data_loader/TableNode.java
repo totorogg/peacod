@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 import java.util.Vector;
 
 
@@ -15,7 +18,7 @@ public class TableNode
 	private Connection conn = null;
 	private String name;
 	private int length;
-
+	private List<String> primaryKey = null;
 	//the attributes corresponding to the table
 	private HashMap<String, TableAttributes> tableAttributeMap = new HashMap<String, TableAttributes>();
 	private Vector<TableAttributes> attributes = new Vector<TableAttributes>();
@@ -38,13 +41,32 @@ public class TableNode
 				tableAttributeMap.put(result.getString(1), aAttr);
 				attributes.add(aAttr);
 			}
+			//get the primary keys
+			result = stmt.executeQuery("SELECT "+              
+									   "pg_attribute.attname,"+ 
+									   "format_type(pg_attribute.atttypid, pg_attribute.atttypmod) "+
+									   "FROM pg_index, pg_class, pg_attribute "+
+									   "WHERE "+
+									   "pg_class.oid = '"+newName+"'::regclass AND "+
+									   "indrelid = pg_class.oid AND "+
+									   "pg_attribute.attrelid = pg_class.oid AND "+
+									   "pg_attribute.attnum = any(pg_index.indkey) "+
+									   "AND indisprimary");
+			
+			primaryKey = new ArrayList<String>();
+			while(result.next())
+			{
+				primaryKey.add(result.getString(1));
+			}
 			
 			//get the table length;
 			result = stmt.executeQuery("select count(*) from "+newName+";");
 			result.next();
 			length = Integer.valueOf(result.getString(1));
 			
-		}catch(SQLException e){
+		}
+		catch(SQLException e)
+		{
 			System.out.println(e.getMessage());
 		}
 	}
@@ -58,7 +80,10 @@ public class TableNode
 	public int getLength(){
 		return length;
 	}
-	
+	public List<String> getPrimaryKey()
+	{
+		return primaryKey;
+	}
 	public boolean addRefed(Vector<Object> newNode)
 	{
 		return FKRef.add(newNode);

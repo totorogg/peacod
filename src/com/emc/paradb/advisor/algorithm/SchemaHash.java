@@ -30,6 +30,8 @@ import com.emc.paradb.advisor.workload_loader.Workload;
  * this class implements the getPartitionKey and getPlacement.
  * therefore, it should know a value of a key goes to which node.
  * 
+ * Note: if primary key is composed of several keys, we pick the first one
+ * 
  * @author panx1
  *
  */
@@ -41,7 +43,7 @@ public class SchemaHash implements PlugInterface
 	HashBased hash = null;
 	int nodes = 0;
 	
-	HashMap<String, String> tableKeyMap = new HashMap<String, String>();
+	HashMap<String, List<String>> tableKeyMap = new HashMap<String, List<String>>();
 	
 	@Override
 	public boolean accept(Connection conn, Workload<Transaction<Object>> workload,
@@ -85,7 +87,9 @@ public class SchemaHash implements PlugInterface
 			if(fkRef == null || fkRef.size() == 0)
 			{
 				String partitionKey = table.getAttrVector().get(0).getName();
-				tableKeyMap.put(table.getName(), partitionKey);
+				List<String> keys = new ArrayList<String>();
+				keys.add(partitionKey);
+				tableKeyMap.put(table.getName(), keys);
 				continue;
 			}
 			
@@ -115,7 +119,9 @@ public class SchemaHash implements PlugInterface
 				}
 			}
 			//here we choose the first attribute, we should select the primary key in future work
-			tableKeyMap.put(startTable, tables.get(startTable).getAttrVector().get(0).getName());
+			List<String> keys = new ArrayList<String>();
+			keys.add(tables.get(startTable).getAttrVector().get(0).getName());
+			tableKeyMap.put(startTable, keys);
 			influenceList = influenceTree.get(startTable);
 			if(influenceList.size() < 1)
 				break;
@@ -129,7 +135,9 @@ public class SchemaHash implements PlugInterface
 			}
 			influenceTree.remove(startTable);
 		}
-		tableKeyMap.put("item", "replicate");
+		List<String> keys = new ArrayList<String>();
+		keys.add("replicate");
+		tableKeyMap.put("item", keys);
 	}
 	private int getInfluence(String table, HashMap<String, HashMap<String, Vector<Object>>> influenceTree)
 	{
@@ -147,8 +155,9 @@ public class SchemaHash implements PlugInterface
 	private void getKeyRecursive(String startTable, String partitionKey, HashMap<String, HashMap<String, Vector<Object>>> influenceTree)
 	{
 		HashMap<String, Vector<Object>> influenceList = influenceTree.get(startTable);
-		
-		tableKeyMap.put(startTable, partitionKey);
+		List<String> keys = new ArrayList<String>();
+		keys.add(partitionKey);
+		tableKeyMap.put(startTable, keys);
 		if(influenceList != null && influenceList.size() > 0)
 		{
 			for(String table : influenceList.keySet())
@@ -164,7 +173,7 @@ public class SchemaHash implements PlugInterface
 	}
 	
 	@Override
-	public HashMap<String, String> getPartitionKey() {
+	public HashMap<String, List<String>> getPartitionKey() {
 		// TODO Auto-generated method stub
 		return tableKeyMap;
 	}
@@ -189,25 +198,18 @@ public class SchemaHash implements PlugInterface
 		}
 		return keyValueList;
 	}
-	@Override
-	public int insert(KeyValuePair kvPair) {
-		// TODO Auto-generated method stub
-		return -1;
-	}
 
 	@Override
-	public int remove(KeyValuePair kvPair) {
+	public List<Integer> getNode(List<KeyValuePair> kvPairs) {
 		// TODO Auto-generated method stub
-		return -1;
-	}
-
-	@Override
-	public int getNode(KeyValuePair kvPair) {
-		// TODO Auto-generated method stub
-		String value = kvPair.getValue();
+		String value = kvPairs.get(0).getValue();
+		List<Integer> nodes = new ArrayList<Integer>();
+		
 		if(value != null)
-			return hash.getPlacement(value);
+			nodes.add(hash.getPlacement(value));
 		else
-			return -1;
+			nodes.add(0);
+		
+		return nodes;
 	}
 }

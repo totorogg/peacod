@@ -36,16 +36,18 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"This algorithm select partition key based on database schema. primary key in \"root table\" is the basic partition key.");
 	
+		PKHash.setInterface(new PKHash());
+		PKHash.setInfo("com.emc.paradb.advisor.algorithm.PKHash",
+							"getPartitionKey()", "getNode()",
+							"This algorithm select primary key as partition key and place values via hash function.");
+	
+		//the following are not implemented
 		consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
 							"getPartitionKey()", "getNode()",
 							"This algorithm partition the key based on consistent hashing.");
 	
-		PKHash.setInterface(new SchemaHash());
-		PKHash.setInfo("com.emc.paradb.advisor.algorithm.PKHash",
-							"getPartitionKey()", "getNode()",
-							"This algorithm select primary key as partition key and place values via hash function.");
-	
+
 		PKRange.setInterface(new SchemaHash());
 		PKRange.setInfo("com.emc.paradb.advisor.algorithm.PKRange",
 							"getPartitionKey()", "getNode()",

@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.emc.paradb.advisor.plugin.Plugin;
 import com.emc.paradb.advisor.ui.data_distribution.DataDistributionCB;
+import com.emc.paradb.advisor.ui.summary.SummaryCB;
 import com.emc.paradb.advisor.ui.transaction_distribution.TransactionDistributionCB;
 import com.emc.paradb.advisor.ui.workload_distribution.WorkloadDistributionCB;
 
@@ -16,6 +17,7 @@ public class DisplayController
 	private static DataDistributionCB dataDistributionCB;
 	private static WorkloadDistributionCB workloadDistributionCB;
 	private static TransactionDistributionCB transactionDistributionCB;
+	private static SummaryCB summaryCB;
 	private static int index = -1;
 	
 	/**
@@ -42,6 +44,12 @@ public class DisplayController
 		return true;
 	}
 	
+	public static boolean registerSummaryCB(SummaryCB sumCB)
+	{
+		DisplayController.summaryCB = sumCB;
+		return true;
+	}
+	
 	public static void displayCompare(HashMap<String, Float> dDVarMap, HashMap<String, Float> wDVarMap)
 	{
 		dataDistributionCB.draw(dDVarMap);
@@ -57,7 +65,7 @@ public class DisplayController
 		display();
 	}
 	
-	static void display()
+	public static void display()
 	{
 		Plugin aPlugin= AlgorithmController.getAlgorithm(index);
 		
@@ -76,4 +84,8 @@ public class DisplayController
 			transactionDistributionCB.draw(dist, nonDist, nodeAccess);
 	}
 	
+	public static void displaySummary(Object[][] data, Object[] columnNames)
+	{
+		summaryCB.drawSummaryTable(data, columnNames);
+	}
 }

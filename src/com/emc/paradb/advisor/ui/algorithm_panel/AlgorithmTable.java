@@ -30,8 +30,8 @@ class AlgorithmTable extends JTable
 	private DefaultTableModel dm = new DefaultTableModel();
 	private AlgorithmDescriptionPanel adPanel = null;
 	
-	public AlgorithmTable(){	
-		
+	public AlgorithmTable()
+	{		
 		dm.setColumnIdentifiers(new Object[]{ "Scheme", "Use", "Advance" });
 		this.setModel(dm);
 		setVisible(true);

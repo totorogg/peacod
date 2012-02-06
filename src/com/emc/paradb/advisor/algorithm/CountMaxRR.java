@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.TableAttributes;
@@ -35,7 +36,7 @@ public class CountMaxRR implements PlugInterface
 	RoundRobin RR = null;
 	int nodes = 0;
 	
-	HashMap<String, String> tableKeyMap = new HashMap<String, String>();
+	HashMap<String, List<String>> tableKeyMap = new HashMap<String, List<String>>();
 	
 	@Override
 	public boolean accept(Connection conn, Workload<Transaction<Object>> workload,
@@ -60,7 +61,7 @@ public class CountMaxRR implements PlugInterface
 	}
 
 	@Override
-	public HashMap<String, String> getPartitionKey() {
+	public HashMap<String, List<String>> getPartitionKey() {
 		return tableKeyMap;
 	}
 	
@@ -118,7 +119,9 @@ public class CountMaxRR implements PlugInterface
 						max = keyCount.get(key);
 					}
 				}
-				tableKeyMap.put(table, partitionKey);
+				List<String> keys = new ArrayList<String>();
+				keys.add(partitionKey);
+				tableKeyMap.put(table, keys);
 			}
 		}
 	}
@@ -149,25 +152,17 @@ public class CountMaxRR implements PlugInterface
 	/**
 	 * this function simply return a int number per call. the number will increase by one every call.
 	 */
-	public int getNode(KeyValuePair kvPair) {
+	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
+	{
 		// TODO Auto-generated method stub
-		String value = kvPair.getValue();
+		String value = kvPairs.get(0).getValue();
+		List<Integer> nodes = new ArrayList<Integer>();
+		
 		if(value != null)
-			return RR.getPlacement(value);
+			nodes.add(RR.getPlacement(value));
 		else
-			return -1;
-	}
-
-
-	@Override
-	public int insert(KeyValuePair kvPair) {
-		// TODO Auto-generated method stub
-		return -1;
-	}
-
-	@Override
-	public int remove(KeyValuePair kvPair) {
-		// TODO Auto-generated method stub
-		return -1;
+			nodes.add(-1);
+		
+		return nodes;
 	}
 }

@@ -8,33 +8,57 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+import com.emc.paradb.advisor.controller.DisplayController;
 
 
 public class SummaryPanel extends JPanel
 {
-	private JLabel workloadChart = new JLabel("building");
-	private Box box = Box.createHorizontalBox();
+	private Box box = Box.createVerticalBox();
+	Box tableBox = Box.createHorizontalBox();
+	private JTable summaryTable = null;
 	
 	public SummaryPanel()
 	{
 		this.setLayout(new BorderLayout());
 		this.add(new JLabel("description: Summarize the coparison among algorithms"), BorderLayout.NORTH);
+		
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
-		List<Integer> data = new ArrayList<Integer>();
+		box.add(Box.createVerticalStrut(20));
+		box.add(tableBox);
 		
-		for(int i = 0; i < 10; i++){
-			data.add(10);
-		}
-		setChart(data);
+		DisplayController.registerSummaryCB(new SummaryCB()
+		{
+			@Override
+			public void drawSummaryTable(Object[][] data, Object[] columnNames) {
+				// TODO Auto-generated method stub
+				DefaultTableModel dm = new DefaultTableModel();
+				dm.setColumnIdentifiers(columnNames);
+				dm.setDataVector(data, columnNames);
+				
+				summaryTable = new JTable();
+				summaryTable.setModel(dm);
+				
+				tableBox.removeAll();
+			
+				JScrollPane jsp = new JScrollPane(summaryTable);
+				Box scrollBox = Box.createHorizontalBox();
+				scrollBox.add(Box.createHorizontalStrut(40));
+				scrollBox.add(jsp);
+				scrollBox.add(Box.createHorizontalStrut(40));
+				
+				tableBox.add(scrollBox);
+				tableBox.add(Box.createHorizontalGlue());
+				
+				tableBox.updateUI();
+			}
+			
+		});
 	}
-	
-	public void setChart(List<Integer> data){
-		
-		box.add(Box.createHorizontalGlue());
-		box.add(workloadChart);
-		box.add(Box.createHorizontalGlue());
-	}
-	
 }
+

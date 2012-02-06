@@ -10,6 +10,7 @@ import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.DataLoader;
 import com.emc.paradb.advisor.evaluator.Comparator;
 import com.emc.paradb.advisor.evaluator.DataDistributionEva;
+import com.emc.paradb.advisor.evaluator.Summarize;
 import com.emc.paradb.advisor.evaluator.WorkloadDistributionEva;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
@@ -47,7 +48,6 @@ public class EvaluateController extends Controller
 			PlugInterface instance = aAlgorithm.getInstance();
 			instance.accept(conn, workload, dbData, nodes);
 
-
 			//evaluate the data distribution
 			List<Long> dataDistributionList = null;
 
@@ -70,11 +70,11 @@ public class EvaluateController extends Controller
 			aAlgorithm.setTransactionDistribution(dist, nonDist, nodeAccess);
 		}
 		DisplayController.display();
-
+		
+		Summarize.summrize();
+		DisplayController.displaySummary(Summarize.getSummaries(), Summarize.getPluginNames());
 	}
-	
-	
-	
+
 	
 	public static void compare()
 	{
@@ -97,4 +97,5 @@ public class EvaluateController extends Controller
 		Comparator.compare(algorithms, nodes);
 		DisplayController.displayCompare(Comparator.getDataDistVar(), Comparator.getWorkloadDistVar());
 	}
+
 }

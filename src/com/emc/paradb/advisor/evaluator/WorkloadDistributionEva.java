@@ -28,7 +28,7 @@ public class WorkloadDistributionEva extends Evaluator
 	private static Plugin aPlugin = null;
 	private static HashMap<Integer, Integer> distCountMap = null;
 	private static List<Long> workloadDistList = null;
-	private static HashMap<String, String> tableKeyMap = null;
+	private static HashMap<String, List<String>> tableKeyMap = null;
 	
 	public static void evaluate(Plugin aPlugin, int nodes)
 	{
@@ -110,50 +110,55 @@ public class WorkloadDistributionEva extends Evaluator
 	protected static void visitDelete(DeleteAnalysisInfo delete, HashMap<Integer, Integer> visitMap)
 	{
 		String table = delete.getTable();
-		String key = tableKeyMap.get(table);
-		
-		
+		List<String> keys = tableKeyMap.get(table);	
+		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
+
 		for(WhereKey whereKey : delete.getWhereKeys())
 		{
-			if(whereKey.getKeyName().equalsIgnoreCase(key))
-			{
-				updateWD(table, key, whereKey.getKeyValue().toString(), visitMap);
-				return;
-			}
+			if(keys.contains(whereKey.getKeyName()))
+				kvPairs.add(new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString()));
 		}
-		visitMap.put(-1, visitMap.get(-1) + 1);
+		if(kvPairs.size() > 0)
+			updateWD(table, kvPairs, visitMap);
+		else
+			visitMap.put(-1, visitMap.get(-1) + 1);
 	}
+	
 	protected static void visitInsert(InsertAnalysisInfo insert, HashMap<Integer, Integer> visitMap)
 	{
 		String table = insert.getTable();
-		String key = tableKeyMap.get(table);
+		List<String> keys = tableKeyMap.get(table);
 		Map<String, Object> keyValueMap = insert.getKeyValueMap();
+		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 		
 		for(String whereKey : keyValueMap.keySet())
 		{
-			if(whereKey.equalsIgnoreCase(key))
-			{
-				updateWD(table, key, keyValueMap.get(whereKey).toString(), visitMap);
-				return;
-			}
+			if(keys.contains(whereKey))
+				kvPairs.add(new KeyValuePair(table, whereKey, keyValueMap.get(whereKey).toString()));
 		}
-		visitMap.put(-1, visitMap.get(-1) + 1);
+		
+		if(kvPairs.size() > 0)
+			updateWD(table, kvPairs, visitMap);
+		else
+			visitMap.put(-1, visitMap.get(-1) + 1);
 	}
 	//this funtion should be further improved.
 	//now it is only aware of deleted old value, but not aware of the inserted new value
 	protected static void visitUpdate(UpdateAnalysisInfo update, HashMap<Integer, Integer> visitMap)
 	{
 		String table = update.getTable();
-		String key = tableKeyMap.get(table);
+		List<String> keys = tableKeyMap.get(table);
+		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
+		
 		for(WhereKey whereKey : update.getWhereKeys())
 		{
-			if(whereKey.getKeyName().equalsIgnoreCase(key))
-			{
-				updateWD(table, key, whereKey.getKeyValue().toString(), visitMap);
-				return;
-			}
+			if(keys.contains(whereKey.getKeyName()))
+				kvPairs.add(new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString()));
 		}
-		visitMap.put(-1, visitMap.get(-1) + 1);
+		if(kvPairs.size() > 0)
+			updateWD(table, kvPairs, visitMap);
+		else
+			visitMap.put(-1, visitMap.get(-1) + 1);
 	}
 	
 	protected static void visitSelect(SelectAnalysisInfo select, HashMap<Integer, Integer> visitMap)
@@ -163,19 +168,20 @@ public class WorkloadDistributionEva extends Evaluator
 		
 		for(String table : tables)
 		{
-			String key = tableKeyMap.get(table);
-			if(key.equalsIgnoreCase("replicate"))
+			List<String> keys = tableKeyMap.get(table);
+			List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
+			
+			if(keys.get(0).equalsIgnoreCase("replicate"))
 			{
 				visitMap.put(-2, visitMap.get(-2) + 1);
 				continue;
 			}
 			for(WhereKey whereKey : select.getWhereKeys())
 			{
-				if(whereKey.getKeyName().equalsIgnoreCase(key))
+				if(keys.contains(whereKey.getKeyName()))
 				{
-					updateWD(table, key, whereKey.getKeyValue().toString(), visitMap);
+					kvPairs.add(new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString()));
 					hit = true;
-					break;
 				}
 			}
 			if(!hit)
@@ -184,27 +190,30 @@ public class WorkloadDistributionEva extends Evaluator
 				return;
 			}
 			hit = false;
+			
+			updateWD(table, kvPairs, visitMap);
 		}
 	}
 	
 	protected static void updateWD(String table,
-								   String keyName, 
-								   String value, 
+								   List<KeyValuePair> kvPairs, 
 								   HashMap<Integer, Integer> visitMap)
 	{
 		
-		KeyValuePair kvPair = new KeyValuePair(table, keyName, value);
-		int node = aPlugin.getInstance().getNode(kvPair);
-		if(node == -1)//failed to match a node
+		List<Integer> nodes = aPlugin.getInstance().getNode(kvPairs);
+		if(nodes.get(0) == -1)//failed to match a node
 		{
-			System.out.println(String.format("cannot match a keyValue %s %s %s to its node", 
-											 table, keyName, value));
+			System.out.println(String.format("cannot match a keyValuePairs to its node", 
+											 kvPairs));
 			return;
 		}
-		if(visitMap.get(node) == null)
-			visitMap.put(node, 1);
-		else
-			visitMap.put(node, visitMap.get(node) + 1);
+		for(Integer node : nodes)
+		{
+			if (visitMap.get(node) == null)
+				visitMap.put(node, 1);
+			else
+				visitMap.put(node, visitMap.get(node) + 1);
+		}
 	}
 	
 	public static List<Long> getWorkloadDistribution()
