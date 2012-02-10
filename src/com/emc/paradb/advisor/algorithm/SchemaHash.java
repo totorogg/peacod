@@ -124,8 +124,28 @@ public class SchemaHash implements PlugInterface
 			keys.add(tables.get(startTable).getPrimaryKey().get(0));
 			tableKeyMap.put(startTable, keys);
 			influenceList = influenceTree.get(startTable);
+			
+			//not child table
 			if(influenceList.size() < 1)
 				break;
+			//if all child tables are already partitioned, this father table will be replicated
+			boolean next = true;
+			for(String table : influenceList.keySet())
+			{
+				if(!tableKeyMap.keySet().contains(table))
+					break;
+				else
+					next = false;
+			}
+			if(!next)
+			{
+				List<String> keyList = new ArrayList<String>();
+				keyList.add("replicate");
+				tableKeyMap.put("item", keyList);
+				break;
+			}
+
+			
 			for(String table : influenceList.keySet())
 			{
 				if(tableKeyMap.get(table) == null)
@@ -135,16 +155,6 @@ public class SchemaHash implements PlugInterface
 				}
 			}
 			influenceTree.remove(startTable);
-		}
-		
-		for(String table : tables.keySet())
-		{
-			if(!tableKeyMap.keySet().contains(table))
-			{
-				List<String> keys = new ArrayList<String>();
-				keys.add("replicate");
-				tableKeyMap.put(table, keys);
-			}
 		}
 		
 	}

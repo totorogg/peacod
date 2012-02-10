@@ -171,7 +171,7 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 			return;
 		}
 		else if (arg0.getLeftExpression() instanceof Column)
-		{			
+		{		
 			column = (Column)arg0.getLeftExpression();
 			value = arg0.getRightExpression();
 		}

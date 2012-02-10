@@ -16,7 +16,7 @@
    </property>
    <property>
       <name>database.port</name>
-      <value>5432</value>
+      <value>12345</value>
    </property>
    <property>
       <name>database.user</name>
