@@ -42,8 +42,8 @@ public class EvaluateController extends Controller
 		float algoNum = algorithms.size();
 		for (Plugin aAlgorithm : algorithms) 
 		{
-			progressBar.setProgress( (int)(++curAlgo/algoNum));
-			progressBar.setState(aAlgorithm.getID());
+			progressBar.setProgress( (int)(curAlgo++ * 100 / algoNum));
+			progressBar.setState(aAlgorithm.getName());
 			
 			PlugInterface instance = aAlgorithm.getInstance();
 			instance.accept(conn, workload, dbData, nodes);
@@ -69,6 +69,7 @@ public class EvaluateController extends Controller
 			HashMap<Integer, Integer> nodeAccess = WorkloadDistributionEva.getDistCountMap();
 			aAlgorithm.setTransactionDistribution(dist, nonDist, nodeAccess);
 		}
+		progressBar.setProgress(100);
 		DisplayController.display();
 		
 		Summarize.summrize();

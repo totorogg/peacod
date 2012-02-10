@@ -1,12 +1,13 @@
 package com.emc.paradb.advisor.workload_loader;
 
-import java.util.List;
+
 
 import net.sf.jsqlparser.expression.AllComparisonExpression;
 import net.sf.jsqlparser.expression.AnyComparisonExpression;
 import net.sf.jsqlparser.expression.CaseExpression;
 import net.sf.jsqlparser.expression.DateValue;
 import net.sf.jsqlparser.expression.DoubleValue;
+import net.sf.jsqlparser.expression.Expression;
 import net.sf.jsqlparser.expression.ExpressionVisitor;
 import net.sf.jsqlparser.expression.Function;
 import net.sf.jsqlparser.expression.InverseExpression;
@@ -54,7 +55,7 @@ public class UpdateAnalyzer {
 	public UpdateAnalysisInfo analyze(Update update){
 		
 		info.setTable(update.getTable().getName());
-		info.setColumn(update.getColumns());
+		info.setSetKeys(update.getColumns(), update.getExpressions());
 		update.getWhere().accept(new UpdateExpressionVisitor(info));
 		
 		return info;
@@ -76,132 +77,260 @@ class UpdateExpressionVisitor implements ExpressionVisitor {
 	}
 
 	@Override
-	public void visit(EqualsTo arg0) {
+	public void visit(EqualsTo arg0) 
+	{
+		Object value = null;
+		Column column = null;
 		
-		if (arg0.getLeftExpression() instanceof Column && 
-				(arg0.getRightExpression() instanceof LongValue)){
-			
-			Column cl = (Column)arg0.getLeftExpression();
-			LongValue lv = (LongValue)arg0.getRightExpression();
-			
-			WhereKey wk = new WhereKey();
-			wk.setTableName(cl.getTable().getName());
-			wk.setKeyName(cl.getColumnName());
-			wk.setKeyValue(lv.getValue());
-			
-			info.getWhereKeys().add(wk);
+		if (arg0.getLeftExpression() instanceof Column)
+		{	
+			column = (Column)arg0.getLeftExpression();
+			value = arg0.getRightExpression();			
 		}
+		else if (arg0.getRightExpression() instanceof Column)
+		{
+			column = (Column)arg0.getRightExpression();
+			value = arg0.getLeftExpression();		
+		}
+		
+		WhereKey wk = new WhereKey();
+		wk.setKeyName(column.getColumnName());
+		if(value instanceof LongValue)
+			wk.setKeyValue(((LongValue)value).getValue());
+		else if(value instanceof StringValue)
+			wk.setKeyValue(((StringValue)value).getValue());
+		else
+			try 
+			{
+				throw new Exception("Unrecognized value type");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+		info.getWhereKeys().add(wk);
 	}
 
 	@Override
-	public void visit(GreaterThan arg0) {	}
+	public void visit(GreaterThan arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(GreaterThanEquals arg0) {	}
+	public void visit(GreaterThanEquals arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(InExpression arg0) {	}
+	public void visit(InExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(IsNullExpression arg0) {	}
+	public void visit(IsNullExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(LikeExpression arg0) {	}
+	public void visit(LikeExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(MinorThan arg0) {	}
+	public void visit(MinorThan arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(MinorThanEquals arg0) {	}
+	public void visit(MinorThanEquals arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(NotEqualsTo arg0) {	}
+	public void visit(NotEqualsTo arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Column arg0) {	}
+	public void visit(Column arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(SubSelect arg0) {	}
+	public void visit(SubSelect arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(CaseExpression arg0) {	}
+	public void visit(CaseExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(WhenClause arg0) {	}
+	public void visit(WhenClause arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(ExistsExpression arg0) {	}
+	public void visit(ExistsExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(AllComparisonExpression arg0) {	}
+	public void visit(AllComparisonExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(AnyComparisonExpression arg0) {	}
+	public void visit(AnyComparisonExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(Concat arg0) {	}
+	public void visit(Concat arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Matches arg0) {	}
+	public void visit(Matches arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(BitwiseAnd arg0) {	}
+	public void visit(BitwiseAnd arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(BitwiseOr arg0) {	}
+	public void visit(BitwiseOr arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(BitwiseXor arg0) {	}
+	public void visit(BitwiseXor arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(NullValue arg0) {	}
+	public void visit(NullValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(Function arg0) { }
+	public void visit(Function arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(InverseExpression arg0) {	}
+	public void visit(InverseExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(JdbcParameter arg0) {	}
+	public void visit(JdbcParameter arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(DoubleValue arg0) {	}
+	public void visit(DoubleValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(LongValue arg0) {	}
+	public void visit(LongValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(DateValue arg0) {	}
+	public void visit(DateValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(TimeValue arg0) {	}
+	public void visit(TimeValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(TimestampValue arg0) {	}
+	public void visit(TimestampValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(Parenthesis arg0) {	}
+	public void visit(Parenthesis arg0) 
+	{
+		Expression pe = arg0.getExpression();
+		pe.accept(this);
+	}
 
 	@Override
-	public void visit(StringValue arg0) {	}
+	public void visit(StringValue arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(Addition arg0) {	}
+	public void visit(Addition arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Division arg0) {	}
+	public void visit(Division arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Multiplication arg0) {	}
+	public void visit(Multiplication arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Subtraction arg0) {	}
+	public void visit(Subtraction arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(OrExpression arg0) {	}
+	public void visit(OrExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Between arg0) {	}
+	public void visit(Between arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 }

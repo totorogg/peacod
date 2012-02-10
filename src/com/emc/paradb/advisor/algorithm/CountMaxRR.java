@@ -36,7 +36,7 @@ public class CountMaxRR implements PlugInterface
 	RoundRobin RR = null;
 	int nodes = 0;
 	
-	HashMap<String, List<String>> tableKeyMap = new HashMap<String, List<String>>();
+	HashMap<String, List<String>> tableKeyMap = null;
 	
 	@Override
 	public boolean accept(Connection conn, Workload<Transaction<Object>> workload,
@@ -46,6 +46,7 @@ public class CountMaxRR implements PlugInterface
 		this.workload = workload;
 		this.dbData = dbData;
 		this.nodes = nodes;
+		tableKeyMap = new HashMap<String, List<String>>();
 		
 		try 
 		{
@@ -104,25 +105,25 @@ public class CountMaxRR implements PlugInterface
 						updateTableKeyCount(tableKeyCount, key.getTableName(), key.getKeyName());	
 				}
 			}
+		}
+		
+		for(String table : tableKeyCount.keySet())
+		{
+			int max = Integer.MIN_VALUE;
+			String partitionKey = "";
+			HashMap<String, Integer> keyCount = tableKeyCount.get(table);
 			
-			for(String table : tableKeyCount.keySet())
+			for(String key : keyCount.keySet())
 			{
-				int max = Integer.MIN_VALUE;
-				String partitionKey = "";
-				HashMap<String, Integer> keyCount = tableKeyCount.get(table);
-				
-				for(String key : keyCount.keySet())
+				if(keyCount.get(key) > max)
 				{
-					if(keyCount.get(key) > max)
-					{
-						partitionKey = key;
-						max = keyCount.get(key);
-					}
+					partitionKey = key;
+					max = keyCount.get(key);
 				}
-				List<String> keys = new ArrayList<String>();
-				keys.add(partitionKey);
-				tableKeyMap.put(table, keys);
 			}
+			List<String> keys = new ArrayList<String>();
+			keys.add(partitionKey);
+			tableKeyMap.put(table, keys);
 		}
 	}
 	
@@ -131,8 +132,8 @@ public class CountMaxRR implements PlugInterface
 		//findTableName:
 		if(table == null)
 			System.out.println(String.format("%s cannot find %s", table, key));
-		
 
+		
 		HashMap<String, Integer> keyCount;
 		if(!tableKeyCount.containsKey(table))
 		{

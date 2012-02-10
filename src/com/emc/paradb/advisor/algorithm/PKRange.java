@@ -1,0 +1,210 @@
+package com.emc.paradb.advisor.algorithm;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import com.emc.paradb.advisor.data_loader.DBData;
+import com.emc.paradb.advisor.data_loader.TableNode;
+import com.emc.paradb.advisor.plugin.KeyValuePair;
+import com.emc.paradb.advisor.plugin.PlugInterface;
+import com.emc.paradb.advisor.workload_loader.Transaction;
+import com.emc.paradb.advisor.workload_loader.Workload;
+
+
+public class PKRange implements PlugInterface
+{
+	Connection conn = null;
+	Workload<Transaction<Object>> workload = null;
+	DBData dbData = null;
+	int nodes = 0;
+	
+	HashMap<String, List<String>> tableKeyMap = null;
+	HashMap<String, LookUpTable> keyLookUpMap = null;
+	
+	@Override
+	public boolean accept(Connection conn, Workload<Transaction<Object>> workload, DBData dbData, int nodes) 
+	{
+		this.conn = conn;
+		this.workload = workload;
+		this.dbData = dbData;
+		this.nodes = nodes;
+		
+		tableKeyMap = new HashMap<String, List<String>>();
+		keyLookUpMap = new HashMap<String, LookUpTable>();
+		
+		setPartitionKey();
+		setPlacement();
+		return true;
+	}
+	
+	private void setPartitionKey()
+	{
+		HashMap<String, TableNode> tableMap = dbData.getMetaData();
+		for(String table : tableMap.keySet())
+		{
+			TableNode tableNode = tableMap.get(table);
+			List<String> primaryKey = tableNode.getPrimaryKey();
+			List<String> keys = new ArrayList<String>();
+			if(primaryKey.size() > 0)
+				keys.add(primaryKey.get(0));
+			else
+				keys.add(tableNode.getAttrVector().get(0).getName());
+			tableKeyMap.put(table, keys);
+		}
+	}
+
+	private void setPlacement()
+	{
+		HashMap<String, TableNode> tables = dbData.getMetaData();
+		
+		for(String tableName :  tableKeyMap.keySet())
+		{
+			String key = tableKeyMap.get(tableName).get(0);
+			
+			Statement stmt;
+			try 
+			{
+				stmt = conn.createStatement();
+				ResultSet resultMin = stmt.executeQuery("select min("+key+") from "+tableName+";");
+				resultMin.next();
+				double min = resultMin.getDouble(1);
+				
+				ResultSet resultMax = stmt.executeQuery("select max("+key+") from "+tableName+";");
+				resultMax.next();
+				double max = resultMax.getDouble(1);
+				
+				LookUpTable aLookUp = new LookUpTable(min, max, nodes);
+				keyLookUpMap.put(key, aLookUp);
+			} 
+			catch (SQLException e) 
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	@Override
+	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
+	{
+		// TODO Auto-generated method stub
+		Set<Integer> nodes = new HashSet<Integer>();
+		
+		for(KeyValuePair kvPair : kvPairs)
+		{
+			LookUpTable aLookUp = keyLookUpMap.get(kvPair.getKey());
+			aLookUp.updateTable(kvPair);
+			nodes.add(aLookUp.getNode(kvPair));
+		}
+		List<Integer> nodeList = new ArrayList<Integer>(nodes);
+		return nodeList;
+	}
+
+	@Override
+	public HashMap<String, List<String>> getPartitionKey() {
+		// TODO Auto-generated method stub
+		return tableKeyMap;
+	}
+	
+}
+
+class LookUpTable
+{
+	private double start;
+	private double end;
+	private double interval;
+	private int slots;
+	
+	public LookUpTable(double start, double end, int slots)
+	{
+		if(start >= end)
+			System.out.println("end >= start");
+		
+		this.start = start;
+		this.end = end;
+		this.slots = slots;
+	}
+	/*
+	public List<Integer> getNodes(double s, double e)
+	{
+		List<Integer> nodes = new ArrayList<Integer>();
+		
+		if (s < start || e > end || s >= e) 
+		{
+			try 
+			{
+				throw new Exception("error range");
+			} 
+			catch (Exception e1) 
+			{
+				e1.printStackTrace();
+				System.out.println(e1.getMessage());
+			}
+		}
+		interval = (end - start) / slots;
+		
+		int startNode = (int)((s - start) / interval);
+		while(startNode >= slots)
+			startNode--;
+		
+		int endNode = (int)((e - start) / interval);
+		while(endNode >= slots)
+			endNode--;
+		
+		nodes.add(startNode);
+		while(startNode < endNode)
+			nodes.add(++startNode);
+		
+		return nodes;
+	}*/
+	
+	public int getNode(KeyValuePair kvPair)
+	{
+		double s = Double.valueOf(kvPair.getValue());
+		
+		if (s < start || s > end) 
+			return -1;
+		
+		interval = (end - start) / slots;
+		
+		int startNode = (int)((s - start) / interval);
+		while(startNode >= slots)
+			startNode--;
+		
+		return startNode;
+	}
+	
+	public void updateTable(KeyValuePair kvPair)
+	{
+		if(kvPair.getOpera().equalsIgnoreCase("select"))
+			return;
+		else if(kvPair.getOpera().equalsIgnoreCase("insert") )
+			insertTuple(kvPair);
+		//we don't consider delete condition now
+		//else if(kvPair.getOpera().equalsIgnoreCase("delete") )
+		//	deleteTuple(kvPair);
+	}
+	
+	private void insertTuple(KeyValuePair kvPair)
+	{
+		double value = Double.valueOf(kvPair.getValue());
+		if(value < start)
+			start = value;
+		else if(value > end)
+			end = value;
+	}
+}
+
+
+
+
+
+
+

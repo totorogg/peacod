@@ -17,6 +17,8 @@ public class Controller
 	protected static WorkloadLoader workloadLoader = null;
 	protected static ProgressCB progressBar = null;
 
+
+	
 	public static int getNodes()
 	{
 		return nodes;

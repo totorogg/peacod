@@ -116,7 +116,11 @@ public class WorkloadDistributionEva extends Evaluator
 		for(WhereKey whereKey : delete.getWhereKeys())
 		{
 			if(keys.contains(whereKey.getKeyName()))
-				kvPairs.add(new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString()));
+			{
+				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString());
+				kvPair.setOpera("delete");
+				kvPairs.add(kvPair);
+			}
 		}
 		if(kvPairs.size() > 0)
 			updateWD(table, kvPairs, visitMap);
@@ -134,9 +138,12 @@ public class WorkloadDistributionEva extends Evaluator
 		for(String whereKey : keyValueMap.keySet())
 		{
 			if(keys.contains(whereKey))
-				kvPairs.add(new KeyValuePair(table, whereKey, keyValueMap.get(whereKey).toString()));
+			{
+				KeyValuePair kvPair = new KeyValuePair(table, whereKey, keyValueMap.get(whereKey).toString());
+				kvPair.setOpera("insert");
+				kvPairs.add(kvPair);
+			}
 		}
-		
 		if(kvPairs.size() > 0)
 			updateWD(table, kvPairs, visitMap);
 		else
@@ -149,11 +156,15 @@ public class WorkloadDistributionEva extends Evaluator
 		String table = update.getTable();
 		List<String> keys = tableKeyMap.get(table);
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
-		
+
 		for(WhereKey whereKey : update.getWhereKeys())
 		{
 			if(keys.contains(whereKey.getKeyName()))
-				kvPairs.add(new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString()));
+			{
+				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString());
+				kvPair.setOpera("delete");
+				kvPairs.add(kvPair);
+			}
 		}
 		if(kvPairs.size() > 0)
 			updateWD(table, kvPairs, visitMap);
@@ -180,7 +191,9 @@ public class WorkloadDistributionEva extends Evaluator
 			{
 				if(keys.contains(whereKey.getKeyName()))
 				{
-					kvPairs.add(new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString()));
+					KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString());
+					kvPair.setOpera("select");
+					kvPairs.add(kvPair);
 					hit = true;
 				}
 			}
@@ -203,8 +216,7 @@ public class WorkloadDistributionEva extends Evaluator
 		List<Integer> nodes = aPlugin.getInstance().getNode(kvPairs);
 		if(nodes.get(0) == -1)//failed to match a node
 		{
-			System.out.println(String.format("cannot match a keyValuePairs to its node", 
-											 kvPairs));
+			System.out.println(String.format("cannot match a keyValuePairs %s to its node", kvPairs));
 			return;
 		}
 		for(Integer node : nodes)

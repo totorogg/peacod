@@ -109,13 +109,25 @@ public class DataDistributionEva extends Evaluator
 					{
 						List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 						for(int i = 0; i < keys.size(); i++)
-							kvPairs.add(new KeyValuePair(table, keys.get(i), result.getString(i + 1)));
-						
+						{
+							KeyValuePair kvPair = new KeyValuePair(table, keys.get(i), result.getString(i + 1));
+							kvPair.setOpera("select");
+							kvPairs.add(kvPair);
+						}
 						long tuples = result.getInt(keys.size() + 1);
 
 						List<Integer> nodeList = plugInterface.getNode(kvPairs);
+						
 						for(Integer node : nodeList)
+						{
+							if(node < 0 || node >= nodes)
+							{
+								System.out.println("Error: unable to find placement");
+								continue;
+							}
+								
 							dataSet.set(node, dataSet.get(node) + tuples);
+						}
 					}
 				}
 			}

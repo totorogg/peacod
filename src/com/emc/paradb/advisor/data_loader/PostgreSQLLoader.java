@@ -3,21 +3,18 @@ package com.emc.paradb.advisor.data_loader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+import com.emc.paradb.advisor.controller.Controller;
+import com.emc.paradb.advisor.controller.PrepareController;
+
 
 
 public class PostgreSQLLoader extends DataLoader
 {
-	private String db = null;
 	private PGMetaLoader pgMetaLoader = null;
 	
 	public PostgreSQLLoader(String selectedBM) throws Exception
 	{
-		if(selectedBM.equalsIgnoreCase("tpc-c"))
-			db = "dbt2";
-		else
-			throw new Exception("other benchmark not implemeneted yet");
-
-		conn = PGConnector.getConnection(db);
+		conn = PGConnector.getConnection();
 	}
 	
 	public float getProgress()
@@ -35,20 +32,24 @@ public class PostgreSQLLoader extends DataLoader
 
 class PGConnector
 {
-	private static String IP = "10.32.216.106";
-	private static String port = "12345";
-	private static String user = "postgres";
-	private static String password = "";
-	
-	static Connection conn = null;
-	
-	public static Connection getConnection(String db)
+
+	public static Connection getConnection()
 	{		
+		Connection conn = null;
+		
+		String db = PrepareController.getDBName();
+		String ip = PrepareController.getDBIP();
+		String port = PrepareController.getDBPort();
+		String user = PrepareController.getDBUser();
+		String password = PrepareController.getDBPassword();
+		
+		
+		
 		try
 		{
 			Class.forName("org.postgresql.Driver").newInstance();
 			conn = DriverManager.getConnection(
-					String.format("jdbc:postgresql://%s:%s/%s", IP, port, db), user, password);
+					String.format("jdbc:postgresql://%s:%s/%s", ip, port, db), user, password);
 		}
 		catch(Exception e)
 		{

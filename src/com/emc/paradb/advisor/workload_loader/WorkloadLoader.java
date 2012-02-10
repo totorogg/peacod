@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.Vector;
 
 import com.emc.paradb.advisor.controller.Controller;
+import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.data_loader.TableAttributes;
 import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.workload_loader.SelectAnalyzer;
@@ -23,9 +24,8 @@ import net.sf.jsqlparser.statement.update.Update;
 
 public class WorkloadLoader
 {
-	private String fileName = "workload.log";
 	private String selectedBM = null;
-	private Workload<Transaction<Object>> workload = new Workload<Transaction<Object>>();
+	private Workload<Transaction<Object>> workload = null;
 	private float progress = 0;
 	
 	public WorkloadLoader(String selectedBM)
@@ -50,7 +50,7 @@ public class WorkloadLoader
 			{
 				try 
 				{
-					String filePath = System.getProperty("user.dir") + "/workload/" + fileName;
+					String filePath = System.getProperty("user.dir") +"/"+ PrepareController.getBMPath();
 					File file = new File(filePath);
 					BufferedReader reader = new BufferedReader(new FileReader(file));
 
@@ -58,6 +58,8 @@ public class WorkloadLoader
 					String line = null;
 					long readLength = 0;
 					Transaction<Object> tran = null;
+					workload = new Workload<Transaction<Object>>();
+					
 					while((line = reader.readLine()) != null)
 					{
 						readLength += line.getBytes().length;
@@ -131,6 +133,8 @@ public class WorkloadLoader
 	
 	protected void fix()
 	{
+		HashMap<String, TableNode> tables = Controller.getData().getMetaData();
+		
 		for(Transaction<Object> aTran : workload)
 		{
 			for(Object statement : aTran)
@@ -138,17 +142,31 @@ public class WorkloadLoader
 				if(statement instanceof SelectAnalysisInfo)
 				{
 					SelectAnalysisInfo select = (SelectAnalysisInfo)statement;
-					
-					for(WhereKey key : select.getWhereKeys())		
-						updateWhereKey(key);	
+					for(WhereKey key : select.getWhereKeys())
+					{
+						for(String tableName : select.getTables())
+						{
+							for(TableAttributes attr : tables.get(tableName).getAttrVector())
+								if(attr.getName().equals(key.getKeyName()))
+									key.setTableName(tableName);
+						}
+
+					}
 					
 				}
 				else if(statement instanceof UpdateAnalysisInfo)
 				{
 					UpdateAnalysisInfo update = (UpdateAnalysisInfo)statement;
+					String tableName = update.getTable();
 					for(WhereKey key : update.getWhereKeys())
-						updateWhereKey(key);	
-					
+					{
+						for(TableAttributes attr : tables.get(tableName).getAttrVector())
+							if(attr.getName().equals(key.getKeyName()))
+								key.setTableName(tableName);
+						
+						if(key.getTableName() == null)
+							System.out.println("Error: unrecognized key" + key.getKeyName());
+					}
 				}
 				else if(statement instanceof InsertAnalysisInfo)
 				{
@@ -157,36 +175,19 @@ public class WorkloadLoader
 				else if(statement instanceof DeleteAnalysisInfo)
 				{
 					DeleteAnalysisInfo delete = (DeleteAnalysisInfo)statement;
+					String tableName = delete.getTable();
 					for(WhereKey key : delete.getWhereKeys())
-						updateWhereKey(key);
+					{	
+						for(TableAttributes attr : tables.get(tableName).getAttrVector())
+							if(attr.getName().equals(key.getKeyName()))
+								key.setTableName(tableName);
+						
+						if(key.getTableName() == null)
+							System.out.println("Error: unrecognized key" + key.getKeyName());
+					}
 				}
 			}
 		}
-	}
-	
-	protected void updateWhereKey(WhereKey key)
-	{
-		if(key.getTableName() != null)
-			return;
-		
-		String table = null;	
-		HashMap<String, TableNode> tables = Controller.getData().getMetaData();
-		
-		for(TableNode tableNode : tables.values())
-		{
-			HashMap<String, TableAttributes> attributes = tableNode.getAttributes();
-			if(attributes.get(key.getKeyName()) != null)
-			{
-				table = tableNode.getName();
-				break;
-			}
-		}
-		
-		//findTableName:
-		if(table == null)
-			System.out.println(String.format("%s cannot find %s", table, key));
-		
-		key.setTableName(table);
 	}
 }
 

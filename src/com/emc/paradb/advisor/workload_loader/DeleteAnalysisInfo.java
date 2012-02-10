@@ -6,20 +6,21 @@ import java.util.Set;
 public class DeleteAnalysisInfo {
 	
 	//where clause, which has table.name = value
-	Set<WhereKey> whereKeys = new HashSet<WhereKey>();
+	private String table;
+	private Set<WhereKey> whereKeys = new HashSet<WhereKey>();
 	
-	public Set<WhereKey> getWhereKeys() {
+	public Set<WhereKey> getWhereKeys() 
+	{
 		return whereKeys;
 	}
 
-	String table;
+	
 	
 	public String getTable() {
 		return table;
 	}
-
 	public void setTable(String table) {
 		this.table = table;
-	}	
-	
+	}
+
 }

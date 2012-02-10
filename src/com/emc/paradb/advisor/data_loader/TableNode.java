@@ -19,8 +19,7 @@ public class TableNode
 	private String name;
 	private int length;
 	private List<String> primaryKey = null;
-	//the attributes corresponding to the table
-	private HashMap<String, TableAttributes> tableAttributeMap = new HashMap<String, TableAttributes>();
+
 	private Vector<TableAttributes> attributes = new Vector<TableAttributes>();
 	//an adjacent list. Each list node contains a refed tableNode, refKeys and refed Keys
 	private Vector<Vector<Object>> FKRef = new Vector<Vector<Object>>();
@@ -32,15 +31,15 @@ public class TableNode
 		try{
 			Statement stmt = conn.createStatement();
 			//get the name of its attributes
-			ResultSet result = stmt.executeQuery("SELECT column_name "+
-												 "FROM information_schema.columns "+
-												 "WHERE table_name ='"+newName+"';");
-			while(result.next())
+			ResultSet result = stmt.executeQuery("select * from "+newName+" limit 1;");			
+			result.next();
+			for(int i = 1; i <= result.getMetaData().getColumnCount(); i++)
 			{
-				TableAttributes aAttr = new TableAttributes(newName, result.getString(1), conn);
-				tableAttributeMap.put(result.getString(1), aAttr);
+				TableAttributes aAttr = new TableAttributes(newName, result.getMetaData().getColumnName(i), conn);
 				attributes.add(aAttr);
 			}
+			
+	
 			//get the primary keys
 			result = stmt.executeQuery("SELECT "+              
 									   "pg_attribute.attname,"+ 
@@ -110,9 +109,6 @@ public class TableNode
 			return false;
 	}
 
-	public HashMap<String, TableAttributes> getAttributes(){
-		return tableAttributeMap;
-	}
 	public Vector<TableAttributes> getAttrVector()
 	{
 		return attributes;

@@ -43,7 +43,7 @@ public class SchemaHash implements PlugInterface
 	HashBased hash = null;
 	int nodes = 0;
 	
-	HashMap<String, List<String>> tableKeyMap = new HashMap<String, List<String>>();
+	HashMap<String, List<String>> tableKeyMap = null;
 	
 	@Override
 	public boolean accept(Connection conn, Workload<Transaction<Object>> workload,
@@ -53,7 +53,8 @@ public class SchemaHash implements PlugInterface
 		this.workload = workload;
 		this.dbData = dbData;
 		this.nodes = nodes;
-		
+		tableKeyMap = new HashMap<String, List<String>>();
+		 
 		try
 		{
 			setPartition();
@@ -120,7 +121,7 @@ public class SchemaHash implements PlugInterface
 			}
 			//here we choose the first attribute, we should select the primary key in future work
 			List<String> keys = new ArrayList<String>();
-			keys.add(tables.get(startTable).getAttrVector().get(0).getName());
+			keys.add(tables.get(startTable).getPrimaryKey().get(0));
 			tableKeyMap.put(startTable, keys);
 			influenceList = influenceTree.get(startTable);
 			if(influenceList.size() < 1)
@@ -135,9 +136,17 @@ public class SchemaHash implements PlugInterface
 			}
 			influenceTree.remove(startTable);
 		}
-		List<String> keys = new ArrayList<String>();
-		keys.add("replicate");
-		tableKeyMap.put("item", keys);
+		
+		for(String table : tables.keySet())
+		{
+			if(!tableKeyMap.keySet().contains(table))
+			{
+				List<String> keys = new ArrayList<String>();
+				keys.add("replicate");
+				tableKeyMap.put(table, keys);
+			}
+		}
+		
 	}
 	private int getInfluence(String table, HashMap<String, HashMap<String, Vector<Object>>> influenceTree)
 	{

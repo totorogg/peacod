@@ -27,7 +27,7 @@ public class PKHash implements PlugInterface
 	HashBased hash = null;
 	int nodes = 0;
 	
-	HashMap<String, List<String>> tableKeyMap = new HashMap<String, List<String>>();
+	HashMap<String, List<String>> tableKeyMap = null;
 	
 	@Override
 	public boolean accept(Connection conn, Workload<Transaction<Object>> workload, DBData dbData, int nodes) 
@@ -36,7 +36,7 @@ public class PKHash implements PlugInterface
 		this.workload = workload;
 		this.dbData = dbData;
 		this.nodes = nodes;
-		
+		tableKeyMap = new HashMap<String, List<String>>();
 		
 		setPartitionKey();
 		hash = new HashBased(nodes);

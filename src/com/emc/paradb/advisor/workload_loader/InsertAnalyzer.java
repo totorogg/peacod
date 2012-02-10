@@ -1,6 +1,11 @@
 package com.emc.paradb.advisor.workload_loader;
 
 import java.util.List;
+
+import com.emc.paradb.advisor.data_loader.DataLoader;
+import com.emc.paradb.advisor.data_loader.TableAttributes;
+import com.emc.paradb.advisor.data_loader.TableNode;
+
 import net.sf.jsqlparser.expression.AllComparisonExpression;
 import net.sf.jsqlparser.expression.AnyComparisonExpression;
 import net.sf.jsqlparser.expression.CaseExpression;
@@ -57,8 +62,15 @@ public class InsertAnalyzer {
 		info.setTable(insert.getTable().getName());
 		
 		List<Column> columns = insert.getColumns();
-		for (Column col: columns){
-			info.addKey(col.getColumnName());
+		if(columns != null)
+			for (Column col: columns)
+				info.addKey(col.getColumnName());
+		else
+		{
+			TableNode tableNode = DataLoader.getDBData().getMetaData().get(info.getTable());
+			
+			for(int i = 0; i < tableNode.getAttrVector().size(); i++)
+				info.addKey(tableNode.getAttrVector().get(i).getName());
 		}
 		
 		insert.getItemsList().accept(new InsertItemsListVisitor(info));
@@ -138,70 +150,133 @@ class InsertExpressionVisitor implements ExpressionVisitor {
 	}
 
 	@Override
-	public void visit(AndExpression arg0) {	}
+	public void visit(AndExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(EqualsTo arg0) {	}
+	public void visit(EqualsTo arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(GreaterThan arg0) {	}
+	public void visit(GreaterThan arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(GreaterThanEquals arg0) {	}
+	public void visit(GreaterThanEquals arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(InExpression arg0) {	}
+	public void visit(InExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(IsNullExpression arg0) {	}
+	public void visit(IsNullExpression arg0)
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(LikeExpression arg0) {	}
+	public void visit(LikeExpression arg0)
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(MinorThan arg0) {	}
+	public void visit(MinorThan arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(MinorThanEquals arg0) {	}
+	public void visit(MinorThanEquals arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(NotEqualsTo arg0) {	}
+	public void visit(NotEqualsTo arg0)
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(Column arg0) {	}
+	public void visit(Column arg0)
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(SubSelect arg0) {	}
+	public void visit(SubSelect arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(CaseExpression arg0) {	}
+	public void visit(CaseExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(WhenClause arg0) {	}
+	public void visit(WhenClause arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(ExistsExpression arg0) {	}
+	public void visit(ExistsExpression arg0) 
+	{	
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(AllComparisonExpression arg0) {	}
+	public void visit(AllComparisonExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(AnyComparisonExpression arg0) {	}
+	public void visit(AnyComparisonExpression arg0) 
+	{
+		System.out.println("No support for " + arg0.toString());
+	}
 
 	@Override
-	public void visit(Concat arg0) {	}
+	public void visit(Concat arg0)
+	{
+	}
 
 	@Override
-	public void visit(Matches arg0) {	}
+	public void visit(Matches arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(BitwiseAnd arg0) {	}
+	public void visit(BitwiseAnd arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(BitwiseOr arg0) {	}
+	public void visit(BitwiseOr arg0) 
+	{
+		System.out.println("No support for " + arg0.getStringExpression());
+	}
 
 	@Override
-	public void visit(BitwiseXor arg0) {	}
+	public void visit(BitwiseXor arg0) 
+	{	}
 
 	@Override
 	public void visit(NullValue arg0) {	}
@@ -216,7 +291,11 @@ class InsertExpressionVisitor implements ExpressionVisitor {
 	public void visit(JdbcParameter arg0) {	}
 
 	@Override
-	public void visit(Parenthesis arg0) {	}
+	public void visit(Parenthesis arg0) 
+	{
+		Expression pe = arg0.getExpression();
+		pe.accept(this);
+	}
 
 	@Override
 	public void visit(Addition arg0) {	}

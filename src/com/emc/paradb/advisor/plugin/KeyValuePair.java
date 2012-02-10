@@ -2,6 +2,8 @@ package com.emc.paradb.advisor.plugin;
 
 
 /**
+ * this class serve as a container for a key value pair.
+ * It also contains the operation the key value pair will perform on the database
  * note that we only take "key" and "value" into account when considering hashCode and equals
  * @author panx1
  *
@@ -11,6 +13,7 @@ public class KeyValuePair
 	private String table = null;
 	private String key = null;
 	private String value = null;
+	private String opera = null;
 	private long cardinality = 0;
 	
 	
@@ -47,6 +50,17 @@ public class KeyValuePair
 	{
 		return table;
 	}
+	
+	public void setOpera(String opera)
+	{
+		this.opera = opera;
+	}
+	public String getOpera()
+	{
+		return opera;
+	}
+	
+	
 	public boolean equals(Object obj)
 	{
 		if(this == obj)

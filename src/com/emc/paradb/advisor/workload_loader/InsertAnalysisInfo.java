@@ -42,5 +42,6 @@ public class InsertAnalysisInfo {
 			obj.put(keys.get(i), values.get(i));
 		}
 	}
+	
 
 }

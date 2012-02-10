@@ -41,6 +41,11 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"This algorithm select primary key as partition key and place values via hash function.");
 	
+		PKRange.setInterface(new PKRange());
+		PKRange.setInfo("com.emc.paradb.advisor.algorithm.PKRange",
+							"getPartitionKey()", "getNode()",
+							"This algorithm select primary key as partition key and place values based on their range.");
+	
 		//the following are not implemented
 		consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
@@ -48,11 +53,7 @@ public class AlgorithmFactory
 							"This algorithm partition the key based on consistent hashing.");
 	
 
-		PKRange.setInterface(new SchemaHash());
-		PKRange.setInfo("com.emc.paradb.advisor.algorithm.PKRange",
-							"getPartitionKey()", "getNode()",
-							"This algorithm select primary key as partition key and place values based on their range.");
-	
+		
 		PKRoundRobin.setInterface(new SchemaHash());
 		PKRoundRobin.setInfo("com.emc.paradb.advisor.algorithm.PKRoundRobin",
 							"getPartitionKey()", "getNode()",
