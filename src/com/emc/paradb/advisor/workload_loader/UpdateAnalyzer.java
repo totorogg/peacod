@@ -95,17 +95,7 @@ class UpdateExpressionVisitor implements ExpressionVisitor {
 		
 		WhereKey wk = new WhereKey();
 		wk.setKeyName(column.getColumnName());
-		if(value instanceof LongValue)
-			wk.setKeyValue(((LongValue)value).getValue());
-		else if(value instanceof StringValue)
-			wk.setKeyValue(((StringValue)value).getValue());
-		else
-			try 
-			{
-				throw new Exception("Unrecognized value type");
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+		wk.setKeyValue(value.toString());
 		
 		info.getWhereKeys().add(wk);
 	}

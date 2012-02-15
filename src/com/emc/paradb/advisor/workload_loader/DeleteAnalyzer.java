@@ -97,10 +97,7 @@ class DeleteExpressionVisitor implements ExpressionVisitor {
 		
 		WhereKey wk = new WhereKey();
 		wk.setKeyName(column.getColumnName());
-		if(value instanceof LongValue)
-			wk.setKeyValue(((LongValue)value).getValue());
-		if(value instanceof StringValue)
-			wk.setKeyValue(((StringValue)value).getValue());
+		wk.setKeyValue(value.toString());
 		
 		info.getWhereKeys().add(wk);
 	}

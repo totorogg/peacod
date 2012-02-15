@@ -76,13 +76,19 @@ public class WorkloadDistributionEva extends Evaluator
 			analyzeTran(visitMap, tran);
 		}
 	}
+	/**
+	 * 
+	 * @param visitMap
+	 * @param tran
+	 */
 	protected static void analyzeTran(HashMap<Integer, Integer> visitMap, Transaction<Object> tran)
 	{
 		int distCount = 0;//how many nodes the transaction visits
 		//partition key is not contained in all Sqls of the transaction
 		for(int i = 0; i < nodes; i++)
 		{
-			visitMap.put(i, visitMap.get(i) + visitMap.get(-1));
+			if(visitMap.get(-1) > 0)
+				visitMap.put(i, visitMap.get(i) + 1);
 			workloadDistList.set(i, workloadDistList.get(i) + visitMap.get(i));
 			if(visitMap.get(i) != 0)
 				distCount++;
@@ -115,9 +121,9 @@ public class WorkloadDistributionEva extends Evaluator
 
 		for(WhereKey whereKey : delete.getWhereKeys())
 		{
-			if(keys.contains(whereKey.getKeyName()))
+			if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
 			{
-				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString());
+				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue());
 				kvPair.setOpera("delete");
 				kvPairs.add(kvPair);
 			}
@@ -132,14 +138,14 @@ public class WorkloadDistributionEva extends Evaluator
 	{
 		String table = insert.getTable();
 		List<String> keys = tableKeyMap.get(table);
-		Map<String, Object> keyValueMap = insert.getKeyValueMap();
+		Map<String, String> keyValueMap = insert.getKeyValueMap();
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 		
 		for(String whereKey : keyValueMap.keySet())
 		{
-			if(keys.contains(whereKey))
+			if(keys.contains(whereKey) && keyValueMap.get(whereKey) != null)
 			{
-				KeyValuePair kvPair = new KeyValuePair(table, whereKey, keyValueMap.get(whereKey).toString());
+				KeyValuePair kvPair = new KeyValuePair(table, whereKey, keyValueMap.get(whereKey));
 				kvPair.setOpera("insert");
 				kvPairs.add(kvPair);
 			}
@@ -157,15 +163,17 @@ public class WorkloadDistributionEva extends Evaluator
 		List<String> keys = tableKeyMap.get(table);
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 
+		
 		for(WhereKey whereKey : update.getWhereKeys())
 		{
-			if(keys.contains(whereKey.getKeyName()))
+			if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
 			{
-				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString());
+				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue());
 				kvPair.setOpera("delete");
 				kvPairs.add(kvPair);
 			}
 		}
+		
 		if(kvPairs.size() > 0)
 			updateWD(table, kvPairs, visitMap);
 		else
@@ -184,14 +192,17 @@ public class WorkloadDistributionEva extends Evaluator
 			
 			if(keys.get(0).equalsIgnoreCase("replicate"))
 			{
-				visitMap.put(-2, visitMap.get(-2) + 1);
-				continue;
+				KeyValuePair kvPair = new KeyValuePair(table, null, "replicate");
+				kvPair.setOpera("select");
+				kvPairs.add(kvPair);
+				hit = true;
 			}
+			
 			for(WhereKey whereKey : select.getWhereKeys())
 			{
-				if(keys.contains(whereKey.getKeyName()))
+				if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
 				{
-					KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue().toString());
+					KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue());
 					kvPair.setOpera("select");
 					kvPairs.add(kvPair);
 					hit = true;
@@ -217,6 +228,7 @@ public class WorkloadDistributionEva extends Evaluator
 		if(nodes.get(0) == -1)//failed to match a node
 		{
 			System.out.println(String.format("cannot match a keyValuePairs %s to its node", kvPairs));
+			visitMap.put(-1, visitMap.get(-1)+1);
 			return;
 		}
 		for(Integer node : nodes)

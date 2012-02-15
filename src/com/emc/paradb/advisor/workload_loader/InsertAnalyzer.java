@@ -115,38 +115,38 @@ class InsertExpressionVisitor implements ExpressionVisitor {
 		this.info = info;
 	}
 	
-	public void addConst(Object value){
+	public void addConst(String value){
 		info.addValue(value);
 	}
 
 	@Override
 	public void visit(DoubleValue arg0) {
-		addConst(arg0);
+		addConst(arg0.toString());
 	}
 
 	@Override
 	public void visit(LongValue arg0) {
-		addConst(arg0);
+		addConst(arg0.toString());
 	}
 
 	@Override
 	public void visit(DateValue arg0) {
-		addConst(arg0);
+		addConst(arg0.toString());
 	}
 
 	@Override
 	public void visit(TimeValue arg0) {
-		addConst(arg0);
+		addConst(arg0.toString());
 	}
 
 	@Override
 	public void visit(TimestampValue arg0) {
-		addConst(arg0);
+		addConst(arg0.toString());
 	}
 
 	@Override
 	public void visit(StringValue arg0) {
-		addConst(arg0);
+		addConst(arg0.toString());
 	}
 
 	@Override

@@ -14,13 +14,13 @@ import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
 /**
- * select the primary key as partitionKey.
- * If primary key is composed of several keys, we choose the first one by default.
- * If a table has no primary key, we choose the first attribute of that table
+ * we replicate all tables to each node 
+ * and palce workload to nodes in Hash manner
+ * 
  * 
  * @author panx1
  */
-public class PKHash implements PlugInterface
+public class AllReplicateHash implements PlugInterface
 {
 	Connection conn = null;
 	Workload<Transaction<Object>> workload = null;
@@ -38,32 +38,22 @@ public class PKHash implements PlugInterface
 		this.dbData = dbData;
 		this.nodes = nodes;
 		tableKeyMap = new HashMap<String, List<String>>();
-		
+
 		setPartitionKey();
 		hash = new HashBased(nodes);
 		
 		return true;
 	}
-	
-	private void setPartitionKey()
+
+	public void setPartitionKey()
 	{
-		HashMap<String, TableNode> tableMap = dbData.getMetaData();
-		for(String table : tableMap.keySet())
-		{
-			TableNode tableNode = tableMap.get(table);
-			List<String> primaryKey = tableNode.getPrimaryKey();
-			List<String> keys = new ArrayList<String>();
-			if(primaryKey.size() > 0)
-				keys.add(primaryKey.get(0));
-			else
-				keys.add(tableNode.getAttrVector().get(0).getName());
-			tableKeyMap.put(table, keys);
-		}
+		List<String> keyList = new ArrayList<String>();
+		keyList.add("replicate");
+		for(String table : dbData.getMetaData().keySet())
+			tableKeyMap.put(table, keyList);
 	}
-	
 	@Override
-	public HashMap<String, List<String>> getPartitionKey() 
-	{
+	public HashMap<String, List<String>> getPartitionKey() {
 		// TODO Auto-generated method stub
 		return tableKeyMap;
 	}
@@ -73,14 +63,13 @@ public class PKHash implements PlugInterface
 	{
 		// TODO Auto-generated method stub
 		List<Integer> nodes = new ArrayList<Integer>();
-		
 		if(kvPairs.get(0).getRange() != Range.EQUAL)
 		{
 			nodes.add(-1);
 			return nodes;
 		}
 		
-		String value = kvPairs.get(0).getValue();
+		String value = kvPairs.get(0).getValue();		
 		if(value != null)
 			nodes.add(hash.getPlacement(value));
 		else

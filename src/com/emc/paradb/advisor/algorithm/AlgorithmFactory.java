@@ -19,7 +19,7 @@ public class AlgorithmFactory
 	private static Plugin PKRange = new Plugin();
 	private static Plugin PKRoundRobin = new Plugin();
 	private static Plugin Dynamo = new Plugin();
-	private static Plugin AllReplicate = new Plugin();
+	private static Plugin AllReplicateHash = new Plugin();
 	private static Plugin AllMidterm = new Plugin();
 	private static Plugin semiSchema = new Plugin();
 	
@@ -46,6 +46,16 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"This algorithm select primary key as partition key and place values based on their range.");
 	
+		PKRoundRobin.setInterface(new PKRR());
+		PKRoundRobin.setInfo("com.emc.paradb.advisor.algorithm.PKRoundRobin",
+							"getPartitionKey()", "getNode()",
+							"This algorithm select primary key as partition key and place values via round robin function.");
+	
+		AllReplicateHash.setInterface(new AllReplicateHash());
+		AllReplicateHash.setInfo("com.emc.paradb.advisor.algorithm.AllReplicateHash",
+							"getPartitionKey()", "getNode()",
+							"The algorithm replicate table to all nodes.");
+		
 		//the following are not implemented
 		consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
@@ -53,21 +63,11 @@ public class AlgorithmFactory
 							"This algorithm partition the key based on consistent hashing.");
 	
 
-		
-		PKRoundRobin.setInterface(new SchemaHash());
-		PKRoundRobin.setInfo("com.emc.paradb.advisor.algorithm.PKRoundRobin",
-							"getPartitionKey()", "getNode()",
-							"This algorithm select primary key as partition key and place values via round robin function.");
-	
 		Dynamo.setInterface(new SchemaHash());
 		Dynamo.setInfo("com.emc.paradb.advisor.algorithm.Dynamo",
 							"getPartitionKey()", "getNode()",
 							"According to dynamo paper.");
 	
-		AllReplicate.setInterface(new SchemaHash());
-		AllReplicate.setInfo("com.emc.paradb.advisor.algorithm.AllReplicate",
-							"getPartitionKey()", "getNode()",
-							"The algorithm replicate table to all nodes.");
 	
 		AllMidterm.setInterface(new SchemaHash());
 		AllMidterm.setInfo("com.emc.paradb.advisor.algorithm.AllMidterm",
@@ -89,7 +89,7 @@ public class AlgorithmFactory
 		algorithms.add(PKRange);
 		algorithms.add(PKRoundRobin);
 		algorithms.add(Dynamo);
-		algorithms.add(AllReplicate);
+		algorithms.add(AllReplicateHash);
 		algorithms.add(AllMidterm);
 		algorithms.add(semiSchema);
 	}

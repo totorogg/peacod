@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.emc.paradb.advisor.workload_loader.WhereKey.Range;
+
 import net.sf.jsqlparser.expression.AllComparisonExpression;
 import net.sf.jsqlparser.expression.AnyComparisonExpression;
 import net.sf.jsqlparser.expression.CaseExpression;
@@ -116,11 +118,11 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 	
 	SelectAnalysisInfo info;
 	Set<EqualsTo> hold = new HashSet<EqualsTo>();
+	WhereKey wk = null;
 	
 	public SelectExpressionVisitor(SelectAnalysisInfo info){
 		this.info = info;
 	}
-
 	@Override
 	public void visit(AndExpression arg0) 
 	{
@@ -135,35 +137,44 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 			Column cl = (Column)aEqualTo.getLeftExpression();
 			Column cr = (Column)aEqualTo.getRightExpression();
 			
-			WhereKey newWk = null;
-			for(WhereKey wk : info.getWhereKeys())
+			wk = null;
+			for(WhereKey whereKey : info.getWhereKeys())
 			{	
-				if(wk.getKeyName().equals(cl.getColumnName())){
-					newWk = new WhereKey();
-					newWk.setKeyName(cr.getColumnName());
-					newWk.setKeyValue(wk.getKeyValue());
+				if(whereKey.getKeyName().equals(cl.getColumnName()) && whereKey.getKeyValue() != null){
+					wk = new WhereKey();
+					wk.setKeyName(cr.getColumnName());
+					wk.setKeyValue(whereKey.getKeyValue().toString());
 					break;
 				}
-				else if(wk.getKeyName().equals(cr.getColumnName())){
-					newWk = new WhereKey();
-					newWk.setKeyName(cl.getColumnName());
-					newWk.setKeyValue(wk.getKeyValue());	
+				else if(whereKey.getKeyName().equals(cr.getColumnName()) && whereKey.getKeyValue() != null){
+					wk = new WhereKey();
+					wk.setKeyName(cl.getColumnName());
+					wk.setKeyValue(whereKey.getKeyValue().toString());	
 					break;
 				}			
 			}
-			if(newWk != null)
-				info.getWhereKeys().add(newWk);
+			if(wk != null)
+				info.getWhereKeys().add(wk);
 			else
-				System.out.println("Warning: join A.a = B.b without A.a = x or B.b = y. Ignored");
+			{
+				wk = new WhereKey();
+				wk.setKeyName(cl.getColumnName());
+				wk.setRange(Range.ALL);
+				info.getWhereKeys().add(wk);
+				
+				wk = new WhereKey();
+				wk.setKeyName(cr.getColumnName());
+				wk.setRange(Range.ALL);
+				info.getWhereKeys().add(wk);
+			}
 		}
 	}
 
 	@Override
 	public void visit(EqualsTo arg0) 
 	{
-		// equi-joins
-		Column column = null;
-		Object value = null;
+		wk = new WhereKey();
+		wk.setRange(Range.EQUAL);
 		if (arg0.getLeftExpression() instanceof Column
 				&& arg0.getRightExpression() instanceof Column) 
 		{	
@@ -172,13 +183,15 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 		}
 		else if (arg0.getLeftExpression() instanceof Column)
 		{		
-			column = (Column)arg0.getLeftExpression();
-			value = arg0.getRightExpression();
+			wk.setKeyName(((Column)arg0.getLeftExpression()).getColumnName());
+			arg0.getRightExpression().accept(this);
+			info.getWhereKeys().add(wk);	
 		}
 		else if (arg0.getRightExpression() instanceof Column)
 		{	
-			column = (Column)arg0.getRightExpression();
-			value = arg0.getLeftExpression();
+			wk.setKeyName(((Column)arg0.getRightExpression()).getColumnName());
+			arg0.getLeftExpression().accept(this);
+			info.getWhereKeys().add(wk);	
 		}
 		else
 		{
@@ -186,27 +199,52 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 			return;
 		}
 		
-		WhereKey wk = new WhereKey();
-		wk.setKeyName(column.getColumnName());
-		if(value instanceof LongValue)
-			wk.setKeyValue(((LongValue)value).getValue());
-		else if(value instanceof StringValue)
-			wk.setKeyValue(((StringValue)value).getValue());
-		
-		info.getWhereKeys().add(wk);
-		
 	}
 
 	@Override
 	public void visit(GreaterThan arg0) 
 	{
-		System.out.println("No support for " + arg0.getStringExpression());
+		wk = new WhereKey();
+		wk.setRange(Range.LARGER);
+		if(arg0.getLeftExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getLeftExpression()).getColumnName());
+			arg0.getRightExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else if(arg0.getRightExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getRightExpression()).getColumnName());
+			arg0.getLeftExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else
+		{
+			System.out.println("Error greater than expression: " + arg0.getStringExpression());
+		}
 	}
 
 	@Override
 	public void visit(GreaterThanEquals arg0) 
 	{
-		System.out.println("No support for " + arg0.getStringExpression());
+		wk = new WhereKey();
+		wk.setRange(Range.LARGEEQL);
+		if(arg0.getLeftExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getLeftExpression()).getColumnName());
+			arg0.getRightExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else if(arg0.getRightExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getRightExpression()).getColumnName());
+			arg0.getLeftExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else
+		{
+			System.out.println("Error >= expression: " + arg0.getStringExpression());
+		}
 	}
 
 	@Override
@@ -230,13 +268,47 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 	@Override
 	public void visit(MinorThan arg0) 
 	{
-		System.out.println("No support for " + arg0.getStringExpression());
+		wk = new WhereKey();
+		wk.setRange(Range.SMALLER);
+		if(arg0.getLeftExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getLeftExpression()).getColumnName());
+			arg0.getRightExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else if(arg0.getRightExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getRightExpression()).getColumnName());
+			arg0.getLeftExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else
+		{
+			System.out.println("Error < expression: " + arg0.getStringExpression());
+		}
 	}
 
 	@Override
 	public void visit(MinorThanEquals arg0) 
 	{
-		System.out.println("No support for " + arg0.getStringExpression());
+		wk = new WhereKey();
+		wk.setRange(Range.SMALLEQL);
+		if(arg0.getLeftExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getLeftExpression()).getColumnName());
+			arg0.getRightExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else if(arg0.getRightExpression() instanceof Column)
+		{
+			wk.setKeyName(((Column)arg0.getRightExpression()).getColumnName());
+			arg0.getLeftExpression().accept(this);
+			info.getWhereKeys().add(wk);
+		}
+		else
+		{
+			System.out.println("Error <= expression: " + arg0.getStringExpression());
+		}
 	}
 
 	@Override
@@ -344,13 +416,13 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 	@Override
 	public void visit(DoubleValue arg0) 
 	{
-		System.out.println("No support for " + arg0.toString());
+		wk.setKeyValue(arg0.toString());
 	}
 
 	@Override
 	public void visit(LongValue arg0) 
 	{
-		System.out.println("No support for " + arg0.toString());
+		wk.setKeyValue(arg0.toString());
 	}
 
 	@Override
@@ -381,7 +453,7 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 	@Override
 	public void visit(StringValue arg0) 
 	{
-		System.out.println("No support for " + arg0.toString());
+		wk.setKeyValue(arg0.toString());
 	}
 
 	@Override

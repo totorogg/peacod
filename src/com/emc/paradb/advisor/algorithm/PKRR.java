@@ -20,12 +20,12 @@ import com.emc.paradb.advisor.workload_loader.Workload;
  * 
  * @author panx1
  */
-public class PKHash implements PlugInterface
+public class PKRR implements PlugInterface
 {
 	Connection conn = null;
 	Workload<Transaction<Object>> workload = null;
 	DBData dbData = null;
-	HashBased hash = null;
+	RoundRobin RR = null;
 	int nodes = 0;
 	
 	HashMap<String, List<String>> tableKeyMap = null;
@@ -40,7 +40,7 @@ public class PKHash implements PlugInterface
 		tableKeyMap = new HashMap<String, List<String>>();
 		
 		setPartitionKey();
-		hash = new HashBased(nodes);
+		RR = new RoundRobin(nodes);
 		
 		return true;
 	}
@@ -73,7 +73,6 @@ public class PKHash implements PlugInterface
 	{
 		// TODO Auto-generated method stub
 		List<Integer> nodes = new ArrayList<Integer>();
-		
 		if(kvPairs.get(0).getRange() != Range.EQUAL)
 		{
 			nodes.add(-1);
@@ -82,7 +81,7 @@ public class PKHash implements PlugInterface
 		
 		String value = kvPairs.get(0).getValue();
 		if(value != null)
-			nodes.add(hash.getPlacement(value));
+			nodes.add(RR.getPlacement(value));
 		else
 			nodes.add(-1);
 		

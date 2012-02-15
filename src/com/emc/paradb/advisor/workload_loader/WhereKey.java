@@ -11,15 +11,20 @@ package com.emc.paradb.advisor.workload_loader;
  */
 public class WhereKey 
 {
-	String tableName = null;
-	String keyName = null;
-	Object keyValue = null;
-	String valueRange = null;
+	private String tableName = null;
+	private String keyName = null;
+	private String keyValue = null;
+	private Range range = Range.EQUAL;
 	
-	public Object getKeyValue() {
+	public enum Range{
+		EQUAL, SMALLEQL, LARGEEQL,
+		SMALLER, LARGER, ALL
+	};
+	
+	public String getKeyValue() {
 		return keyValue;
 	}
-	public void setKeyValue(Object keyValue) {
+	public void setKeyValue(String keyValue) {
 		this.keyValue = keyValue;
 	}
 	public String getTableName() {
@@ -33,6 +38,14 @@ public class WhereKey
 	}
 	public void setKeyName(String keyName) {
 		this.keyName = keyName;
+	}
+	public void setRange(Range type)
+	{
+		this.range = type;
+	}
+	public Range getRange()
+	{
+		return this.range;
 	}
 	
 	@Override

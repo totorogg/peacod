@@ -14,6 +14,7 @@ import com.emc.paradb.advisor.data_loader.TableAttributes;
 import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
 import com.emc.paradb.advisor.plugin.PlugInterface;
+import com.emc.paradb.advisor.plugin.KeyValuePair.Range;
 import com.emc.paradb.advisor.workload_loader.DeleteAnalysisInfo;
 import com.emc.paradb.advisor.workload_loader.InsertAnalysisInfo;
 import com.emc.paradb.advisor.workload_loader.SelectAnalysisInfo;
@@ -156,9 +157,14 @@ public class CountMaxRR implements PlugInterface
 	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
 	{
 		// TODO Auto-generated method stub
-		String value = kvPairs.get(0).getValue();
 		List<Integer> nodes = new ArrayList<Integer>();
+		if(kvPairs.get(0).getRange() != Range.EQUAL)
+		{
+			nodes.add(-1);
+			return nodes;
+		}
 		
+		String value = kvPairs.get(0).getValue();
 		if(value != null)
 			nodes.add(RR.getPlacement(value));
 		else

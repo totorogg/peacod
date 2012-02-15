@@ -10,10 +10,10 @@ public class InsertAnalysisInfo {
 	//the table to be inserted
 	private String table;	
 	//the key and correspondent values of the the inserted tuple
-	Map<String, Object> obj = new HashMap<String, Object>();
+	Map<String, String> obj = new HashMap<String, String>();
 	
 	private List<String> keys = new ArrayList<String>();
-	private List<Object> values = new ArrayList<Object>();
+	private List<String> values = new ArrayList<String>();
 	
 	public InsertAnalysisInfo(){}
 
@@ -25,7 +25,7 @@ public class InsertAnalysisInfo {
 		this.table = table;
 	}
 
-	public Map<String, Object> getKeyValueMap() {
+	public Map<String, String> getKeyValueMap() {
 		return obj;
 	}
 	
@@ -33,7 +33,7 @@ public class InsertAnalysisInfo {
 		keys.add(key);
 	}
 	
-	public void addValue(Object value){
+	public void addValue(String value){
 		values.add(value);
 	}
 	

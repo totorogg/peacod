@@ -15,6 +15,7 @@ import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
 import com.emc.paradb.advisor.plugin.PlugInterface;
+import com.emc.paradb.advisor.plugin.KeyValuePair.Range;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
@@ -221,13 +222,23 @@ public class SchemaHash implements PlugInterface
 	@Override
 	public List<Integer> getNode(List<KeyValuePair> kvPairs) {
 		// TODO Auto-generated method stub
-		String value = kvPairs.get(0).getValue();
 		List<Integer> nodes = new ArrayList<Integer>();
+		if(kvPairs.get(0).getRange() != Range.EQUAL)
+		{
+			nodes.add(-1);
+			return nodes;
+		}
+		if(kvPairs.get(0).getValue().equalsIgnoreCase("replicate"))
+		{
+			nodes.add(-2);
+			return nodes;
+		}
 		
+		String value = kvPairs.get(0).getValue();		
 		if(value != null)
 			nodes.add(hash.getPlacement(value));
 		else
-			nodes.add(0);
+			nodes.add(-1);
 		
 		return nodes;
 	}

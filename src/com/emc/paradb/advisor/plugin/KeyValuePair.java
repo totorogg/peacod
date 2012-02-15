@@ -1,5 +1,7 @@
 package com.emc.paradb.advisor.plugin;
 
+import com.emc.paradb.advisor.workload_loader.WhereKey.Range;
+
 
 /**
  * this class serve as a container for a key value pair.
@@ -15,6 +17,12 @@ public class KeyValuePair
 	private String value = null;
 	private String opera = null;
 	private long cardinality = 0;
+	private Range range = Range.EQUAL;
+	
+	public enum Range{
+		EQUAL, SMALLEQL, LARGEEQL,
+		SMALLER, LARGER, ALL
+	};
 	
 	
 	public KeyValuePair(String key, String value)
@@ -50,14 +58,22 @@ public class KeyValuePair
 	{
 		return table;
 	}
+	public String getOpera()
+	{
+		return opera;
+	}
+	public Range getRange()
+	{
+		return range;
+	}
 	
 	public void setOpera(String opera)
 	{
 		this.opera = opera;
 	}
-	public String getOpera()
+	public void setRange(Range range)
 	{
-		return opera;
+		this.range = range;
 	}
 	
 	

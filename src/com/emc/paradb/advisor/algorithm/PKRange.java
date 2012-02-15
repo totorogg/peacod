@@ -13,6 +13,7 @@ import java.util.Set;
 import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
+import com.emc.paradb.advisor.plugin.KeyValuePair.Range;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
@@ -95,10 +96,17 @@ public class PKRange implements PlugInterface
 	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
 	{
 		// TODO Auto-generated method stub
+		
 		Set<Integer> nodes = new HashSet<Integer>();
 		
 		for(KeyValuePair kvPair : kvPairs)
 		{
+			if(kvPair.getRange() != Range.EQUAL)
+			{
+				List<Integer> nodeList = new ArrayList<Integer>();
+				nodeList.add(-1);
+				return nodeList;
+			}
 			LookUpTable aLookUp = keyLookUpMap.get(kvPair.getKey());
 			aLookUp.updateTable(kvPair);
 			nodes.add(aLookUp.getNode(kvPair));
@@ -167,6 +175,8 @@ class LookUpTable
 	
 	public int getNode(KeyValuePair kvPair)
 	{
+		if(kvPair.getValue() == null)
+			return -1;
 		double s = Double.valueOf(kvPair.getValue());
 		
 		if (s < start || s > end) 
