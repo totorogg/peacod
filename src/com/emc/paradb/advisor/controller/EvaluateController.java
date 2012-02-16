@@ -73,7 +73,13 @@ public class EvaluateController extends Controller
 		DisplayController.display();
 		
 		Summarize.summrize();
-		DisplayController.displaySummary(Summarize.getSummaries(), Summarize.getPluginNames());
+		DisplayController.displaySummary(Summarize.getTableKeyMap(), 
+				 Summarize.getPluginNames(),
+				 "Table->PartitionKey", false);
+		
+		DisplayController.displaySummary(Summarize.getWorkloadDist(), 
+				 Summarize.getPluginNames(),
+				 "Workload Distribution Evaluation", true);
 	}
 
 	

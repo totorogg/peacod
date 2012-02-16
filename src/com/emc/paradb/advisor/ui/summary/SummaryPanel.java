@@ -18,7 +18,7 @@ import com.emc.paradb.advisor.controller.DisplayController;
 public class SummaryPanel extends JPanel
 {
 	private Box box = Box.createVerticalBox();
-	Box tableBox = Box.createHorizontalBox();
+	Box tableBox = Box.createVerticalBox();
 	private JTable summaryTable = null;
 	
 	public SummaryPanel()
@@ -29,13 +29,13 @@ public class SummaryPanel extends JPanel
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
-		box.add(Box.createVerticalStrut(20));
 		box.add(tableBox);
-		
 		DisplayController.registerSummaryCB(new SummaryCB()
 		{
 			@Override
-			public void drawSummaryTable(Object[][] data, Object[] columnNames) {
+			public void drawSummaryTable(Object[][] data, Object[] columnNames,
+					String title, boolean append) 
+			{
 				// TODO Auto-generated method stub
 				DefaultTableModel dm = new DefaultTableModel();
 				dm.setColumnIdentifiers(columnNames);
@@ -44,18 +44,22 @@ public class SummaryPanel extends JPanel
 				summaryTable = new JTable();
 				summaryTable.setModel(dm);
 				
-				tableBox.removeAll();
-			
+				if(!append)
+					tableBox.removeAll();
+
+				
 				JScrollPane jsp = new JScrollPane(summaryTable);
 				Box scrollBox = Box.createHorizontalBox();
 				scrollBox.add(Box.createHorizontalStrut(40));
 				scrollBox.add(jsp);
 				scrollBox.add(Box.createHorizontalStrut(40));
 				
+				tableBox.add(Box.createVerticalStrut(10));
+				tableBox.add(new JLabel(title));
 				tableBox.add(scrollBox);
 				tableBox.add(Box.createHorizontalGlue());
-				
 				tableBox.updateUI();
+				tableBox.validate();
 			}
 			
 		});

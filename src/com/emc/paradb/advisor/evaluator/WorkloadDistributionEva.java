@@ -163,7 +163,6 @@ public class WorkloadDistributionEva extends Evaluator
 		List<String> keys = tableKeyMap.get(table);
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 
-		
 		for(WhereKey whereKey : update.getWhereKeys())
 		{
 			if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
@@ -224,14 +223,14 @@ public class WorkloadDistributionEva extends Evaluator
 								   HashMap<Integer, Integer> visitMap)
 	{
 		
-		List<Integer> nodes = aPlugin.getInstance().getNode(kvPairs);
-		if(nodes.get(0) == -1)//failed to match a node
+		List<Integer> nodeList = aPlugin.getInstance().getNode(kvPairs);
+		if(nodeList.get(0) == -1)//failed to match a node
 		{
 			System.out.println(String.format("cannot match a keyValuePairs %s to its node", kvPairs));
 			visitMap.put(-1, visitMap.get(-1)+1);
 			return;
 		}
-		for(Integer node : nodes)
+		for(Integer node : nodeList)
 		{
 			if (visitMap.get(node) == null)
 				visitMap.put(node, 1);

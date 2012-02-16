@@ -84,8 +84,9 @@ public class DisplayController
 			transactionDistributionCB.draw(dist, nonDist, nodeAccess);
 	}
 	
-	public static void displaySummary(Object[][] data, Object[] columnNames)
+	public static void displaySummary(Object[][] data, Object[] columnNames, 
+			String title, boolean append)
 	{
-		summaryCB.drawSummaryTable(data, columnNames);
+		summaryCB.drawSummaryTable(data, columnNames, title, append);
 	}
 }
