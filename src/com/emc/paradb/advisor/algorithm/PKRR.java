@@ -87,4 +87,10 @@ public class PKRR implements PlugInterface
 		
 		return nodes;
 	}
+
+	@Override
+	public List<String[]> getSetting() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

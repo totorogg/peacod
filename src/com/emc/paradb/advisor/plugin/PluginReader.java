@@ -155,9 +155,8 @@ class ConfigXML
 {
 	private PluginInfo pluginInfo = new PluginInfo();
 	
-	public PluginInfo parse(JarFile jarFile){
-		
-		
+	public PluginInfo parse(JarFile jarFile)
+	{	
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = null;
 		Document doc = null;

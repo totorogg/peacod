@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.emc.paradb.advisor.plugin.Plugin;
+import com.emc.paradb.advisor.ui.algorithm_panel.AlgorithmSetting;
 import com.emc.paradb.advisor.ui.data_distribution.DataDistributionCB;
 import com.emc.paradb.advisor.ui.summary.SummaryCB;
 import com.emc.paradb.advisor.ui.transaction_distribution.TransactionDistributionCB;
@@ -88,5 +89,10 @@ public class DisplayController
 			String title, boolean append)
 	{
 		summaryCB.drawSummaryTable(data, columnNames, title, append);
+	}
+	
+	public static void displaySetting(List<String[]> paraList)
+	{
+		AlgorithmSetting.disPlaySetting(paraList);
 	}
 }

@@ -60,8 +60,7 @@ public class SummaryPanel extends JPanel
 				tableBox.add(Box.createHorizontalGlue());
 				tableBox.updateUI();
 				tableBox.validate();
-			}
-			
+			}	
 		});
 	}
 }

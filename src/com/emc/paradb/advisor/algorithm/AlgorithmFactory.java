@@ -93,6 +93,7 @@ public class AlgorithmFactory
 		algorithms.add(AllMidterm);
 		algorithms.add(semiSchema);
 	}
+	
 	public static void ListAlgorithms()
 	{
 		for(Plugin aAlgorithm : algorithms)

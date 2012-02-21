@@ -78,15 +78,27 @@ class AlgorithmTable extends JTable
 	{
 		super.tableChanged(e);
 		
+		
+		
 		// TODO Auto-generated method stub
 		int row = e.getFirstRow();
 		int column = e.getColumn();
-		if(row < 0 || column != 1)
+		
+		if(row < 0)
 			return;
-		TableModel model = (TableModel)e.getSource();
-		Boolean checkBox = (Boolean)model.getValueAt(row, column);
-			
-		AlgorithmController.updateSelectedAlgorithm(row, checkBox.booleanValue());
+		
+		if(column == 2)
+		{
+			AlgorithmController.updateSetting(row);
+			return;
+		}	
+		else if(column == 1)
+		{
+			TableModel model = (TableModel)e.getSource();
+			Boolean checkBox = (Boolean)model.getValueAt(row, column);
+				
+			AlgorithmController.updateSelectedAlgorithm(row, checkBox.booleanValue());
+		}
 	}
 	
 	//if a different is selected, the corresponding description should also be changed

@@ -25,7 +25,7 @@ public class PKRange implements PlugInterface
 	Workload<Transaction<Object>> workload = null;
 	DBData dbData = null;
 	int nodes = 0;
-	
+	List<String[]> paraList = null;
 	HashMap<String, List<String>> tableKeyMap = null;
 	HashMap<String, LookUpTable> keyLookUpMap = null;
 	
@@ -81,7 +81,20 @@ public class PKRange implements PlugInterface
 				resultMax.next();
 				double max = resultMax.getDouble(1);
 				
-				LookUpTable aLookUp = new LookUpTable(min, max, nodes);
+				double range = 0;
+				if(paraList != null)
+				{
+					String rangeString = paraList.get(0)[1];
+					try
+					{
+						range = Double.valueOf(rangeString);
+					}catch(NumberFormatException e)
+					{
+						System.out.println("illegal range value");
+						range = 0;
+					}
+				}
+				LookUpTable aLookUp = new LookUpTable(min, max, range, nodes);
 				keyLookUpMap.put(key, aLookUp);
 			} 
 			catch (SQLException e) 
@@ -120,6 +133,18 @@ public class PKRange implements PlugInterface
 		// TODO Auto-generated method stub
 		return tableKeyMap;
 	}
+
+	@Override
+	public List<String[]> getSetting() {
+		// TODO Auto-generated method stub
+		paraList = new ArrayList<String[]>();
+	
+		String[] range = new String[]{"range(double)","",
+				"all values in the range are put in one node"};  
+		paraList.add(range);
+		
+		return paraList;
+	}
 	
 }
 
@@ -128,9 +153,10 @@ class LookUpTable
 	private double start;
 	private double end;
 	private double interval;
+	private double range = 0;
 	private int slots;
 	
-	public LookUpTable(double start, double end, int slots)
+	public LookUpTable(double start, double end, double range, int slots)
 	{
 		if(start >= end)
 			System.out.println("end >= start");
@@ -138,55 +164,25 @@ class LookUpTable
 		this.start = start;
 		this.end = end;
 		this.slots = slots;
+		this.range = range;
 	}
-	/*
-	public List<Integer> getNodes(double s, double e)
-	{
-		List<Integer> nodes = new ArrayList<Integer>();
-		
-		if (s < start || e > end || s >= e) 
-		{
-			try 
-			{
-				throw new Exception("error range");
-			} 
-			catch (Exception e1) 
-			{
-				e1.printStackTrace();
-				System.out.println(e1.getMessage());
-			}
-		}
-		interval = (end - start) / slots;
-		
-		int startNode = (int)((s - start) / interval);
-		while(startNode >= slots)
-			startNode--;
-		
-		int endNode = (int)((e - start) / interval);
-		while(endNode >= slots)
-			endNode--;
-		
-		nodes.add(startNode);
-		while(startNode < endNode)
-			nodes.add(++startNode);
-		
-		return nodes;
-	}*/
+
 	
 	public int getNode(KeyValuePair kvPair)
 	{
 		if(kvPair.getValue() == null)
 			return -1;
-		double s = Double.valueOf(kvPair.getValue());
 		
+		double s = Double.valueOf(kvPair.getValue());
 		if (s < start || s > end) 
 			return -1;
 		
-		interval = (end - start) / slots;
+		if(range == 0)
+			interval = (end - start) / slots;
+		else
+			interval = range;
 		
-		int startNode = (int)((s - start) / interval);
-		while(startNode >= slots)
-			startNode--;
+		int startNode = (int)((s - start) / interval) % slots;
 		
 		return startNode;
 	}
