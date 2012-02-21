@@ -145,7 +145,6 @@ public class PKRange implements PlugInterface
 		
 		return paraList;
 	}
-	
 }
 
 class LookUpTable

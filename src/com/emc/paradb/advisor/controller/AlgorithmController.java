@@ -53,8 +53,11 @@ public class AlgorithmController extends Controller
 	public static void updateSetting(int index)
 	{
 		Plugin aPlugin = AlgorithmFactory.getAlgorithms().get(index);
-		
-		List<String[]> paraList = aPlugin.getInstance().getSetting();
-		DisplayController.displaySetting(paraList);
+		if(aPlugin.getInstance().getSetting() != null)
+		{
+			List<String[]> paraList = aPlugin.getInstance().getSetting();
+			DisplayController.displaySetting(paraList);
+		}
+
 	}
 }
