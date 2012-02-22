@@ -47,7 +47,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	private Box bmBox = Box.createVerticalBox();
 	
 	private JComboBox bmComboBox = null;
-	private String[] bmString = {"TPC-C", "TPC-E", "TPC-W", "TATP"};
+	private String[] bmString = {"TPC-C", "EPINIONS", "TATP"};
 
 	private JComboBox dbComboBox = null;
 	private String[] dbString = {"PostgreSQL"};

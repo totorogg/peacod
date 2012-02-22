@@ -14,6 +14,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
+import com.emc.paradb.advisor.utils.QueryPrepare;
+
 
 
 
@@ -63,8 +65,8 @@ class PGMetaLoader
 					while(tableResult.next())
 					{
 						String name = tableResult.getString(1);
-						TableNode aTableNode = new TableNode(name, conn);
-						tables.put(name, aTableNode);
+						TableNode aTableNode = new TableNode(QueryPrepare.prepare(name), conn);
+						tables.put(QueryPrepare.prepare(name), aTableNode);
 						progress = (float)(++currentPos)/rowCount;
 					}
 					
@@ -75,8 +77,8 @@ class PGMetaLoader
 					
 					while(result.next())
 					{
-						String refTable = result.getString(1);
-						String refedTable = result.getString(2);
+						String refTable = QueryPrepare.prepare(result.getString(1));
+						String refedTable = QueryPrepare.prepare(result.getString(2));
 						
 						TableNode refNode = tables.get(refTable);
 						TableNode refedNode = tables.get(refedTable);
@@ -94,6 +96,7 @@ class PGMetaLoader
 				catch(SQLException e)
 				{
 					System.out.println(e.getMessage());
+					e.printStackTrace();
 				}
 			}
 		}.start();
@@ -127,43 +130,48 @@ class PGMetaLoader
 							+ "(select conrelid as oid, confrelid as roid, conkey, confkey from pg_constraint where contype='f') as t3 "
 							+ "where t1.oid = t3.oid and "
 							+ "t2.oid = t3.roid) as result " + "where ref='"
-							+ refNode.getName() + "' and " + "refed='" + refedNode.getName()
+							+ QueryPrepare.unPrepare(refNode.getName()) + "' and " + "refed='" + QueryPrepare.unPrepare(refedNode.getName())
 							+ "';");
-			result.next();
-			Array refArray = result.getArray(1);
-			Array refedArray = result.getArray(2);
+			if(result.next())
+			{
+				Array refArray = result.getArray(1);
+				Array refedArray = result.getArray(2);
 
-			Integer[] refAttrNum = (Integer[]) refArray.getArray();
-			Integer[] refedAttrNum = (Integer[]) refedArray.getArray();
+				Integer[] refAttrNum = (Integer[]) refArray.getArray();
+				Integer[] refedAttrNum = (Integer[]) refedArray.getArray();
 
-			for (Integer atnum : refAttrNum) {
-				ResultSet attr = stmt
-						.executeQuery("select attname "
-								+ "from pg_attribute "
-								+ "where attrelid = (select oid from pg_class where relname='"
-								+ refNode.getName() + "') and attnum ="
-								+ atnum.toString() + ";");
-				attr.next();
-				refKeys.add(attr.getString(1));
-			}
+				for (Integer atnum : refAttrNum) {
+					ResultSet attr = stmt
+							.executeQuery("select attname "
+									+ "from pg_attribute "
+									+ "where attrelid = (select oid from pg_class where relname='"
+									+ QueryPrepare.unPrepare(refNode.getName()) + "') and attnum ="
+									+ QueryPrepare.unPrepare(atnum.toString()) + ";");
+					attr.next();
+					refKeys.add(attr.getString(1));
+				}
 
-			for (Integer atnum : refedAttrNum) {
-				ResultSet attr = stmt
-						.executeQuery("select attname "
-								+ "from pg_attribute "
-								+ "where attrelid = (select oid from pg_class where relname='"
-								+ refedNode.getName() + "') and attnum ="
-								+ atnum.toString() + ";");
-				attr.next();
-				refedKeys.add(attr.getString(1));
+				for (Integer atnum : refedAttrNum) {
+					ResultSet attr = stmt
+							.executeQuery("select attname "
+									+ "from pg_attribute "
+									+ "where attrelid = (select oid from pg_class where relname='"
+									+ QueryPrepare.unPrepare(refedNode.getName()) + "') and attnum ="
+									+ QueryPrepare.unPrepare(atnum.toString()) + ";");
+					attr.next();
+					refedKeys.add(attr.getString(1));
+				}
+				
+				adjacentListNode.add(refedNode);
+				adjacentListNode.add(refKeys);
+				adjacentListNode.add(refedKeys);
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		
-		adjacentListNode.add(refedNode);
-		adjacentListNode.add(refKeys);
-		adjacentListNode.add(refedKeys);
+
 		
 		return adjacentListNode;
 	}

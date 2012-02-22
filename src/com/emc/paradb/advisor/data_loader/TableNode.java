@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.Vector;
 
+import com.emc.paradb.advisor.utils.QueryPrepare;
+
 
 
 
@@ -31,7 +33,7 @@ public class TableNode
 		try{
 			Statement stmt = conn.createStatement();
 			//get the name of its attributes
-			ResultSet result = stmt.executeQuery("select * from "+newName+" limit 1;");			
+			ResultSet result = stmt.executeQuery("select * from "+QueryPrepare.prepare(newName)+" limit 1;");			
 			result.next();
 			for(int i = 1; i <= result.getMetaData().getColumnCount(); i++)
 			{
@@ -46,7 +48,7 @@ public class TableNode
 									   "format_type(pg_attribute.atttypid, pg_attribute.atttypmod) "+
 									   "FROM pg_index, pg_class, pg_attribute "+
 									   "WHERE "+
-									   "pg_class.oid = '"+newName+"'::regclass AND "+
+									   "pg_class.oid = '"+QueryPrepare.prepare(newName)+"'::regclass AND "+
 									   "indrelid = pg_class.oid AND "+
 									   "pg_attribute.attrelid = pg_class.oid AND "+
 									   "pg_attribute.attnum = any(pg_index.indkey) "+
@@ -59,7 +61,7 @@ public class TableNode
 			}
 			
 			//get the table length;
-			result = stmt.executeQuery("select count(*) from "+newName+";");
+			result = stmt.executeQuery("select count(*) from "+QueryPrepare.prepare(newName)+";");
 			result.next();
 			length = Integer.valueOf(result.getString(1));
 			
@@ -67,6 +69,7 @@ public class TableNode
 		catch(SQLException e)
 		{
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 	public Vector<Vector<Object>> getFKRef()

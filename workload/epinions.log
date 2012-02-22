@@ -1,0 +1,425 @@
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=246 AND t.source_u_id=1900
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=360 AND t.source_u_id=1657
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=632
+-
+UPDATE review SET rating = 198 WHERE i_id=935 AND u_id=1871
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=481 AND t.source_u_id=939
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=398 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1918 AND target_u_id=1899
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1197 AND target_u_id=587
+-
+UPDATE "user" SET name = 'RxbD' WHERE u_id=1311
+-
+UPDATE "user" SET name = 'TTrW' WHERE u_id=1423
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=835
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=0 
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=114 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=474 AND target_u_id=776
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=917
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=539 AND target_u_id=473
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1188 
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=391 AND target_u_id=701
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=575
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=230 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=806 AND target_u_id=1134
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=268 AND t.source_u_id=1144
+-
+UPDATE item SET title = 'TjKXWVyobmKYlpKcpfh' WHERE i_id=276
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=383 AND target_u_id=1665
+-
+UPDATE "user" SET name = 'obTe' WHERE u_id=1292
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=315 AND t.source_u_id=1692
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=432 AND target_u_id=1579
+-
+UPDATE item SET title = 'RSkjiDGgfjzxloOyhvn' WHERE i_id=171
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=487 AND target_u_id=1391
+-
+SELECT * FROM review r WHERE r.i_id=24
+SELECT * FROM trust t WHERE t.source_u_id=1855
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=806 AND target_u_id=1352
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1064 AND target_u_id=1088
+-
+UPDATE review SET rating = 478 WHERE i_id=440 AND u_id=1437
+-
+UPDATE item SET title = 'YOvHfyhpZrvNJQkwvoy' WHERE i_id=79
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=874 AND target_u_id=974
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=405 
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=74 AND t.source_u_id=1495
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=615 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=843 AND target_u_id=555
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=429 ORDER BY rating LIMIT 10
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=279 AND t.source_u_id=1857
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=811 AND target_u_id=944
+-
+SELECT * FROM review r WHERE r.i_id=381
+SELECT * FROM trust t WHERE t.source_u_id=1790
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1782 AND target_u_id=63
+-
+UPDATE "user" SET name = 'uJyJ' WHERE u_id=635
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=276 
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=798 AND t.source_u_id=1411
+-
+UPDATE review SET rating = 92 WHERE i_id=474 AND u_id=1570
+-
+UPDATE "user" SET name = 'bBGL' WHERE u_id=1405
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=10 AND target_u_id=386
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1741 
+-
+UPDATE "user" SET name = 'tETE' WHERE u_id=1844
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=795 AND t.source_u_id=52
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1384 AND target_u_id=1047
+-
+UPDATE item SET title = 'OWQIFwzPkmuXUWIwPqk' WHERE i_id=874
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=220 AND target_u_id=222
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=745 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1924 AND target_u_id=855
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=15
+-
+UPDATE item SET title = 'tddovbmeCddFbdCwAnd' WHERE i_id=257
+-
+SELECT * FROM review r WHERE r.i_id=778
+SELECT * FROM trust t WHERE t.source_u_id=324
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=818 AND t.source_u_id=1384
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1050 AND target_u_id=1686
+-
+UPDATE "user" SET name = 'fJsR' WHERE u_id=1351
+-
+UPDATE review SET rating = 984 WHERE i_id=720 AND u_id=246
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1590 AND target_u_id=808
+-
+UPDATE "user" SET name = 'LOtD' WHERE u_id=217
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=528 ORDER BY rating LIMIT 10
+-
+UPDATE "user" SET name = 'MwoZ' WHERE u_id=183
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=229 AND target_u_id=711
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=514 AND t.source_u_id=767
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1560 
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1492 
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=696 
+-
+UPDATE review SET rating = 406 WHERE i_id=134 AND u_id=1367
+-
+UPDATE "user" SET name = 'xnlb' WHERE u_id=211
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=411
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=933
+-
+SELECT * FROM review r WHERE r.i_id=923
+SELECT * FROM trust t WHERE t.source_u_id=121
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=252 AND target_u_id=1632
+-
+SELECT * FROM review r WHERE r.i_id=293
+SELECT * FROM trust t WHERE t.source_u_id=1104
+-
+UPDATE "user" SET name = 'FtOL' WHERE u_id=608
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=661 AND t.source_u_id=1613
+-
+SELECT * FROM review r WHERE r.i_id=571
+SELECT * FROM trust t WHERE t.source_u_id=136
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=766
+-
+UPDATE review SET rating = 918 WHERE i_id=184 AND u_id=712
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=962 
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1269 AND target_u_id=360
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1066 
+-
+UPDATE item SET title = 'GbxFwNmsyMiINAUVEBy' WHERE i_id=245
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=903 
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=104 
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=993 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1433 AND target_u_id=1002
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=572
+-
+SELECT * FROM review r WHERE r.i_id=920
+SELECT * FROM trust t WHERE t.source_u_id=1179
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=572
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=930 ORDER BY rating LIMIT 10
+-
+UPDATE review SET rating = 198 WHERE i_id=762 AND u_id=1400
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1757 AND target_u_id=133
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1245 AND target_u_id=789
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=251 AND t.source_u_id=1330
+-
+SELECT * FROM review r WHERE r.i_id=437
+SELECT * FROM trust t WHERE t.source_u_id=1317
+-
+UPDATE "user" SET name = 'hgsn' WHERE u_id=826
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=358 AND target_u_id=418
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=642 AND target_u_id=359
+-
+UPDATE review SET rating = 731 WHERE i_id=519 AND u_id=838
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=972 AND t.source_u_id=1448
+-
+SELECT * FROM review r WHERE r.i_id=370
+SELECT * FROM trust t WHERE t.source_u_id=393
+-
+SELECT * FROM review r WHERE r.i_id=693
+SELECT * FROM trust t WHERE t.source_u_id=30
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=908 
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=387 AND target_u_id=423
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1453 AND target_u_id=1006
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=137 
+-
+UPDATE "user" SET name = 'miRD' WHERE u_id=1838
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=609 AND t.source_u_id=1530
+-
+SELECT * FROM review r WHERE r.i_id=522
+SELECT * FROM trust t WHERE t.source_u_id=436
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1207 AND target_u_id=163
+-
+UPDATE review SET rating = 895 WHERE i_id=469 AND u_id=42
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=356
+-
+UPDATE "user" SET name = 'dyec' WHERE u_id=934
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=997 AND t.source_u_id=131
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1235 AND target_u_id=1868
+-
+UPDATE review SET rating = 478 WHERE i_id=337 AND u_id=580
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=543 
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=426 ORDER BY rating LIMIT 10
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=463 ORDER BY rating LIMIT 10
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1521 
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=407 
+-
+SELECT * FROM review r WHERE r.i_id=604
+SELECT * FROM trust t WHERE t.source_u_id=740
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=91 AND target_u_id=513
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=575 AND target_u_id=1556
+-
+UPDATE review SET rating = 672 WHERE i_id=938 AND u_id=109
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=74 AND target_u_id=534
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1376 AND target_u_id=1678
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=962
+-
+SELECT * FROM review r WHERE r.i_id=753
+SELECT * FROM trust t WHERE t.source_u_id=212
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1700 AND target_u_id=1504
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=242 AND t.source_u_id=1057
+-
+UPDATE review SET rating = 621 WHERE i_id=72 AND u_id=1152
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=249 AND target_u_id=458
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1785 AND target_u_id=1548
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=265 AND t.source_u_id=569
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1294 AND target_u_id=654
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=802
+-
+UPDATE item SET title = 'jqftXXOXjGZUioPSUKB' WHERE i_id=211
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=3 AND t.source_u_id=1184
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1801 AND target_u_id=1253
+-
+UPDATE "user" SET name = 'MihQ' WHERE u_id=627
+-
+UPDATE "user" SET name = 'ChIZ' WHERE u_id=71
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=821 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=1869 AND target_u_id=399
+-
+SELECT * FROM review r WHERE r.i_id=381
+SELECT * FROM trust t WHERE t.source_u_id=1961
+-
+UPDATE "user" SET name = 'Uuer' WHERE u_id=448
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1960 
+-
+SELECT * FROM review r WHERE r.i_id=768
+SELECT * FROM trust t WHERE t.source_u_id=1083
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1650 AND target_u_id=665
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=474 AND target_u_id=1840
+-
+UPDATE review SET rating = 611 WHERE i_id=277 AND u_id=308
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=699 AND t.source_u_id=874
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=851 AND t.source_u_id=1491
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=237 AND t.source_u_id=910
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=672
+-
+SELECT * FROM review r WHERE r.i_id=634
+SELECT * FROM trust t WHERE t.source_u_id=390
+-
+UPDATE "user" SET name = 'bwnC' WHERE u_id=10
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=140 AND target_u_id=1157
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=670
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=992 
+-
+SELECT * FROM review r WHERE r.i_id=917
+SELECT * FROM trust t WHERE t.source_u_id=1710
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=771 AND t.source_u_id=1276
+-
+UPDATE review SET rating = 811 WHERE i_id=981 AND u_id=1201
+-
+UPDATE item SET title = 'ugsfatgbOmtHTxajrfn' WHERE i_id=576
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1434 AND target_u_id=1456
+-
+UPDATE review SET rating = 187 WHERE i_id=541 AND u_id=1410
+-
+UPDATE "user" SET name = 'WTeb' WHERE u_id=425
+-
+SELECT * FROM review r WHERE r.i_id=604
+SELECT * FROM trust t WHERE t.source_u_id=928
+-
+UPDATE item SET title = 'nYWfAnSywZUYkDADNOA' WHERE i_id=883
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=1 ORDER BY rating LIMIT 10
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=779 
+-
+UPDATE item SET title = 'pHPiSbHQJVtNzDBnqLh' WHERE i_id=76
+-
+UPDATE item SET title = 'HpTWdJpjLWsKBeJQoXj' WHERE i_id=656
+-
+UPDATE "user" SET name = 'yFqQ' WHERE u_id=753
+-
+UPDATE trust SET trust = 0 WHERE source_u_id=483 AND target_u_id=436
+-
+UPDATE review SET rating = 332 WHERE i_id=297 AND u_id=1640
+-
+SELECT * FROM review r WHERE r.i_id=776
+SELECT * FROM trust t WHERE t.source_u_id=1352
+-
+UPDATE review SET rating = 361 WHERE i_id=600 AND u_id=656
+-
+UPDATE review SET rating = 30 WHERE i_id=295 AND u_id=232
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=873 ORDER BY rating LIMIT 10
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=371 ORDER BY rating LIMIT 10
+-
+UPDATE review SET rating = 636 WHERE i_id=223 AND u_id=841
+-
+SELECT * FROM review r, item i WHERE i.i_id = r.i_id and r.i_id=684 ORDER BY rating LIMIT 10
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1348 AND target_u_id=818
+-
+SELECT * FROM review r, "user" u WHERE u.u_id = r.u_id AND r.u_id=1979 
+-
+SELECT * FROM review r WHERE r.i_id=12
+SELECT * FROM trust t WHERE t.source_u_id=1930
+-
+SELECT * FROM review r WHERE r.i_id=23
+SELECT * FROM trust t WHERE t.source_u_id=345
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=585
+-
+UPDATE item SET title = 'XMwoyAXyKBshGtsWKaQ' WHERE i_id=524
+-
+SELECT avg(rating) FROM review r WHERE r.i_id=708
+-
+SELECT avg(rating) FROM review r, trust t WHERE r.u_id=t.target_u_id AND r.i_id=927 AND t.source_u_id=1047
+-
+UPDATE item SET title = 'VVAXYjvHizwciOzzrFP' WHERE i_id=189
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=713 AND target_u_id=715
+-
+UPDATE trust SET trust = 1 WHERE source_u_id=1609 AND target_u_id=788

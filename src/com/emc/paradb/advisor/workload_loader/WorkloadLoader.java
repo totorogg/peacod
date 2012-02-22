@@ -160,6 +160,13 @@ public class WorkloadLoader
 					String tableName = update.getTable();
 					for(WhereKey key : update.getWhereKeys())
 					{
+						if(tableName == null)
+							System.out.println("1");
+						else if(tables.get(tableName) == null)
+							System.out.println("2");
+						else if(tables.get(tableName).getAttrVector() == null)
+							System.out.println("3");
+						
 						for(TableAttributes attr : tables.get(tableName).getAttrVector())
 							if(attr.getName().equals(key.getKeyName()))
 								key.setTableName(tableName);

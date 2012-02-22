@@ -97,4 +97,11 @@ public class KeyValuePair
 	{
 		return 7 * key.hashCode() + 13 * value.hashCode();
 	}
+	
+	public String toString()
+	{
+		return "table" + table + 
+				"\tkey:" + key + 
+				"\tvalue:" + value;
+	}
 }

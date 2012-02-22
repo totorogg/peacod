@@ -16,6 +16,7 @@ import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.KeyValuePair.Range;
+import com.emc.paradb.advisor.utils.QueryPrepare;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
@@ -204,7 +205,8 @@ public class SchemaHash implements PlugInterface
 		try
 		{
 			Statement stmt = conn.createStatement();
-			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s order by %s", key, table, key, key));
+			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s order by %s", 
+									key, QueryPrepare.prepare(table), key, key));
 			while(result.next())
 			{
 				KeyValuePair kvPair = new KeyValuePair(key, result.getString(1), result.getInt(2));

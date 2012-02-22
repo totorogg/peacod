@@ -14,6 +14,7 @@ import com.emc.paradb.advisor.data_loader.DataLoader;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
+import com.emc.paradb.advisor.utils.QueryPrepare;
 
 
 public class DataDistributionEva extends Evaluator
@@ -91,7 +92,7 @@ public class DataDistributionEva extends Evaluator
 				
 				if(keys.get(0).equalsIgnoreCase("replicate"))
 				{
-					result = stmt.executeQuery("select count(*) from " +table);
+					result = stmt.executeQuery("select count(*) from " +QueryPrepare.prepare(table));
 					result.next();
 					for(int i = 0; i < nodes; i++)
 						dataSet.set(i, dataSet.get(i) + result.getInt(1));
@@ -103,7 +104,7 @@ public class DataDistributionEva extends Evaluator
 						keyList = keyList + "," + keys.get(i);
 					
 					result = stmt.executeQuery("select "+keyList+", count(*) "+
-													 "from "+table+
+													 "from "+QueryPrepare.prepare(table)+
 													 " group by "+keyList+" order by "+keyList+";");
 					while(result.next())
 					{

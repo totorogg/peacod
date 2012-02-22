@@ -15,6 +15,7 @@ import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
 import com.emc.paradb.advisor.plugin.KeyValuePair.Range;
 import com.emc.paradb.advisor.plugin.PlugInterface;
+import com.emc.paradb.advisor.utils.QueryPrepare;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
@@ -73,11 +74,13 @@ public class PKRange implements PlugInterface
 			try 
 			{
 				stmt = conn.createStatement();
-				ResultSet resultMin = stmt.executeQuery("select min("+key+") from "+tableName+";");
+				ResultSet resultMin = stmt.executeQuery("select min("+key+") from "+
+										QueryPrepare.prepare(tableName)+";");
 				resultMin.next();
 				double min = resultMin.getDouble(1);
 				
-				ResultSet resultMax = stmt.executeQuery("select max("+key+") from "+tableName+";");
+				ResultSet resultMax = stmt.executeQuery("select max("+key+") from "+
+										QueryPrepare.prepare(tableName)+";");
 				resultMax.next();
 				double max = resultMax.getDouble(1);
 				
@@ -95,7 +98,7 @@ public class PKRange implements PlugInterface
 					}
 				}
 				LookUpTable aLookUp = new LookUpTable(min, max, range, nodes);
-				keyLookUpMap.put(key, aLookUp);
+				keyLookUpMap.put(tableName, aLookUp);
 			} 
 			catch (SQLException e) 
 			{
@@ -120,7 +123,7 @@ public class PKRange implements PlugInterface
 				nodeList.add(-1);
 				return nodeList;
 			}
-			LookUpTable aLookUp = keyLookUpMap.get(kvPair.getKey());
+			LookUpTable aLookUp = keyLookUpMap.get(kvPair.getTable());
 			aLookUp.updateTable(kvPair);
 			nodes.add(aLookUp.getNode(kvPair));
 		}

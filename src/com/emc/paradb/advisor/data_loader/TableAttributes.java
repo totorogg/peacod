@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.emc.paradb.advisor.utils.QueryPrepare;
+
 
 
 public class TableAttributes
@@ -31,12 +33,14 @@ public class TableAttributes
 	{
 		try{
 			Statement stmt = conn.createStatement();
-			ResultSet result = stmt.executeQuery("select count(distinct("+name+")) from "+table+" as t1;");
+			ResultSet result = stmt.executeQuery("select count(distinct("+
+					QueryPrepare.prepare(name)+")) from "+QueryPrepare.prepare(table)+" as t1;");
 			result.next();
 			Cardinality = Integer.valueOf(result.getString(1));
 			return true;
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		return false;
 	}
@@ -58,6 +62,7 @@ public class TableAttributes
 			}
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 			return false;
 		}
 		return true;
@@ -72,7 +77,8 @@ public class TableAttributes
 		try
 		{
 			Statement stmt = conn.createStatement();
-			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s", attrName, tableName, attrName));
+			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s",
+					attrName, QueryPrepare.prepare(tableName), attrName));
 			while(result.next())
 			{
 				values.add( new AttributeValue(result.getString(1), result.getInt(2)));

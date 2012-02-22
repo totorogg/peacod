@@ -42,6 +42,8 @@ public class PrepareController extends Controller
 	protected static String tatpDB = null;
 	protected static String tpccPath = null;
 	protected static String tpccDB = null;
+	protected static String epinionsPath = null;
+	protected static String epinionsDB = null;
 	protected static String selectedBM = null;
 	
 	/**
@@ -167,6 +169,15 @@ public class PrepareController extends Controller
 					.compile("/config/property/name[text() = \"workload.tatp\"]/following-sibling::*[2]");
 			result = expr.evaluate(doc, XPathConstants.NODESET);
 			tatpDB = ((NodeList) result).item(0).getTextContent();
+			
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.epinions\"]/following-sibling::*[1]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			epinionsPath = ((NodeList) result).item(0).getTextContent();
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.epinions\"]/following-sibling::*[2]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			epinionsDB = ((NodeList) result).item(0).getTextContent();
 
 		}catch(Exception e)
 		{
@@ -198,6 +209,8 @@ public class PrepareController extends Controller
 			return tpccPath;
 		else if(selectedBM.equalsIgnoreCase("tatp"))
 			return tatpPath;
+		else if(selectedBM.equalsIgnoreCase("epinions"))
+			return epinionsPath;
 		else
 		{
 			System.out.println("No support for benchMark: " + selectedBM);
@@ -210,6 +223,8 @@ public class PrepareController extends Controller
 			return tpccDB;
 		else if(selectedBM.equalsIgnoreCase("tatp"))
 			return tatpDB;
+		else if(selectedBM.equalsIgnoreCase("epinions"))
+			return epinionsDB;
 		else
 		{
 			System.out.println("No support for benchMark: " + selectedBM);
