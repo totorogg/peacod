@@ -28,7 +28,7 @@ public class DisplayPanel extends JTabbedPane
 		this.add(dataDistributionPanel, "Data Distribution");
 		this.add(workloadDistributionPanel, "Workload Distribution");
 		this.add(tranDistPanel, "# of Distributed Xacts");
-		this.add(dataMigrationPanel, "Data Migration");
+		//this.add(dataMigrationPanel, "Data Migration");
 		this.add(summaryPanel, "Summary");
 	}
 }

@@ -80,7 +80,9 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		
 		bmBox.add(Box.createVerticalStrut(5));
 		JTextArea workloadLabel = new JTextArea("Workload");
+		//JLabel workloadLabel = new JLabel("Workload");
 		workloadLabel.setBackground(null);
+		//workloadLabel.setAlignmentX(0.5f);
 		bmBox.add(workloadLabel);
 		bmBox.add(Box.createVerticalStrut(2));
 		workloadText.setHorizontalAlignment(JTextField.RIGHT);
@@ -110,6 +112,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(nodeLabel);
 		bmBox.add(Box.createVerticalStrut(2));
 		nodeCountText.setHorizontalAlignment(JTextField.RIGHT);
+		//nodeCountText.setPreferredSize(new Dimension(10, ABORT));
 		nodeCountText.setMargin(new Insets(2, 5, 2, 5));
 		bmBox.add(nodeCountText);
 		
