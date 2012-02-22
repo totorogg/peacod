@@ -24,6 +24,8 @@ import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
 public class MainFrame extends JFrame
 {
+	//public Font mainFont;
+	
 	private static DisplayPanel displayPanel; 
 	private static BenchmarkSelectPanel benchmarkSelectPanel;
 	private static AlgorithmSelectPanel algorithmSelectPanel;
@@ -39,7 +41,7 @@ public class MainFrame extends JFrame
 		try {
 		
 			UIManager.setLookAndFeel(WindowsLookAndFeel.class.getName());
-//NapkinLookAndFeel,NimbusLookAndFeel,WindowsLookAndFeel
+			//NapkinLookAndFeel,NimbusLookAndFeel,WindowsLookAndFeel
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
