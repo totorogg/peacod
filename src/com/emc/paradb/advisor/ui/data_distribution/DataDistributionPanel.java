@@ -23,29 +23,28 @@ import org.jfree.data.category.DefaultCategoryDataset;
 import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.controller.EvaluateController;
 
-public class DataDistributionPanel extends JPanel
-{
+public class DataDistributionPanel extends JPanel {
 	private JLabel dataChart = null;
 	private Box box = Box.createHorizontalBox();
-	
-	public DataDistributionPanel()
-	{
+
+	public DataDistributionPanel() {
 		this.setLayout(new BorderLayout());
 
-		JTextArea description = new JTextArea("DESCRIPTION: It describes how even data is distributed on each nodes.\n");
+		JTextArea description = new JTextArea(
+				"DESCRIPTION: \n This metric describes how uniformly data are distributed across partitions (nodes). "
+						+ "In a single scheme's descriptive representation, each node's total tuples will be showed. In the comparasion representation, "
+						+ "the metric is represented by the standard variance normalized to be a value between zero and one. \n");
+
 		description.setLineWrap(true);
-		
+
 		this.add(description, BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
-		
-		
-		DisplayController.registerDataDistributionCB(new DataDistributionCB()
-		{
-			public void draw(List<Long> data)
-			{
+
+		DisplayController.registerDataDistributionCB(new DataDistributionCB() {
+			public void draw(List<Long> data) {
 				box.removeAll();
-				
+
 				dataChart = DataChart.createChart(data);
 				box.add(Box.createHorizontalGlue());
 				box.add(dataChart);
@@ -57,7 +56,7 @@ public class DataDistributionPanel extends JPanel
 			public void draw(HashMap<String, Float> dDVarMap) {
 				// TODO Auto-generated method stub
 				box.removeAll();
-				
+
 				dataChart = DataChart.createChart(dDVarMap);
 				box.add(Box.createHorizontalGlue());
 				box.add(dataChart);
@@ -68,36 +67,32 @@ public class DataDistributionPanel extends JPanel
 	}
 }
 
-
-class DataChart 
-{
-	public static JLabel createChart(List<Long> tuples){
+class DataChart {
+	public static JLabel createChart(List<Long> tuples) {
 
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
-		for (int i = 0; i < tuples.size(); i ++){
-			categoryDataset.setValue(tuples.get(i), ""+i, table);
+		for (int i = 0; i < tuples.size(); i++) {
+			categoryDataset.setValue(tuples.get(i), "" + i, table);
 		}
 
 		JFreeChart chart = ChartFactory.createBarChart("", // Title
 				"Node", // X-Axis label
 				"Data (Tuples)", // Y-Axis label
-				categoryDataset, // Dataset, 
+				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
-		
+
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400,180)));
-		
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+
 		return lb;
 	}
-	
-	public static JLabel createChart(HashMap<String, Float> dDVarMap)
-	{
-		
+
+	public static JLabel createChart(HashMap<String, Float> dDVarMap) {
+
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
-		for(String algorithm : dDVarMap.keySet())
-		{
+		for (String algorithm : dDVarMap.keySet()) {
 			int index = algorithm.lastIndexOf(".");
 			String name = algorithm.substring(index + 1);
 			categoryDataset.setValue(dDVarMap.get(algorithm), "", name);
@@ -106,13 +101,13 @@ class DataChart
 		JFreeChart chart = ChartFactory.createBarChart("Distribution Variance", // Title
 				"Algorithms", // X-Axis label
 				"Variance", // Y-Axis label
-				categoryDataset, // Dataset, 
+				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
-		
+
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400,180)));
-		
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+
 		return lb;
 	}
-	
+
 }

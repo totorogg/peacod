@@ -33,6 +33,7 @@ import org.jfree.util.Rotation;
 
 import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.controller.EvaluateController;
+import com.emc.paradb.advisor.ui.mainframe.MainFrame;
 
 
 
@@ -46,11 +47,11 @@ public class TransactionDistributionPanel extends JPanel
 		
 		JTextPane description = new JTextPane();
 		MutableAttributeSet set = new SimpleAttributeSet();
-		StyleConstants.setLineSpacing(set, -0.4f);
-		StyleConstants.setFontFamily(set, "Comic Sans MS");
-		description.setParagraphAttributes(set, true);
+		//StyleConstants.setLineSpacing(set, -0.4f);
+		//StyleConstants.setFontFamily(set, "Comic Sans MS");
+		//description.setParagraphAttributes(set, true);
 		
-		description.setText("Description:\n  This metric measures how many distributed transactions have resulted from partitioning. Since distributed transactions incur dominant execution cost, a fewer number of them implies the better scheme performance." +
+		description.setText("DESCRIPTION:\n  This metric measures how many distributed transactions have resulted from partitioning. Since distributed transactions incur dominant execution cost, a fewer number of them implies the better scheme performance." +
 							"The left figure shows the distributed transactions’ ratio by the selected scheme. The right figure shows the ratios of node number which a distributed transaction can access.");
 		description.setEditable(false);
 
@@ -125,12 +126,14 @@ public class TransactionDistributionPanel extends JPanel
 	        true,
 	        false
 	    );
-	    chart.getTitle().setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+	    //chart.getTitle().setFont(new Font("Comic Sans MS", Font.BOLD, 18));
+	    chart.getTitle().setFont(MainFrame.mainFont.deriveFont(Font.BOLD, 18));
 	    chart.setBorderVisible(false);
 	    chart.setBorderPaint(null);
 
 	    PiePlot plot = (PiePlot) chart.getPlot();
-	    plot.setLabelFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+	    //plot.setLabelFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+	    plot.setLabelFont(MainFrame.mainFont.deriveFont(Font.PLAIN, 12));
 	    plot.setSimpleLabels(simple);
 	    plot.setOutlineVisible(false);
 	    plot.setLabelGenerator(new StandardPieSectionLabelGenerator(

@@ -8,6 +8,7 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 
 
@@ -19,7 +20,8 @@ public class DataMigrationPanel extends JPanel
 	public DataMigrationPanel()
 	{
 		this.setLayout(new BorderLayout());
-		this.add(new JLabel("description: Portion of data to be migrated on each node when new nodes are added"), BorderLayout.NORTH);
+		this.add(
+				new JTextArea("DESCRIPTION: \n This metric indicated the amount of data to be migrated among nodes in case of database re-partitioning. Here, we will assume the scenatio where database re-partitioning is triggered for the load re-balance of the system with one new node added. "), BorderLayout.NORTH);
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 		
