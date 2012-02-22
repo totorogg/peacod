@@ -36,7 +36,7 @@ public class MainFrame extends JFrame {
 	}
 
 	public MainFrame() {
-		try {
+	/*	try {
 
 			UIManager.setLookAndFeel(WindowsLookAndFeel.class.getName());
 			// NapkinLookAndFeel,NimbusLookAndFeel,WindowsLookAndFeel
@@ -53,7 +53,7 @@ public class MainFrame extends JFrame {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+*/
 		try {
 			mainFont = Font.createFont(Font.TRUETYPE_FONT,
 					new File(System.getProperty("user.dir")

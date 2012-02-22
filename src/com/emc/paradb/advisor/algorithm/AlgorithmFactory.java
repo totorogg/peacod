@@ -14,14 +14,14 @@ public class AlgorithmFactory
 	
 	private static Plugin countMaxRR = new Plugin();
 	private static Plugin schemaHash = new Plugin();
-	private static Plugin consistentHash = new Plugin();
+	//private static Plugin consistentHash = new Plugin();
 	private static Plugin PKHash = new Plugin();
 	private static Plugin PKRange = new Plugin();
 	private static Plugin PKRoundRobin = new Plugin();
-	private static Plugin Dynamo = new Plugin();
+	//private static Plugin Dynamo = new Plugin();
 	private static Plugin AllReplicateHash = new Plugin();
-	private static Plugin AllMidterm = new Plugin();
-	private static Plugin semiSchema = new Plugin();
+	//private static Plugin AllMidterm = new Plugin();
+	//private static Plugin semiSchema = new Plugin();
 	
 	//load the build-in algorithms
 	static
@@ -57,7 +57,7 @@ public class AlgorithmFactory
 							"The algorithm replicate table to all nodes.");
 		
 		//the following are not implemented
-		consistentHash.setInterface(new SchemaHash());
+	/*	consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
 							"getPartitionKey()", "getNode()",
 							"This algorithm partition the key based on consistent hashing.");
@@ -77,21 +77,21 @@ public class AlgorithmFactory
 		semiSchema.setInterface(new SchemaHash());
 		semiSchema.setInfo("com.emc.paradb.advisor.algorithm.SemiSchema",
 							"getPartitionKey()", "getNode()",
-							"This algorithm partition the root table based on predicates in workload and partition other tables by fk references.");
+							"This algorithm partition the root table based on predicates in workload and partition other tables by fk references.");*/
 	}
 	
 	public static void loadBuildin()
 	{
 		algorithms.add(countMaxRR);
 		algorithms.add(schemaHash);
-		algorithms.add(consistentHash);
+		//algorithms.add(consistentHash);
 		algorithms.add(PKHash);
 		algorithms.add(PKRange);
 		algorithms.add(PKRoundRobin);
-		algorithms.add(Dynamo);
+		//algorithms.add(Dynamo);
 		algorithms.add(AllReplicateHash);
-		algorithms.add(AllMidterm);
-		algorithms.add(semiSchema);
+		//algorithms.add(AllMidterm);
+		//algorithms.add(semiSchema);
 	}
 	
 	public static void ListAlgorithms()

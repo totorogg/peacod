@@ -4,11 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -19,20 +16,19 @@ import javax.swing.JPanel;
 import javax.swing.JTextPane;
 import javax.swing.text.MutableAttributeSet;
 import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
-import org.jfree.chart.plot.PieLabelDistributor;
 import org.jfree.chart.plot.PiePlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
 import org.jfree.util.Rotation;
 
 import com.emc.paradb.advisor.controller.DisplayController;
-import com.emc.paradb.advisor.controller.EvaluateController;
 import com.emc.paradb.advisor.ui.mainframe.MainFrame;
 
 
@@ -40,7 +36,8 @@ import com.emc.paradb.advisor.ui.mainframe.MainFrame;
 public class TransactionDistributionPanel extends JPanel
 {
 	private Box box = Box.createHorizontalBox();
-
+	private JLabel transactionChart = null;
+	
 	public TransactionDistributionPanel()
 	{
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -93,6 +90,20 @@ public class TransactionDistributionPanel extends JPanel
 				box.add(chartPanel2);
 				box.add(Box.createHorizontalGlue());
 				box.updateUI();
+				box.validate();
+			}
+
+			@Override
+			public void draw(HashMap<String, Float> tDMap) {
+				// TODO Auto-generated method stub
+				box.removeAll();
+
+				transactionChart = TransactionChart.createChart(tDMap);
+				box.add(Box.createHorizontalGlue());
+				box.add(transactionChart);
+				box.add(Box.createHorizontalGlue());
+				box.updateUI();
+				box.validate();
 			}
 		});
 	}
@@ -149,3 +160,28 @@ public class TransactionDistributionPanel extends JPanel
 	
 }
 
+
+class TransactionChart {
+
+	public static JLabel createChart(HashMap<String, Float> wDVarMap) {
+
+		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
+		String table = "";
+		for (String algorithm : wDVarMap.keySet()) {
+			int index = algorithm.lastIndexOf(".");
+			String name = algorithm.substring(index + 1);
+			categoryDataset.setValue(wDVarMap.get(algorithm), "", name);
+		}
+
+		JFreeChart chart = ChartFactory.createBarChart("Average Node Coverage Per Xact", // Title
+				"Algorithms", // X-Axis label
+				"Node Count", // Y-Axis label
+				categoryDataset, // Dataset,
+				PlotOrientation.VERTICAL, false, true, false);
+
+		JLabel lb = new JLabel();
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+
+		return lb;
+	}
+}

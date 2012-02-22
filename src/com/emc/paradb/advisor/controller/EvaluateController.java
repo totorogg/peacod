@@ -102,7 +102,9 @@ public class EvaluateController extends Controller
 			}
 		}
 		Comparator.compare(algorithms, nodes);
-		DisplayController.displayCompare(Comparator.getDataDistVar(), Comparator.getWorkloadDistVar());
+		DisplayController.displayCompare(Comparator.getDataDistVar(), 
+				Comparator.getWorkloadDistVar(),
+				Comparator.getTranDistVar());
 	}
 
 }

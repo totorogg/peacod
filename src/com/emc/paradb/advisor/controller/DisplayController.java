@@ -51,10 +51,13 @@ public class DisplayController
 		return true;
 	}
 	
-	public static void displayCompare(HashMap<String, Float> dDVarMap, HashMap<String, Float> wDVarMap)
+	public static void displayCompare(HashMap<String, Float> dDVarMap, 
+			HashMap<String, Float> wDVarMap,
+			HashMap<String, Float> tDMap)
 	{
 		dataDistributionCB.draw(dDVarMap);
 		workloadDistributionCB.draw(wDVarMap);
+		transactionDistributionCB.draw(tDMap);
 	}
 	
 	public static void display(int selected)
