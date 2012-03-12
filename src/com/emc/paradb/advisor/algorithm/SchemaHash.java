@@ -34,7 +34,7 @@ import com.emc.paradb.advisor.workload_loader.Workload;
  * 
  * Note: if primary key is composed of several keys, we pick the first one
  * 
- * @author panx1
+ * @author Xin Pan
  *
  */
 public class SchemaHash implements PlugInterface

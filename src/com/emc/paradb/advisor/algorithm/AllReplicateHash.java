@@ -18,7 +18,7 @@ import com.emc.paradb.advisor.workload_loader.Workload;
  * and palce workload to nodes in Hash manner
  * 
  * 
- * @author panx1
+ * @author Xin Pan
  */
 public class AllReplicateHash implements PlugInterface
 {

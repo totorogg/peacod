@@ -18,7 +18,7 @@ import com.emc.paradb.advisor.workload_loader.Workload;
  * If primary key is composed of several keys, we choose the first one by default.
  * If a table has no primary key, we choose the first attribute of that table
  * 
- * @author panx1
+ * @author Xin Pan
  */
 public class PKRR implements PlugInterface
 {

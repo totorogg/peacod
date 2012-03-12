@@ -6,7 +6,7 @@ package com.emc.paradb.advisor.workload_loader;
  * 1.euqal 2.smallerThan 3.largerThan 4.all
  * other value can be added in the future
  * such
- * @author panx1
+ * @author Xin Pan
  *
  */
 public class WhereKey 

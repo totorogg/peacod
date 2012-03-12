@@ -7,7 +7,7 @@ import com.emc.paradb.advisor.workload_loader.WhereKey.Range;
  * this class serve as a container for a key value pair.
  * It also contains the operation the key value pair will perform on the database
  * note that we only take "key" and "value" into account when considering hashCode and equals
- * @author panx1
+ * @author Xin Pan
  *
  */
 public class KeyValuePair

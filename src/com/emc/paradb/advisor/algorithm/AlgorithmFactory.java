@@ -6,7 +6,14 @@ import java.util.List;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
 
-
+/**
+ * This class maintains all algorithms' information
+ * To add a bulit-in algorithm, you have to new a Plugin() and added in manually in this class.
+ * To add a plug-in algorithm, you need to package the algorithm into a jar and then put in plugin directory 
+ * of the project. A config.xml is also necessary to be added in the jar
+ * @author Xin Pan
+ *
+ */
 public class AlgorithmFactory
 {
 	private static List<Plugin> algorithms = new ArrayList<Plugin>();

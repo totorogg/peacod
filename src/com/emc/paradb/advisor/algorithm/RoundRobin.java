@@ -2,7 +2,7 @@ package com.emc.paradb.advisor.algorithm;
 
 /**
  * a util class provides the round robin function
- * @author panx1
+ * @author Xin Pan
  *
  */
 public class RoundRobin
