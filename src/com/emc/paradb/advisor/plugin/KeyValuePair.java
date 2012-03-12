@@ -19,10 +19,6 @@ public class KeyValuePair
 	private long cardinality = 0;
 	private Range range = Range.EQUAL;
 	
-	public enum Range{
-		EQUAL, SMALLEQL, LARGEEQL,
-		SMALLER, LARGER, ALL
-	};
 	
 	
 	public KeyValuePair(String key, String value)

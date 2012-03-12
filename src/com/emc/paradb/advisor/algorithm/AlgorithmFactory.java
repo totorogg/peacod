@@ -14,14 +14,15 @@ public class AlgorithmFactory
 	
 	private static Plugin countMaxRR = new Plugin();
 	private static Plugin schemaHash = new Plugin();
-	//private static Plugin consistentHash = new Plugin();
+
 	private static Plugin PKHash = new Plugin();
 	private static Plugin PKRange = new Plugin();
 	private static Plugin PKRoundRobin = new Plugin();
-	//private static Plugin Dynamo = new Plugin();
+
 	private static Plugin AllReplicateHash = new Plugin();
-	//private static Plugin AllMidterm = new Plugin();
-	//private static Plugin semiSchema = new Plugin();
+	private static Plugin RangeGraph = new Plugin();
+	private static Plugin Minterm = new Plugin();
+
 	
 	//load the build-in algorithms
 	static
@@ -56,6 +57,17 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"The algorithm replicate table to all nodes.");
 		
+		
+		RangeGraph.setInterface(new RangeGraph());
+		RangeGraph.setInfo("com.emc.paradb.advisor.algorithm.RangeGraph",
+							"getPartitionKey()", "getNode()",
+							"choose primary key as partitionKey and use METIS to play graph partition");
+		
+		Minterm.setInterface(new MinTerm());
+		Minterm.setInfo("com.emc.paradb.advisor.algorithm.Minterm",
+							"getPartitionKey()", "getNode()",
+							"This algorithm analyse predicates in a workload and partition by the midterm ranges.");
+		
 		//the following are not implemented
 	/*	consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
@@ -68,11 +80,7 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"According to dynamo paper.");
 	
-	
-		AllMidterm.setInterface(new SchemaHash());
-		AllMidterm.setInfo("com.emc.paradb.advisor.algorithm.AllMidterm",
-							"getPartitionKey()", "getNode()",
-							"This algorithm analyse predicates in a workload and partition by the midterm ranges.");
+
 	
 		semiSchema.setInterface(new SchemaHash());
 		semiSchema.setInfo("com.emc.paradb.advisor.algorithm.SemiSchema",
@@ -90,7 +98,8 @@ public class AlgorithmFactory
 		algorithms.add(PKRoundRobin);
 		//algorithms.add(Dynamo);
 		algorithms.add(AllReplicateHash);
-		//algorithms.add(AllMidterm);
+		algorithms.add(RangeGraph);
+		algorithms.add(Minterm);
 		//algorithms.add(semiSchema);
 	}
 	

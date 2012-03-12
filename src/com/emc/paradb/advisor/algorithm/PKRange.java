@@ -13,10 +13,10 @@ import java.util.Set;
 import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.KeyValuePair;
-import com.emc.paradb.advisor.plugin.KeyValuePair.Range;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.utils.QueryPrepare;
 import com.emc.paradb.advisor.workload_loader.Transaction;
+import com.emc.paradb.advisor.workload_loader.WhereKey.Range;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
 

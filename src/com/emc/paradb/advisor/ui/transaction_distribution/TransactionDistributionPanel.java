@@ -94,7 +94,7 @@ public class TransactionDistributionPanel extends JPanel
 			}
 
 			@Override
-			public void draw(HashMap<String, Float> tDMap) {
+			public void draw(HashMap<String, Integer> tDMap) {
 				// TODO Auto-generated method stub
 				box.removeAll();
 
@@ -161,10 +161,10 @@ public class TransactionDistributionPanel extends JPanel
 }
 
 
-class TransactionChart {
-
-	public static JLabel createChart(HashMap<String, Float> wDVarMap) {
-
+class TransactionChart 
+{
+	public static JLabel createChart(HashMap<String, Integer> wDVarMap) 
+	{
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
 		for (String algorithm : wDVarMap.keySet()) {
@@ -173,7 +173,7 @@ class TransactionChart {
 			categoryDataset.setValue(wDVarMap.get(algorithm), "", name);
 		}
 
-		JFreeChart chart = ChartFactory.createBarChart("Average Node Coverage Per Xact", // Title
+		JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
 				"Algorithms", // X-Axis label
 				"Node Count", // Y-Axis label
 				categoryDataset, // Dataset,

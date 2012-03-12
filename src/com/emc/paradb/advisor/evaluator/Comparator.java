@@ -11,14 +11,14 @@ public class Comparator
 {
 	private static HashMap<String, Float> dDVarMap = null;
 	private static HashMap<String, Float> wDVarMap = null;
-	private static HashMap<String, Float> tDMap = null;
+	private static HashMap<String, Integer> tDMap = null;
 	private static int nodes;
 	
 	public static void compare(List<Plugin> algorithms, int nodes)
 	{
 		dDVarMap = new HashMap<String, Float>();
 		wDVarMap = new HashMap<String, Float>();
-		tDMap = new HashMap<String, Float>();
+		tDMap = new HashMap<String, Integer>();
 		Comparator.nodes = nodes;
 		
 		for(Plugin aAlgorithm : algorithms)
@@ -84,9 +84,7 @@ public class Comparator
 	private static void getTranDistComp(Plugin aAlgorithm)
 	{
 		int dist = aAlgorithm.getDist();
-		int total = aAlgorithm.getNonDist() + dist;
-		float distRate = (float)dist/(float)total;
-		tDMap.put(aAlgorithm.getID(), distRate);
+		tDMap.put(aAlgorithm.getID(), dist);
 	}
 	
 	private static Long pow(Long num, int time)
@@ -111,7 +109,7 @@ public class Comparator
 	{
 		return wDVarMap;
 	}
-	public static HashMap<String, Float> getTranDistVar()
+	public static HashMap<String, Integer> getTranDistVar()
 	{
 		return tDMap;
 	}

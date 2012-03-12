@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <plugin>
 	<path>com.emc.paradb.advisor.algorithm</path>
-	<class>NaiveAlgorithm</class>
+	<class>RandomHash</class>
 	<interface>PlugInterface</interface>
 	<partitionMethod>getPartitionKey()</partitionMethod>
 	<placementMethod>getNode()</placementMethod>
-	<description>this naive algorithm select the first attribute of each table as the key and partition them in round robin manner</description>
+	<description>this algorithm choose a key at random and place values with hashes</description>
 </plugin>

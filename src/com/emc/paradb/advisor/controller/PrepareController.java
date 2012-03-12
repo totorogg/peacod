@@ -64,10 +64,11 @@ public class PrepareController extends Controller
 			int progress = 0;
 			if(!prepared)
 			{
+
 				//load parameters
 				if(!loadParameters())
 					return;
-				
+			
 				// load data from the selected data source
 				if(selectedDB.equalsIgnoreCase("postgresql"))
 				{
@@ -79,6 +80,7 @@ public class PrepareController extends Controller
 					System.out.println("unknown database selected");
 					return;
 				}
+				
 				progressBar.setProgress(progress);
 				progressBar.setState("data loading...");
 				

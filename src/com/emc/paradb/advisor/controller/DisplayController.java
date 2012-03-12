@@ -53,7 +53,7 @@ public class DisplayController
 	
 	public static void displayCompare(HashMap<String, Float> dDVarMap, 
 			HashMap<String, Float> wDVarMap,
-			HashMap<String, Float> tDMap)
+			HashMap<String, Integer> tDMap)
 	{
 		dataDistributionCB.draw(dDVarMap);
 		workloadDistributionCB.draw(wDVarMap);
