@@ -174,14 +174,15 @@ class TransactionChart
 			categoryDataset.setValue(wDVarMap.get(algorithm), "", name);
 		}
 
-		JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
+		//JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
+		JFreeChart chart = ChartFactory.createBarChart(null, // Title
 				"Algorithms", // X-Axis label
 				"Transaction Count", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}

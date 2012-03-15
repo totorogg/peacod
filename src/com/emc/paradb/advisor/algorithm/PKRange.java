@@ -148,8 +148,8 @@ public class PKRange implements PlugInterface
 		// TODO Auto-generated method stub
 		paraList = new ArrayList<String[]>();
 	
-		String[] range = new String[]{"range size(double):","",
-				"tables are broken into several equal ranges "};  
+		String[] range = new String[]{"Range length L (double):","",
+				"Each table is splitted into several equal ranges, each range will have size L."};  
 		paraList.add(range);
 		
 		return paraList;
