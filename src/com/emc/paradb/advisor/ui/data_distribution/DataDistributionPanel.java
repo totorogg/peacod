@@ -85,7 +85,7 @@ class DataChart {
 				PlotOrientation.VERTICAL, false, true, false);
 
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}
@@ -107,7 +107,7 @@ class DataChart {
 				PlotOrientation.VERTICAL, false, true, false);
 
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}

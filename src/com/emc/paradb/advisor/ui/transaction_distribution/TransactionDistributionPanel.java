@@ -77,7 +77,8 @@ public class TransactionDistributionPanel extends JPanel
 				PieDataset result2 = createNodeAccessDataset(nodeAccess);
 				
 				JFreeChart chart = createChart(result, "Distributed/NonDistributed", true);
-				JFreeChart chart2 = createChart(result2, "Nodes Coverage of Distributed Transactions", false);
+				//JFreeChart chart2 = createChart(result2, "Nodes Coverage of Distributed Transactions", false);
+				JFreeChart chart2 = createChart(result2, "Nodes Coverage of Transactions", false);
 				
 				chart2.removeLegend();
 				
