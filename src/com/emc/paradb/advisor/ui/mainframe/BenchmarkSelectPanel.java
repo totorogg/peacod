@@ -58,14 +58,15 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	
 	private JTextField workloadText = new JTextField("1000");
 	
-	private JButton prepareButton = new JButton("Prepare");
+	private JButton prepareButton = new JButton("PreProcessing");
 	
 	private JProgressBar loadProgress = new JProgressBar(0, 100);
 	
 	public BenchmarkSelectPanel()
 	{
 		benchmarkSelectPanel.setLayout(new BoxLayout(benchmarkSelectPanel, BoxLayout.Y_AXIS));
-		benchmarkSelectPanel.setPreferredSize(new Dimension(140, ABORT));
+		//benchmarkSelectPanel.setPreferredSize(new Dimension(140, ABORT));
+		benchmarkSelectPanel.setPreferredSize(new Dimension((int) (MainFrame.scWidth * 0.175), ABORT));
 		benchmarkSelectPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
 		
 		bmComboBox = new JComboBox(bmString);
@@ -75,21 +76,21 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		
 		dbComboBox = new JComboBox(dbString);
 		dbComboBox.setSelectedIndex(0);
-		bmBox.add(Box.createVerticalStrut(10));
+		bmBox.add(Box.createVerticalStrut(20));
 		bmBox.add(dbComboBox);
 		
-		bmBox.add(Box.createVerticalStrut(5));
+		bmBox.add(Box.createVerticalStrut(20));
 		JTextArea workloadLabel = new JTextArea("Workload");
 		//JLabel workloadLabel = new JLabel("Workload");
 		workloadLabel.setBackground(null);
 		//workloadLabel.setAlignmentX(0.5f);
 		bmBox.add(workloadLabel);
-		bmBox.add(Box.createVerticalStrut(2));
+		bmBox.add(Box.createVerticalStrut(5));
 		workloadText.setHorizontalAlignment(JTextField.RIGHT);
 		workloadText.setMargin(new Insets(2, 5, 2, 5));
 		Box workloadBox = Box.createHorizontalBox();
 		workloadBox.add(workloadText);
-		workloadBox.add(Box.createHorizontalStrut(10));
+		workloadBox.add(Box.createHorizontalStrut(20));
 		workloadBox.add(new JLabel("Xacts"));
 		bmBox.add(workloadBox);
 		
@@ -102,7 +103,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		dataSetText.setHorizontalAlignment(JTextField.RIGHT);
 		dataSetText.setMargin(new Insets(2, 5, 2, 5));
 		dataSetBox.add(dataSetText);
-		dataSetBox.add(Box.createHorizontalStrut(10));
+		dataSetBox.add(Box.createHorizontalStrut(20));
 		dataSetBox.add(new JLabel("GB"));
 		bmBox.add(dataSetBox);
 		

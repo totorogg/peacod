@@ -105,8 +105,8 @@ public class AlgorithmFactory
 		algorithms.add(PKRoundRobin);
 		//algorithms.add(Dynamo);
 		algorithms.add(AllReplicateHash);
-		algorithms.add(RangeGraph);
-		algorithms.add(Minterm);
+		//algorithms.add(RangeGraph);
+		//algorithms.add(Minterm);
 		//algorithms.add(semiSchema);
 	}
 	
