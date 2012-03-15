@@ -25,12 +25,14 @@ import net.sf.jsqlparser.statement.update.Update;
 public class WorkloadLoader
 {
 	private String selectedBM = null;
+	private int transactionNum = 0;
 	private Workload<Transaction<Object>> workload = null;
 	private float progress = 0;
 	
-	public WorkloadLoader(String selectedBM)
+	public WorkloadLoader(String selectedBM, int transactionNumber)
 	{
 		this.selectedBM = selectedBM;
+		this.transactionNum = transactionNumber;
 	}
 	
 	public float getProgress()
@@ -56,17 +58,22 @@ public class WorkloadLoader
 
 					
 					String line = null;
+					int loaded = 0;
 					long readLength = 0;
 					Transaction<Object> tran = null;
 					workload = new Workload<Transaction<Object>>();
 					
-					while((line = reader.readLine()) != null)
+					while(
+							(line = reader.readLine()) != null)
 					{
 						readLength += line.getBytes().length;
 						progress = (float)readLength/(file.length() * 1.1f);
 						if(line.equalsIgnoreCase("-"))
 						{
 							tran = new Transaction<Object>();
+							if(loaded++ >= transactionNum)
+								break;
+							
 							workload.add(tran);
 							continue;
 						}
@@ -99,26 +106,10 @@ public class WorkloadLoader
 						}
 						
 					}
-					//filled some entries in workload (e.g. when a=1, we should add table.a = 1).
+					System.out.println(loaded);
 					fix();
 					progress = 1;
-					/*for test
-					for(Transaction<Object> aTran : workload)
-					{
-						for(Object statement : aTran)
-						{
-							if(statement instanceof SelectAnalysisInfo)
-							{
-								Set<WhereKey> keys = ((SelectAnalysisInfo) statement).getWhereKeys();
 
-								for(WhereKey key : keys)
-								{
-									System.out.println(key.getTableName() + "." + key.getKeyName() + 
-														" = " + key.getKeyValue());
-								}
-							}
-						}
-					}*/
 					reader.close();
 				} 
 				catch (Exception e) 

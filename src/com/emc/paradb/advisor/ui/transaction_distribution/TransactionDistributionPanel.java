@@ -175,7 +175,7 @@ class TransactionChart
 
 		JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
 				"Algorithms", // X-Axis label
-				"Node Count", // Y-Axis label
+				"Transaction Count", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 

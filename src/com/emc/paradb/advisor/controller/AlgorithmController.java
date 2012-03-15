@@ -6,6 +6,13 @@ import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
 import com.emc.paradb.advisor.plugin.Plugin;
 import com.emc.paradb.advisor.plugin.PluginManager;
 
+
+/**
+ * This controller is responsible for algorithm related operations, such as loading, select, etc.
+ * 
+ * @author Xin Pan
+ *
+ */
 public class AlgorithmController extends Controller
 {
 	/**

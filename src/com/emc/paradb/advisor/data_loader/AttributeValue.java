@@ -1,6 +1,13 @@
 package com.emc.paradb.advisor.data_loader;
 
 
+/**
+ * It maintains a value information of a key
+ * including the value and its number of occurrence
+ * 
+ * @author Xin Pan
+ *
+ */
 public class AttributeValue
 {
 	Object value;

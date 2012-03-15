@@ -19,7 +19,13 @@ import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.WhereKey.Range;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
-
+/**
+ * This algorithm select primary key as partition key
+ * Then partition the values by range
+ * 
+ * @author Xin Pan
+ *
+ */
 public class PKRange implements PlugInterface
 {
 	Connection conn = null;
@@ -142,8 +148,8 @@ public class PKRange implements PlugInterface
 		// TODO Auto-generated method stub
 		paraList = new ArrayList<String[]>();
 	
-		String[] range = new String[]{"range(double)","",
-				"all values in the range are put in one node"};  
+		String[] range = new String[]{"range size(double):","",
+				"tables are broken into several equal ranges "};  
 		paraList.add(range);
 		
 		return paraList;

@@ -7,7 +7,12 @@ import com.emc.paradb.advisor.controller.Controller;
 import com.emc.paradb.advisor.controller.PrepareController;
 
 
-
+/**
+ * Data load for postgresql
+ * 
+ * @author Xin Pan
+ *
+ */
 public class PostgreSQLLoader extends DataLoader
 {
 	private PGMetaLoader pgMetaLoader = null;

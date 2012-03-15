@@ -50,6 +50,7 @@ public class DataDistributionPanel extends JPanel {
 				box.add(dataChart);
 				box.add(Box.createHorizontalGlue());
 				box.repaint();
+				box.validate();
 			}
 
 			@Override
@@ -62,6 +63,7 @@ public class DataDistributionPanel extends JPanel {
 				box.add(dataChart);
 				box.add(Box.createHorizontalGlue());
 				box.repaint();
+				box.validate();
 			}
 		});
 	}

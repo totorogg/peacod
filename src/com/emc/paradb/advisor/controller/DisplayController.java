@@ -12,7 +12,15 @@ import com.emc.paradb.advisor.ui.transaction_distribution.TransactionDistributio
 import com.emc.paradb.advisor.ui.workload_distribution.WorkloadDistributionCB;
 
 
-
+/**
+ * This controller is responsible for displaying.
+ * Any UI panel has to regesiter a call back class.
+ * The controller will update UI by calling the call back class
+ * 
+ * 
+ * @author Xin Pan
+ *
+ */
 public class DisplayController
 {
 	private static DataDistributionCB dataDistributionCB;

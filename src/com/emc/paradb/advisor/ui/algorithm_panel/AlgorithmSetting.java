@@ -3,6 +3,7 @@ package com.emc.paradb.advisor.ui.algorithm_panel;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -23,7 +25,6 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 {
 	private JPanel settingPanel = null;
 	private JButton ok = null;
-	private JButton no = null;
 	private JTextField input = null;
 	private static List<JTextField> textList = null;
 	
@@ -31,8 +32,8 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 	{
 		super(frame, modal);
 		this.setLayout(new BorderLayout());
-		this.setPreferredSize(new Dimension(500,200));
-		this.setMinimumSize(new Dimension(500,100));
+		this.setPreferredSize(new Dimension(400,100));
+		this.setMinimumSize(new Dimension(400,100));
 	}
 
 	@Override
@@ -51,6 +52,38 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 		settingPanel.setLayout(new BoxLayout(settingPanel, BoxLayout.Y_AXIS));
 		textList = new ArrayList<JTextField>();
 		
+		
+		Box nameBox = Box.createHorizontalBox();
+		
+		String[] aPara = paraList.get(0);
+		
+		nameBox.add(new JLabel(aPara[0]));
+		settingPanel.add(nameBox);
+		
+		input = new JTextField();
+		textList.add(input);
+	/*	Box inputBox = Box.createHorizontalBox();
+		inputBox.add(input);
+		settingPanel.add(inputBox);
+		*/
+		nameBox.add(input);
+
+		input.setPreferredSize(new Dimension(10, 10));
+		input.setMaximumSize(new Dimension(200, 40));
+
+		JTextArea descrip = new JTextArea("description: " + aPara[2]);
+		Box descripBox = Box.createHorizontalBox();
+		descripBox.add(descrip);
+		settingPanel.add(descripBox);
+		
+		ok = new JButton("Apply");
+		ok.addActionListener(this);
+		nameBox.add(ok);
+		nameBox.add(Box.createHorizontalStrut(120));
+		this.add(new JScrollPane(settingPanel), BorderLayout.CENTER);
+/*
+		
+		this.setVisible(true);
 		for(String[] aPara : paraList)
 		{
 			Box paraBox = Box.createHorizontalBox();	
@@ -92,7 +125,7 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 		ok = new JButton("Apply");
 		ok.addActionListener(this);
 		this.add(ok, BorderLayout.SOUTH);
-		
+		*/
 		this.setVisible(true);
 	}
 	
@@ -111,7 +144,7 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 		frame.setSize(800, 380);
 		frame.setLayout(new BorderLayout());
 		frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		AlgorithmSetting settingDialog = new AlgorithmSetting(new JFrame(), true, "setting");
+		AlgorithmSetting settingDialog = new AlgorithmSetting(frame, true, "setting");
 		settingDialog.setContent(paraList);
 		
 		for(int i = 0; i < paraList.size(); i++)

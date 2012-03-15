@@ -30,6 +30,15 @@ import com.emc.paradb.advisor.workload_loader.WhereKey;
 import com.emc.paradb.advisor.workload_loader.WhereKey.Range;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
+
+/**
+ * This algorithm select the primary key as partition key
+ * Each node is a range of a partition key.
+ * Nodes are then partitioned by graph partition algorithm
+ * 
+ * @author Xin Pan
+ *
+ */
 public class RangeGraph implements PlugInterface
 {
 	Connection conn = null;

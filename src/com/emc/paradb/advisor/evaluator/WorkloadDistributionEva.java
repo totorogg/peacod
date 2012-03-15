@@ -19,7 +19,12 @@ import com.emc.paradb.advisor.workload_loader.UpdateAnalysisInfo;
 import com.emc.paradb.advisor.workload_loader.WhereKey;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
-
+/**
+ * Evaluate the workload distribution
+ * 
+ * @author Xin Pan
+ *
+ */
 public class WorkloadDistributionEva extends Evaluator
 {
 	private static int dist;
@@ -119,15 +124,20 @@ public class WorkloadDistributionEva extends Evaluator
 		List<String> keys = tableKeyMap.get(table);	
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 
+		boolean defined = true;
+		if(keys.get(0).equals("undefined"))
+			defined = false;
+
 		for(WhereKey whereKey : delete.getWhereKeys())
 		{
-			if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
+			if(!defined || keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
 			{
-				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue());
+				KeyValuePair kvPair = new KeyValuePair(whereKey.getTableName(), whereKey.getKeyName(), whereKey.getKeyValue());
 				kvPair.setOpera("delete");
 				kvPairs.add(kvPair);
 			}
 		}
+		
 		if(kvPairs.size() > 0)
 			updateWD(table, kvPairs, visitMap);
 		else
@@ -141,15 +151,20 @@ public class WorkloadDistributionEva extends Evaluator
 		Map<String, String> keyValueMap = insert.getKeyValueMap();
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
 		
+		boolean defined = true;
+		if(keys.get(0).equals("undefined"))
+			defined = false;
+
 		for(String whereKey : keyValueMap.keySet())
 		{
-			if(keys.contains(whereKey) && keyValueMap.get(whereKey) != null)
+			if(!defined || keys.contains(whereKey) && keyValueMap.get(whereKey) != null)
 			{
-				KeyValuePair kvPair = new KeyValuePair(table, whereKey, keyValueMap.get(whereKey));
+				KeyValuePair kvPair = new KeyValuePair(insert.getTable(), whereKey, keyValueMap.get(whereKey));
 				kvPair.setOpera("insert");
 				kvPairs.add(kvPair);
 			}
 		}
+		
 		if(kvPairs.size() > 0)
 			updateWD(table, kvPairs, visitMap);
 		else
@@ -162,12 +177,17 @@ public class WorkloadDistributionEva extends Evaluator
 		String table = update.getTable();
 		List<String> keys = tableKeyMap.get(table);
 		List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
-
+		
+		boolean defined = true;
+		if(keys.get(0).equals("undefined"))
+			defined = false;
+		
+		
 		for(WhereKey whereKey : update.getWhereKeys())
 		{
-			if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
+			if(!defined || keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
 			{
-				KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue());
+				KeyValuePair kvPair = new KeyValuePair(whereKey.getTableName(), whereKey.getKeyName(), whereKey.getKeyValue());
 				kvPair.setOpera("delete");
 				kvPairs.add(kvPair);
 			}
@@ -184,6 +204,8 @@ public class WorkloadDistributionEva extends Evaluator
 		Set<String> tables  = select.getTables();
 		boolean hit = false;
 		
+
+		
 		for(String table : tables)
 		{
 			List<String> keys = tableKeyMap.get(table);
@@ -197,11 +219,16 @@ public class WorkloadDistributionEva extends Evaluator
 				hit = true;
 			}
 			
+			boolean defined = true;
+			if(keys.get(0).equals("undefined"))
+				defined = false;
+			
 			for(WhereKey whereKey : select.getWhereKeys())
 			{
-				if(keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null)
+				if( (!defined || keys.contains(whereKey.getKeyName()) && whereKey.getKeyValue() != null) 
+						&& whereKey.getTableName().equals(table))
 				{
-					KeyValuePair kvPair = new KeyValuePair(table, whereKey.getKeyName(), whereKey.getKeyValue());
+					KeyValuePair kvPair = new KeyValuePair(whereKey.getTableName(), whereKey.getKeyName(), whereKey.getKeyValue());
 					kvPair.setOpera("select");
 					kvPairs.add(kvPair);
 					hit = true;

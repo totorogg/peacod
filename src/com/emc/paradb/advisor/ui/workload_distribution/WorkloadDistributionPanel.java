@@ -45,6 +45,7 @@ public class WorkloadDistributionPanel extends JPanel {
 						box.add(workloadChart);
 						box.add(Box.createHorizontalGlue());
 						box.updateUI();
+						box.validate();
 					}
 
 					@Override
@@ -57,6 +58,7 @@ public class WorkloadDistributionPanel extends JPanel {
 						box.add(workloadChart);
 						box.add(Box.createHorizontalGlue());
 						box.repaint();
+						box.validate();
 					}
 				});
 	}
@@ -72,7 +74,7 @@ class WorkloadChart {
 		}
 		JFreeChart chart = ChartFactory.createBarChart("Workload Distribution", // Title
 				"Node", // X-Axis label
-				"Data (Tuples)", // Y-Axis label
+				"Visit Frequency", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 

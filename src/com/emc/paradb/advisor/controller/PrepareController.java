@@ -31,7 +31,14 @@ import com.emc.paradb.advisor.workload_loader.Workload;
 import com.emc.paradb.advisor.workload_loader.WorkloadLoader;
 
 
-
+/**
+ * This controller is responsible to prepare necessary information
+ * first it call data loader to load all meta data
+ * then it call workload loader to load all transaction
+ * 
+ * @author Xin Pan
+ *
+ */
 public class PrepareController extends Controller
 {	
 	protected static String dbIP = null;
@@ -46,6 +53,14 @@ public class PrepareController extends Controller
 	protected static String epinionsDB = null;
 	protected static String selectedBM = null;
 	
+	protected static String tpccBNUM = null;
+	protected static String epinionsBNUM = null;
+	protected static String tatpBNUM = null;
+	
+	protected static String tpccSize = null;
+	protected static String epinionsSize = null;
+	protected static String tatpSize = null;
+	
 	/**
 	 * start the partition suggest process
 	 * step1: load data
@@ -54,9 +69,10 @@ public class PrepareController extends Controller
 	 * @param selectedBM
 	 * @param loadProgress
 	 */
-	public static void start(String selectedDB, String selectedBM, int nodeNumber, ProgressCB progressCB)
+	public static void start(String selectedDB, String selectedBM, int nodeNumber, int transactionNumber, ProgressCB progressCB)
 	{
 		nodes = nodeNumber;
+		transactionNum = transactionNumber;
 		progressBar = progressCB;
 		PrepareController.selectedBM = selectedBM;
 		
@@ -64,11 +80,6 @@ public class PrepareController extends Controller
 			int progress = 0;
 			if(!prepared)
 			{
-
-				//load parameters
-				if(!loadParameters())
-					return;
-			
 				// load data from the selected data source
 				if(selectedDB.equalsIgnoreCase("postgresql"))
 				{
@@ -95,7 +106,7 @@ public class PrepareController extends Controller
 			
 				// load workload for the selected benchmark
 				progress = 0;
-				workloadLoader = new WorkloadLoader(selectedBM);
+				workloadLoader = new WorkloadLoader(selectedBM, transactionNum);
 				workloadLoader.load();
 
 				progressBar.setState("workload loading...");
@@ -118,7 +129,7 @@ public class PrepareController extends Controller
 	}
 	
 	
-	private static boolean loadParameters()
+	public static boolean loadParameters()
 	{
 		String basedir = System.getProperty("user.dir") + "/";
 		try{
@@ -162,6 +173,15 @@ public class PrepareController extends Controller
 					.compile("/config/property/name[text() = \"workload.tpcc\"]/following-sibling::*[2]");
 			result = expr.evaluate(doc, XPathConstants.NODESET);
 			tpccDB = ((NodeList) result).item(0).getTextContent();
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.tpcc\"]/following-sibling::*[3]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			tpccBNUM = ((NodeList) result).item(0).getTextContent();
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.tpcc\"]/following-sibling::*[4]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			tpccSize = ((NodeList) result).item(0).getTextContent();
+			
 			
 			expr = xpath
 					.compile("/config/property/name[text() = \"workload.tatp\"]/following-sibling::*[1]");
@@ -171,6 +191,15 @@ public class PrepareController extends Controller
 					.compile("/config/property/name[text() = \"workload.tatp\"]/following-sibling::*[2]");
 			result = expr.evaluate(doc, XPathConstants.NODESET);
 			tatpDB = ((NodeList) result).item(0).getTextContent();
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.tatp\"]/following-sibling::*[3]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			tatpBNUM = ((NodeList) result).item(0).getTextContent();
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.tatp\"]/following-sibling::*[4]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			tatpSize = ((NodeList) result).item(0).getTextContent();
+		
 			
 			expr = xpath
 					.compile("/config/property/name[text() = \"workload.epinions\"]/following-sibling::*[1]");
@@ -180,7 +209,15 @@ public class PrepareController extends Controller
 					.compile("/config/property/name[text() = \"workload.epinions\"]/following-sibling::*[2]");
 			result = expr.evaluate(doc, XPathConstants.NODESET);
 			epinionsDB = ((NodeList) result).item(0).getTextContent();
-
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.epinions\"]/following-sibling::*[3]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			epinionsBNUM = ((NodeList) result).item(0).getTextContent();
+			expr = xpath
+					.compile("/config/property/name[text() = \"workload.epinions\"]/following-sibling::*[4]");
+			result = expr.evaluate(doc, XPathConstants.NODESET);
+			epinionsSize = ((NodeList) result).item(0).getTextContent();
+			
 		}catch(Exception e)
 		{
 			System.out.println(e.getMessage());
@@ -188,7 +225,32 @@ public class PrepareController extends Controller
 		return true;
 	}
 	
+	public static String getTPCCSize()
+	{
+		return tpccSize;
+	}
+	public static String getTATPSize()
+	{
+		return tatpSize;
+	}
+	public static String getEPINIONSize()
+	{
+		return epinionsSize;
+	}
 	
+	
+	public static String getTPCCBNUM()
+	{
+		return tpccBNUM;
+	}
+	public static String getTATPBNUM()
+	{
+		return tatpBNUM;
+	}
+	public static String getEPINIONBNUM()
+	{
+		return epinionsBNUM;
+	}
 	public static String getDBIP()
 	{
 		return dbIP;

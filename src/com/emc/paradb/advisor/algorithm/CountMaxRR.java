@@ -26,6 +26,7 @@ import com.emc.paradb.advisor.workload_loader.Workload;
 /**
  * This class selects the most frequently accessed key of each table by the workloads
  * It implements the getPartitionKey() and getNode() function
+ * 
  * @author Xin Pan
  *
  */

@@ -17,7 +17,12 @@ import java.util.Vector;
 import com.emc.paradb.advisor.utils.QueryPrepare;
 
 
-
+/**
+ * Meta data loader for postgres
+ * 
+ * @author Xin Pan
+ *
+ */
 
 class PGMetaLoader
 {

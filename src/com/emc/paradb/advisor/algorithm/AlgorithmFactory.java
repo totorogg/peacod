@@ -11,6 +11,7 @@ import com.emc.paradb.advisor.plugin.Plugin;
  * To add a bulit-in algorithm, you have to new a Plugin() and added in manually in this class.
  * To add a plug-in algorithm, you need to package the algorithm into a jar and then put in plugin directory 
  * of the project. A config.xml is also necessary to be added in the jar
+ * 
  * @author Xin Pan
  *
  */
@@ -28,7 +29,7 @@ public class AlgorithmFactory
 
 	private static Plugin AllReplicateHash = new Plugin();
 	private static Plugin RangeGraph = new Plugin();
-	private static Plugin Minterm = new Plugin();
+	private static Plugin MintermGraph = new Plugin();
 
 	
 	//load the build-in algorithms
@@ -70,8 +71,8 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"choose primary key as partitionKey and use METIS to play graph partition");
 		
-		Minterm.setInterface(new MinTerm());
-		Minterm.setInfo("com.emc.paradb.advisor.algorithm.Minterm",
+		MintermGraph.setInterface(new MinTermGraph());
+		MintermGraph.setInfo("com.emc.paradb.advisor.algorithm.MintermGraph",
 							"getPartitionKey()", "getNode()",
 							"This algorithm analyse predicates in a workload and partition by the midterm ranges.");
 		
@@ -95,6 +96,7 @@ public class AlgorithmFactory
 							"This algorithm partition the root table based on predicates in workload and partition other tables by fk references.");*/
 	}
 	
+	//build-in algorithms are added statically
 	public static void loadBuildin()
 	{
 		algorithms.add(countMaxRR);
@@ -106,7 +108,7 @@ public class AlgorithmFactory
 		//algorithms.add(Dynamo);
 		algorithms.add(AllReplicateHash);
 		algorithms.add(RangeGraph);
-		algorithms.add(Minterm);
+		algorithms.add(MintermGraph);
 		//algorithms.add(semiSchema);
 	}
 	
@@ -115,22 +117,27 @@ public class AlgorithmFactory
 		for(Plugin aAlgorithm : algorithms)
 			System.out.println(aAlgorithm.getID());
 	}
+	
 	public static List<Plugin> getAlgorithms()
 	{
 		return algorithms;
 	}
+	
 	public static void addAlgorithms(List<Plugin> newAlgorithms)
 	{
 		algorithms.addAll(newAlgorithms);
 	}
+	
 	public static void removeAll()
 	{
 		algorithms = new ArrayList<Plugin>();
 	}
+	
 	public static void addSelected(Plugin aAlgorithm)
 	{
 		selectedAlgorithms.add(aAlgorithm);
 	}
+	
 	public static void removeSelected(Plugin aAlgorithm)
 	{
 		selectedAlgorithms.remove(aAlgorithm);
@@ -140,6 +147,7 @@ public class AlgorithmFactory
 		for(Plugin aAlgorithm : selectedAlgorithms)
 			System.out.println(aAlgorithm.getID());
 	}
+	
 	public static List<Plugin> getSelectedAlgorithms()
 	{
 		return selectedAlgorithms;

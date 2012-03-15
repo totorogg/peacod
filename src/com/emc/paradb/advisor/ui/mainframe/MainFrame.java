@@ -17,6 +17,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.plaf.basic.BasicLookAndFeel;
 
+import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.ui.algorithm_panel.AlgorithmSelectPanel;
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
@@ -36,6 +37,8 @@ public class MainFrame extends JFrame {
 	}
 
 	public MainFrame() {
+		
+		PrepareController.loadParameters();
 	/*	try {
 
 			UIManager.setLookAndFeel(WindowsLookAndFeel.class.getName());

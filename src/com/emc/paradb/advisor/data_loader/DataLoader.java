@@ -3,7 +3,13 @@ package com.emc.paradb.advisor.data_loader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
+/**
+ * Abstract class for loading data
+ * different loaders for different database should inherit this class
+ * 
+ * @author Xin Pan
+ *
+ */
 public abstract class DataLoader
 {
 	protected static DBData dbData = new DBData();
@@ -23,6 +29,7 @@ public abstract class DataLoader
 	{
 		return dbData;
 	}
+	
 	public abstract float getProgress();
 	public abstract void load();
 }

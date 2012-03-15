@@ -21,6 +21,13 @@ import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
 
+/**
+ * This controller is responsible for evaluating algorithms
+ * after evaluating, it will call display controller
+ * 
+ * @author Xin Pan
+ *
+ */
 public class EvaluateController extends Controller
 {
 	

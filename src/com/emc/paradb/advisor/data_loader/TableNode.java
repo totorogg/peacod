@@ -14,7 +14,13 @@ import com.emc.paradb.advisor.utils.QueryPrepare;
 
 
 
-
+/**
+ * This class maintains all information of a table
+ * including its keys
+ * 
+ * @author Xin Pan
+ *
+ */
 public class TableNode
 {
 	private Connection conn = null;

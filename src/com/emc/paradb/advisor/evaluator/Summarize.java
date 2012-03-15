@@ -9,7 +9,12 @@ import com.emc.paradb.advisor.data_loader.DataLoader;
 import com.emc.paradb.advisor.data_loader.TableNode;
 import com.emc.paradb.advisor.plugin.Plugin;
 
-
+/**
+ * summarize the evaluate information of all algorithms
+ * 
+ * @author Xin Pan
+ *
+ */
 public class Summarize
 {
 	private static Object[] pluginNames;

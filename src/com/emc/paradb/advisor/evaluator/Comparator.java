@@ -6,7 +6,14 @@ import java.util.List;
 import com.emc.paradb.advisor.algorithm.AlgorithmFactory;
 import com.emc.paradb.advisor.plugin.Plugin;
 
-
+/**
+ * This comparator is responsible for comparing different algorithms
+ * including data distribution variance, workload distribution variances
+ * and transation distribution
+ * 
+ * @author Xin Pan
+ *
+ */
 public class Comparator
 {
 	private static HashMap<String, Float> dDVarMap = null;

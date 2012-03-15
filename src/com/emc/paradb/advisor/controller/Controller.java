@@ -8,9 +8,18 @@ import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 import com.emc.paradb.advisor.workload_loader.WorkloadLoader;
 
+/**
+ * Father class of controllers.
+ * it maintains some global information so as to control all parts of the projects
+ * 
+ * 
+ * @author Xin Pan
+ *
+ */
 public class Controller
 {
 	protected static int nodes = 0;
+	protected static int transactionNum = 0;
 	protected static boolean prepared = false;
 	
 	protected static DataLoader dataLoader = null;

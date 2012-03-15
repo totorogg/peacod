@@ -16,7 +16,12 @@ import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
 import com.emc.paradb.advisor.utils.QueryPrepare;
 
-
+/**
+ * this class evaluate data distribution 
+ * 
+ * @author Xin Pan
+ *
+ */
 public class DataDistributionEva extends Evaluator
 {
 	private static HashMap<String, List<String>> tableKeyMap = null;
@@ -96,6 +101,19 @@ public class DataDistributionEva extends Evaluator
 					result.next();
 					for(int i = 0; i < nodes; i++)
 						dataSet.set(i, dataSet.get(i) + result.getInt(1));
+				}
+				else if(keys.get(0).equals("undefined"))
+				{
+					List<KeyValuePair> kvPairs = new ArrayList<KeyValuePair>();
+					KeyValuePair kvPair = new KeyValuePair(table, "undefined", "undefined");		
+					kvPairs.add(kvPair);
+					List<Integer> nodeList = plugInterface.getNode(kvPairs);
+					
+					if(nodeList == null)
+						System.err.println("Error: unable to find placement");
+					
+					for(int i = 0; i < nodeList.size(); i++)
+						dataSet.set(i, Long.valueOf(nodeList.get(i)));
 				}
 				else
 				{

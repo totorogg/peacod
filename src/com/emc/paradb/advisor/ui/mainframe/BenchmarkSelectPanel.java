@@ -70,8 +70,36 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		
 		bmComboBox = new JComboBox(bmString);
 		bmComboBox.setSelectedIndex(0);
+		bmComboBox.addActionListener(new ActionListener()
+		{
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				// TODO Auto-generated method stub
+				JComboBox cb = (JComboBox)arg0.getSource();
+				int selectedIndex = cb.getSelectedIndex();
+				switch(selectedIndex)
+				{
+				case 0:
+					workloadText.setText(PrepareController.getTPCCBNUM());
+					dataSetText.setText(PrepareController.getTPCCSize());
+					break;
+				case 1:
+					workloadText.setText(PrepareController.getEPINIONBNUM());
+					dataSetText.setText(PrepareController.getTATPSize());
+					break;
+				case 2:
+					workloadText.setText(PrepareController.getTATPBNUM());
+					dataSetText.setText(PrepareController.getEPINIONSize());
+					break;
+				}
+			}
+			
+		});
 		bmBox.add(Box.createVerticalStrut(10));
 		bmBox.add(bmComboBox);
+		
 		
 		dbComboBox = new JComboBox(dbString);
 		dbComboBox.setSelectedIndex(0);
@@ -103,7 +131,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		dataSetText.setMargin(new Insets(2, 5, 2, 5));
 		dataSetBox.add(dataSetText);
 		dataSetBox.add(Box.createHorizontalStrut(10));
-		dataSetBox.add(new JLabel("GB"));
+		dataSetBox.add(new JLabel("MB"));
 		bmBox.add(dataSetBox);
 		
 		bmBox.add(Box.createVerticalStrut(5));
@@ -138,6 +166,11 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		prepareButton.addActionListener(this);
 	}
 
+	private String getWorkloadCount(String bm)
+	{
+		return null;
+	}
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) 
 	{
@@ -151,7 +184,8 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					String selectedDB = dbComboBox.getSelectedItem().toString();
 					String selectedBM = bmComboBox.getSelectedItem().toString();
 					int nodes = Integer.valueOf(nodeCountText.getText().toString());
-					PrepareController.start(selectedDB, selectedBM, nodes, progressCB);
+					int transactions = Integer.valueOf(workloadText.getText().toString());
+					PrepareController.start(selectedDB, selectedBM, nodes, transactions, progressCB);
 				}
 			}.start();
 		}

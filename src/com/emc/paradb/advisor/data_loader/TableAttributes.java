@@ -14,13 +14,18 @@ import java.util.Set;
 import com.emc.paradb.advisor.utils.QueryPrepare;
 
 
-
+/**
+ * This class stores all information of a key
+ * its values are also included.
+ * 
+ * @author Xin Pan
+ *
+ */
 public class TableAttributes
 {
 	private Connection conn = null;
 	private String attrName;//name of the attribute
 	private int Cardinality;//number of different value the attribute has
-	private Set<AttributeValue> values = null;
 	
 
 	public TableAttributes(String table, String name, Connection conn)
@@ -61,31 +66,6 @@ public class TableAttributes
 				data[0][5] = result.getString(18);
 			}
 		}catch(SQLException e){
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-			return false;
-		}
-		return true;
-	}
-	private Set<AttributeValue> getAttrValue()
-	{
-		return values;
-	}
-	private boolean setAttrValue(String tableName)
-	{
-		values = new HashSet<AttributeValue>();
-		try
-		{
-			Statement stmt = conn.createStatement();
-			ResultSet result = stmt.executeQuery(String.format("select %s, count(*) from %s group by %s",
-					attrName, QueryPrepare.prepare(tableName), attrName));
-			while(result.next())
-			{
-				values.add( new AttributeValue(result.getString(1), result.getInt(2)));
-			}
-		}
-		catch(SQLException e)
-		{
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 			return false;
