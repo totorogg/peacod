@@ -71,7 +71,7 @@ class WorkloadChart {
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
 		for (int i = 0; i < tuples.size(); i++) {
-			categoryDataset.setValue(tuples.get(i), "" + i, table);
+			categoryDataset.setValue(tuples.get(i), "", String.valueOf(i+1));
 		}
 		//JFreeChart chart = ChartFactory.createBarChart("Workload Distribution", // Title
 		JFreeChart chart = ChartFactory.createBarChart("", // Title
