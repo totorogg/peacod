@@ -32,6 +32,7 @@ public class WorkloadDistributionPanel extends JPanel {
 						+ "In a single scheme's descriptive representation, each node's total transactions be executed will be showed. In the comparasion representation, "
 						+ "the metric is represented by the standard variance normalized to be a value between zero and one. \n");
 
+		description.setLineWrap(true);
 		this.add(description, BorderLayout.NORTH);
 		this.setBorder(BorderFactory.createEtchedBorder());
 

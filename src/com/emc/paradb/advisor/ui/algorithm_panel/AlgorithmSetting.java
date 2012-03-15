@@ -32,8 +32,8 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 	{
 		super(frame, modal);
 		this.setLayout(new BorderLayout());
-		this.setPreferredSize(new Dimension(400,100));
-		this.setMinimumSize(new Dimension(400,100));
+		this.setPreferredSize(new Dimension(500,100));
+		this.setMinimumSize(new Dimension(500,100));
 	}
 
 	@Override
