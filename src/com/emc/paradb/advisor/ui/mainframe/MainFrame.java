@@ -24,6 +24,8 @@ import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
 public class MainFrame extends JFrame {
 	public static Font mainFont;
+	public static int scWidth = 1200;
+	public static int scHeight = 540;
 
 	private static DisplayPanel displayPanel;
 	private static BenchmarkSelectPanel benchmarkSelectPanel;
@@ -63,7 +65,7 @@ public class MainFrame extends JFrame {
 							+ "/resources/Frutiger.ttf"));
 			//mainFont = mainFont.deriveFont(Font.PLAIN, 12.0f);
 		} catch (Exception e) {
-			mainFont = new Font("Sans Serif", Font.PLAIN, 12);
+			mainFont = new Font("Sans Serif", Font.PLAIN, 18);
 			System.out.println("load font error: using system font");
 			e.printStackTrace();
 		}
@@ -76,7 +78,8 @@ public class MainFrame extends JFrame {
 				// UIManager.put (key, new Font( "Comic Sans MS", Font.PLAIN,
 				// 12));
 				// UIManager.put (key, new Font( "Frutiger", Font.PLAIN, 12));
-				UIManager.put(key, mainFont.deriveFont(Font.PLAIN, 12));
+				//UIManager.put(key, mainFont.deriveFont(Font.PLAIN, 12));
+				UIManager.put(key, mainFont.deriveFont(Font.PLAIN, 18));
 			}
 		}
 		// Map<? extends AttributedCharacterIterator.Attribute,?> attributes =
@@ -92,7 +95,8 @@ public class MainFrame extends JFrame {
 		algorithmSelectPanel = new AlgorithmSelectPanel();
 		benchmarkSelectPanel = new BenchmarkSelectPanel();
 
-		this.setSize(800, 360);
+		//this.setSize(800, 360);
+		this.setSize(scWidth, scHeight);
 		this.setTitle("PEACOD");
 		this.setLayout(new BorderLayout());
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -102,7 +106,8 @@ public class MainFrame extends JFrame {
 		splitPane.setDividerSize(5);
 
 		this.add(splitPane, BorderLayout.CENTER);
-		splitPane.setDividerLocation(470);
+		//splitPane.setDividerLocation(470);scWidth
+		splitPane.setDividerLocation(scWidth * 3 / 5);
 		this.add(benchmarkSelectPanel, BorderLayout.WEST);
 	}
 }
