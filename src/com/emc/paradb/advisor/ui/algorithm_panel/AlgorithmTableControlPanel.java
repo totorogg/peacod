@@ -23,7 +23,7 @@ import com.emc.paradb.advisor.controller.EvaluateController;
 
 public class AlgorithmTableControlPanel extends JPanel
 {
-	private JButton load = new JButton("Load");
+	private JButton load = new JButton("Select");
 	private JButton evaluate = new JButton("Evaluate");
 	private JButton compare = new JButton("Compare");
 	

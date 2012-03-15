@@ -38,7 +38,7 @@ public class AlgorithmFactory
 		countMaxRR.setInterface(new CountMaxRR());
 		countMaxRR.setInfo("com.emc.paradb.advisor.algorithm.CountMaxRR",
 							"getPartitionKey()", "getNode()",
-							"This scheme select the keys that are most frequently accessed, and partition them in roundRobin manner.");
+							"In this scheme, those most frequently accessed columns are selected as the partitioning keys. The tables are partitioned in the round robin manner based on the partitioning key values.");//This scheme select partitioning keys that are most frequently accessed, and partition them in roundRobin manner.");
 	
 		schemaHash.setInterface(new SchemaHash());
 		schemaHash.setInfo("com.emc.paradb.advisor.algorithm.SchemaHash",
