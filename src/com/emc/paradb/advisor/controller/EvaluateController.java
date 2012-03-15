@@ -31,7 +31,6 @@ import com.emc.paradb.advisor.workload_loader.Workload;
 public class EvaluateController extends Controller
 {
 	
-	
 	public static void evaluate()
 	{
 		if(!prepared)
@@ -82,11 +81,11 @@ public class EvaluateController extends Controller
 		Summarize.summrize();
 		DisplayController.displaySummary(Summarize.getTableKeyMap(), 
 				 Summarize.getPluginNames(),
-				 "Table->PartitionKey", false);
+				 "Workload Distribution Evaluation", false);
 		
 		DisplayController.displaySummary(Summarize.getWorkloadDist(), 
 				 Summarize.getPluginNames(),
-				 "Workload Distribution Evaluation", true);
+				 "Table->PartitionKey", true);
 	}
 
 	

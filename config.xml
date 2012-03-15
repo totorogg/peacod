@@ -11,14 +11,14 @@
       <name>workload.tatp</name>
       <value>workload/tatp.log</value>
       <value>tatp</value>
-      <value>18124</value>
+      <value>5877</value>
       <value>15</value>
    </property>
    <property>
       <name>workload.epinions</name>
       <value>workload/epinions.log</value>
       <value>epinions</value>
-      <value>672</value>
+      <value>202</value>
       <value>6</value>
    </property>
    <property>
