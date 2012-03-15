@@ -31,9 +31,9 @@ public class DataDistributionPanel extends JPanel {
 		this.setLayout(new BorderLayout());
 
 		JTextArea description = new JTextArea(
-				"DESCRIPTION: \n This metric describes how uniformly data are distributed across partitions (nodes). "
-						+ "In a single scheme's descriptive representation, each node's total tuples will be showed. In the comparasion representation, "
-						+ "the metric is represented by the standard variance normalized to be a value between zero and one. \n");
+				"DESCRIPTION: \n This metric describes how uniformly data are distributed across data nodes. "
+						+ "For a single scheme's descriptive representation, each node's total tuples will be showed. For the comparasion representation, "
+						+ "the metric is represented by the standard variance that is normalized to a value between zero and one. \n");
 
 		description.setLineWrap(true);
 
@@ -75,11 +75,12 @@ class DataChart {
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
 		for (int i = 0; i < tuples.size(); i++) {
-			categoryDataset.setValue(tuples.get(i), "", String.valueOf(i+1));
+			//categoryDataset.setValue(tuples.get(i), i + "", String.valueOf(i+1));
+			categoryDataset.setValue(tuples.get(i), i + "", "");
 		}
 
 		JFreeChart chart = ChartFactory.createBarChart("", // Title
-				"Node", // X-Axis label
+				"Data Nodes", // X-Axis label
 				"Data (Tuples)", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
@@ -100,8 +101,8 @@ class DataChart {
 			categoryDataset.setValue(dDVarMap.get(algorithm), "", name);
 		}
 
-		JFreeChart chart = ChartFactory.createBarChart("Distribution Variance", // Title
-				"Algorithms", // X-Axis label
+		JFreeChart chart = ChartFactory.createBarChart("", // Title
+				"Schemes", // X-Axis label
 				"Variance", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);

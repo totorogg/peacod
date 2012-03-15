@@ -38,43 +38,43 @@ public class AlgorithmFactory
 		countMaxRR.setInterface(new CountMaxRR());
 		countMaxRR.setInfo("com.emc.paradb.advisor.algorithm.CountMaxRR",
 							"getPartitionKey()", "getNode()",
-							"In this scheme, those most frequently accessed columns are selected as the partitioning keys. The tables are partitioned in the round robin manner based on the partitioning key values.");//This scheme select partitioning keys that are most frequently accessed, and partition them in roundRobin manner.");
+							"In this scheme, those most frequently accessed columns are selected as the partition keys. The tables are partitioned in the round robin manner based on the partition key values.");//This scheme select partitioning keys that are most frequently accessed, and partition them in roundRobin manner.");
 	
 		schemaHash.setInterface(new SchemaHash());
 		schemaHash.setInfo("com.emc.paradb.advisor.algorithm.SchemaHash",
 							"getPartitionKey()", "getNode()",
-							"This algorithm select partition key based on database schema. primary key in \"root table\" is the basic partition key.");
+							"This scheme selects partition keys based on the primary-foreign key relationship topology in the database schema. The primary key of the \"root table\" will become the main driving partition key.");
 	
 		PKHash.setInterface(new PKHash());
 		PKHash.setInfo("com.emc.paradb.advisor.algorithm.PKHash",
 							"getPartitionKey()", "getNode()",
-							"This algorithm select primary key as partition key and place values via hash function.");
+							"This scheme selects primary keys of tables as the partition keys and hash-partition tables.");
 	
 		PKRange.setInterface(new PKRange());
 		PKRange.setInfo("com.emc.paradb.advisor.algorithm.PKRange",
 							"getPartitionKey()", "getNode()",
-							"This algorithm select primary key as partition key and place values based on their range.");
+							"This scheme selects primary keys of tables as the partition keys and range-partition tables.");
 	
 		PKRoundRobin.setInterface(new PKRR());
 		PKRoundRobin.setInfo("com.emc.paradb.advisor.algorithm.PKRoundRobin",
 							"getPartitionKey()", "getNode()",
-							"This algorithm select primary key as partition key and place values via round robin function.");
+							"This scheme selects primary keys of tables as the partition keys and partition tables in the round-robin manner based on the partition key values.");
 	
 		AllReplicateHash.setInterface(new AllReplicateHash());
 		AllReplicateHash.setInfo("com.emc.paradb.advisor.algorithm.AllReplicateHash",
 							"getPartitionKey()", "getNode()",
-							"The algorithm replicate table to all nodes.");
+							"The scheme replicates each table to all data nodes.");
 		
 		
 		RangeGraph.setInterface(new RangeGraph());
 		RangeGraph.setInfo("com.emc.paradb.advisor.algorithm.RangeGraph",
 							"getPartitionKey()", "getNode()",
-							"choose primary key as partitionKey and use METIS to play graph partition");
+							"This scheme chooses the primary keys of tables as the partition keys and uses METIS to play graph partition");
 		
 		MintermGraph.setInterface(new MinTermGraph());
 		MintermGraph.setInfo("com.emc.paradb.advisor.algorithm.MintermGraph",
 							"getPartitionKey()", "getNode()",
-							"This algorithm analyse predicates in a workload and partition by the midterm ranges.");
+							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
 		
 		//the following are not implemented
 	/*	consistentHash.setInterface(new SchemaHash());

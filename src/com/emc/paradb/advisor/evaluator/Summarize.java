@@ -28,7 +28,8 @@ public class Summarize
 		
 		pluginNames = new Object[plugins.size() + 1];
 		
-		pluginNames[0] = "Term";
+		//pluginNames[0] = "Term";
+		pluginNames[0] = " ";
 		for(int i = 0; i < plugins.size(); i++)
 			pluginNames[i + 1] = plugins.get(i).getName();
 		
@@ -45,16 +46,16 @@ public class Summarize
 	{
 		int rowCount = 0;
 		
-		results[rowCount][0] = "Dist-Xacts";
+		results[rowCount][0] = "#Dist-Xacts";
 		for(int i = 0; i < plugins.size(); i++)
 			results[rowCount][i+1] = String.valueOf(plugins.get(i).getDist());
 		
-		results[++rowCount][0] = "Nondist-Xacts";
+		results[++rowCount][0] = "#Nondist-Xacts";
 		for(int i = 0; i < plugins.size(); i++)
 			results[rowCount][i+1] = String.valueOf(plugins.get(i).getNonDist());
 		
 		
-		results[++rowCount][0] = "SQLs/Node";
+		results[++rowCount][0] = "#SQLs per Node";
 		for(int i = 0; i < plugins.size(); i++)
 		{
 			List<Long> workloadList = plugins.get(i).getWorkloadDistribution();
@@ -64,7 +65,7 @@ public class Summarize
 			results[rowCount][i+1] = String.valueOf(sum / workloadList.size());
 		}
 		
-		results[++rowCount][0] = "Node/Xact";
+		results[++rowCount][0] = "#Nodes per Xact";
 		for(int i = 0; i < plugins.size(); i++)
 		{
 			HashMap<Integer, Integer> nodeAccess = plugins.get(i).getNodeAccess();

@@ -48,13 +48,15 @@ public class TransactionDistributionPanel extends JPanel
 		//StyleConstants.setFontFamily(set, "Comic Sans MS");
 		//description.setParagraphAttributes(set, true);
 		
-		description.setText("DESCRIPTION:\n  This metric measures how many distributed transactions have resulted from partitioning. Since distributed transactions incur dominant execution cost, a fewer number of them implies the better scheme performance." +
-							"The left figure shows the distributed transactions’ ratio by the selected scheme. The right figure shows the ratios of node number which a distributed transaction can access.");
+		description.setText("DESCRIPTION:\n  This metric measures the total number of distributed transactions of the workload resulted from the partitioning scheme(s). " 
+							+ "Since distributed transactions dominate the total workload execution cost, the fewer number of them implies the better performance." +
+							"For a single scheme, the left figure shows the number of distributed transactions. The right figure shows the distribution of the number of " + "" +
+							"data nodes that a transaction spanned over.");
 		description.setEditable(false);
 
 		Box labelBox = Box.createHorizontalBox();
-		JLabel label = new JLabel("Partition scheme: CountMaxRR");
-		labelBox.add(label);
+		//JLabel label = new JLabel("Partition scheme: CountMaxRR");
+		//labelBox.add(label);
 		labelBox.add(Box.createHorizontalGlue());
 		this.add(description);
 		this.add(Box.createVerticalStrut(10));
@@ -76,7 +78,7 @@ public class TransactionDistributionPanel extends JPanel
 				PieDataset result = createDistNonDistDataset(dist, nonDist);
 				PieDataset result2 = createNodeAccessDataset(nodeAccess);
 				
-				JFreeChart chart = createChart(result, "Distributed/NonDistributed", true);
+				JFreeChart chart = createChart(result, "#Distributed vs. #NonDistributed", true);
 				//JFreeChart chart2 = createChart(result2, "Nodes Coverage of Distributed Transactions", false);
 				JFreeChart chart2 = createChart(result2, "Nodes Coverage of Transactions", false);
 				
@@ -176,8 +178,8 @@ class TransactionChart
 
 		//JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
 		JFreeChart chart = ChartFactory.createBarChart(null, // Title
-				"Algorithms", // X-Axis label
-				"Transaction Count", // Y-Axis label
+				"Schemes", // X-Axis label
+				"# transactions", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 
