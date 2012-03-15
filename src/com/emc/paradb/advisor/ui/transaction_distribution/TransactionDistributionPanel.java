@@ -77,7 +77,8 @@ public class TransactionDistributionPanel extends JPanel
 				PieDataset result2 = createNodeAccessDataset(nodeAccess);
 				
 				JFreeChart chart = createChart(result, "Distributed/NonDistributed", true);
-				JFreeChart chart2 = createChart(result2, "Nodes Coverage of Distributed Transactions", false);
+				//JFreeChart chart2 = createChart(result2, "Nodes Coverage of Distributed Transactions", false);
+				JFreeChart chart2 = createChart(result2, "Nodes Coverage of Transactions", false);
 				
 				chart2.removeLegend();
 				
@@ -173,14 +174,15 @@ class TransactionChart
 			categoryDataset.setValue(wDVarMap.get(algorithm), "", name);
 		}
 
-		JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
+		//JFreeChart chart = ChartFactory.createBarChart("Distributed Transactions", // Title
+		JFreeChart chart = ChartFactory.createBarChart(null, // Title
 				"Algorithms", // X-Axis label
 				"Transaction Count", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}

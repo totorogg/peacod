@@ -73,14 +73,15 @@ class WorkloadChart {
 		for (int i = 0; i < tuples.size(); i++) {
 			categoryDataset.setValue(tuples.get(i), "", String.valueOf(i+1));
 		}
-		JFreeChart chart = ChartFactory.createBarChart("Workload Distribution", // Title
+		//JFreeChart chart = ChartFactory.createBarChart("Workload Distribution", // Title
+		JFreeChart chart = ChartFactory.createBarChart("", // Title
 				"Node", // X-Axis label
 				"Visit Frequency", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}
@@ -102,7 +103,7 @@ class WorkloadChart {
 				PlotOrientation.VERTICAL, false, true, false);
 
 		JLabel lb = new JLabel();
-		lb.setIcon(new ImageIcon(chart.createBufferedImage(400, 180)));
+		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}

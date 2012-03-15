@@ -31,9 +31,10 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 	public AlgorithmSetting(JFrame frame, boolean modal, String myMessage)
 	{
 		super(frame, modal);
+		this.setTitle("Partitioning Schemes Settings");
 		this.setLayout(new BorderLayout());
-		this.setPreferredSize(new Dimension(500,100));
-		this.setMinimumSize(new Dimension(500,100));
+		this.setPreferredSize(new Dimension(680, 120));
+		this.setMinimumSize(new Dimension(680, 120));
 	}
 
 	@Override
@@ -71,7 +72,7 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 		input.setPreferredSize(new Dimension(10, 10));
 		input.setMaximumSize(new Dimension(200, 40));
 
-		JTextArea descrip = new JTextArea("description: " + aPara[2]);
+		JTextArea descrip = new JTextArea("Description: \n" + aPara[2]);
 		Box descripBox = Box.createHorizontalBox();
 		descripBox.add(descrip);
 		settingPanel.add(descripBox);
