@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.data_loader.TableNode;
@@ -62,20 +63,10 @@ public class AllReplicateHash implements PlugInterface
 	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
 	{
 		// TODO Auto-generated method stub
-		List<Integer> nodes = new ArrayList<Integer>();
-		if(kvPairs.get(0).getRange() != Range.EQUAL)
-		{
-			nodes.add(-1);
-			return nodes;
-		}
 		
-		String value = kvPairs.get(0).getValue();		
-		if(value != null)
-			nodes.add(hash.getPlacement(value));
-		else
-			nodes.add(-1);
-		
-		return nodes;
+		List<Integer> nodeList = new ArrayList<Integer>();
+		nodeList.add(-2);
+		return nodeList;
 	}
 
 	@Override

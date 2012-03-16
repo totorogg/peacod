@@ -109,7 +109,7 @@ public class AlgorithmFactory
 		algorithms.add(AllReplicateHash);
 
 		//algorithms.add(RangeGraph);
-		//algorithms.add(Minterm);
+		algorithms.add(MintermGraph);
 		//algorithms.add(semiSchema);
 	}
 	

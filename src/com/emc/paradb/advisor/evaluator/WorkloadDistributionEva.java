@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 import com.emc.paradb.advisor.controller.Controller;
@@ -103,7 +104,9 @@ public class WorkloadDistributionEva extends Evaluator
 		if(distCount == 0 && visitMap.get(-2) != 0)
 		{
 			distCount++;
-			workloadDistList.set(0, workloadDistList.get(0) + visitMap.get(-2));
+			Random r = new Random();
+			int node = r.nextInt(nodes);
+			workloadDistList.set(node, workloadDistList.get(node) + visitMap.get(-2));
 		}
 		
 		if(distCount > 1)
@@ -249,6 +252,11 @@ public class WorkloadDistributionEva extends Evaluator
 								   List<KeyValuePair> kvPairs, 
 								   HashMap<Integer, Integer> visitMap)
 	{
+		for(KeyValuePair kvPair : kvPairs)
+		{
+			if(kvPair.getValue() == null)
+				return;
+		}
 		
 		List<Integer> nodeList = aPlugin.getInstance().getNode(kvPairs);
 		if(nodeList.get(0) == -1)//failed to match a node

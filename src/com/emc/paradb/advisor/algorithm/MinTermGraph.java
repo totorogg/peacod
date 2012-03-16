@@ -107,6 +107,7 @@ public class MinTermGraph implements PlugInterface
 				System.out.print(aTablePartition.getKeyPartition(keyList.get(j)).getName() + "\t");
 		}
 		
+
 		partitionGraph();
 		
 		for(int i = 0; i < tableList.size(); i++)
@@ -127,8 +128,6 @@ public class MinTermGraph implements PlugInterface
 			System.err.println("Error edge count");
 		edgeCount /= 2;
 		
-	//	for(int i = 0; i < minTermList.size(); i++)
-	//		minTermList.get(i).listMinTerm();
 		
 		String graphFile = "minTermGraph";		
 		FileWriter fstream = new FileWriter(graphFile);
@@ -185,11 +184,13 @@ public class MinTermGraph implements PlugInterface
 		int rmCount = 0;
 		
 		int lastValidMT = 0;
+		int validPos = 0;
 		for(int i = 1; i < minTermList.size(); i++)
 		{
 			if(minTermList.get(i).getNeibourSize() != 0)
 			{
 				lastValidMT = minTermList.get(i).getPos();
+				validPos = i;
 				break;
 			}
 		}
@@ -212,6 +213,8 @@ public class MinTermGraph implements PlugInterface
 						{
 							count++;
 							aMinTerm.addConnect(lastValidMT);
+							minTermList.get(validPos).addConnect(aMinTerm.getPos());
+							
 							System.err.println("Error: Unable To Combine: " + s);
 							s++;
 							continue;
@@ -223,14 +226,14 @@ public class MinTermGraph implements PlugInterface
 				else
 				{
 					lastValidMT = minTermList.get(s).getPos();
+					validPos = s;
 					s++;
 				}
 			}
 			tableEndPos.put(tableName, tableEndPos.get(tableName) - rmCount);
 		}
 		System.out.println(count);
-		
-		
+
 	}
 	
 	private void serialize()
@@ -701,12 +704,14 @@ class TablePartition
 					continue;
 				
 				minResult.next();
-				int min = minResult.getInt(1);
-			
+				//int min = minResult.getInt(1);
+				int min = Integer.MIN_VALUE / 2;
+				
 				ResultSet maxResult = stmt.executeQuery("select max(" + aKey +") " +
 														"from " + QueryPrepare.prepare(tableName) + ";");
 				maxResult.next();
-				int max = maxResult.getInt(1);
+				//int max = maxResult.getInt(1); 
+				int max = Integer.MAX_VALUE / 2;
 				
 				KeyPartition aKeyPartition = new KeyPartition(aKey, min, max + 1);
 				keyPartitions.put(aKey, aKeyPartition);
@@ -793,7 +798,7 @@ class TablePartition
 	{
 		//eliminateUpdateAvg();
 		
-		elimateLowerThan(2);
+		elimateLowerThan(3);
 		
 		Set<String> keys = keyVisitMap.keySet();
 		Set<String> rmKeys = new HashSet<String>();
@@ -910,6 +915,11 @@ class KeyPartition
 	
 	public boolean addPredicate(Predicate aPredicate)
 	{
+		if(predicates.size() > 2000)
+		{
+			System.out.println("two many");
+			return true;
+		}	
 		if(aPredicate.getMin() == null)
 		{
 			int aMax = aPredicate.getMax();
