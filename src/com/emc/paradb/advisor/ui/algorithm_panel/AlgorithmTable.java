@@ -32,7 +32,8 @@ class AlgorithmTable extends JTable
 	
 	public AlgorithmTable()
 	{		
-		dm.setColumnIdentifiers(new Object[]{ "Scheme", "Y/N", "Setting" });
+		//dm.setColumnIdentifiers(new Object[]{ "Scheme", "Y/N", "Setting" });
+		dm.setColumnIdentifiers(new Object[]{ "Scheme", " " });
 		this.setModel(dm);
 		setVisible(true);
 	}
@@ -53,17 +54,18 @@ class AlgorithmTable extends JTable
 		}
 		
 		//dm.addRow(data);
-		dm.setDataVector(data, new Object[]{ "Scheme", "Y/N", "Setting" });
+		//dm.setDataVector(data, new Object[]{ "Scheme", "Y/N", "Setting" });
+		dm.setDataVector(data, new Object[]{ "Scheme", " " });
 		this.setModel(dm);
 		this.setRowHeight(30);
 		
-		this.getColumn("Setting").setCellRenderer(new AlgorithmButtonRenderer());
-		this.getColumn("Setting").setCellEditor(new ButtonEditor(new JCheckBox()));
-		this.getColumn("Setting").setPreferredWidth(80);
+		//this.getColumn("Setting").setCellRenderer(new AlgorithmButtonRenderer());
+		//this.getColumn("Setting").setCellEditor(new ButtonEditor(new JCheckBox()));
+		//this.getColumn("Setting").setPreferredWidth(80);
 		
-		this.getColumn("Y/N").setCellRenderer(this.getDefaultRenderer(Boolean.class));
-		this.getColumn("Y/N").setCellEditor(this.getDefaultEditor(Boolean.class));
-		this.getColumn("Y/N").setPreferredWidth(40);
+		this.getColumn(" ").setCellRenderer(this.getDefaultRenderer(Boolean.class));
+		this.getColumn(" ").setCellEditor(this.getDefaultEditor(Boolean.class));
+		this.getColumn(" ").setPreferredWidth(40);
 		
 		this.getColumn("Scheme").setPreferredWidth(80);
 	}

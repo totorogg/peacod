@@ -28,9 +28,9 @@ public class WorkloadDistributionPanel extends JPanel {
 		this.setLayout(new BorderLayout());
 		this.add(box, BorderLayout.CENTER);
 		JTextArea description = new JTextArea(
-				"DESCRIPTION: \n This metric evaluates how uniformly the data accesses by the workload are distributed across partitions. "
-						+ "In a single scheme's descriptive representation, each node's total transactions be executed will be showed. In the comparasion representation, "
-						+ "the metric is represented by the standard variance normalized to be a value between zero and one. \n");
+				"DESCRIPTION: \n This metric evaluates how uniformly the data accesses of workload are distributed across data nodes. "
+						+ "For a single scheme's descriptive representation, the total number of transactions executed at each node will be showed. For the comparasion representation, "
+						+ "the metric is represented by the standard variance that is normalized to a value between zero and one. \n");
 
 		description.setLineWrap(true);
 		this.add(description, BorderLayout.NORTH);
@@ -71,11 +71,12 @@ class WorkloadChart {
 		DefaultCategoryDataset categoryDataset = new DefaultCategoryDataset();
 		String table = "";
 		for (int i = 0; i < tuples.size(); i++) {
-			categoryDataset.setValue(tuples.get(i), "", String.valueOf(i+1));
+			//categoryDataset.setValue(tuples.get(i), "", String.valueOf(i+1));
+			categoryDataset.setValue(tuples.get(i), i + "", "");
 		}
 		//JFreeChart chart = ChartFactory.createBarChart("Workload Distribution", // Title
 		JFreeChart chart = ChartFactory.createBarChart("", // Title
-				"Node", // X-Axis label
+				"Data Nodes", // X-Axis label
 				"Visit Frequency", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
@@ -96,8 +97,8 @@ class WorkloadChart {
 			categoryDataset.setValue(wDVarMap.get(algorithm), "", name);
 		}
 
-		JFreeChart chart = ChartFactory.createBarChart("Distribution Variance", // Title
-				"Algorithms", // X-Axis label
+		JFreeChart chart = ChartFactory.createBarChart("", // Title
+				"Schemes", // X-Axis label
 				"Variance", // Y-Axis label
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);

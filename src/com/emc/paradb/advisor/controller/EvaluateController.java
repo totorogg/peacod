@@ -81,11 +81,11 @@ public class EvaluateController extends Controller
 		Summarize.summrize();
 		DisplayController.displaySummary(Summarize.getTableKeyMap(), 
 				 Summarize.getPluginNames(),
-				 "Workload Distribution Evaluation", false);
+				 "Scheme effects", false);
 		
 		DisplayController.displaySummary(Summarize.getWorkloadDist(), 
 				 Summarize.getPluginNames(),
-				 "Table->PartitionKey", true);
+				 "Scheme details (partition keys of tables)", true);
 	}
 
 	

@@ -58,7 +58,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 	
 	private JTextField workloadText = new JTextField("1000");
 	
-	private JButton prepareButton = new JButton("PreProcessing");
+	private JButton prepareButton = new JButton("Configure");
 	
 	private JProgressBar loadProgress = new JProgressBar(0, 100);
 	
@@ -108,7 +108,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(dbComboBox);
 		
 		bmBox.add(Box.createVerticalStrut(20));
-		JTextArea workloadLabel = new JTextArea("Workload");
+		JTextArea workloadLabel = new JTextArea("Workload Size");
 		//JLabel workloadLabel = new JLabel("Workload");
 		workloadLabel.setBackground(null);
 		//workloadLabel.setAlignmentX(0.5f);
@@ -138,7 +138,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		bmBox.add(dataSetBox);
 		
 		bmBox.add(Box.createVerticalStrut(5));
-		JTextArea nodeLabel = new JTextArea("Node Number");
+		JTextArea nodeLabel = new JTextArea("# Data Nodes");
 		nodeLabel.setBackground(null);
 		bmBox.add(nodeLabel);
 		bmBox.add(Box.createVerticalStrut(2));

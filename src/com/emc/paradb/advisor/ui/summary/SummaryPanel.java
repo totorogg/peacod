@@ -24,7 +24,7 @@ public class SummaryPanel extends JPanel
 	public SummaryPanel()
 	{
 		this.setLayout(new BorderLayout());
-		this.add(new JLabel("Description: Comparison summary among different partitioning schemes"), BorderLayout.NORTH);
+		this.add(new JLabel("Description: Comparison summarization among different partitioning schemes"), BorderLayout.NORTH);
 		
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
