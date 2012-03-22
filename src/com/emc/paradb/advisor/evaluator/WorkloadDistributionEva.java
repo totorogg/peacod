@@ -173,6 +173,7 @@ public class WorkloadDistributionEva extends Evaluator
 		else
 			visitMap.put(-1, visitMap.get(-1) + 1);
 	}
+	
 	//this funtion should be further improved.
 	//now it is only aware of deleted old value, but not aware of the inserted new value
 	protected static void visitUpdate(UpdateAnalysisInfo update, HashMap<Integer, Integer> visitMap)

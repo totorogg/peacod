@@ -29,6 +29,8 @@ public class WorkloadLoader
 	private Workload<Transaction<Object>> workload = null;
 	private float progress = 0;
 	
+	protected static boolean updateFilter = false;
+	
 	public WorkloadLoader(String selectedBM, int transactionNumber)
 	{
 		this.selectedBM = selectedBM;
@@ -63,8 +65,7 @@ public class WorkloadLoader
 					Transaction<Object> tran = null;
 					workload = new Workload<Transaction<Object>>();
 					
-					while(
-							(line = reader.readLine()) != null)
+					while((line = reader.readLine()) != null)
 					{
 						readLength += line.getBytes().length;
 						progress = (float)readLength/(file.length() * 1.1f);
@@ -80,25 +81,25 @@ public class WorkloadLoader
 						
 						Statement statement = QueryAnalyzer.analyze(line);
 						
-						if(statement instanceof Select)
+						if(statement instanceof Select )
 						{
 							SelectAnalyzer analyzer = new SelectAnalyzer();
 							SelectAnalysisInfo sqlInfo = analyzer.analyze((Select)statement);
 							tran.add(sqlInfo);
 						}
-						else if(statement instanceof Update)
+						else if(statement instanceof Update && !updateFilter)
 						{
 							UpdateAnalyzer analyzer = new UpdateAnalyzer();
 							UpdateAnalysisInfo sqlInfo = analyzer.analyze((Update)statement);
 							tran.add(sqlInfo);
 						}
-						else if(statement instanceof Delete)
+						else if(statement instanceof Delete && !updateFilter)
 						{
 							DeleteAnalyzer analyzer = new DeleteAnalyzer();
 							DeleteAnalysisInfo sqlInfo = analyzer.analyze((Delete)statement);
 							tran.add(sqlInfo);
 						}
-						else if(statement instanceof Insert)
+						else if(statement instanceof Insert && !updateFilter)
 						{
 							InsertAnalyzer analyzer = new InsertAnalyzer();
 							InsertAnalysisInfo sqlInfo = analyzer.analyze((Insert)statement);

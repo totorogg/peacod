@@ -222,7 +222,8 @@ public class SchemaHash implements PlugInterface
 	}
 
 	@Override
-	public List<Integer> getNode(List<KeyValuePair> kvPairs) {
+	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
+	{
 		// TODO Auto-generated method stub
 		List<Integer> nodes = new ArrayList<Integer>();
 		if(kvPairs.get(0).getRange() != Range.EQUAL)

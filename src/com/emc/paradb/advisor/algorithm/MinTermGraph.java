@@ -90,12 +90,16 @@ public class MinTermGraph implements PlugInterface
 	
 	private void workload2Graph() throws Exception
 	{
+		//construct minterm list
 		serialize();
 		
+		//add edges among minterms
 		for(Transaction<Object> aTran : workload)
 			explainTran(aTran);
 		
+		//combine unvisited minterms
 		combine();
+		
 		
 		for(int i = 0; i < tableList.size(); i++)
 		{
@@ -107,7 +111,7 @@ public class MinTermGraph implements PlugInterface
 				System.out.print(aTablePartition.getKeyPartition(keyList.get(j)).getName() + "\t");
 		}
 		
-
+		//partition the minterm graph
 		partitionGraph();
 		
 		for(int i = 0; i < tableList.size(); i++)
@@ -117,6 +121,23 @@ public class MinTermGraph implements PlugInterface
 			tableKeyMap.put(tableList.get(i), keyList);
 		}
 		
+		List<String> keyList = new ArrayList<String>();
+		keyList.add("replicate");
+		tableKeyMap.put("item", keyList);
+		
+		
+		//display the placement strategy, for validation
+		BufferedWriter out = new BufferedWriter(new FileWriter("placement"));
+		for(int i = 0; i < nodes; i++)
+		{
+			for(int j = 0; j < minTermList.size(); j++)
+			{
+				if(minTermList.get(j).getNode() == i)
+					out.write(minTermList.get(j).toString() + "&&");
+			}
+			out.write("\n*******************************\n");
+		}
+		out.close();
 	}
 	
 	private void partitionGraph() throws Exception
@@ -133,10 +154,14 @@ public class MinTermGraph implements PlugInterface
 		FileWriter fstream = new FileWriter(graphFile);
 		BufferedWriter out = new BufferedWriter(fstream);
 		
-		out.write(minTermList.size() + " " + edgeCount + " 001\n");
+		out.write(minTermList.size() + " " + edgeCount + " 011\n");
 		
 		for(int i = 0; i < minTermList.size(); i++)
 		{
+			if(i > 10)
+				out.write(minTermList.get(i).getEstimatedSize() + " ");
+			else
+				out.write(1000000 + " ");
 			HashMap<Integer, Integer> neighbourMap = minTermList.get(i).getNeighbour();
 			for (Integer neighbourID : neighbourMap.keySet())
 				out.write(neighbourID + " " + neighbourMap.get(neighbourID) + " ");
@@ -202,6 +227,7 @@ public class MinTermGraph implements PlugInterface
 			int s = tableStartPos.get(tableName);
 			int e = tableEndPos.get(tableName) - rmCount;
 			int cmp = e - s;
+			
 			for(int j = 0; j < cmp; j++)
 			{
 				MinTerm aMinTerm = minTermList.get(s);
@@ -214,9 +240,11 @@ public class MinTermGraph implements PlugInterface
 							count++;
 							aMinTerm.addConnect(lastValidMT);
 							minTermList.get(validPos).addConnect(aMinTerm.getPos());
-							
 							System.err.println("Error: Unable To Combine: " + s);
 							s++;
+							/*
+							minTermList.remove(s);
+							rmCount++;*/
 							continue;
 						}
 					}
@@ -232,10 +260,14 @@ public class MinTermGraph implements PlugInterface
 			}
 			tableEndPos.put(tableName, tableEndPos.get(tableName) - rmCount);
 		}
-		System.out.println(count);
+		System.out.println(count + "\t" + rmCount);
 
 	}
 	
+	/*
+	 * translate predicates into minTerms lists.
+	 * Each table has its start position and end position in the list.
+	 */
 	private void serialize()
 	{
 		tableList = new ArrayList<String>();
@@ -265,6 +297,8 @@ public class MinTermGraph implements PlugInterface
 				{						
 					String tableName = key.getTableName();
 					TablePartition aTablePartition = tablePartitions.get(tableName);
+					if(aTablePartition == null)
+						continue;
 					
 					String aKey = key.getKeyName();
 					KeyPartition aKeyPartition = aTablePartition.getKeyPartition(aKey);
@@ -283,6 +317,8 @@ public class MinTermGraph implements PlugInterface
 				{
 					String tableName = key.getTableName();
 					TablePartition aTablePartition = tablePartitions.get(tableName);
+					if(aTablePartition == null)
+						continue;
 					
 					String aKey = key.getKeyName();
 					KeyPartition aKeyPartition = aTablePartition.getKeyPartition(aKey);
@@ -302,6 +338,8 @@ public class MinTermGraph implements PlugInterface
 				{
 					String tableName = insert.getTable();
 					TablePartition aTablePartition = tablePartitions.get(tableName);
+					if(aTablePartition == null)
+						continue;
 					
 					KeyPartition aKeyPartition = aTablePartition.getKeyPartition(key);
 					if(aKeyPartition == null)
@@ -319,6 +357,8 @@ public class MinTermGraph implements PlugInterface
 				{
 					String tableName = key.getTableName();
 					TablePartition aTablePartition = tablePartitions.get(tableName);
+					if(aTablePartition == null)
+						continue;
 					
 					String aKey = key.getKeyName();
 					KeyPartition aKeyPartition = aTablePartition.getKeyPartition(aKey);
@@ -338,17 +378,18 @@ public class MinTermGraph implements PlugInterface
 		preparePredicates();
 		
 		for(Transaction<Object> aTran : workload)
-		{
 			extractTran(aTran);	
-		}
 		
 		eliminateKey();
 		
-		try {
+		try 
+		{
 			BufferedWriter out = new BufferedWriter(new FileWriter("minterm"));
 			listPartitions(out);
 			out.close();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) 
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -385,7 +426,8 @@ public class MinTermGraph implements PlugInterface
 				for(WhereKey key : select.getWhereKeys())
 				{						
 					String tableName = key.getTableName();
-					if(tablePartitions.get(tableName).getKeyPartition(key.getKeyName()) == null)
+					if(tablePartitions.get(tableName) == null ||
+							tablePartitions.get(tableName).getKeyPartition(key.getKeyName()) == null)
 						continue;
 					
 					if(tableKeyValueMap.get(tableName) == null)
@@ -411,7 +453,8 @@ public class MinTermGraph implements PlugInterface
 				for(WhereKey key : update.getWhereKeys())
 				{
 					String tableName = key.getTableName();
-					if(tablePartitions.get(tableName).getKeyPartition(key.getKeyName()) == null)
+					if(tablePartitions.get(tableName) == null || 
+							tablePartitions.get(tableName).getKeyPartition(key.getKeyName()) == null)
 						continue;
 					
 					if(tableKeyValueMap.get(tableName) == null)
@@ -438,7 +481,8 @@ public class MinTermGraph implements PlugInterface
 				for(String key : insert.getKeyValueMap().keySet())
 				{
 					String tableName = insert.getTable();
-					if(tablePartitions.get(tableName).getKeyPartition(key) == null)
+					if(tablePartitions.get(tableName) == null || 
+							tablePartitions.get(tableName).getKeyPartition(key) == null)
 						continue;
 					
 					if(tableKeyValueMap.get(tableName) == null)
@@ -463,7 +507,8 @@ public class MinTermGraph implements PlugInterface
 				for(WhereKey key : delete.getWhereKeys())
 				{
 					String tableName = key.getTableName();
-					if(tablePartitions.get(tableName).getKeyPartition(key.getKeyName()) == null)
+					if(tablePartitions.get(tableName) == null || 
+							tablePartitions.get(tableName).getKeyPartition(key.getKeyName()) == null)
 						continue;
 					
 					if(tableKeyValueMap.get(tableName) == null)
@@ -564,8 +609,6 @@ public class MinTermGraph implements PlugInterface
 			value = Integer.valueOf(keyValue);
 		}catch(NumberFormatException e)
 		{
-			//e.printStackTrace();
-			//System.err.println("Not a Integer: " + keyValue);
 			return null;
 		}
 		
@@ -610,6 +653,9 @@ public class MinTermGraph implements PlugInterface
 		HashMap<String, TableNode> tables = dbData.getMetaData();
 		for(TableNode aTableNode : tables.values())
 		{
+			if(aTableNode.getName().equals("item"))
+				continue;
+			
 			TablePartition aTablePartition = new TablePartition(aTableNode, conn);
 			tablePartitions.put(aTableNode.getName(), aTablePartition);
 		}
@@ -622,12 +668,20 @@ public class MinTermGraph implements PlugInterface
 	}
 
 	@Override
-	public List<Integer> getNode(List<KeyValuePair> kvPairs) {
+	public List<Integer> getNode(List<KeyValuePair> kvPairs) 
+	{
 		// TODO Auto-generated method stub
 		
 		List<Integer> nodeList = new ArrayList<Integer>();
 		
-		if(kvPairs.get(0).getKey().equals("undefined"))
+		
+		if(kvPairs.get(0).getValue().equalsIgnoreCase("replicate"))
+		{
+			nodeList.add(-2);
+			return nodeList;
+		}
+		
+		else if(kvPairs.get(0).getKey().equals("undefined"))
 		{
 			for(int i = 0; i < nodes; i++)
 				nodeList.add(0);
@@ -635,8 +689,6 @@ public class MinTermGraph implements PlugInterface
 		}
 		
 		String tableName = kvPairs.get(0).getTable();
-		if(kvPairs.get(0).getTable().equals("new_order") && kvPairs.get(0).getValue().equals("1"))
-			System.out.print(true);
 		
 		List<Predicate> searchMT = initSearchMinTerm(tableName, kvPairs);
 		if(searchMT == null)
@@ -915,11 +967,6 @@ class KeyPartition
 	
 	public boolean addPredicate(Predicate aPredicate)
 	{
-		if(predicates.size() > 2000)
-		{
-			System.out.println("two many");
-			return true;
-		}	
 		if(aPredicate.getMin() == null)
 		{
 			int aMax = aPredicate.getMax();
@@ -1029,6 +1076,21 @@ class MinTerm
 			terms.add(new Predicate(oldTerms.get(i)));
 		
 		terms.add(new Predicate(newPredicate));
+	}
+	
+	public int getEstimatedSize()
+	{
+		int size = 0;
+		for(int i = 0; i < terms.size(); i++)
+		{
+			int gap = terms.get(i).getMax() - terms.get(i).getMin();
+			if(gap > Integer.MAX_VALUE / 5 || gap < 0)
+				gap = 1;
+			size += gap;
+		}
+		if(size < 0)
+			System.err.println("Err");
+		return size;
 	}
 	
 	public void setNode(int node)

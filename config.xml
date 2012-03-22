@@ -2,7 +2,7 @@
 <config>
    <property>
       <name>workload.tpcc</name>
-      <value>workload/tpcc.sql.log</value>
+      <value>workload/workload.log</value>
       <value>dbt2_large</value>
       <value>1000</value>
       <value>1021</value>

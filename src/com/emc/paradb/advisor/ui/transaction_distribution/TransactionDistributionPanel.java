@@ -2,9 +2,11 @@ package com.emc.paradb.advisor.ui.transaction_distribution;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Paint;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.swing.BorderFactory;
@@ -20,12 +22,17 @@ import javax.swing.text.SimpleAttributeSet;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.labels.ItemLabelAnchor;
+import org.jfree.chart.labels.ItemLabelPosition;
 import org.jfree.chart.labels.StandardPieSectionLabelGenerator;
 import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.BarRenderer;
+import org.jfree.chart.renderer.category.CategoryItemRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
+import org.jfree.ui.TextAnchor;
 import org.jfree.util.Rotation;
 
 import com.emc.paradb.advisor.controller.DisplayController;
@@ -157,6 +164,13 @@ public class TransactionDistributionPanel extends JPanel
 	    plot.setDirection(Rotation.CLOCKWISE);
 	    plot.setBackgroundPaint(Color.white);
 	    plot.setInteriorGap(0.06f);
+	   
+		Color[] colors = {Color.red, Color.blue, Color.green,
+                Color.yellow, Color.orange, Color.cyan,
+                Color.magenta, Color.blue};
+        PieRenderer renderer = new PieRenderer(colors);
+        renderer.setColor(plot, dataset);
+		
 	    return chart;
 	}
 	
@@ -183,9 +197,73 @@ class TransactionChart
 				categoryDataset, // Dataset,
 				PlotOrientation.VERTICAL, false, true, false);
 
+		 final CategoryItemRenderer renderer = new CustomRenderer(
+		            new Paint[] {Color.red, Color.blue, Color.green,
+		                Color.yellow, Color.orange, Color.cyan,
+		                Color.magenta, Color.blue}
+		 );
+//		        renderer.setLabelGenerator(new StandardCategoryLabelGenerator());
+		        renderer.setItemLabelsVisible(true);
+		        final ItemLabelPosition p = new ItemLabelPosition(
+		            ItemLabelAnchor.CENTER, TextAnchor.CENTER, TextAnchor.CENTER, 45.0
+		        );
+		        renderer.setPositiveItemLabelPosition(p);
+		chart.getCategoryPlot().setRenderer(renderer);
+		
 		JLabel lb = new JLabel();
 		lb.setIcon(new ImageIcon(chart.createBufferedImage(600, 320)));
 
 		return lb;
 	}
+}
+
+class PieRenderer
+{
+    private Color[] color;
+   
+    public PieRenderer(Color[] color)
+    {
+        this.color = color;
+    }       
+   
+    public void setColor(PiePlot plot, PieDataset dataset)
+    {
+        List <Comparable> keys = dataset.getKeys();
+        int aInt;
+       
+        for (int i = 0; i < keys.size(); i++)
+        {
+            aInt = i % this.color.length;
+            plot.setSectionPaint(keys.get(i), this.color[aInt]);
+        }
+    }
+}
+
+class CustomRenderer extends BarRenderer
+{
+
+       /** The colors. */
+       private Paint[] colors;
+
+       /**
+        * Creates a new renderer.
+        *
+        * @param colors  the colors.
+        */
+       public CustomRenderer(final Paint[] colors) {
+           this.colors = colors;
+       }
+
+       /**
+        * Returns the paint for an item.  Overrides the default behaviour inherited from
+        * AbstractSeriesRenderer.
+        *
+        * @param row  the series.
+        * @param column  the category.
+        *
+        * @return The item color.
+        */
+       public Paint getItemPaint(final int row, final int column) {
+           return this.colors[column % this.colors.length];
+       }
 }

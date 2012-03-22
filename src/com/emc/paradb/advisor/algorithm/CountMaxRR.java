@@ -42,8 +42,8 @@ public class CountMaxRR implements PlugInterface
 	
 	@Override
 	public boolean accept(Connection conn, Workload<Transaction<Object>> workload,
-			DBData dbData, int nodes) {
-
+			DBData dbData, int nodes) 
+	{
 		this.conn = conn;
 		this.workload = workload;
 		this.dbData = dbData;
@@ -54,12 +54,12 @@ public class CountMaxRR implements PlugInterface
 		{
 			setPartitionKey();
 			RR = new RoundRobin(nodes);
-		} 
+		}
 		catch (Exception e) 
 		{
 			System.out.println(e.getMessage());
 			e.printStackTrace();
-		}	
+		}
 		return true;
 	}
 
