@@ -72,6 +72,8 @@ public class WorkloadLoader
 						if(line.equalsIgnoreCase("-"))
 						{
 							tran = new Transaction<Object>();
+							
+							//loaded++;
 							if(loaded++ >= transactionNum)
 								break;
 							
@@ -138,6 +140,9 @@ public class WorkloadLoader
 					{
 						for(String tableName : select.getTables())
 						{
+							if(tableName == null ||
+									tables.get(tableName) == null || tables.get(tableName).getAttrVector() == null)
+								System.err.println("!");
 							for(TableAttributes attr : tables.get(tableName).getAttrVector())
 								if(attr.getName().equals(key.getKeyName()))
 									key.setTableName(tableName);

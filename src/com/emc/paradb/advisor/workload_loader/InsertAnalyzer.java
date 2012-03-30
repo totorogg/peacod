@@ -279,7 +279,10 @@ class InsertExpressionVisitor implements ExpressionVisitor {
 	{	}
 
 	@Override
-	public void visit(NullValue arg0) {	}
+	public void visit(NullValue arg0) 
+	{
+		addConst(arg0.toString());
+	}
 
 	@Override
 	public void visit(Function arg0) { }

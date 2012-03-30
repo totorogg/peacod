@@ -70,7 +70,6 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		benchmarkSelectPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
 		
 		bmComboBox = new JComboBox(bmString);
-		bmComboBox.setSelectedIndex(0);
 		bmComboBox.addActionListener(new ActionListener()
 		{
 
@@ -96,8 +95,8 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 					break;
 				}
 			}
-			
 		});
+		bmComboBox.setSelectedIndex(0);
 		bmBox.add(Box.createVerticalStrut(10));
 		bmBox.add(bmComboBox);
 		
@@ -167,6 +166,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		this.add(benchmarkSelectPanel, "Benchmarks");
 		
 		prepareButton.addActionListener(this);
+		
 	}
 
 	private String getWorkloadCount(String bm)

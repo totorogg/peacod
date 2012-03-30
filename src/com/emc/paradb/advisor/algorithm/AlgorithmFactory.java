@@ -3,6 +3,7 @@ package com.emc.paradb.advisor.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emc.paradb.advisor.algorithm.mintermGraph.MinTermGraph;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
 

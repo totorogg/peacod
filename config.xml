@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <config>
    <property>
-      <name>workload.tpcc</name>
-      <value>workload/workload.log</value>
-      <value>dbt2_large</value>
-      <value>1000</value>
-      <value>1021</value>
+      <name>workload.tpcc</name>					<!-- xml node name -->
+      <value>workload/tpcc10w.log</value>			<!-- file path -->
+      <value>tpcc10w</value>						<!-- database name for JDBC-->
+      <value>60000</value>							<!-- transaction number -->
+      <value>1021</value>							<!-- database size -->
    </property>
    <property>
       <name>workload.tatp</name>
