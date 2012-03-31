@@ -4,7 +4,7 @@
       <name>workload.tpcc</name>					<!-- xml node name -->
       <value>workload/tpcc10w.log</value>			<!-- file path -->
       <value>tpcc10w</value>						<!-- database name for JDBC-->
-      <value>60000</value>							<!-- transaction number -->
+      <value>6000</value>							<!-- transaction number -->
       <value>1021</value>							<!-- database size -->
    </property>
    <property>
@@ -27,7 +27,7 @@
    </property>
    <property>
       <name>database.port</name>
-      <value>12345</value>
+      <value>54321</value>
    </property>
    <property>
       <name>database.user</name>
@@ -35,6 +35,6 @@
    </property>
    <property>
       <name>database.password</name>
-      <value></value>
+      <value>123456</value>
    </property>
 </config>

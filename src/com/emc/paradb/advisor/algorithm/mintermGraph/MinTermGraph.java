@@ -1,9 +1,6 @@
 package com.emc.paradb.advisor.algorithm.mintermGraph;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,8 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -62,7 +57,8 @@ public class MinTermGraph implements PlugInterface
 	
 	Graph minTermGraph = null;
 	
-	int sample = 12;
+	int extractSample = 1;
+	int explainSample = 1;
 	
 	private static boolean partitioned = false;
 	
@@ -178,7 +174,6 @@ public class MinTermGraph implements PlugInterface
 		keyList.add("replicate");
 		tableKeyMap.put("item", keyList);
 		
-		
 		minTermGraph.display();
 	}
 		
@@ -215,7 +210,7 @@ public class MinTermGraph implements PlugInterface
 	private void extractTran(Transaction<Object> aTran)
 	{
 		Random r = new Random();
-		if(r.nextInt() % sample != 0)
+		if(r.nextInt() % extractSample != 0)
 			return;
 		
 		for(Object statement : aTran)
@@ -349,8 +344,11 @@ public class MinTermGraph implements PlugInterface
 	
 	private void explainTran(Transaction<Object> aTran)
 	{
+		Random r = new Random();
+		if(r.nextInt() % explainSample != 0)
+			return;
+		
 		HashMap<String, List<KeyValuePair>> tableKeyValueMap = new HashMap<String, List<KeyValuePair>>();
-
 		
 		for(Object statement : aTran)
 		{
@@ -883,13 +881,6 @@ class TablePartition
  * @author Xin Pan
  *maintain partition result of a key
  *
- *key range partition algorithm:
- *we first select a large range [Integer.Min/2, Integer.Max/2] as the partition range
- *all partition action are performed on the large range;
- *we also record the min, max value visited and the min,max value in database
- *
- *in the final updateBound() phase, we update the range,
- *the range low bound will be set to min(min from database, min visited), max bound too.
  *
  */
 class KeyPartition

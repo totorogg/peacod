@@ -50,7 +50,8 @@ public class Predicate
 		if(sMin >= sMax)
 			return true;
 		
-		if(sMin >= min && sMax <= max)
+		if(sMin >= min && sMin < max ||
+				sMax > min && sMax < max)
 			return true;
 		else
 			return false;
