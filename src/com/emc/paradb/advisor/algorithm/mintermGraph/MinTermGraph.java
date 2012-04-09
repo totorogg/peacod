@@ -57,8 +57,6 @@ public class MinTermGraph implements PlugInterface
 	
 	Graph minTermGraph = null;
 	
-	int extractSample = 1;
-	int explainSample = 1;
 	
 	private static boolean partitioned = false;
 	
@@ -209,10 +207,6 @@ public class MinTermGraph implements PlugInterface
 	
 	private void extractTran(Transaction<Object> aTran)
 	{
-		Random r = new Random();
-		if(r.nextInt() % extractSample != 0)
-			return;
-		
 		for(Object statement : aTran)
 		{
 			
@@ -344,9 +338,6 @@ public class MinTermGraph implements PlugInterface
 	
 	private void explainTran(Transaction<Object> aTran)
 	{
-		Random r = new Random();
-		if(r.nextInt() % explainSample != 0)
-			return;
 		
 		HashMap<String, List<KeyValuePair>> tableKeyValueMap = new HashMap<String, List<KeyValuePair>>();
 		

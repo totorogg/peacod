@@ -69,7 +69,7 @@ public class Graph
 		int s = startPos.get(separator);
 		int e = endPos.get(separator);		
 		
-		//find a minterm node whose has neighbour
+		//find a minterm node whose has neighbor
 		int lastValidMT = 0;
 		int validPos = 0;
 		for(int i = 1; i < adjacencyList.size(); i++)
@@ -215,7 +215,8 @@ public class Graph
 		FileReader instream = new FileReader(graphFileName + ".part");	
 		BufferedReader in = new BufferedReader(instream);
 
-		for (int i = 0; i < adjacencyList.size(); i++) {
+		for (int i = 0; i < adjacencyList.size(); i++) 
+		{
 			int node = Integer.valueOf(in.readLine());
 			adjacencyList.get(i).setNode(node);
 		}

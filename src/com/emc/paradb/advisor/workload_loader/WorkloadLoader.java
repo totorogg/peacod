@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Set;
 import java.util.Vector;
 
@@ -31,6 +32,7 @@ public class WorkloadLoader
 	
 	protected static boolean updateFilter = false;
 	
+	
 	public WorkloadLoader(String selectedBM, int transactionNumber)
 	{
 		this.selectedBM = selectedBM;
@@ -49,7 +51,8 @@ public class WorkloadLoader
 	
 	public void load()
 	{
-		new Thread(){
+		new Thread()
+		{
 			public void run()
 			{
 				try 
@@ -60,7 +63,7 @@ public class WorkloadLoader
 
 					
 					String line = null;
-					int loaded = 0;
+					int loadedXact = 0;
 					long readLength = 0;
 					Transaction<Object> tran = null;
 					workload = new Workload<Transaction<Object>>();
@@ -71,12 +74,9 @@ public class WorkloadLoader
 						progress = (float)readLength/(file.length() * 1.1f);
 						if(line.equalsIgnoreCase("-"))
 						{
+							loadedXact++;
+							
 							tran = new Transaction<Object>();
-							
-							//loaded++;
-							if(loaded++ >= transactionNum)
-								break;
-							
 							workload.add(tran);
 							continue;
 						}
@@ -109,7 +109,7 @@ public class WorkloadLoader
 						}
 						
 					}
-					System.out.println(loaded);
+					sampling(loadedXact);
 					fix();
 					progress = 1;
 
@@ -123,6 +123,16 @@ public class WorkloadLoader
 				}
 			}
 		}.start();
+	}
+	private void sampling(int loadedXact)
+	{
+		Workload<Transaction<Object>> newWorkload = new Workload<Transaction<Object>>();
+		Random r = new Random(1000000);
+
+		for(int i = 0; i < workload.size(); i++)
+			if(r.nextInt() % loadedXact < transactionNum && newWorkload.size() < transactionNum)
+				newWorkload.add(workload.get(i));
+		workload = newWorkload;
 	}
 	
 	protected void fix()

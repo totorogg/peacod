@@ -477,7 +477,18 @@ class SelectExpressionVisitor implements ExpressionVisitor {
 	@Override
 	public void visit(Subtraction arg0) 
 	{
-		System.out.println("No support for " + arg0.getStringExpression());
+		String[] parts = arg0.toString().split("-");
+		try
+		{
+			int first = Integer.valueOf(parts[0].trim());
+			int second = Integer.valueOf(parts[1].trim());
+			wk.setKeyValue(String.valueOf(first-second));
+		}
+		catch(NumberFormatException e)
+		{
+			System.out.println("No support for non integer:" + arg0.getStringExpression());
+			return;
+		}
 	}
 
 	@Override
