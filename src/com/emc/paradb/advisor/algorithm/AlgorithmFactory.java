@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.emc.paradb.advisor.algorithm.mintermGraph.MinTermGraph;
+import com.emc.paradb.advisor.algorithm.mintermGraphFile.MinTermGraphFile;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
 
@@ -31,8 +32,7 @@ public class AlgorithmFactory
 	private static Plugin AllReplicateHash = new Plugin();
 	private static Plugin RangeGraph = new Plugin();
 	private static Plugin MintermGraph = new Plugin();
-
-	
+	private static Plugin MintermGraphFile = new Plugin();
 	//load the build-in algorithms
 	static
 	{
@@ -77,6 +77,11 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
 		
+		MintermGraphFile.setInterface(new MinTermGraphFile());
+		MintermGraphFile.setInfo("com.emc.paradb.advisor.algorithm.MintermGraphFile",
+							"getPartitionKey()", "getNode()",
+							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
+		
 		//the following are not implemented
 	/*	consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
@@ -111,6 +116,7 @@ public class AlgorithmFactory
 
 		//algorithms.add(RangeGraph);
 		algorithms.add(MintermGraph);
+		algorithms.add(MintermGraphFile);
 		//algorithms.add(semiSchema);
 	}
 	

@@ -78,7 +78,7 @@ public class WorkloadDistributionEva extends Evaluator
 					DeleteAnalysisInfo delete = (DeleteAnalysisInfo)statement;
 					visitDelete(delete, visitMap);
 				}
-			}			
+			}		
 			analyzeTran(visitMap, tran);
 		}
 	}
@@ -207,8 +207,6 @@ public class WorkloadDistributionEva extends Evaluator
 	{
 		Set<String> tables  = select.getTables();
 		boolean hit = false;
-		
-
 		
 		for(String table : tables)
 		{
