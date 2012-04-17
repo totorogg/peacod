@@ -144,10 +144,7 @@ public class MinTermGraphFile implements PlugInterface
 		
 		//combine unvisited minterms
 		combine();
-		
-		for(int i = 0; i < minTermList.size(); i++)
-			if(!minTermList.get(i).hasNeighbor())
-				System.err.println("!!!!!!!!!!!!!!!!!!!");
+
 /*		
 		for(int i = 0; i < tableList.size(); i++)
 		{
@@ -188,7 +185,7 @@ public class MinTermGraphFile implements PlugInterface
 			String tableName = tableList.get(i);
 			uncombined.addAll(minTermGraph.combine(tableName));
 		}
-	
+	/*
 		if(uncombined.size() == 1)
 			System.err.println("not combined!!!!!!!!!!");
 		
@@ -207,7 +204,7 @@ public class MinTermGraphFile implements PlugInterface
 					inOut.write(("\t" + (uncombined.get(j).getPos()-1) + "\t1").getBytes());
 			inOut.write("\n".getBytes());
 		}
-		inOut.close();
+		inOut.close();*/
 	}
 	
 	/*
@@ -650,7 +647,7 @@ public class MinTermGraphFile implements PlugInterface
 				nodeList.add(-1);
 			return nodeList;
 		}
-		
+	
 		
 		List<Integer> placement = minTermGraph.searchPlacement(searchMT, tableName);
 		nodeList.addAll(placement);

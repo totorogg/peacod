@@ -14,6 +14,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 /**
@@ -68,10 +69,10 @@ public class Graph
 		BufferedWriter out = new BufferedWriter(new FileWriter(GV.dirName+"/"+tranCnt++));
 		for(Integer aNode : visitNodes)
 		{
-			out.write(String.valueOf(adjacencyList.get(aNode).getPos()));
+			out.write(String.valueOf(aNode));
 			for(Integer aVisitNode : visitNodes)
 				if(! aVisitNode.equals(aNode))
-					out.write("\t" + adjacencyList.get(aVisitNode).getPos() + "\t1");
+					out.write("\t" + aVisitNode+ "\t1");
 			out.write("\n");
 		}
 		out.close();
@@ -162,7 +163,8 @@ public class Graph
 	{
 		this.part = part;
 		
-		HashMap<Integer, Integer> posMap = prepareForMETIS();
+		HashMap<Integer, Integer> posMap = new HashMap<Integer, Integer>();
+		int nodeSize = prepareForMETIS(posMap);
 		
 		int edgeCount = 0;
 		for(int i = 0; i < adjacencyList.size(); i++)
@@ -172,15 +174,15 @@ public class Graph
 			System.err.println("Error edge count");
 		edgeCount /= 2;
 		
-		
 		BufferedWriter out = new BufferedWriter(new FileWriter(graphFileName));
 		RandomAccessFile ranIn = new RandomAccessFile(GraphFile.getGraphFile(), "r");
-		out.write(adjacencyList.size() + " " + edgeCount + " 001\n");
+		out.write(nodeSize + " " + edgeCount + " 001\n");
 		
 		for(int i = 0; i < adjacencyList.size(); i++)
 		{
 			//out.write(adjacencyList.get(i).getEstimatedSize() + " ");
-
+			if(!adjacencyList.get(i).hasNeighbor())
+				continue;
 			HashMap<Integer, Integer> neighbor = adjacencyList.get(i).getNeighbor(ranIn);
 			for (Integer id : neighbor.keySet())
 			{
@@ -203,36 +205,50 @@ public class Graph
 		FileReader instream = new FileReader(graphFileName + ".part." + part);
 		BufferedReader in = new BufferedReader(instream);
 		
+		Random r = new Random(part);
 		for(int i = 0; i < adjacencyList.size(); i++)
 		{
-			int node = Integer.valueOf(in.readLine());
-			adjacencyList.get(i).setNode(node);
+			if(!adjacencyList.get(i).hasNeighbor())
+				adjacencyList.get(i).setNode(r.nextInt());
+			else
+			{
+				int node = Integer.valueOf(in.readLine());
+				adjacencyList.get(i).setNode(node);
+			}
 		}
 		in.close();
 	}
 	
-	protected HashMap<Integer, Integer> prepareForMETIS()
+	protected int prepareForMETIS(HashMap<Integer, Integer> posMap)
 	{
-		HashMap<Integer, Integer> posMap = new HashMap<Integer, Integer>();
 		minTermIDMap = new HashMap<Integer, MinTerm>();
+
+		int pos = 1;
 		
+		for(int i = 0; i < adjacencyList.size(); i++)
+		{	
+			if(adjacencyList.get(i).hasNeighbor())
+			{
+				posMap.put(adjacencyList.get(i).getPos()-1, pos);
+				adjacencyList.get(i).setPos(pos);
+				minTermIDMap.put(pos, adjacencyList.get(i));
+				pos++;
+			}
+		}
+		
+		int pos2 = pos;
 		for(int i = 0; i < adjacencyList.size(); i++)
 		{
 			if(!adjacencyList.get(i).hasNeighbor())
-				System.err.println("");
+			{
+				adjacencyList.get(i).setPos(pos2);
+				minTermIDMap.put(pos2, adjacencyList.get(i));
+				pos2++;
+			}
 		}
 		
-		for(int i = 0; i < adjacencyList.size(); i++)
-		{
-			if(adjacencyList.get(i).getPos() == 38102)
-				System.err.println("");
-			
-			posMap.put(adjacencyList.get(i).getPos()-1, i+1);
-			adjacencyList.get(i).setPos(i+1);
-			minTermIDMap.put(i+1, adjacencyList.get(i));
-		}
 		
-		return posMap;
+		return pos-1;
 	}
 	
 	public void display() throws IOException
@@ -448,6 +464,8 @@ public class Graph
 		Set<Integer> visitNodes = this.match(searchMT, separator);
 		for(Integer nodeID : visitNodes)
 			visitParts.add(adjacencyList.get(nodeID).getNode());
+		
+
 		
 		return visitParts;
 	}

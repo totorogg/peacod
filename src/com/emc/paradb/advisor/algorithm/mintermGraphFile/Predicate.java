@@ -51,7 +51,8 @@ public class Predicate
 			return true;
 		
 		if(sMin >= min && sMin < max ||
-				sMax > min && sMax < max)
+				sMax > min && sMax < max ||
+					sMin < min && sMax >= max)
 			return true;
 		else
 			return false;

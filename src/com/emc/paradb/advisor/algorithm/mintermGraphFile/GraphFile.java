@@ -295,7 +295,7 @@ public class GraphFile
 	
 	
 	private static void validate(File file) throws IOException
-	{
+	{/*
 		BufferedReader in = new BufferedReader(new FileReader(file));
 		String line = null;
 		Set<Integer> ids = new HashSet<Integer>();
@@ -317,6 +317,6 @@ public class GraphFile
 		}
 		in.close();
 		
-		System.out.println("validated: " + file.getName());
+		System.out.println("validated: " + file.getName());*/
 	}
 }

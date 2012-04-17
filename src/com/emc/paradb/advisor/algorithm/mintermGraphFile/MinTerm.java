@@ -190,6 +190,9 @@ public class MinTerm
 	
 	public HashMap<Integer, Integer> getNeighbor(RandomAccessFile in) throws IOException
 	{
+		if(!hasNeighbor())
+			return null;
+		
 		HashMap<Integer, Integer> neighbor = new HashMap<Integer, Integer>();
 		in.seek(offset);
 		String line = in.readLine();
