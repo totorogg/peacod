@@ -34,5 +34,4 @@ public class Transaction<T> extends Vector<T>
 		
 		return super.add(statement);
 	}
-	
 }

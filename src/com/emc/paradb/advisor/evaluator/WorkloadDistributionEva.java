@@ -256,7 +256,7 @@ public class WorkloadDistributionEva extends Evaluator
 			if(kvPair.getValue() == null)
 				return;
 		}
-		
+
 		List<Integer> nodeList = aPlugin.getInstance().getNode(kvPairs);
 		if(nodeList.get(0) == -1)//failed to match a node
 		{
