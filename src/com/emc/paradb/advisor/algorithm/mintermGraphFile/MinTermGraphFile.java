@@ -325,21 +325,14 @@ public class MinTermGraphFile implements PlugInterface
 		
 		eliminateKey();
 	
-		/*for tests	
-		try 
-		{
-			BufferedWriter out = new BufferedWriter(new FileWriter("minterm"));
-			listPartitions(out);
-			out.close();
-		} 
-		catch (IOException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		
+		setPartitionSize();
 	}
 	
+	private void setPartitionSize()
+	{
+		for(TablePartition aTablePartition : tablePartitions.values())
+			aTablePartition.setKeyPartitionSize();
+	}
 	private void eliminateKey()
 	{
 		for(TablePartition aTablePartition : tablePartitions.values())
@@ -710,7 +703,12 @@ class TablePartition
 				maxResult.next();
 				int max = maxResult.getInt(1); 
 				
-				KeyPartition aKeyPartition = new KeyPartition(aKey, min, max + 1);
+				ResultSet cardResult = stmt.executeQuery("select count(" + aKey +") " + 
+												   "from " + QueryPrepare.prepare(tableName) + ";");
+				cardResult.next();
+				int card = cardResult.getInt(1);
+				
+				KeyPartition aKeyPartition = new KeyPartition(aKey, min, max + 1, card);
 				keyPartitions.put(aKey, aKeyPartition);
 			}
 			catch(SQLException e)
@@ -719,6 +717,7 @@ class TablePartition
 				e.printStackTrace();
 			}
 		}
+	
 	}
 	
 	public List<String> getKeyList()
@@ -739,6 +738,7 @@ class TablePartition
 			if(minTermList.size() == startIndex)
 			{
 				List<Predicate> predicates = aKeyPartition.getPredicates();
+
 				for(int i = 0; i < predicates.size(); i++)
 				{
 					MinTerm aMinTerm = new MinTerm(predicates.get(i));
@@ -781,6 +781,11 @@ class TablePartition
 		return count;
 	}
 	
+	public void setKeyPartitionSize()
+	{
+		for(KeyPartition aKey : keyPartitions.values())
+			aKey.setPartitionSize();
+	}
 	
 	public void listPartitions(BufferedWriter out) throws IOException
 	{
@@ -911,18 +916,31 @@ class KeyPartition
 	
 	private int min;
 	private int max;
+	private int card;
 	
 	private int minVisit = Integer.MAX_VALUE;
 	private int maxVisit = Integer.MIN_VALUE;
 	
-	public KeyPartition(String key, int min, int max)
+	public KeyPartition(String key, int min, int max, int card)
 	{
 		this.key = key;
 		this.min = min;
 		this.max = max;
+		this.card = card;
 		
 		Predicate aPredicate = new Predicate(Integer.MIN_VALUE/2, Integer.MAX_VALUE/2);
 		predicates.add(aPredicate);
+	}
+	
+	public void setPartitionSize()
+	{
+		for(int i = 0; i < predicates.size(); i++)
+		{
+			int pMin = predicates.get(i).getMin();
+			int pMax = predicates.get(i).getMax();
+			int estimateSize = (int)(((double)(pMax - pMin))/(max - min) * card);
+			predicates.get(i).setSize(estimateSize);
+		}
 	}
 	
 	public String getName()

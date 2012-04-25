@@ -5,6 +5,7 @@ public class Predicate
 {
 	private Integer min = null;
 	private Integer max = null;
+	private Integer size = null;
 	
 	public Predicate()
 	{}
@@ -19,8 +20,19 @@ public class Predicate
 	{
 		min = copyP.min;
 		max = copyP.max;
+		size = copyP.size;
+	}
+	public Integer getSize()
+	{
+		if(size == null)
+			System.err.println("Err: predicate has no size");
+		return size;
 	}
 	
+	public void setSize(int size)
+	{
+		this.size = size;
+	}
 	
 	
 	public Integer getMin()
@@ -65,6 +77,6 @@ public class Predicate
 	
 	public String toString()
 	{
-		return min +":"+ max;
+		return min +":"+ max + ":" + size;
 	}
 }

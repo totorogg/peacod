@@ -15,6 +15,8 @@ public class MinTerm
 	protected int node = 0;
 	protected int pos = -1;
 	
+	protected int size = 0;
+	
 	protected long offset = -1;
 	protected long length = -1;
 	
@@ -32,11 +34,6 @@ public class MinTerm
 		
 	}
 	
-	public MinTerm(List<Predicate> terms)
-	{
-		this.terms = terms;
-	}
-	
 	public MinTerm(Predicate aPredicate)
 	{
 		terms = new ArrayList<Predicate>();
@@ -46,16 +43,11 @@ public class MinTerm
 	
 	public int getEstimatedSize()
 	{
-		int size = 0;
+		int size = 1;
 		for(int i = 0; i < terms.size(); i++)
 		{
-			int gap = (int)Math.sqrt((double)terms.get(i).getMax() - terms.get(i).getMin());
-			if(gap > Integer.MAX_VALUE / 5 || gap <= 0)
-				gap = 1;
-			size += gap;
+			size *= terms.get(i).getSize();
 		}
-		if(size < 0)
-			System.err.println("Err");
 		return size;
 	}
 	
