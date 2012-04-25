@@ -43,10 +43,10 @@ public class MinTerm
 	
 	public int getEstimatedSize()
 	{
-		int size = 1;
+		int size = 0;
 		for(int i = 0; i < terms.size(); i++)
 		{
-			size *= terms.get(i).getSize();
+			size += terms.get(i).getSize();
 		}
 		return size;
 	}

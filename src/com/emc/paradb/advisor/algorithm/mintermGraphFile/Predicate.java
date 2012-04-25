@@ -14,6 +14,7 @@ public class Predicate
 	{
 		this.min = min;
 		this.max = max;
+		//size = 1;
 	}
 	
 	public Predicate(Predicate copyP)

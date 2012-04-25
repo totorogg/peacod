@@ -53,6 +53,12 @@ public class GraphFile
 			public boolean accept(File arg0, String arg1) 
 			{
 				// TODO Auto-generated method stub
+				//if(arg1.length() > 10)
+				//{
+				//	arg0.delete();
+				//	return false;
+				//}
+				
 				if(arg1.matches("[0-9]+"))
 					return true;
 				else 
