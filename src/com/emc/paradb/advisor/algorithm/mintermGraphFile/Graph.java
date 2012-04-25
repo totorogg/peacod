@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -83,6 +84,7 @@ public class Graph
 		GraphFile.sortFile();
 		GraphFile.multiWayMerge(GV.nWay);
 		
+		long start = System.currentTimeMillis();
 		RandomAccessFile ranIn = new RandomAccessFile(GraphFile.getGraphFile(), "r");
 		
 		int i = 0;
@@ -90,6 +92,8 @@ public class Graph
 		long offset = 0;
 		
 		String line = null;
+		
+		//Iterator<MinTerm> iterator = adjacencyList.iterator();
 		while((line = ranIn.readLine()) != null)
 		{
 			String[] splitLine = line.split("\t");
@@ -97,7 +101,22 @@ public class Graph
 			pos = Integer.valueOf(splitLine[0]);
 			
 			int edgeCnt = (splitLine.length - 1) / 2;
-				
+			/*
+			while(iterator.hasNext())
+			{
+				MinTerm aMT = iterator.next();
+				if(pos == i)
+				{
+					aMT.setOffset(offset);
+					aMT.setEdgeCnt(edgeCnt);
+					offset = ranIn.getFilePointer();
+					i++;
+					break;
+				}
+				i++;
+			}*/
+			
+			
 			for(; i < adjacencyList.size(); i++)
 			{
 				if(pos == i)
@@ -110,6 +129,9 @@ public class Graph
 			}
 		}
 		ranIn.close();
+		
+		long end = System.currentTimeMillis();
+		System.out.println("duration: " + (end - start));
 	}
 	
 	public List<MinTerm> combine(String separator) throws IOException
@@ -156,7 +178,6 @@ public class Graph
 		}
 		
 		return toAddMT;
-		
 	}
 	
 	public void partitionGraph(int part) throws Exception

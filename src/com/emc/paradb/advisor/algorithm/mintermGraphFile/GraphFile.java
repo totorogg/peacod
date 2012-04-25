@@ -50,7 +50,8 @@ public class GraphFile
 		File[] files = dir.listFiles(new FilenameFilter()
 		{
 			@Override
-			public boolean accept(File arg0, String arg1) {
+			public boolean accept(File arg0, String arg1) 
+			{
 				// TODO Auto-generated method stub
 				if(arg1.matches("[0-9]+"))
 					return true;
