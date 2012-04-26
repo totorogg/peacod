@@ -201,9 +201,11 @@ public class Graph
 		
 		for(int i = 0; i < adjacencyList.size(); i++)
 		{
-			out.write(adjacencyList.get(i).getEstimatedSize() + " ");
 			if(!adjacencyList.get(i).hasNeighbor())
 				continue;
+			
+			out.write(adjacencyList.get(i).getEstimatedSize() + " ");
+			
 			HashMap<Integer, Integer> neighbor = adjacencyList.get(i).getNeighbor(ranIn);
 			for (Integer id : neighbor.keySet())
 			{

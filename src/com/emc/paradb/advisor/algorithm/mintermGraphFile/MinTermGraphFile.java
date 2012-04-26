@@ -125,6 +125,7 @@ public class MinTermGraphFile implements PlugInterface
 	
 	private void workload2Graph() throws Exception
 	{
+		
 		//construct minterm list
 		HashMap<String, Integer> tableStartPos = new HashMap<String, Integer>();
 		HashMap<String, Integer> tableEndPos = new HashMap<String, Integer>();
@@ -175,7 +176,6 @@ public class MinTermGraphFile implements PlugInterface
 		
 		//minTermGraph.display();
 	}
-		
 	
 	private void combine() throws IOException
 	{
@@ -703,7 +703,7 @@ class TablePartition
 				maxResult.next();
 				int max = maxResult.getInt(1); 
 				
-				ResultSet cardResult = stmt.executeQuery("select count(" + aKey +") " + 
+				ResultSet cardResult = stmt.executeQuery("select count(*) " + 
 												   "from " + QueryPrepare.prepare(tableName) + ";");
 				cardResult.next();
 				int card = cardResult.getInt(1);
@@ -939,6 +939,7 @@ class KeyPartition
 			int pMin = predicates.get(i).getMin();
 			int pMax = predicates.get(i).getMax();
 			int estimateSize = (int)(((double)(pMax - pMin))/(max - min) * card);
+			estimateSize = estimateSize == 0 ? 1 : estimateSize;
 			predicates.get(i).setSize(estimateSize);
 		}
 	}
