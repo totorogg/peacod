@@ -197,11 +197,11 @@ public class Graph
 		
 		BufferedWriter out = new BufferedWriter(new FileWriter(graphFileName));
 		RandomAccessFile ranIn = new RandomAccessFile(GraphFile.getGraphFile(), "r");
-		out.write(nodeSize + " " + edgeCount + " 001\n");
+		out.write(nodeSize + " " + edgeCount + " 011\n");
 		
 		for(int i = 0; i < adjacencyList.size(); i++)
 		{
-			//out.write(adjacencyList.get(i).getEstimatedSize() + " ");
+			out.write(adjacencyList.get(i).getEstimatedSize() + " ");
 			if(!adjacencyList.get(i).hasNeighbor())
 				continue;
 			HashMap<Integer, Integer> neighbor = adjacencyList.get(i).getNeighbor(ranIn);
