@@ -46,7 +46,9 @@ public class MinTerm
 		int size = 0;
 		for(int i = 0; i < terms.size(); i++)
 		{
-			size += terms.get(i).getSize();
+			//size += terms.get(i).getSize();
+			//[tag by xiaoyan]
+			size = Math.max(size, terms.get(i).getSize());
 		}
 		return size;
 	}

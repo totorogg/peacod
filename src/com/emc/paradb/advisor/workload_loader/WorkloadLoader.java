@@ -130,7 +130,9 @@ public class WorkloadLoader
 		Random r = new Random(1000000);
 
 		for(int i = 0; i < workload.size(); i++)
-			if(r.nextInt() % loadedXact < transactionNum && newWorkload.size() < transactionNum)
+			//if(r.nextInt() % loadedXact < transactionNum && newWorkload.size() < transactionNum)
+			//[tag by xiaoyan: only use the front k transaction]
+			if (newWorkload.size() < transactionNum)
 				newWorkload.add(workload.get(i));
 		workload = newWorkload;
 	}

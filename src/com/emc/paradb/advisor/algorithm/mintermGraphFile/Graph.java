@@ -73,7 +73,7 @@ public class Graph
 			out.write(String.valueOf(aNode));
 			for(Integer aVisitNode : visitNodes)
 				if(! aVisitNode.equals(aNode))
-					out.write("\t" + aVisitNode+ "\t1");
+					out.write("\t" + aVisitNode+ "\t" + 1);
 			out.write("\n");
 		}
 		out.close();
@@ -131,7 +131,7 @@ public class Graph
 		ranIn.close();
 		
 		long end = System.currentTimeMillis();
-		System.out.println("duration: " + (end - start));
+		System.out.println("random access: " + (end - start) + "ms");
 	}
 	
 	public List<MinTerm> combine(String separator) throws IOException
@@ -182,6 +182,7 @@ public class Graph
 	
 	public void partitionGraph(int part) throws Exception
 	{
+		long begin = System.currentTimeMillis();
 		this.part = part;
 		
 		HashMap<Integer, Integer> posMap = new HashMap<Integer, Integer>();
@@ -204,7 +205,8 @@ public class Graph
 			if(!adjacencyList.get(i).hasNeighbor())
 				continue;
 			
-			out.write(adjacencyList.get(i).getEstimatedSize() + " ");
+			int nodeWeight = adjacencyList.get(i).getEstimatedSize();
+			out.write(nodeWeight + " ");
 			
 			HashMap<Integer, Integer> neighbor = adjacencyList.get(i).getNeighbor(ranIn);
 			for (Integer id : neighbor.keySet())
@@ -214,7 +216,13 @@ public class Graph
 					System.err.println("no such pos map");
 					continue;
 				}
-				out.write(posMap.get(id) + " " + neighbor.get(id) + " ");
+				//[tag by xiaoyan: add the edge weight to be the multiple of two nodes weight]
+				//System.out.println("id = " + id + " i = " + i + " size = " + adjacencyList.size());
+				int neighborNodeSize = adjacencyList.get(id - 1).getEstimatedSize();
+				long edgeWeight = (long)(Math.sqrt(nodeWeight) * Math.sqrt(neighborNodeSize));
+				//System.out.println("neighborNodeSize = " + neighborNodeSize + " weight = " + edgeWeight + " id = " + id + " i = " + i + " size = " + adjacencyList.size());
+				//out.write(posMap.get(id) + " " + neighbor.get(id) + " ");
+				out.write(posMap.get(id) + " " + (neighbor.get(id) * edgeWeight) + " ");
 			}
 			out.write("\n");
 		}
@@ -240,6 +248,8 @@ public class Graph
 			}
 		}
 		in.close();
+		long end = System.currentTimeMillis();
+		System.out.println("Partitioning graph: " + (end - begin) + "ms");
 	}
 	
 	protected int prepareForMETIS(HashMap<Integer, Integer> posMap)

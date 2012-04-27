@@ -45,6 +45,7 @@ public class GraphFile
 	
 	public static void sortFile() throws IOException
 	{
+		long start = System.currentTimeMillis();
 		String dirName = GV.dirName;
 		File dir = new File(dirName);
 		File[] files = dir.listFiles(new FilenameFilter()
@@ -109,12 +110,15 @@ public class GraphFile
 			
 			GraphFile.validate(files[i]);
 		}
+		long end = System.currentTimeMillis();
+		System.out.println("Sort File: " + (end - start) + "ms");
 	}
 	
 	
 	
 	public static boolean multiWayMerge(int nWay) throws IOException
 	{
+		long begin = System.currentTimeMillis();
 		String dirName = GV.dirName;
 		File dirFile = new File(dirName);
 		File[] files = dirFile.listFiles(new FilenameFilter()
@@ -152,7 +156,8 @@ public class GraphFile
 			fileList = mergedList;
 		}
 		merge(fileList);
-		
+		long end = System.currentTimeMillis();
+		System.out.println("Merge File: " + (end - begin) + "ms");
 		return true;
 	}
 	
