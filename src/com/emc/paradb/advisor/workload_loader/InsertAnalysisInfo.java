@@ -5,6 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * this is a container for insert sql statement
+ * its elements include where key object set
+ * also a map object is defined for fast access to where key object by key name
+ * @author Xin Pan
+ *
+ */
+
 public class InsertAnalysisInfo {
 	
 	//the table to be inserted

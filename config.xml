@@ -2,7 +2,7 @@
 <config>
    <property>
       <name>workload.tpcc</name>					<!-- xml node name -->
-      <value>workload/tpcc2w.log</value>			<!-- file path -->
+      <value>workload/test.log</value>			<!-- file path -->
       <value>tpcc2w</value>						<!-- database name for JDBC-->
       <value>6000</value>							<!-- transaction number -->
       <value>1021</value>							<!-- database size -->

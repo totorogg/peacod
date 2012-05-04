@@ -8,7 +8,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
-
+/**
+ * a panel for holding algorithm table, control panel and description panel
+ * @author xpan
+ *
+ */
 public class AlgorithmSelectPanel extends JTabbedPane
 {
 	private AlgorithmTableControlPanel atcPanel = null;

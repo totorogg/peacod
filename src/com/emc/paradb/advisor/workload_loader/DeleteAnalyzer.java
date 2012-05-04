@@ -43,6 +43,18 @@ import net.sf.jsqlparser.schema.Column;
 import net.sf.jsqlparser.statement.delete.Delete;
 import net.sf.jsqlparser.statement.select.SubSelect;
 
+
+/**
+ * translate an delete sql statement into a in-memory object we define
+ * it is based on the visitor design pattern
+ * 
+ * notice that not all kinds of sql statement are supported.
+ * currenty equal statement for int, string are well tested
+ * however, range statement, etc are not well-tested.
+ * 
+ * @author xin pan
+ *
+ */
 public class DeleteAnalyzer {
 	
 	DeleteAnalysisInfo info = new DeleteAnalysisInfo();

@@ -22,13 +22,22 @@ import com.emc.paradb.advisor.ui.algorithm_panel.AlgorithmSelectPanel;
 import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
+/**
+ * Entry point of sharding-simulator
+ * 
+ * @author XP
+ *
+ */
 public class MainFrame extends JFrame {
 	public static Font mainFont;
 	public static int scWidth = 1200;
 	public static int scHeight = 540;
 
+	//middle panel for displaying charts
 	private static DisplayPanel displayPanel;
+	//left panel for displaying options, like database, benchmark, etc.
 	private static BenchmarkSelectPanel benchmarkSelectPanel;
+	//right panel for selecting algorithms, selecting displaying statistics
 	private static AlgorithmSelectPanel algorithmSelectPanel;
 	private static JSplitPane splitPane = new JSplitPane(
 			JSplitPane.HORIZONTAL_SPLIT, true);
@@ -40,6 +49,7 @@ public class MainFrame extends JFrame {
 
 	public MainFrame() {
 		
+		//load xml configuration properties
 		PrepareController.loadParameters();
 	/*	try {
 
@@ -59,6 +69,7 @@ public class MainFrame extends JFrame {
 			e.printStackTrace();
 		}
 */
+		//some kind of central UI alteration
 		try {
 			mainFont = Font.createFont(Font.TRUETYPE_FONT,
 					new File(System.getProperty("user.dir")
@@ -88,9 +99,9 @@ public class MainFrame extends JFrame {
 		// UIManager.put( "Button.font", new Font( "Verdana", Font.BOLD,
 		// ABORT));
 		// UIManager.put("Button.font", new Font( "Verdana", Font.BOLD, ABORT));
-
 		UIManager.put("Panel.background", Color.WHITE);
 
+		//init each panels
 		displayPanel = new DisplayPanel();
 		algorithmSelectPanel = new AlgorithmSelectPanel();
 		benchmarkSelectPanel = new BenchmarkSelectPanel();

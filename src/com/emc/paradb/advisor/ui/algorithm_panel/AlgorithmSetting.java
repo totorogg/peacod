@@ -20,7 +20,17 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-
+/**
+ * this is a call back class for addint setting to specific algorithm
+ * it is tested by the range partition algorithm.
+ * now it is disabled
+ * 
+ * to reuse the class, you have to register it with a algorithm
+ * the display controll has to retrieve this class from specific algorithm
+ * and call display staitic method in this class
+ * @author xpan
+ *
+ */
 public class AlgorithmSetting extends JDialog implements ActionListener
 {
 	private JPanel settingPanel = null;
@@ -139,6 +149,12 @@ public class AlgorithmSetting extends JDialog implements ActionListener
 		return results;
 	}
 	
+	/**
+	 * this function is important for display controller to call
+	 * settable parameters are passed in as paraList
+	 * and displayed in setting panel
+	 * @param paraList
+	 */
 	public static void disPlaySetting(List<String[]> paraList)
 	{
 		JFrame frame = new JFrame();

@@ -10,7 +10,13 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-
+/**
+ * describe the algorithms
+ * where a algorithm is selected in the table
+ * this panel will display related information
+ * @author xpan
+ *
+ */
 public class AlgorithmDescriptionPanel extends JPanel
 {
 	JTextArea description = new JTextArea("Description:\n");

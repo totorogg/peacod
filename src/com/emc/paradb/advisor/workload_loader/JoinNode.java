@@ -1,6 +1,11 @@
 package com.emc.paradb.advisor.workload_loader;
 
-
+/**
+ * this class is not used now
+ * it is designed to store join operations info
+ * @author xpan
+ *
+ */
 public class JoinNode {
 	
 	String leftTable;

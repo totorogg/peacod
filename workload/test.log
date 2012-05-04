@@ -1,2 +1,15 @@
 -
-INSERT INTO call_forwarding VALUES (8559, 4, 0, 10, '000000000006124')
+SELECT c_discount, c_last, c_credit, w_tax  FROM customer, warehouse WHERE w_id = 1 AND c_w_id = 1 AND c_d_id = 2 AND c_id = 2019
+SELECT d_next_o_id, d_tax FROM district WHERE d_w_id = 1 AND d_id = 2 
+INSERT INTO new_order (no_o_id, no_d_id, no_w_id) VALUES ( 3011, 2, 1)
+-
+SELECT c_discount, c_last, c_credit, w_tax  FROM customer, warehouse WHERE w_id = 2 AND c_w_id = 2 AND c_d_id = 7 AND c_id = 1154
+SELECT d_next_o_id, d_tax FROM district WHERE d_w_id = 2 AND d_id = 7 
+INSERT INTO new_order (no_o_id, no_d_id, no_w_id) VALUES ( 3204, 7, 2)
+-
+SELECT d_next_o_id FROM district WHERE d_w_id = 1 AND d_id = 8
+SELECT COUNT(DISTINCT (s_i_id)) AS stock_count FROM order_line, stock WHERE ol_w_id = 1 AND ol_d_id = 8 AND ol_o_id < 3004 AND ol_o_id >= 3004 - 20 AND s_w_id = 1 AND s_i_id = ol_i_id AND s_quantity < 20
+-
+SELECT c_discount, c_last, c_credit, w_tax  FROM customer, warehouse WHERE w_id = 2 AND c_w_id = 2 AND c_d_id = 2 AND c_id = 2047
+SELECT d_next_o_id, d_tax FROM district WHERE d_w_id = 2 AND d_id = 2 
+INSERT INTO new_order (no_o_id, no_d_id, no_w_id) VALUES ( 3231, 2, 2)

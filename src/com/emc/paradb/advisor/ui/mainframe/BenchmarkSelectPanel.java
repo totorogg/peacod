@@ -41,15 +41,30 @@ import com.emc.paradb.advisor.workload_loader.Workload;
 import com.emc.paradb.advisor.workload_loader.WorkloadLoader;
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
+/**
+ * select options
+ * including
+ * 1. database to use
+ * 2. benchmark to use
+ * 3. number of transcations to use
+ * 4. number of physical nodes
+ * display progress
+ * 
+ * @author peter pan
+ *
+ */
 public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 {
 	private JPanel benchmarkSelectPanel = new JPanel();
 	private Box bmBox = Box.createVerticalBox();
 	
 	private JComboBox bmComboBox = null;
+	//supported benchmarks should be noted here
 	private String[] bmString = {"TPC-C", "EPINIONS", "TATP"};
 
 	private JComboBox dbComboBox = null;
+	//supported database type should be noted here.
+	//only postgres is supported now
 	private String[] dbString = {"PostgreSQL"};
 	
 	private JTextField dataSetText = new JTextField("10");
@@ -70,6 +85,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		benchmarkSelectPanel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
 		
 		bmComboBox = new JComboBox(bmString);
+		//action listener for changing selections
 		bmComboBox.addActionListener(new ActionListener()
 		{
 
@@ -168,11 +184,6 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		prepareButton.addActionListener(this);
 		
 	}
-
-	private String getWorkloadCount(String bm)
-	{
-		return null;
-	}
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) 
@@ -194,6 +205,7 @@ public class BenchmarkSelectPanel extends JTabbedPane implements ActionListener
 		}
 	}
 	
+	//define the progross call back interface
 	private ProgressCB progressCB = new ProgressCB(){
 
 		@Override

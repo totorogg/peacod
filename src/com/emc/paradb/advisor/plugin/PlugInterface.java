@@ -8,7 +8,22 @@ import com.emc.paradb.advisor.data_loader.DBData;
 import com.emc.paradb.advisor.workload_loader.Transaction;
 import com.emc.paradb.advisor.workload_loader.Workload;
 
-
+/**
+ * it is the core interface of our plugin system
+ * every algorithm should implement this interface so as
+ * to co-play with our system.
+ * System will communicate with algorithms through 
+ * this functions defined in this interface
+ * 
+ * most importantly there are three parts.
+ * the accept() funcation for accepting neccessary info for the algorithm
+ * such as database connection, workload and database meta
+ * the getPartitionKey() function for returning partition keys
+ * the getNode() function for retrieving partition results
+ * 
+ * @author XinPan
+ *
+ */
 public interface PlugInterface
 {	
 	public boolean accept(Connection conn, 

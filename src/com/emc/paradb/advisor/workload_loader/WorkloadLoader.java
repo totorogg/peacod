@@ -22,14 +22,22 @@ import net.sf.jsqlparser.statement.insert.Insert;
 import net.sf.jsqlparser.statement.select.Select;
 import net.sf.jsqlparser.statement.update.Update;
 
-
+/**
+ * load workloads into memory.
+ * Workloads are translated into the format we define
+ * 
+ * @author Xin Pan
+ * */
 public class WorkloadLoader
 {
+	//selected benchmark
 	private String selectedBM = null;
+	//number of transactions used
 	private int transactionNum = 0;
+	//in-memory structure for storing workload
 	private Workload<Transaction<Object>> workload = null;
 	private float progress = 0;
-	
+	//determine whether use update statement or not
 	protected static boolean updateFilter = false;
 	
 	
@@ -48,7 +56,7 @@ public class WorkloadLoader
 		return workload;
 	}
 	
-	
+	//routines for loading workload
 	public void load()
 	{
 		new Thread()
@@ -72,6 +80,7 @@ public class WorkloadLoader
 					{
 						readLength += line.getBytes().length;
 						progress = (float)readLength/(file.length() * 1.1f);
+						//transcations are seperated by - in files
 						if(line.equalsIgnoreCase("-"))
 						{
 							loadedXact++;
@@ -82,7 +91,8 @@ public class WorkloadLoader
 						}
 						
 						Statement statement = QueryAnalyzer.analyze(line);
-						
+						//which kind of sql a statement belongs
+						//different statements are stored in different objects slightly differ from each other
 						if(statement instanceof Select )
 						{
 							SelectAnalyzer analyzer = new SelectAnalyzer();
@@ -109,7 +119,9 @@ public class WorkloadLoader
 						}
 						
 					}
+					//sampling a subset of workload 
 					sampling(loadedXact);
+					//fix those keys without table name
 					fix();
 					progress = 1;
 
@@ -124,17 +136,24 @@ public class WorkloadLoader
 			}
 		}.start();
 	}
+	/**
+	 * sampling transactions in files
+	 * @param loadedXact
+	 */
 	private void sampling(int loadedXact)
 	{
 		Workload<Transaction<Object>> newWorkload = new Workload<Transaction<Object>>();
 		Random r = new Random(1000000);
 
+		//this sampling function is not quite right, but it works
+		//changes are needed in the future
 		for(int i = 0; i < workload.size(); i++)
 			if(r.nextInt() % loadedXact < transactionNum && newWorkload.size() < transactionNum)
 				newWorkload.add(workload.get(i));
 		workload = newWorkload;
 	}
 	
+	//add table name to keys
 	protected void fix()
 	{
 		HashMap<String, TableNode> tables = Controller.getData().getMetaData();

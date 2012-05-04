@@ -14,7 +14,14 @@ import javax.swing.table.DefaultTableModel;
 
 import com.emc.paradb.advisor.controller.DisplayController;
 
-
+/**
+ * Summary panel display partition results are a set of tables
+ * results currently include partition keys selected,
+ * distributed transactions, distribution ratio, transaction number, etc
+ * 
+ * @author peter pan
+ *
+ */
 public class SummaryPanel extends JPanel
 {
 	private Box box = Box.createVerticalBox();

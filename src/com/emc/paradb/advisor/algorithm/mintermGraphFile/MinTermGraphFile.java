@@ -353,11 +353,11 @@ public class MinTermGraphFile implements PlugInterface
 	
 	private void explainTran(Transaction<Object> aTran)
 	{
-		
 		HashMap<String, List<KeyValuePair>> tableKeyValueMap = new HashMap<String, List<KeyValuePair>>();
-		
 		for(Object statement : aTran)
 		{
+		
+			
 			if(statement instanceof SelectAnalysisInfo)
 			{
 				SelectAnalysisInfo select = (SelectAnalysisInfo)statement;

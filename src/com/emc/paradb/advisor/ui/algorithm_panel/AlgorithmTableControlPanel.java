@@ -20,7 +20,14 @@ import com.emc.paradb.advisor.controller.Controller;
 import com.emc.paradb.advisor.controller.EvaluateController;
 
 
-
+/**
+ * controller of algorithm table, function include
+ * insert algorithms into table
+ * evaluate selected algorithms in the table
+ * compare selected algorithms in the table
+ * @author xpan
+ *
+ */
 public class AlgorithmTableControlPanel extends JPanel
 {
 	private JButton load = new JButton("Select");
@@ -54,6 +61,7 @@ public class AlgorithmTableControlPanel extends JPanel
 		box.setSize(ABORT, 20);
 		this.add(box);
 	
+		//register button click event handlers
 		load.addActionListener(new ActionListener()
 		{	
 			public void actionPerformed(ActionEvent e)
@@ -63,6 +71,10 @@ public class AlgorithmTableControlPanel extends JPanel
 			}
 		});
 		
+		/**
+		 * to avoid long time blocking during evaluation routine
+		 * we create a new thread for evalutation process
+		 */
 		evaluate.addActionListener(new ActionListener()
 		{	
 			public void actionPerformed(ActionEvent e)

@@ -22,7 +22,18 @@ import org.w3c.dom.NodeList;
 
 
 
-
+/**
+ * This class is used to load algorithms.
+ * each custermized plugin algorithms can be coded elsewhere besides
+ * this project can be imported into our core system during runtime.
+ * 
+ * To enable this function, programmer should create a xml file and
+ * note down necessary meta data in it. An example can be found in plugin directory
+ * of the project
+ * 
+ * @author XinPan
+ *
+ */
 class JarFilter implements FilenameFilter {
 
 	@Override

@@ -38,8 +38,14 @@ import org.jfree.util.Rotation;
 import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.ui.mainframe.MainFrame;
 
-
-
+/**
+ *This metric measures the total number of distributed transactions of the workload resulted from the partitioning scheme(s). 
+ *Since distributed transactions dominate the total workload execution cost, the fewer number of them implies the better performance.
+ *For a single scheme, the left figure shows the number of distributed transactions. The right figure shows the distribution of the number of
+ *data nodes that a transaction spanned over."
+ * @author Xin Pan
+ *
+ */
 public class TransactionDistributionPanel extends JPanel
 {
 	private Box box = Box.createHorizontalBox();
@@ -74,7 +80,7 @@ public class TransactionDistributionPanel extends JPanel
 				
 		this.setBorder(BorderFactory.createEtchedBorder());
 
-		
+		//define its call back object and register it in controller
 		DisplayController.registerTransactionDistributionCB(new TransactionDistributionCB()
 		{
 			@Override
@@ -117,7 +123,7 @@ public class TransactionDistributionPanel extends JPanel
 			}
 		});
 	}
-	
+	//create its chart
 	private  PieDataset createDistNonDistDataset(int dist, int nonDist) 
 	{
         DefaultPieDataset result = new DefaultPieDataset();
