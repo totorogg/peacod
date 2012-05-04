@@ -27,6 +27,13 @@ import org.jfree.ui.TextAnchor;
 
 import com.emc.paradb.advisor.controller.DisplayController;
 
+/**
+ * DESCRIPTION: \n This metric evaluates how uniformly the data accesses of workload are distributed across data nodes.
+ * For a single scheme's descriptive representation, the total number of transactions executed at each node will be showed. For the comparasion representation,
+ * the metric is represented by the standard variance that is normalized to a value between zero and one. \n")
+ * @author Xin Pan
+ *
+ */
 public class WorkloadDistributionPanel extends JPanel {
 	private JLabel workloadChart = null;
 	private Box box = Box.createHorizontalBox();

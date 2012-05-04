@@ -11,13 +11,23 @@ import com.emc.paradb.advisor.ui.summary.SummaryPanel;
 import com.emc.paradb.advisor.ui.transaction_distribution.TransactionDistributionPanel;
 import com.emc.paradb.advisor.ui.workload_distribution.WorkloadDistributionPanel;
 
-
+/**
+ * the display panel for showing sharding statistics
+ * it consists of 4 subpanels 
+ * @author Xin Pan
+ *
+ */
 public class DisplayPanel extends JTabbedPane
 {
+	//display data distribution 
 	DataDistributionPanel dataDistributionPanel = new DataDistributionPanel();
+	//display workload distribution
 	WorkloadDistributionPanel workloadDistributionPanel = new WorkloadDistributionPanel();
+	//display transaction locality condition
 	TransactionDistributionPanel tranDistPanel = new TransactionDistributionPanel();
+	//not used yet
 	DataMigrationPanel dataMigrationPanel = new DataMigrationPanel();
+	//summarize the sharding results
 	SummaryPanel summaryPanel = new SummaryPanel();
 	
 	public DisplayPanel()

@@ -1,0 +1,31 @@
+-
+select * from w where wid = 1
+select * from c where cwid = 1
+-
+select * from w where wid = 2
+select * from c where cwid = 2
+-
+select * from w where wid = 1
+select * from c where cwid = 1
+-
+select * from w where wid = 2
+select * from c where cwid = 2
+-
+select * from w where wid = 1
+select * from c where cwid = 1
+-
+select * from w where wid = 2
+select * from c where cwid = 2
+-
+select * from w where wid = 1
+select * from c where cwid = 1
+-
+select * from w where wid = 2
+select * from c where cwid = 2
+-
+select * from w where wid = 1
+select * from c where cwid = 2
+-
+select * from w where wid = 2
+select * from c where cwid = 1
+-

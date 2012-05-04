@@ -2,6 +2,10 @@ package com.emc.paradb.advisor.workload_loader;
 
 
 /**
+ * the where key class is a baic element for each sql
+ * each a=1 or b>0 is stored as a where key
+ * a sql statement might has a set of where keys
+ * 
  * valueRange has four value
  * 1.euqal 2.smallerThan 3.largerThan 4.all
  * other value can be added in the future

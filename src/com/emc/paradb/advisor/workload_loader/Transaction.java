@@ -2,7 +2,15 @@ package com.emc.paradb.advisor.workload_loader;
 
 import java.util.Vector;
 
-
+/**
+ * a transaction class, extending from vector
+ * workload class contrains a list of transaction object
+ * sql statements are stored as a list in the transaction object
+ * 
+ * @author xpan
+ *
+ * @param <T>
+ */
 public class Transaction<T> extends Vector<T>
 {
 	/**

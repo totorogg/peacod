@@ -30,6 +30,13 @@ import org.jfree.ui.TextAnchor;
 import com.emc.paradb.advisor.controller.DisplayController;
 import com.emc.paradb.advisor.controller.EvaluateController;
 
+/**
+ * DESCRIPTION: \n This metric describes how uniformly data are distributed across data nodes. "
+ * "For a single scheme's descriptive representation, each node's total tuples will be showed. For the comparasion representation, "
+ * "the metric is represented by the standard variance that is normalized to a value between zero and one. \n");
+ * @author xpan
+ *
+ */
 public class DataDistributionPanel extends JPanel {
 	private JLabel dataChart = null;
 	private Box box = Box.createHorizontalBox();
@@ -48,6 +55,7 @@ public class DataDistributionPanel extends JPanel {
 		this.add(box, BorderLayout.CENTER);
 		this.setBorder(BorderFactory.createEtchedBorder());
 
+		//define the call back function and register it in controller
 		DisplayController.registerDataDistributionCB(new DataDistributionCB() {
 			public void draw(List<Long> data) {
 				box.removeAll();

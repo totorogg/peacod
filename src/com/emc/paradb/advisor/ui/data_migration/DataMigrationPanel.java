@@ -11,7 +11,12 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-
+/**
+ * display data migration information 
+ * currently it is not used
+ * @author xpan
+ *
+ */
 public class DataMigrationPanel extends JPanel
 {
 	private JLabel workloadChart = new JLabel("building");

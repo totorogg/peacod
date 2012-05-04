@@ -5,7 +5,15 @@ import java.util.List;
 
 import com.emc.paradb.advisor.evaluator.WorkloadDistributionEva;
 
-
+/**
+ * a plugin class served as a container for algorithms
+ * each algorithm is stored in a plugin class
+ * along with its meta information such as name, description
+ * and performance statistics, id, etc.
+ * In fact, all information related to a algorithm is stored hehre
+ * @author Xin Pan
+ *
+ */
 public class Plugin
 {
 	private String name = null;

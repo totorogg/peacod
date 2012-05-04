@@ -1,6 +1,5 @@
 package com.emc.paradb.advisor.ui.algorithm_panel;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,16 +12,19 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableModel;
 
 import com.emc.paradb.advisor.controller.AlgorithmController;
 import com.emc.paradb.advisor.controller.DisplayController;
-import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.plugin.Plugin;
 
+/**
+ * algorithm table, for displaying algorithm list
+ * @author xpan
+ *
+ */
 class AlgorithmTable extends JTable
 {
 	private final int columnSize = 3;
@@ -38,12 +40,16 @@ class AlgorithmTable extends JTable
 		setVisible(true);
 	}
 	
-	
+	/**
+	 * set algorithm info into the table
+	 * @param pluginInterfaces
+	 */
 	public void setData(List<Plugin> pluginInterfaces)
 	{
 		int row = pluginInterfaces.size();
 		Object data[][] = new Object[row][columnSize];
 		
+		//add algorithms row by row
 		for(int i = 0; i < row; i++)
 		{		
 			String name = pluginInterfaces.get(i).getID();
@@ -80,8 +86,6 @@ class AlgorithmTable extends JTable
 	public void tableChanged(TableModelEvent e) 
 	{
 		super.tableChanged(e);
-		
-		
 		
 		// TODO Auto-generated method stub
 		int row = e.getFirstRow();
@@ -140,7 +144,10 @@ class AlgorithmButtonRenderer extends JButton implements TableCellRenderer {
 	}
 }
 
-
+/**
+ * customize the button editor
+ * so that it can be used in JTable
+ */
 class ButtonEditor extends DefaultCellEditor {
 
 	protected JButton button;
