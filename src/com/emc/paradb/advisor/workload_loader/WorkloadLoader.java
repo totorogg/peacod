@@ -148,7 +148,9 @@ public class WorkloadLoader
 		//this sampling function is not quite right, but it works
 		//changes are needed in the future
 		for(int i = 0; i < workload.size(); i++)
-			if(r.nextInt() % loadedXact < transactionNum && newWorkload.size() < transactionNum)
+			//if(r.nextInt() % loadedXact < transactionNum && newWorkload.size() < transactionNum)
+			//[tag by xiaoyan: only use the front k transaction]
+			if (newWorkload.size() < transactionNum)
 				newWorkload.add(workload.get(i));
 		workload = newWorkload;
 	}

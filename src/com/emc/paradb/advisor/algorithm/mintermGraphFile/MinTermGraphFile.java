@@ -144,7 +144,7 @@ public class MinTermGraphFile implements PlugInterface
 		minTermGraph.initGraphFile();
 		
 		//combine unvisited minterms
-		combine();
+		//combine();
 
 /*		
 		for(int i = 0; i < tableList.size(); i++)

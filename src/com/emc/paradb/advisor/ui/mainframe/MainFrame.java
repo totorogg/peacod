@@ -19,7 +19,7 @@ import javax.swing.plaf.basic.BasicLookAndFeel;
 
 import com.emc.paradb.advisor.controller.PrepareController;
 import com.emc.paradb.advisor.ui.algorithm_panel.AlgorithmSelectPanel;
-import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
+//import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
 /**

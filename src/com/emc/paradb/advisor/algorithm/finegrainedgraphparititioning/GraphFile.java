@@ -1,4 +1,4 @@
-package com.emc.paradb.advisor.algorithm.mintermGraphFile;
+package com.emc.paradb.advisor.algorithm.finegrainedgraphparititioning;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

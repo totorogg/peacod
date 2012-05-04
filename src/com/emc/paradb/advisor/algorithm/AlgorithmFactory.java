@@ -3,6 +3,7 @@ package com.emc.paradb.advisor.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.emc.paradb.advisor.algorithm.finegrainedgraphparititioning.FineGrainedGraphPartitioning;
 import com.emc.paradb.advisor.algorithm.mintermGraph.MinTermGraph;
 import com.emc.paradb.advisor.algorithm.mintermGraphFile.MinTermGraphFile;
 import com.emc.paradb.advisor.plugin.PlugInterface;
@@ -33,6 +34,7 @@ public class AlgorithmFactory
 	private static Plugin RangeGraph = new Plugin();
 	private static Plugin MintermGraph = new Plugin();
 	private static Plugin MintermGraphFile = new Plugin();
+	private static Plugin FineGrainedGraph = new Plugin();
 	//load the build-in algorithms
 	static
 	{
@@ -82,6 +84,11 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
 		
+		FineGrainedGraph.setInterface(new FineGrainedGraphPartitioning());
+		FineGrainedGraph.setInfo("com.emc.paradb.advisor.algorithm.FineGrainedGraphPartitioning",
+							"getPartitionKey()", "getNode()",
+							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
+		
 		//the following are not implemented
 	/*	consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
@@ -117,6 +124,8 @@ public class AlgorithmFactory
 		//algorithms.add(RangeGraph);
 		algorithms.add(MintermGraph);
 		algorithms.add(MintermGraphFile);
+		algorithms.add(FineGrainedGraph);
+		
 		//algorithms.add(semiSchema);
 	}
 	

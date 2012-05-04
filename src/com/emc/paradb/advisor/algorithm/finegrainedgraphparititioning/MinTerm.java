@@ -1,4 +1,4 @@
-package com.emc.paradb.advisor.algorithm.mintermGraphFile;
+package com.emc.paradb.advisor.algorithm.finegrainedgraphparititioning;
 
 
 import java.io.IOException;
@@ -43,12 +43,12 @@ public class MinTerm
 	
 	public int getEstimatedSize()
 	{
-		int size = 0;
+		int size = Integer.MAX_VALUE;
 		for(int i = 0; i < terms.size(); i++)
 		{
 			//size += terms.get(i).getSize();
-			//[tag by xiaoyan]
-			size = Math.max(size, terms.get(i).getSize());
+			//[tag by xiaoyan] using the min of each size?
+			size = Math.min(size, terms.get(i).getSize());
 		}
 		return size;
 	}
