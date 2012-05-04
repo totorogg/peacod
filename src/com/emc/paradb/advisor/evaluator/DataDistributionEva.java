@@ -19,21 +19,27 @@ import com.emc.paradb.advisor.utils.QueryPrepare;
 /**
  * this class evaluate data distribution 
  * 
+ * 
  * @author Xin Pan
  *
  */
 public class DataDistributionEva extends Evaluator
 {
+	//map from a table name to its partition keys
 	private static HashMap<String, List<String>> tableKeyMap = null;
 	private static Plugin aPlugin = null;
 	
+	//start evaluate the algorithm, plugin should contain the
+	//algorithms to be evaluated.
 	public static List<Long> evaluate(Plugin aPlugin, int nodes)
 	{
 		List<Long> dataSet = null;
 		tableKeyMap = new HashMap<String, List<String>>();
 		DataDistributionEva.aPlugin = aPlugin;
 		
+		//get partition method. Currently, we only support the getPartitionKey() way
 		String partitionMD = aPlugin.getPartitionMethod();
+		//get placement method. Currently, we only support the getNode() way
 		String placementMD = aPlugin.getPlacementMethod();
 		
 		//get the table and its partition key
@@ -72,11 +78,12 @@ public class DataDistributionEva extends Evaluator
 		return dataSet;
 	}
 	
+	//get the partition keys from algorithms
 	protected static HashMap<String, List<String>> getPartitionKeyEva()
 	{
 		return aPlugin.getInstance().getPartitionKey();
 	}
-	
+	//get the node placement result from algorithms
 	protected static List<Long> getNodeEva()
 	{
 		int nodes = Controller.getNodes();
@@ -86,15 +93,24 @@ public class DataDistributionEva extends Evaluator
 		for(int i = 0; i < nodes; i++)
 			dataSet.add(i, 0L);
 		
+		//data can be partitioned into three ways, the
+		//first one is partition by keys
+		//second one is replication
+		//the third way is undefined in case of which we won't
+		//display data distribution results.
+		//currently, most algorithm use the first and second partition ways.
+		//the third partition ways are only for minTermGraph
 		Connection conn = DataLoader.getConn();
 		try
 		{
+			//iterate through each table and get its distribution info
 			for(String table : tableKeyMap.keySet())
 			{
 				List<String> keys = tableKeyMap.get(table);
 				Statement stmt = conn.createStatement();
 				ResultSet result = null;
-				
+				//determine whether it is partitioned by key or replicate, undefined.
+				//different partition way needs different routine to handle it
 				if(keys.get(0).equalsIgnoreCase("replicate"))
 				{
 					result = stmt.executeQuery("select count(*) from " +QueryPrepare.prepare(table));

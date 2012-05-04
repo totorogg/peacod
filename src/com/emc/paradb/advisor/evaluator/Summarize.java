@@ -11,6 +11,11 @@ import com.emc.paradb.advisor.plugin.Plugin;
 
 /**
  * summarize the evaluate information of all algorithms
+ * this class retrieve all partition information
+ * all partition results are already stored in
+ * plugin classes.
+ * Hence, the work of this class just retrieve
+ * data from plugins and aggregate them.
  * 
  * @author Xin Pan
  *
