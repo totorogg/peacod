@@ -65,7 +65,7 @@ public class MinTermGraphFile implements PlugInterface
 			DBData dbData, int nodes) 
 	{
 		//if already partitioned, start the refine process.
-		if(partitioned && nodes == this.nodes)
+/*		if(partitioned && nodes == this.nodes)
 		{
 			try 
 			{
@@ -77,7 +77,7 @@ public class MinTermGraphFile implements PlugInterface
 			}
 			return true;
 		}
-		
+	*/	
 		//partittion the graph for the first time
 		this.conn = conn;
 		this.workload = workload;

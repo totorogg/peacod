@@ -222,13 +222,13 @@ public class Graph
 				long edgeWeight = (long)(Math.sqrt(nodeWeight) * Math.sqrt(neighborNodeSize));
 				//System.out.println("neighborNodeSize = " + neighborNodeSize + " weight = " + edgeWeight + " id = " + id + " i = " + i + " size = " + adjacencyList.size());
 				//out.write(posMap.get(id) + " " + neighbor.get(id) + " ");
-				out.write(posMap.get(id) + " " + (neighbor.get(id) * edgeWeight) + " ");
+				out.write(posMap.get(id) + " " + (neighbor.get(id)/* * edgeWeight*/) + " ");
 			}
 			out.write("\n");
 		}
 		out.close();
 		
-		Process p = Runtime.getRuntime().exec("gpmetis " + 
+		Process p = Runtime.getRuntime().exec("gpmetis -objtype=cut -ufactor=200 " + 
 												graphFileName + " " + part);
 		p.waitFor();
 	
@@ -250,6 +250,24 @@ public class Graph
 		in.close();
 		long end = System.currentTimeMillis();
 		System.out.println("Partitioning graph: " + (end - begin) + "ms");
+	}
+	
+	protected void GOMetisTest() throws NumberFormatException, IOException {
+		FileReader instream = new FileReader("minTermGraph.part.2");
+		BufferedReader in = new BufferedReader(instream);
+		
+		Random r = new Random(part);
+		for(int i = 0; i < adjacencyList.size(); i++)
+		{
+			if(!adjacencyList.get(i).hasNeighbor())
+				adjacencyList.get(i).setNode(r.nextInt());
+			else
+			{
+				int node = Integer.valueOf(in.readLine());
+				adjacencyList.get(i).setNode(node);
+			}
+		}
+		in.close();
 	}
 	
 	protected int prepareForMETIS(HashMap<Integer, Integer> posMap)

@@ -15,6 +15,8 @@ public class Transaction<T> extends Vector<T>
 	private int insertCount = 0;
 	private int deleteCount = 0;
 	
+	private int index = 0;
+	
 	public Transaction()
 	{
 		super();
@@ -35,4 +37,11 @@ public class Transaction<T> extends Vector<T>
 		return super.add(statement);
 	}
 	
+	public void setIndex(int index) {
+		this.index = index;
+	}
+	
+	public int getIndex() {
+		return this.index;
+	}
 }

@@ -73,6 +73,9 @@ public class FineGrainedGraphPartitioning implements PlugInterface {
 		tablePartitions = new HashMap<String, TablePartition>();
 
 		try {
+			//[tag xiaoyan] clear test/*
+			Process p = Runtime.getRuntime().exec("rm test/* ");
+			p.waitFor();
 			setPartition();
 			workload2Graph();
 			partitioned = true;

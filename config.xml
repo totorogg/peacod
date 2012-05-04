@@ -2,9 +2,16 @@
 <config>
    <property>
       <name>workload.tpcc</name>					<!-- xml node name -->
-      <value>workload/tpcc2w.log</value>			<!-- file path -->
+      <value>workload/payment.txt.log</value>			<!-- file path -->
       <value>tpcc2w</value>						<!-- database name for JDBC-->
       <value>6000</value>							<!-- transaction number -->
+      <value>1021</value>							<!-- database size -->
+   </property>
+   <property>
+      <name>workload.tatp</name>					<!-- xml node name -->
+      <value>workload/x10.workload</value>			<!-- file path -->
+      <value>wc</value>						<!-- database name for JDBC-->
+      <value>10</value>							<!-- transaction number -->
       <value>1021</value>							<!-- database size -->
    </property>
    <property>

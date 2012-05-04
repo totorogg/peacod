@@ -50,8 +50,11 @@ public class WorkloadDistributionEva extends Evaluator
 		for(int i = 0; i < nodes; i++)
 			workloadDistList.add(0L);
 		
+		int index = 0;
 		for(Transaction<Object> tran : workload)
 		{
+			tran.setIndex(index);
+			index++;
 			HashMap<Integer, Integer> visitMap = new HashMap<Integer, Integer>();
 			for(int i = -2; i < nodes; i++)
 				visitMap.put(i, 0);
@@ -109,10 +112,12 @@ public class WorkloadDistributionEva extends Evaluator
 			workloadDistList.set(node, workloadDistList.get(node) + visitMap.get(-2));
 		}
 		
-		if(distCount > 1)
+		if(distCount > 1) {
 			dist++;
-		else
+			System.out.println("xact = " + tran.getIndex() + " is dist xact");
+		} else {
 			nonDist++;
+		}
 
 		if(distCountMap.get(distCount) == null)
 			distCountMap.put(distCount, 1);
