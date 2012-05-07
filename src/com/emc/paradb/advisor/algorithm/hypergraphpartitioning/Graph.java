@@ -77,6 +77,11 @@ public class Graph
 			int tmp = this.hyperEdge.get(visitNodes);
 			this.hyperEdge.put(visitNodes, 1 + tmp);
 		}
+		
+		//[tag xiaoyan] add the node weight of the access cnt
+		for(Integer aNode : visitNodes) {
+			this.adjacencyList.get(aNode).accessCnt++;
+		}
 		/*
 		BufferedWriter out = new BufferedWriter(new FileWriter(GV.dirName+"/"+tranCnt++));
 		for(Integer aNode : visitNodes)
@@ -225,15 +230,20 @@ public class Graph
 			}
 			out.write("\n");
 		}
-		// the node weights
+		// the node weights for size
+		//for(int i = 0; i < adjacencyList.size(); i++) {
+		//	int nodeWeight = adjacencyList.get(i).getEstimatedSize();
+		//	out.write(nodeWeight + "\n");
+		//}
+		// the node weights for access count
 		for(int i = 0; i < adjacencyList.size(); i++) {
-			int nodeWeight = adjacencyList.get(i).getEstimatedSize();
+			int nodeWeight = adjacencyList.get(i).accessCnt;
 			out.write(nodeWeight + "\n");
 		}
 		out.close();
 		
 		Process p = Runtime.getRuntime().exec("shmetis " + 
-												graphFileName + " " + part + " 10");
+												graphFileName + " " + part + " 20");
 		p.waitFor();
 	
 		

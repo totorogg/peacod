@@ -21,6 +21,8 @@ public class MinTerm
 	protected long length = -1;
 	
 	protected int edgeCnt = 0;
+	//tag [xiaoyan]
+	protected int accessCnt = 0;
 	
 	public MinTerm(MinTerm oldMinTerm, Predicate newPredicate)
 	{
@@ -44,12 +46,19 @@ public class MinTerm
 	public int getEstimatedSize()
 	{
 		int size = Integer.MAX_VALUE;
+		double sel = 1.0;
 		for(int i = 0; i < terms.size(); i++)
 		{
 			//size += terms.get(i).getSize();
 			//[tag by xiaoyan] using the min of each size?
-			size = Math.min(size, terms.get(i).getSize());
+			//size = Math.min(size, terms.get(i).getSize());
+			//[tag by xiaoyan] using selectivity to estimate size
+			sel *= terms.get(i).getSelectivity();
+			//sel = Math.min(sel, terms.get(i).getSelectivity());
+			System.out.println("term i = " + i + " sel = " + terms.get(i).getSelectivity());
 		}
+		size = (int) (sel * terms.get(0).getCount());
+		System.out.println("sel = " + sel + " size = " + terms.get(0).getCount());
 		return size;
 	}
 	

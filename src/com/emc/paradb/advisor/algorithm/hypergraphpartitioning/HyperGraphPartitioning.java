@@ -607,7 +607,7 @@ class TablePartition {
 	int partitionCount = 0;
 	List<String> keyList = null;
 
-	private final int retainTopK = 3;
+	private final int retainTopK = 2;
 
 	public TablePartition(String tableName) {
 		this.tableName = tableName;
@@ -847,6 +847,10 @@ class KeyPartition {
 			if (pMin == Integer.MIN_VALUE / 2 || pMax == Integer.MAX_VALUE / 2)
 				estimateSize = 1;
 			predicates.get(i).setSize(estimateSize);
+			predicates.get(i).setCount(this.cnt);
+			predicates.get(i).setSelectivity((double) (pMax - pMin) / (this.max - this.min));
+			//System.out.println("pmax = " + pMax + ", pmin = " + pMin + ", this.max = " + this.max + ", this.min = " + this.min);
+			//System.out.println("set sel = " + (double) (pMax - pMin) / (this.max - this.min) + ", cnt = " + this.cnt);
 		}
 	}
 
@@ -957,5 +961,9 @@ class KeyPartition {
 
 		predicates.get(0).setMin(min);
 		predicates.get(predicates.size() - 1).setMax(max);
+		if (predicates.get(0).getMin() == predicates.get(0).getMax())
+			predicates.remove(0);
+		if (predicates.get(predicates.size() - 1).getMin() == predicates.get(predicates.size() - 1).getMax())
+			predicates.remove(predicates.size() - 1);
 	}
 }

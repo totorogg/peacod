@@ -6,6 +6,8 @@ public class Predicate
 	private Integer min = null;
 	private Integer max = null;
 	private Integer size = null;
+	private double selectivity = 0.0;
+	private int cnt = 0;
 	
 	public Predicate()
 	{}
@@ -22,6 +24,8 @@ public class Predicate
 		min = copyP.min;
 		max = copyP.max;
 		size = copyP.size;
+		this.selectivity = copyP.selectivity;
+		this.cnt = copyP.cnt;
 	}
 	public Integer getSize()
 	{
@@ -35,6 +39,22 @@ public class Predicate
 		this.size = size;
 	}
 	
+	public double getSelectivity() {
+		return this.selectivity;
+	}
+	
+	public void setSelectivity(double selectivity) {
+		this.selectivity = selectivity;
+		System.out.println("set sel = " + this.selectivity);
+	}
+	
+	public int getCount() {
+		return this.cnt;
+	}
+	
+	public void setCount(int cnt) {
+		this.cnt = cnt;
+	}
 	
 	public Integer getMin()
 	{
