@@ -7,6 +7,7 @@ import com.emc.paradb.advisor.algorithm.finegrainedgraphparititioning.FineGraine
 import com.emc.paradb.advisor.algorithm.hypergraphpartitioning.HyperGraphPartitioning;
 import com.emc.paradb.advisor.algorithm.mintermGraph.MinTermGraph;
 import com.emc.paradb.advisor.algorithm.mintermGraphFile.MinTermGraphFile;
+import com.emc.paradb.advisor.algorithm.rewrite.RewriteHyperGraphPartitioning;
 import com.emc.paradb.advisor.plugin.PlugInterface;
 import com.emc.paradb.advisor.plugin.Plugin;
 
@@ -37,6 +38,7 @@ public class AlgorithmFactory
 	private static Plugin MintermGraphFile = new Plugin();
 	private static Plugin FineGrainedGraph = new Plugin();
 	private static Plugin HyperGraphPartitioning = new Plugin();
+	private static Plugin RewriteHyperGraphPartitioning = new Plugin();
 	//load the build-in algorithms
 	static
 	{
@@ -96,6 +98,11 @@ public class AlgorithmFactory
 							"getPartitionKey()", "getNode()",
 							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
 		
+		RewriteHyperGraphPartitioning.setInterface(new RewriteHyperGraphPartitioning());
+		RewriteHyperGraphPartitioning.setInfo("com.emc.paradb.advisor.algorithm.RewriteHyperGraphPartitioning",
+							"getPartitionKey()", "getNode()",
+							"This scheme analyses predicates in a workload and partitions tables by the midterm ranges.");
+		
 		//the following are not implemented
 	/*	consistentHash.setInterface(new SchemaHash());
 		consistentHash.setInfo("com.emc.paradb.advisor.algorithm.ConsistentHash",
@@ -133,6 +140,7 @@ public class AlgorithmFactory
 		algorithms.add(MintermGraphFile);
 		algorithms.add(FineGrainedGraph);
 		algorithms.add(HyperGraphPartitioning);
+		algorithms.add(RewriteHyperGraphPartitioning);
 		
 		//algorithms.add(semiSchema);
 	}

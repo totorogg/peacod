@@ -113,10 +113,14 @@ public class DataDistributionEva extends Evaluator
 				//different partition way needs different routine to handle it
 				if(keys.get(0).equalsIgnoreCase("replicate"))
 				{
-					result = stmt.executeQuery("select count(*) from " +QueryPrepare.prepare(table));
-					result.next();
-					for(int i = 0; i < nodes; i++)
-						dataSet.set(i, dataSet.get(i) + result.getInt(1));
+					try {
+						result = stmt.executeQuery("select count(*) from " +QueryPrepare.prepare(table));
+						result.next();
+						for(int i = 0; i < nodes; i++)
+							dataSet.set(i, dataSet.get(i) + result.getInt(1));
+					} catch (Exception e) {
+						System.out.println("replication error, table = " + table + " not found");
+					}
 				}
 				else if(keys.get(0).equals("undefined"))
 				{

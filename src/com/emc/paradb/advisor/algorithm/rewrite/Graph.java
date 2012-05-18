@@ -1,4 +1,4 @@
-package com.emc.paradb.advisor.algorithm.hypergraphpartitioning;
+package com.emc.paradb.advisor.algorithm.rewrite;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,6 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.Vector;
 
 /**
  * 
@@ -34,6 +35,8 @@ public class Graph
 	
 	//[tag xiaoyan] the hyper edge
 	protected HashMap<Set<Integer>, Integer> hyperEdge = null;
+	// [tag xiaoyan] the node to edge lookup structure
+	protected HashMap<Integer, Set<Integer>> hyperAdjacentList = null;
 	
 	protected int part = 1;//partition into how many parts
 	protected final int topK = 10;//divide how many nodes for repartitioning
@@ -82,6 +85,7 @@ public class Graph
 		for(Integer aNode : visitNodes) {
 			this.adjacencyList.get(aNode).accessCnt++;
 		}
+		//
 		/*
 		BufferedWriter out = new BufferedWriter(new FileWriter(GV.dirName+"/"+tranCnt++));
 		for(Integer aNode : visitNodes)
@@ -198,6 +202,22 @@ public class Graph
 		return toAddMT;
 	}
 	
+	public int getMintermNodeWeight(MinTerm m) {
+		// the node weights for size
+		//int nodeWeight = m.getEstimatedSize();
+		
+		// the node weights for access count
+		//int nodeWeight = adjacencyList.get(i).accessCnt;
+		
+		//the node weights for size, but zero access node will be zero size
+		int nodeWeight = m.getEstimatedSize();
+		int accessWeight = m.accessCnt;
+		if (accessWeight == 0)
+			nodeWeight = 0;;
+		
+		return (int) (nodeWeight * m.prop);
+	}
+	
 	public void partitionGraph(int part) throws Exception
 	{
 		long begin = System.currentTimeMillis();
@@ -236,8 +256,18 @@ public class Graph
 		//	out.write(nodeWeight + "\n");
 		//}
 		// the node weights for access count
+		//for(int i = 0; i < adjacencyList.size(); i++) {
+		//	int nodeWeight = adjacencyList.get(i).accessCnt;
+		//	out.write(nodeWeight + "\n");
+		//}
+		//the node weights for size, but zero access node will be zero size
+		System.out.println("adjacent list size = " + adjacencyList.size());
 		for(int i = 0; i < adjacencyList.size(); i++) {
-			int nodeWeight = adjacencyList.get(i).accessCnt;
+			//int nodeWeight = adjacencyList.get(i).getEstimatedSize();
+			//int accessWeight = adjacencyList.get(i).accessCnt;
+			//if (accessWeight == 0)
+			//	nodeWeight = 0;
+			int nodeWeight = this.getMintermNodeWeight(this.adjacencyList.get(i));
 			out.write(nodeWeight + "\n");
 		}
 		out.close();

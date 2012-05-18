@@ -506,10 +506,15 @@ public class HyperGraphPartitioning implements PlugInterface {
 		Predicate newPredicate = new Predicate();
 
 		int value = 0;
+		//[tag xiaoyan] currently only support integer?
 		try {
 			value = Integer.valueOf(keyValue);
 		} catch (NumberFormatException e) {
-			return null;
+			//[tag xiaoyan] string value
+			//newPredicate.setStrVal(keyValue);
+			//return newPredicate;
+			value = keyValue.hashCode() % (Integer.MAX_VALUE / 2);
+			//return null;
 		}
 
 		if (range == Range.EQUAL) {
@@ -613,6 +618,7 @@ class TablePartition {
 		this.tableName = tableName;
 	}
 
+	//[tag xiaoyan] get the partitions for each attributes
 	public TablePartition(TableNode aTableNode, Connection conn) {
 		tableName = aTableNode.getName();
 
@@ -622,13 +628,23 @@ class TablePartition {
 			String aKey = aAttr.getName();
 			try {
 				Statement stmt = conn.createStatement();
+				ResultSet cardResult = stmt.executeQuery("select count(*) "
+						+ "from " + QueryPrepare.prepare(tableName) + ";");
+				cardResult.next();
+				int card = cardResult.getInt(1);
+				
 				ResultSet minResult = stmt.executeQuery("select min(" + aKey
 						+ ") " + "from " + QueryPrepare.prepare(tableName)
 						+ ";");
 
 				int type = minResult.getMetaData().getColumnType(1);
-				if (type != Types.INTEGER)
+				//[tag xiaoyan] supporting string value
+				if (type != Types.INTEGER) {
+					KeyPartition aKeyPartition = new KeyPartition(aKey, 0,
+							Integer.MAX_VALUE / 2, card, card);
+					keyPartitions.put(aKey, aKeyPartition);
 					continue;
+				}
 
 				minResult.next();
 				int min = minResult.getInt(1);
@@ -638,11 +654,6 @@ class TablePartition {
 						+ ";");
 				maxResult.next();
 				int max = maxResult.getInt(1);
-
-				ResultSet cardResult = stmt.executeQuery("select count(*) "
-						+ "from " + QueryPrepare.prepare(tableName) + ";");
-				cardResult.next();
-				int card = cardResult.getInt(1);
 
 				KeyPartition aKeyPartition = new KeyPartition(aKey, min,
 						max + 1, card, card);
@@ -721,8 +732,9 @@ class TablePartition {
 	}
 
 	public void updateKeyBound() {
-		for (KeyPartition aKey : keyPartitions.values())
+		for (KeyPartition aKey : keyPartitions.values()) {
 			aKey.setBound();
+		}
 	}
 
 	public void eliminateKey() {
