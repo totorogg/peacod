@@ -58,11 +58,11 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 	Graph minTermGraph = null;
 
 	private static boolean partitioned = false;
-	//[tag xiaoyan] refine count
-	private int refineCount = 10;
+	// [tag xiaoyan] refine count
+	private int refineCount = 5;
 
 	@Override
-	//[tag xiaoyan: the interface of peacod for a partitioning scheme]
+	// [tag xiaoyan: the interface of peacod for a partitioning scheme]
 	public boolean accept(Connection conn,
 			Workload<Transaction<Object>> workload, DBData dbData, int nodes) {
 
@@ -77,9 +77,9 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 		tablePartitions = new HashMap<String, TablePartition>();
 
 		try {
-			//[tag xiaoyan] clear test/*
-			//Process p = Runtime.getRuntime().exec("rm test/* ");
-			//p.waitFor();
+			// [tag xiaoyan] clear test/*
+			// Process p = Runtime.getRuntime().exec("rm test/* ");
+			// p.waitFor();
 			setPartition();
 			workload2Graph();
 			partitioned = true;
@@ -107,24 +107,64 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 		// minTermGraph.display();
 	}
-	
-	//[tag xiaoyan] hyper-graph refinement
+
+	// [tag xiaoyan] divide node, divide a minterm into equally two parts
+	private MinTerm divideNode(MinTerm dMinTerm) {
+		// find large predicate, and divide the minTerm over it
+		List<Predicate> terms = dMinTerm.getTerms();
+		int largestRange = 0;
+		int largestPos = -1;
+		for (int i = 0; i < terms.size(); i++) {
+			if (terms.get(i).getType() != 0)
+				continue;
+			if (terms.get(i).getMin() <= Integer.MIN_VALUE/2 || terms.get(i).getMax() >= Integer.MAX_VALUE /2)
+				continue;
+			if (terms.get(i).getMax() - terms.get(i).getMin() > largestRange) {
+				largestRange = terms.get(i).getMax() - terms.get(i).getMin();
+				largestPos = i;
+			}
+		}
+		if (largestRange <= 1)
+			return null;
+
+		// create the new minterm divided from the old one
+		MinTerm newMinTerm = new MinTerm(dMinTerm);
+		//List<Predicate> newTerms = new ArrayList<Predicate>();
+		List<Predicate> newTerms = newMinTerm.getTerms();
+		for (int i = 0; i < terms.size(); i++) {
+			//Predicate newPredicate = new Predicate(terms.get(i));
+			//newTerms.add(newPredicate);
+			if (i == largestPos) {
+				int newMin = terms.get(largestPos).getMin() + largestRange / 2;
+				//Predicate newPredicate = new Predicate(newMin, terms.get(
+				//		largestPos).getMax());
+				newTerms.get(i).setMin(newMin);
+				terms.get(largestPos).setMax(newMin);
+				//System.out.println("split the minterm i = " + i);
+				System.out.println("old: (" + terms.get(i).getMin() + ", " + terms.get(i).getMax() + 
+						"), new: (" + newTerms.get(i).getMin() + ", " + newTerms.get(i).getMax() + ")");
+			} 
+		}
+		return newMinTerm;
+	}
+
+	// [tag xiaoyan] hyper-graph refinement
 	/*
-	 * 1. find the top-k or top-k% vertex that has margest node weight
-	 * 2. add each vertex to the end of adjacent list
-	 * 3. split each vertex to be 2 in each edge
-	 * 4. modify the node weight of the split nodes
+	 * 1. find the top-k or top-k% vertex that has margest node weight 2. add
+	 * each vertex to the end of adjacent list 3. split each vertex to be 2 in
+	 * each edge 4. modify the node weight of the split nodes
 	 */
 	private void hyperGraphRefinement(Graph g) {
 		class Mnode {
 			int weight;
 			int index;
+
 			public Mnode(int weight, int index) {
 				this.weight = weight;
 				this.index = index;
 			}
 		}
-		//sort the adjacent list;
+		// sort the adjacent list;
 		int index = 0;
 		Comparator comp = new Comparator() {
 			public int compare(Object o1, Object o2) {
@@ -132,12 +172,12 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 				Mnode n2 = (Mnode) o2;
 				if (n1.weight < n2.weight)
 					return 1;
-				else 
+				else
 					return 0;
 			}
 		};
 		Vector<Mnode> v = new Vector();
-		for (MinTerm m: g.adjacencyList) {
+		for (MinTerm m : g.adjacencyList) {
 			int weight = g.getMintermNodeWeight(m);
 			Mnode n = new Mnode(weight, index);
 			v.addElement(n);
@@ -146,11 +186,14 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 		Collections.sort(v, comp);
 		// find the top k elements
 		int k = 10;
-		for (int i = 0; i< k; i++) {
+		for (int i = 0; i < k; i++) {
 			index = v.elementAt(i).index;
 			// add this vertex to the end of the adjacent list
 			MinTerm m = g.adjacencyList.get(index);
-			MinTerm newm = new MinTerm(m);
+			//MinTerm newm = new MinTerm(m);
+			MinTerm newm = this.divideNode(m);
+			if (newm == null)
+				continue;
 			newm.prop /= 2.0;
 			m.prop /= 2.0;
 			g.adjacencyList.add(newm);
@@ -159,12 +202,12 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 			for (Set<Integer> ge : g.hyperEdge.keySet()) {
 				keyset.add(ge);
 			}
-			for (Set<Integer> ge : keyset){
+			for (Set<Integer> ge : keyset) {
 				if (ge.contains(index)) {
 					int cnt = g.hyperEdge.get(ge);
-				
+
 					g.hyperEdge.remove(ge);
-					//g.hyperEdge.put(ge, 0);
+					// g.hyperEdge.put(ge, 0);
 					ge.add(g.adjacencyList.size() - 1);
 					g.hyperEdge.put(ge, cnt);
 				}
@@ -178,21 +221,22 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 		HashMap<String, Integer> tableStartPos = new HashMap<String, Integer>();
 		HashMap<String, Integer> tableEndPos = new HashMap<String, Integer>();
 		List<MinTerm> minTermList = new ArrayList<MinTerm>();
-		//[tag xiaoyan] the hyper edge
+		// [tag xiaoyan] the hyper edge
 		HashMap<Set<Integer>, Integer> hyperEdge = new HashMap<Set<Integer>, Integer>();
 
-		//[tag xiaoyan] cross the minterm item in a table to be the minterm
+		// [tag xiaoyan] cross the minterm item in a table to be the minterm
 		serialize(tableStartPos, tableEndPos, minTermList);
 
 		// construct the graph with the minterm node list
-		minTermGraph = new Graph(tableStartPos, tableEndPos, minTermList, hyperEdge);
+		minTermGraph = new Graph(tableStartPos, tableEndPos, minTermList,
+				hyperEdge);
 
 		// add edges among minterms
 		for (Transaction<Object> aTran : workload)
 			explainTran(aTran);
 
-		//[tag xiaoyan] not need neither ?
-		//minTermGraph.initGraphFile();
+		// [tag xiaoyan] not need neither ?
+		// minTermGraph.initGraphFile();
 
 		// combine unvisited minterms
 		// combine();
@@ -208,15 +252,16 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 		 * keyList.get(j)).getName() + "\t"); }
 		 */
 		// partition the minterm graph
-		//[tag xiaoyan] add graph refinement function
+		// [tag xiaoyan] add graph refinement function
 		minTermGraph.partitionGraph(nodes);
-		while (this.refineCount >= 0) {
+		while (this.refineCount > 0) {
 			this.refineCount--;
 			this.hyperGraphRefinement(minTermGraph);
 			minTermGraph.partitionGraph(nodes);
-			
-			System.out.println("refine count = " + this.refineCount);
-		};
+
+			System.out.println("refine count = " + this.refineCount + " node size = " + minTermGraph.adjacencyList.size());
+		}
+		;
 
 		// refine partition
 		// minTermGraph.refinePartition();
@@ -276,7 +321,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 		}
 	}
 
-	//[tag xiaoyan]: extract where clauses from sqls
+	// [tag xiaoyan]: extract where clauses from sqls
 	private void extractTran(Transaction<Object> aTran) {
 		for (Object statement : aTran) {
 
@@ -296,8 +341,8 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 					if (aKeyPartition == null)
 						continue;
 
-					Predicate aPredicate = extractPredicate(aKey,
-							key.getKeyValue(), key.getRange());
+					Predicate aPredicate = extractPredicate(aKey, key
+							.getKeyValue(), key.getRange());
 					if (aPredicate != null)
 						aKeyPartition.addPredicate(aPredicate);
 				}
@@ -316,8 +361,8 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 					if (aKeyPartition == null)
 						continue;
 
-					Predicate aPredicate = extractPredicate(aKey,
-							key.getKeyValue(), key.getRange());
+					Predicate aPredicate = extractPredicate(aKey, key
+							.getKeyValue(), key.getRange());
 					if (aPredicate != null)
 						aKeyPartition.addPredicate(aPredicate);
 				}
@@ -356,8 +401,8 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 					if (aKeyPartition == null)
 						continue;
 
-					Predicate aPredicate = extractPredicate(aKey,
-							key.getKeyValue(), key.getRange());
+					Predicate aPredicate = extractPredicate(aKey, key
+							.getKeyValue(), key.getRange());
 					if (aPredicate != null)
 						aKeyPartition.addPredicate(aPredicate);
 				}
@@ -366,13 +411,14 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 	}
 
 	private void setPartition() {
-		//[tag xiaoyan]: extract the where clauses form sqls
+		// [tag xiaoyan]: extract the where clauses form sqls
 		preparePredicates();
 
 		for (Transaction<Object> aTran : workload)
 			extractTran(aTran);
 
-		//[tag xiaoyan] only use the first topk = 3 attributes for a given table
+		// [tag xiaoyan] only use the first topk = 3 attributes for a given
+		// table
 		eliminateKey();
 
 		setPartitionSize();
@@ -399,12 +445,13 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 	private void explainTran(Transaction<Object> aTran) {
 
-		//HashMap<String, List<KeyValuePair>> tableKeyValueMap = new HashMap<String, List<KeyValuePair>>();
+		// HashMap<String, List<KeyValuePair>> tableKeyValueMap = new
+		// HashMap<String, List<KeyValuePair>>();
 		Set<Integer> visitNodes = new HashSet<Integer>();
 
 		for (Object statement : aTran) {
 			HashMap<String, List<KeyValuePair>> tableKeyValueMap = new HashMap<String, List<KeyValuePair>>();
-			
+
 			if (statement instanceof SelectAnalysisInfo) {
 				SelectAnalysisInfo select = (SelectAnalysisInfo) statement;
 
@@ -417,15 +464,15 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 					if (tableKeyValueMap.get(tableName) == null) {
 						List<KeyValuePair> aKeyValueList = new ArrayList<KeyValuePair>();
-						KeyValuePair aKVPair = new KeyValuePair(
-								key.getKeyName(), key.getKeyValue());
+						KeyValuePair aKVPair = new KeyValuePair(key
+								.getKeyName(), key.getKeyValue());
 						aKeyValueList.add(aKVPair);
 						tableKeyValueMap.put(tableName, aKeyValueList);
 					} else {
 						List<KeyValuePair> aKeyValueList = tableKeyValueMap
 								.get(tableName);
-						KeyValuePair aKVPair = new KeyValuePair(
-								key.getKeyName(), key.getKeyValue());
+						KeyValuePair aKVPair = new KeyValuePair(key
+								.getKeyName(), key.getKeyValue());
 						aKeyValueList.add(aKVPair);
 						tableKeyValueMap.put(tableName, aKeyValueList);
 					}
@@ -442,15 +489,15 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 					if (tableKeyValueMap.get(tableName) == null) {
 						List<KeyValuePair> aKeyValueList = new ArrayList<KeyValuePair>();
-						KeyValuePair aKVPair = new KeyValuePair(
-								key.getKeyName(), key.getKeyValue());
+						KeyValuePair aKVPair = new KeyValuePair(key
+								.getKeyName(), key.getKeyValue());
 						aKeyValueList.add(aKVPair);
 						tableKeyValueMap.put(tableName, aKeyValueList);
 					} else {
 						List<KeyValuePair> aKeyValueList = tableKeyValueMap
 								.get(tableName);
-						KeyValuePair aKVPair = new KeyValuePair(
-								key.getKeyName(), key.getKeyValue());
+						KeyValuePair aKVPair = new KeyValuePair(key
+								.getKeyName(), key.getKeyValue());
 						aKeyValueList.add(aKVPair);
 						tableKeyValueMap.put(tableName, aKeyValueList);
 					}
@@ -492,15 +539,15 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 					if (tableKeyValueMap.get(tableName) == null) {
 						List<KeyValuePair> aKeyValueList = new ArrayList<KeyValuePair>();
-						KeyValuePair aKVPair = new KeyValuePair(
-								key.getKeyName(), key.getKeyValue());
+						KeyValuePair aKVPair = new KeyValuePair(key
+								.getKeyName(), key.getKeyValue());
 						aKeyValueList.add(aKVPair);
 						tableKeyValueMap.put(tableName, aKeyValueList);
 					} else {
 						List<KeyValuePair> aKeyValueList = tableKeyValueMap
 								.get(tableName);
-						KeyValuePair aKVPair = new KeyValuePair(
-								key.getKeyName(), key.getKeyValue());
+						KeyValuePair aKVPair = new KeyValuePair(key
+								.getKeyName(), key.getKeyValue());
 						aKeyValueList.add(aKVPair);
 						tableKeyValueMap.put(tableName, aKeyValueList);
 					}
@@ -509,7 +556,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 			}
 			visitNodes.addAll(explainTableKeyValueMap(tableKeyValueMap));
 		}
-		//explainTableKeyValueMap(tableKeyValueMap);
+		// explainTableKeyValueMap(tableKeyValueMap);
 		try {
 			minTermGraph.addConnect(visitNodes);
 		} catch (IOException e) {
@@ -553,7 +600,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 					KeyValuePair kvPair = kvList.get(j);
 					if (kvPair.getValue() == null)
 						return null;
-					//[tag xiaoyan] support string value
+					// [tag xiaoyan] support string value
 					int min = 0;
 					try {
 						min = Integer.valueOf(kvPair.getValue());
@@ -562,12 +609,12 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 						found = true;
 						break;
 					}
-					//[tag xiaoyan] integer value
+					// [tag xiaoyan] integer value
 					int max = min + 1;
 
 					predicates.add(new Predicate(min, max));// note that we
-															// consider equal
-															// only
+					// consider equal
+					// only
 					found = true;
 					break;
 				}
@@ -593,15 +640,15 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 		int value = 0;
 		int type = 0;
-		//[tag xiaoyan] currently only support integer?
+		// [tag xiaoyan] currently only support integer?
 		try {
 			value = Integer.valueOf(keyValue);
 		} catch (NumberFormatException e) {
-			//[tag xiaoyan] string value
-			//newPredicate.setStrVal(keyValue);
-			//return newPredicate;
-			//value = keyValue.hashCode() % (Integer.MAX_VALUE / 2);
-			//return null;
+			// [tag xiaoyan] string value
+			// newPredicate.setStrVal(keyValue);
+			// return newPredicate;
+			// value = keyValue.hashCode() % (Integer.MAX_VALUE / 2);
+			// return null;
 			type = 1;
 		}
 
@@ -610,7 +657,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 			newPredicate.setStrVal(keyValue);
 			return newPredicate;
 		}
-		
+
 		// for integer value
 		if (range == Range.EQUAL) {
 			newPredicate.setMax(value + 1);
@@ -645,7 +692,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 			TablePartition aTablePartition = new TablePartition(aTableNode,
 					conn);
-			//[tag xiaoyan] for each table, we have a table partition
+			// [tag xiaoyan] for each table, we have a table partition
 			tablePartitions.put(aTableNode.getName(), aTablePartition);
 		}
 	}
@@ -682,6 +729,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 			return nodeList;
 		}
 
+		
 		List<Integer> placement = minTermGraph.searchPlacement(searchMT,
 				tableName);
 		nodeList.addAll(placement);
@@ -701,7 +749,7 @@ public class RewriteHyperGraphPartitioning implements PlugInterface {
 
 class TablePartition {
 	private String tableName;
-	//[tag xiaoyan] store each key of a table's partitions
+	// [tag xiaoyan] store each key of a table's partitions
 	private HashMap<String, KeyPartition> keyPartitions = new HashMap<String, KeyPartition>();
 	HashMap<String, Integer> keyVisitMap = new HashMap<String, Integer>();
 	HashMap<String, Integer> keyPartitionCount = new HashMap<String, Integer>();
@@ -715,7 +763,7 @@ class TablePartition {
 		this.tableName = tableName;
 	}
 
-	//[tag xiaoyan] get the partitions for each attributes
+	// [tag xiaoyan] get the partitions for each attributes
 	public TablePartition(TableNode aTableNode, Connection conn) {
 		tableName = aTableNode.getName();
 
@@ -725,22 +773,24 @@ class TablePartition {
 			String aKey = aAttr.getName();
 			try {
 				Statement stmt = conn.createStatement();
-				ResultSet cardResult = stmt.executeQuery("select count(distinct " + aKey + ") "
-						+ "from " + QueryPrepare.prepare(tableName) + ";");
+				ResultSet cardResult = stmt
+						.executeQuery("select count(distinct " + aKey + ") "
+								+ "from " + QueryPrepare.prepare(tableName)
+								+ ";");
 				cardResult.next();
 				int card = cardResult.getInt(1);
-				
+
 				ResultSet countResult = stmt.executeQuery("select count(*) "
 						+ "from " + QueryPrepare.prepare(tableName) + ";");
 				countResult.next();
 				int cnt = countResult.getInt(1);
-				
+
 				ResultSet minResult = stmt.executeQuery("select min(" + aKey
 						+ ") " + "from " + QueryPrepare.prepare(tableName)
 						+ ";");
 
 				int type = minResult.getMetaData().getColumnType(1);
-				//[tag xiaoyan] supporting string value
+				// [tag xiaoyan] supporting string value
 				if (type != Types.INTEGER) {
 					KeyPartition aKeyPartition = new KeyPartition(aKey, 0,
 							Integer.MAX_VALUE / 2, card, cnt, 1);
@@ -778,8 +828,8 @@ class TablePartition {
 
 		for (KeyPartition aKeyPartition : keyPartitions.values()) {
 			keyList.add(aKeyPartition.getName());
-			keyPartitionCount.put(aKeyPartition.getName(),
-					aKeyPartition.getPartitionCount());
+			keyPartitionCount.put(aKeyPartition.getName(), aKeyPartition
+					.getPartitionCount());
 
 			if (minTermList.size() == startIndex) {
 				List<Predicate> predicates = aKeyPartition.getPredicates();
@@ -797,8 +847,8 @@ class TablePartition {
 					MinTerm oldMinTerm = minTermList.get(startIndex);
 					minTermList.remove(startIndex);
 					for (int j = 0; j < predicates.size(); j++) {
-						MinTerm newMinTerm = new MinTerm(oldMinTerm,
-								predicates.get(j));
+						MinTerm newMinTerm = new MinTerm(oldMinTerm, predicates
+								.get(j));
 						newMinTerm.setPos(++partitionCount + startIndex);
 						minTermList.add(newMinTerm);
 					}
@@ -927,19 +977,20 @@ class TablePartition {
  */
 class KeyPartition {
 	private String key;
-	//[tag xiaoyan] the list for all the available predicates for a key 
+	// [tag xiaoyan] the list for all the available predicates for a key
 	private List<Predicate> predicates = new ArrayList<Predicate>();
 
 	private int min;
 	private int max;
 	private int card;
-	private int cnt; //the number of tuples in the table, xiaoyan
-	private int type; //the type of this attribute, int or string
+	private int cnt; // the number of tuples in the table, xiaoyan
+	private int type; // the type of this attribute, int or string
 
 	private int minVisit = Integer.MAX_VALUE;
 	private int maxVisit = Integer.MIN_VALUE;
 
-	public KeyPartition(String key, int min, int max, int card, int cnt, int type) {
+	public KeyPartition(String key, int min, int max, int card, int cnt,
+			int type) {
 		this.key = key;
 		this.min = min;
 		this.max = max;
@@ -954,36 +1005,41 @@ class KeyPartition {
 
 	public void setPartitionSize() {
 		for (int i = 0; i < predicates.size(); i++) {
-			//[tag xiaoyan] for string value
+			// [tag xiaoyan] for string value
 			Predicate pred = predicates.get(i);
 			if (pred.getType() != 0) {
 				pred.setSelectivity(pred.getCard() / pred.getCount());
 				pred.setCount(pred.getCount());
-				//[tag xiaoyan] this.cnt == pred.getcount() ???
+				// [tag xiaoyan] this.cnt == pred.getcount() ???
 				continue;
 			}
 			int pMin = predicates.get(i).getMin();
 			int pMax = predicates.get(i).getMax();
-			//int estimateSize = (int) (((double) (pMax - pMin)) / (max - min) * card);
-			//estimateSize = estimateSize == 0 ? 1 : estimateSize;
-			//[tag xiaoyan] a new size estimation
-			int estimateSize = (int)((double) (pMax - pMin) / (this.max - this.min) * this.cnt);
+			// int estimateSize = (int) (((double) (pMax - pMin)) / (max - min)
+			// * card);
+			// estimateSize = estimateSize == 0 ? 1 : estimateSize;
+			// [tag xiaoyan] a new size estimation
+			int estimateSize = (int) ((double) (pMax - pMin)
+					/ (this.max - this.min) * this.cnt);
 			if (estimateSize <= 0)
 				estimateSize = 1;
 			if (pMin == Integer.MIN_VALUE / 2 || pMax == Integer.MAX_VALUE / 2)
 				estimateSize = 1;
 			predicates.get(i).setSize(estimateSize);
 			predicates.get(i).setCount(this.cnt);
-			predicates.get(i).setSelectivity((double) (pMax - pMin) / (this.max - this.min));
-			//System.out.println("pmax = " + pMax + ", pmin = " + pMin + ", this.max = " + this.max + ", this.min = " + this.min);
-			//System.out.println("set sel = " + (double) (pMax - pMin) / (this.max - this.min) + ", cnt = " + this.cnt);
+			predicates.get(i).setSelectivity(
+					(double) (pMax - pMin) / (this.max - this.min));
+			// System.out.println("pmax = " + pMax + ", pmin = " + pMin +
+			// ", this.max = " + this.max + ", this.min = " + this.min);
+			// System.out.println("set sel = " + (double) (pMax - pMin) /
+			// (this.max - this.min) + ", cnt = " + this.cnt);
 		}
 	}
 
 	public String getName() {
 		return key;
 	}
-	
+
 	public int getType() {
 		return this.type;
 	}
@@ -993,18 +1049,19 @@ class KeyPartition {
 	}
 
 	public boolean addPredicate(Predicate aPredicate) {
-		//[tag xiaoyan] first handling when the predicate type is string
+		// [tag xiaoyan] first handling when the predicate type is string
 		int type = aPredicate.getType();
 		if (type == 1) { // string type, only support eqaul operation now
 			for (int i = 0; i < predicates.size(); i++) {
-				if (predicates.get(i).getStrVal().compareTo(aPredicate.getStrVal()) == 0) {
+				if (predicates.get(i).getStrVal().compareTo(
+						aPredicate.getStrVal()) == 0) {
 					return false;
 				}
 			}
 			predicates.add(aPredicate);
 			return true;
 		}
-		
+
 		updateBound(aPredicate);
 
 		if (aPredicate.getMin() == null) {
@@ -1047,18 +1104,18 @@ class KeyPartition {
 						&& aMin - 1 >= oldPredicate.getMin()) {
 					if (aMax < oldPredicate.getMax()) {
 						Predicate first = new Predicate(aMin, aMax);
-						Predicate second = new Predicate(aMax,
-								oldPredicate.getMax());
+						Predicate second = new Predicate(aMax, oldPredicate
+								.getMax());
 						oldPredicate.setMax(aMin);
 
 						predicates.add(i + 1, second);
 						predicates.add(i + 1, first);
 
 						return true;// it is important, avoid counting aMax
-									// again
+						// again
 					} else {
-						Predicate first = new Predicate(aMin,
-								oldPredicate.getMax());
+						Predicate first = new Predicate(aMin, oldPredicate
+								.getMax());
 						oldPredicate.setMax(aMin);
 						predicates.add(i + 1, first);
 					}
@@ -1105,7 +1162,8 @@ class KeyPartition {
 		predicates.get(predicates.size() - 1).setMax(max);
 		if (predicates.get(0).getMin() == predicates.get(0).getMax())
 			predicates.remove(0);
-		if (predicates.get(predicates.size() - 1).getMin() == predicates.get(predicates.size() - 1).getMax())
+		if (predicates.get(predicates.size() - 1).getMin() == predicates.get(
+				predicates.size() - 1).getMax())
 			predicates.remove(predicates.size() - 1);
 	}
 }

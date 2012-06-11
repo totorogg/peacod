@@ -211,6 +211,8 @@ public class Graph
 		
 		//the node weights for size, but zero access node will be zero size
 		int nodeWeight = m.getEstimatedSize();
+		//[tag xiaoyan] sqrt the nde weight
+		nodeWeight = (int) Math.sqrt(nodeWeight);
 		int accessWeight = m.accessCnt;
 		if (accessWeight == 0)
 			nodeWeight = 0;;
