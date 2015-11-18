@@ -71,10 +71,11 @@ public class MainFrame extends JFrame {
 */
 		//some kind of central UI alteration
 		try {
-			mainFont = Font.createFont(Font.TRUETYPE_FONT,
-					new File(System.getProperty("user.dir")
-							+ "/resources/Frutiger.ttf"));
+			//mainFont = Font.createFont(Font.TRUETYPE_FONT,
+			//		new File(System.getProperty("user.dir")
+			//				+ "/resources/Frutiger.ttf"));
 			//mainFont = mainFont.deriveFont(Font.PLAIN, 12.0f);
+			mainFont = new Font("Sans Serif", Font.PLAIN, 18);
 		} catch (Exception e) {
 			mainFont = new Font("Sans Serif", Font.PLAIN, 18);
 			System.out.println("load font error: using system font");

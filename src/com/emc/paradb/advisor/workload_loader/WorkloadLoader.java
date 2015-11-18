@@ -175,7 +175,7 @@ public class WorkloadLoader
 									tables.get(tableName) == null || tables.get(tableName).getAttrVector() == null)
 								System.err.println("!");
 							for(TableAttributes attr : tables.get(tableName).getAttrVector())
-								if(attr.getName().equals(key.getKeyName()))
+								if(attr.getName().toUpperCase().equals(key.getKeyName().toUpperCase()))
 									key.setTableName(tableName);
 						}
 
@@ -196,7 +196,7 @@ public class WorkloadLoader
 							System.out.println("3");
 						
 						for(TableAttributes attr : tables.get(tableName).getAttrVector())
-							if(attr.getName().equals(key.getKeyName()))
+							if(attr.getName().toUpperCase().equals(key.getKeyName().toUpperCase()))
 								key.setTableName(tableName);
 						
 						if(key.getTableName() == null)
@@ -214,7 +214,7 @@ public class WorkloadLoader
 					for(WhereKey key : delete.getWhereKeys())
 					{	
 						for(TableAttributes attr : tables.get(tableName).getAttrVector())
-							if(attr.getName().equals(key.getKeyName()))
+							if(attr.getName().toUpperCase().equals(key.getKeyName().toUpperCase()))
 								key.setTableName(tableName);
 						
 						if(key.getTableName() == null)

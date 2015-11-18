@@ -17,6 +17,8 @@ public class QueryPrepare
 	{
 		translateMap.put("user", "\"user\"");
 		untranslateMap.put("\"user\"", "user");
+		translateMap.put("USERTABLE", "\"USERTABLE\"");
+		untranslateMap.put("\"USERTABLE\"", "USERTABLE");
 	}
 	public static String prepare(String table)
 	{

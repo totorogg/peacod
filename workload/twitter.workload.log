@@ -1,0 +1,5054 @@
+-
+SELECT * FROM "tweets" WHERE uid = '55449' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28102' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64887' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51469' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80122' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '495' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30987' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98036' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '18391', '61694', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999', '80999')
+-
+-
+SELECT * FROM "tweets" WHERE uid = '62754' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46106' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8403' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23155' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49268' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3031' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19763' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98143' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61560' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1858' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38158' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74732' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63293' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74412' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78918' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4735' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9458' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48960' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74992' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30135' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89818' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2861' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59549' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19228' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63456' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '851' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33100' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39633' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64234' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28502' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62204' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66874' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33707' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72777' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17294' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24034' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38093' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54185' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55378' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93126' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24779' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19144' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90148' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29888' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20732' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84585' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90266' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27199' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10296' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3701' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27620' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24585' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75306' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18480' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011', '19011')
+-
+SELECT * FROM "tweets" WHERE uid = '7914' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15143' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62484' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71986' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69501' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26952' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8121' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60116' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16116' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907')
+-
+SELECT * FROM "tweets" WHERE uid = '38063' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45414' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9903' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20741' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48924' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72844' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74098' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72923' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13177' LIMIT 10
+-
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018', '36018')
+-
+SELECT * FROM "tweets" WHERE uid = '55201' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16947' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43461' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15051' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66202' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64335' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52811' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34475' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43396' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69598' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65576' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35121' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86507' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19325' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '27576' LIMIT 10
+-
+-
+-
+SELECT * FROM "tweets" WHERE uid = '56474' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41088' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46194' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96918' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45373' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54355' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75379' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41497' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36603' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13427' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99827' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63485' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '97480', 'jX(=ci"9%^:`(8|T\s''.D*oI\5yJV6:gzcJc]S]J_|S7,eW;Gj>Kk8gzL]t~59U4', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '49338' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54312' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27605' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96791' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30672' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22628' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29441' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17820' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49331' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19102' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '956' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45224' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95191' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9619' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114')
+-
+SELECT * FROM "tweets" WHERE uid = '82778' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89555' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83467' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37908' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2422' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21555' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '90732' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67330' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72239' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95507' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3191' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10397' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84292' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82708' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33976' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13193' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20257' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33561' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89006' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48580' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70587' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91674' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86349' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94348' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50857' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28180' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10840' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20902' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53871' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26389' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61180' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51199' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59616' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95804' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83257' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47384' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73081' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10305' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76866' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94282' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2855' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93908' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8763' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77229' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32209' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63339' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5077' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92886' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64940' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63416' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45738' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '35483' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80781' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039', '64039')
+-
+SELECT * FROM "tweets" WHERE uid = '66265' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977', '13977')
+-
+SELECT * FROM "tweets" WHERE uid = '69243' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21338' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32279' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87557' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5818' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '67509' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('3582', '4115', '6929', '27105', '28294', '31907', '34151', '36018', '38398', '39203', '40054', '46833', '47288', '60401', '61957', '65723', '69193', '79321', '80603', '83976')
+-
+SELECT * FROM "tweets" WHERE uid = '14360' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67092' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '97794' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34207' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34347' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40803' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67062' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51523' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92263' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12950' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75451' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('32141', '45266', '75098', '77379', '83976', '84290', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937', '87937')
+-
+SELECT * FROM "tweets" WHERE uid = '72868' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69307' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29431' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6511' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27693' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39338' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('60799', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305', '80305')
+-
+SELECT * FROM "tweets" WHERE uid = '90089' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91927' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85434' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81750' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41835' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77172' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67101' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74385' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24983' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22580' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24967' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90414' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1483' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50697' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80487' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71226' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '70353' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33488' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87963' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15374' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68758' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98723' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55246' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86172' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93116' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62536' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52293' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22693' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32878' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17634' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29590' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88865' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93132' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10232' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44537' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89628' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '997' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48518' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063', '98063')
+-
+SELECT * FROM "tweets" WHERE uid = '62711' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '8237', 'Z0$5vg/jju8n(RJQf}{N(&=-Kt\u?g~L"+JG6&XKL?^1Pl0LEcB$XGL!L;WUFbeywaE+KMK D!f^', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '82167' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38430' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5843' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87525' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52098' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43663' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59621' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15443' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98846' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16745' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45243' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68783' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97257' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3225' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61861' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3991' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65105' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4486' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33572' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45869' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '23956', 'gp>z`)`v.(nf{BKp~}*W@G<2', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '47292' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46103' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67345' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98720' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29929' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10529' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57148' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78069' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25297' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89372' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57190' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38216' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30430' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49048' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29516' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26686' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20768' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91595' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '43725', '_\uXeoLJ)4SQ`DSv6DQQ(Z^z\.>P~>c=''-Sdz@@fiK\{jOaeR,%G-<{j12K^?`5Vh@\n9PWjsg,lMpV[/2Bro)/+Qeu+ NR4R\iIm.d(Wt&ODTBlPZ]/OXbPxDNBq$PH''|\>m&Zj=', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '58595' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94709' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2844' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14447' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87797' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81277' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57438' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18002' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49489' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70227' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25774' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34962' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29189' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54077' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23548' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15173' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56460' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86827' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93564' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88942' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91479' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87548' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85726' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14895' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '33778' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56282' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85889' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84712' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006')
+-
+SELECT * FROM "tweets" WHERE uid = '35951' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17967' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59161' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4430' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86577' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96842' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64907' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88889' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67448' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73738' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36031' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21629' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11807' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88409' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52464' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60691' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75618' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4722' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25887' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53304' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99858' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65759' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50843' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40211' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18542' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29748' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62988' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25482' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17324' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54344' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28292' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29928' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2686' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34919' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15686' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57673' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2172' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99449' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '56792' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51884' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50589' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95095' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1796' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63237' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632', '77632')
+-
+SELECT * FROM "tweets" WHERE uid = '98117' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58691' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8254' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89606' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74949' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70959' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55837' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97122' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81370' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7955' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21752' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23703' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6589' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52208' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87485' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23746' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23041' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55413' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3775' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64257' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42244' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1816' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1229' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58893' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30380' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24307' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77377' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21473' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '42267' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54512' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76241' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9187' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25553' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48691' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49716' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '346' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735')
+-
+SELECT * FROM "tweets" WHERE uid = '22608' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48223' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47985' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64434' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82184' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58228' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36373' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70730' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49082' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7911' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38548' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70749' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '11593' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87900' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35995' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52847' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37452' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56507' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29513' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41097' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77152' LIMIT 10
+-
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818', '26818')
+-
+SELECT * FROM "tweets" WHERE uid = '80278' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90479' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79278' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77580' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48098' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38269' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5808' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53495' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31428' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86296' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91737' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5487' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19924' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77163' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84248' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58551' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68378' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77398' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20288' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18603' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42132' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2612' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21069' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '35788' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48498' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34317' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13961' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54431' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47658' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95416' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '93844', '7OG:N=h]M!,Ti''1s|9EtpIrMg|#!ABA8GtVr>xF;Byd(N5C`T|l''I7-QBuHdSxs%YSr6`RMmuT<r>H''Usokr5:}]q!2T|>8C(ak1xjBm)}]@fWU]43rV[[$=f''pH)', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '9' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12193' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26184' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91572' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15191' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74262' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34744' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '944' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66996' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '19959', '`e{#31r^ 5;+S*>^GMtuA4%q>du6>l#FCCJtFieP"PPG(;(8.?', '2012-09-13 +08:00:00')
+-
+-
+SELECT * FROM "tweets" WHERE uid = '46833' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267', '25267')
+-
+SELECT * FROM "tweets" WHERE uid = '26230' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59915' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82830' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74867' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4744' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90168' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '457' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90305' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13315' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75223' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3116' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92215' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76462' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8998' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94500' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59801' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6300' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13764' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71073' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '94197' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76225' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61369' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32665' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61425' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17791' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60927' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14402' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14791' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53512' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78316' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12395' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29599' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34570' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71137' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59209' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1407' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2417' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29343' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24777' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23263' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5205' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20191' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25462' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53184' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6215' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58034' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60431' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20236' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96228' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25689' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14573' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93361' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32717' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45266' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80527' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65441' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81423' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83884' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34574' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266', '45266')
+-
+SELECT * FROM "tweets" WHERE uid = '65199' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14979' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70873' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91903' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35686' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57849' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91984' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6206' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54757' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95875' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1454' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16472' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24951' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54705' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69284' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45966' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82521' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87001' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33072' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74357' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34742' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91297' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '759' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92424' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254', '77254')
+-
+SELECT * FROM "tweets" WHERE uid = '52786' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36845' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14657' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83465' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31039' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44074' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99347' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59454' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25498' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70082' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72643' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71235' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34133' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16416' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8674' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9880' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60491' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17602' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49578' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42122' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '13533', '13977', '22589', '25267', '28294', '31907', '40054', '46567', '46833', '48569', '49098', '53685', '56985', '60401', '60656', '60828', '69193', '75098', '76306')
+-
+SELECT * FROM "tweets" WHERE uid = '17097' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83967' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79569' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96351' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74094' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '971' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19248' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8690' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53544' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72624' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53091' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24188' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50122' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '11744' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '842' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84359' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54979' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '40933' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87612' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76111' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94485' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15976' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57887' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('47288', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114', '99114')
+-
+SELECT * FROM "tweets" WHERE uid = '53894' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26225' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10123' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79798' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74648' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89822' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '95713', '`qWZZ,7mf''na~te m{T0[_$5k-UfGr!4p7''d96phEL{+@;|U|u', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '73449' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97718' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97574' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34766' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55583' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77293' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83744' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77260' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70894' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45035' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9305' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91073' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60022' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63811' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51438' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83648' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81992' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85599' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49827' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64571' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90182' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30773' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35069' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36154' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29762' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '34790', 'Je]f]:;R[{<~''_bk )''Ym$.[W$}0iD*}D`hC|XsX$X', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '76500' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32546' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68492' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9935' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64578' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69147' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14109' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16032' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17358' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29905' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17678' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43560' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70785' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '65578' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58945' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31505' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60892' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77658' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45361' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12036' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83275' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18449' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '795' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59132' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99520' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92951' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11717' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72345' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79903' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37867' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40931' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95914' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29178' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14243' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33391' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55950' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62381' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964', '79964')
+-
+SELECT * FROM "tweets" WHERE uid = '12508' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28718' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18083' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77077' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54090' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72412' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56117' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33652' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10685' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15695' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66374' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20456' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '48381' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16093' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9334' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9572' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76537' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38552' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73524' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84490' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33463' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '3709', '6445', '7524', '14906', '18377', '19156', '20999', '21470', '21572', '22589', '23754', '24094', '27042', '28294', '28578', '31907', '32141', '36801', '37999')
+-
+SELECT * FROM "tweets" WHERE uid = '46978' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '83145' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75427' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29612' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10913' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99311' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65195' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20551' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64168' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79753' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95593' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30498' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93625' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60241' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77454' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13940' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14405' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24064' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35752' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90000' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47930' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66130' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31347' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74726' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59801' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56021' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11020' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66205' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24634' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61594' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48900' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55512' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69150' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4504' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74891' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46542' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77537' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52009' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46253' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12318' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98977' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '6663', '7524', '7664', '9294', '9480', '9557', '10851', '11830', '12115', '12784', '12932', '13977', '14906', '15482', '16423', '18244', '19011', '19895', '22589')
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('9480', '14890', '22589', '41517', '45266', '50702', '53547', '58098', '64039', '65573', '77459', '81398', '84106', '95040', '97912', '97912', '97912', '97912', '97912', '97912')
+-
+SELECT * FROM "tweets" WHERE uid = '14423' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92177' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32499' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48608' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22198' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94034' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22330' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33361' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1841' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30871' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24314' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14007' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69829' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79358' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74007' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97646' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78605' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22322' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28963' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85587' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38174' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5294' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91215' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68455' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50033' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '396' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33835' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93254' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908', '62908')
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('57702', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396')
+-
+SELECT * FROM "tweets" WHERE uid = '38941' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69923' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16826' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97807' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90529' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59759' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28244' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28357' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71087' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23226' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9743' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52615' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89045' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81154' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42195' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75115' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97330' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64535' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74011' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12643' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '14906', '22749', '25267', '31907', '36018', '37492', '64787', '71213', '89328', '91269', '92549', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040')
+-
+SELECT * FROM "tweets" WHERE uid = '7465' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71553' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97748' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68322' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73724' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3925' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83050' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6133' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83357' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47274' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2035' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78261' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76725' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81324' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46549' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84055' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65280' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26313' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83229' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18806' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44579' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '9480', '10851', '18391', '19491', '28285', '31907', '45466', '46833', '49098', '60164', '62908', '64768', '65723', '77685', '87613', '89328', '92549', '95929', '99121')
+-
+SELECT * FROM "tweets" WHERE uid = '55036' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93349' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74462' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58330' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30257' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71177' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81682' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70651' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568', '75568')
+-
+SELECT * FROM "tweets" WHERE uid = '21710' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36922' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20469' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97930' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67813' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27837' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13805' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6570' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33370' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '3249', '21572', '27105', '32141', '34361', '39295', '46111', '48569', '64039', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898')
+-
+SELECT * FROM "tweets" WHERE uid = '43110' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21561' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25294' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36128' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27042' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8229' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55393' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('3310', '10851', '13977', '26160', '32141', '45466', '49098', '50702', '56229', '58638', '60401', '76898', '79696', '81523', '82060', '84290', '93933', '99053', '99053', '99053')
+-
+SELECT * FROM "tweets" WHERE uid = '23674' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70792' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68584' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90987' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49702' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37473' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96312' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7516' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55985' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24234' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1838' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '72536' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86457' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57660' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28004' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78929' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60213' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88499' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22762' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('14906', '18244', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928', '64928')
+-
+SELECT * FROM "tweets" WHERE uid = '28066' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65332' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41226' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20007' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13603' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37168' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('341', '2414', '3249', '3582', '4115', '6235', '6722', '6929', '8298', '9480', '10851', '10894', '11662', '12115', '13977', '18543', '18599', '19743', '22302', '22555')
+-
+SELECT * FROM "tweets" WHERE uid = '16886' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34508' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85182' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92076' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41336' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44452' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '70349', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328')
+-
+SELECT * FROM "tweets" WHERE uid = '60763' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5944' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51912' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91892' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92888' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80262' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39651' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38616' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17016' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43032' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80811' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70561' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45656' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82170' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48891' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50491' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21578' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58598' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48196' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50405' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60449' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62915' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86908' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43220' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55107' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15443' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95757' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77326' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20587' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86759' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39401' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98764' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '9352' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33277' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40193' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599', '18599')
+-
+SELECT * FROM "tweets" WHERE uid = '25434' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72780' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13735' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5145' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '3289' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53704' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52293' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51700' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69383' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89531' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40746' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6104' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67474' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42720' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15223' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77694' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48806' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22749' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14872' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37566' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17061' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96286' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94802' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51685' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99437' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '6402', '8852', '9480', '9557', '12896', '13883', '13977', '14906', '19156', '20732', '22227', '25267', '29260', '31907', '32141', '34361', '34465', '39856', '40054')
+-
+SELECT * FROM "tweets" WHERE uid = '73985' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9737' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19120' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29535' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8392' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71080' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40496' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6868' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27081' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45370' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98108' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90511' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4648' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96555' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84987' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30994' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79480' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90027' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('8298', '13977', '34361', '50702', '64039', '69550', '81398', '88445', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328')
+-
+SELECT * FROM "tweets" WHERE uid = '72941' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82961' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('3', '17', '19', '36', '39', '68', '83', '95', '98', '112', '115', '133', '139', '147', '152', '153', '165', '170', '171', '172')
+-
+SELECT * FROM "tweets" WHERE uid = '67879' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97527' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86830' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29061' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15420' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '34151', '45466', '54931', '65723', '83950', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202', '89202')
+-
+SELECT * FROM "tweets" WHERE uid = '14420' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86101' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36024' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49082' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87818' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84149' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40823' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80965' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15439' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39475' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49201' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32240' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47482' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36454' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85578' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3972' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81285' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '30558', 'hE_]gfc>ggLW{d-Z=NPuu"vYm;.qBbtE/?:W_G-{tf;idvWvMS<X=2zRek#ZJuoyR6#A-c', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '34675' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75649' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '20210' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38042' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1132' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93647' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69701' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59157' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '66806', 'k sN4xXJ6w=; dL%;b|@4".mjn?''t\''''a1~61XQHyX`Q''2z\IK&`o&@"b];bX@DWl#2++~qi%b1l', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '88814' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6479' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26862' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33282' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83761' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89790' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44721' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '73794', 'mAw B|2&!vj+''~j:UVHYP,X', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '48684' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23001' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86724' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13463' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51988' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94174' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54025' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('45466', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685')
+-
+SELECT * FROM "tweets" WHERE uid = '85115' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76891' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49690' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('30062', '41517', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321', '79321')
+-
+SELECT * FROM "tweets" WHERE uid = '25564' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735')
+-
+SELECT * FROM "tweets" WHERE uid = '97130' LIMIT 10
+-
+-
+-
+SELECT * FROM "tweets" WHERE uid = '91950' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8565' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58273' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43815' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16749' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78408' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98733' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71461' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71600' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77668' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21012' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62385' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7503' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39542' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29654' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57896' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '83027' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78354' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50641' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8967' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24107' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48039' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25538' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96460' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7556' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86210' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68629' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96126' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27416' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79519' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38313' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72928' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8187' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66686' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51951' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396', '68396')
+-
+SELECT * FROM "tweets" WHERE uid = '93499' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66288' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65155' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97430' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89719' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54973' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '867' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81566' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58379' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39018' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85472' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99145' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72738' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97361' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78562' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39276' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87692' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75739' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '80474', '%\7"JYoi{lP^8MceZeozmn/:BYKfHT6TFB', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '22076' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25424' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76618' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97932' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22331' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8171' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91943' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73088' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96637' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33199' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48965' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('3582', '31907', '35076', '57292', '58902', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799')
+-
+SELECT * FROM "tweets" WHERE uid = '85554' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68148' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79066' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78844' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83092' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47466' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3217' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82000' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64908' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17151' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86148' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33841' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79831' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77841' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32309' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10743' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19407' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87344' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33692' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35855' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11361' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('58361', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799', '60799')
+-
+SELECT * FROM "tweets" WHERE uid = '91437' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6025' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38075' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98920' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62744' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50545' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81372' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93633' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77228' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22988' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27900' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91738' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20694' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94383' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76660' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6694' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79513' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51490' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85329' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '77491' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90751' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14288' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2778' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16769' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33101' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23598' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41041' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52643' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72279' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69049' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72266' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '746' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54593' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85358' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '39423', 'yA!lWe$Hg5$l.4B>+uE37N 1f-B4T*.!1$[hgvw''S_->TUM"H1\Et`:NZ>rVh)O+Sf``+B<c$l!hWWJLt>:Sc/*tkCxT2un# Rsh!', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '79582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52564' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17246' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12921' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '72801' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81278' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38707' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18309' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35459' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72238' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36321' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13654' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61467' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4626' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50383' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13307' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '41469' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '88553' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75200' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26660' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56551' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71244' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45907' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30373' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9827' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1862' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10888' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33658' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9959' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80132' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56549' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11016' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98200' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62578' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8363' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48895' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58568' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1540' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48121' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50050' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27659' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67163' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20579' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42443' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15707' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23342' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91653' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290')
+-
+-
+SELECT * FROM "tweets" WHERE uid = '94161' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59320' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23336' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14673' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9529' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8722' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56961' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65121' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50017' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20755' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40646' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8508' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44005' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36638' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83948' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42699' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96543' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75268' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43439' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26362' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6928' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5605' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86115' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53700' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69014' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75276' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70205' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '946' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63361' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89466' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28711' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90501' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73199' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('25267', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098', '49098')
+-
+SELECT * FROM "tweets" WHERE uid = '54857' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99287' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37764' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26841' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88715' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74202' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4349' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31973' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97104' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29986' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60430' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29640' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '16716', 'e[_WM?Irtgi0cPJ*0f;?/=YQMSs7y3jGS$o:9:dP6CTqUccUj).bH_*_k y9(F]Xf}iXOw`,mNxLZ>P  wC!>waHTDxV/",y{Z(9[%RdiYOwiX''3yW~qX)ix/Y', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '2652' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21094' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97397' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9438' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24496' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93961' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21396' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77242' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23268' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46623' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89381' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97987' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83378' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4779' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53776' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87921' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10991' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32740' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5596' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42695' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87893' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29613' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94943' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27564' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53122' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8971' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23455' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84625' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79309' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42863' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '96698' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57066' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13376' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32317' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82920' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48640' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34892' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53530' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16324' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98074' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95722' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40621' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39167' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75024' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '1257' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81023' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81471' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94468' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('31907', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517', '41517')
+-
+SELECT * FROM "tweets" WHERE uid = '32973' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45311' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9395' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62889' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64841' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16154' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32748' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74497' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63615' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80705' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12555' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49384' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '49988' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10708' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78186' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('3709', '6235', '9480', '12115', '14906', '22589', '28294', '31907', '32141', '34361', '40054', '41517', '43805', '45266', '45466', '46833', '47076', '49098', '50702', '58541')
+-
+SELECT * FROM "tweets" WHERE uid = '79296' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19414' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7781' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71575' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29797' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '95006' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32382' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19536' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43501' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53184' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90079' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15632' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976', '83976')
+-
+SELECT * FROM "tweets" WHERE uid = '40551' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71099' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23240' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '58785' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38589' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58883' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3867' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90311' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20019' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39498' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '18926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45826' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98022' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68191' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97981' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54364' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98817' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11708' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57766' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22773' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040')
+-
+SELECT * FROM "tweets" WHERE uid = '30415' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2463' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77860' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30043' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16634' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41766' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94803' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42259' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66215' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51314' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26060' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47555' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4786' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34500' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96835' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78990' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27143' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45069' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78504' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '48501' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40417' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76490' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38234' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86523' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15777' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328', '89328')
+-
+SELECT * FROM "tweets" WHERE uid = '58154' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4576' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86368' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19326' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95062' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40754' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47568' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37811' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60837' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89516' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50875' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59640' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75654' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53987' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72485' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74068' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '18544' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38320' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23005' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63299' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24603' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57711' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '68948' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95290' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82012' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45114' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76500' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64056' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48930' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55130' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61855' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42095' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15499' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80505' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26915' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('6235', '41517', '57292', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696', '79696')
+-
+SELECT * FROM "tweets" WHERE uid = '80573' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7100' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7892' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40595' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10055' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98736' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52667' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59173' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49831' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53114' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14164' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30586' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45299' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4075' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17835' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25354' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38394' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32461' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49568' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35174' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60923' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72101' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93809' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12798' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38239' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6993' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27888' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50571' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47253' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53290' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('21470', '22589', '25267', '36018', '39856', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211', '53211')
+-
+SELECT * FROM "tweets" WHERE uid = '68491' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32262' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17536' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50429' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92353' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12358' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25880' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45670' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85476' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29455' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82796' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79984' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23698' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29842' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52786' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20476' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67519' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31007' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37701' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82271' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11914' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85626' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20830' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89415' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15810' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87328' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92561' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44594' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81674' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61419' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9269' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '75462', ';AhL`Q0H:uq''f~ZC>,},!t[\$43d+)!X_u''B/1*pv ,S UUfs13+_ySs6h8QIh|xfq+8+"6xh*HpCQs-:v7ZYKa8UIHS&$MH1OCo''7K=UCtt~BErFv2@WnFF"Z?[#fM(R#hw', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '61482' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95194' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14874' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16106' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29752' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60240' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61178' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92928' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3096' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25907' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34619' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25597' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47719' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36445' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85939' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24974' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '26522' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57525' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66774' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '941' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '2874' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91279' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('41517', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158', '87158')
+-
+SELECT * FROM "tweets" WHERE uid = '85479' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51862' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47801' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13615' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99536' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4455' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91355' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74507' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22830' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81231' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80011' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41088' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84729' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72799' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84098' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75659' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '749' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '64005', 'I+:Mwm7u#A1Ey^Cq8/*?X\A*a''9yn=yX?o?C:+FlHUF9`2@GJe4F$gEj4 fB]$y>[U2T!ZGt 0N5KoUw%G=1s2qN6&,$XR7kD#T1A>&{?x#j&oSn1H?jGRs(oA8_@W:$d', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '72801' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97677' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49567' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12800' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29323' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20851' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95117' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35745' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73091' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59195' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94004' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92833' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21397' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21407' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86468' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20521' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23322' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21520' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40145' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40533' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39490' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67817' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46596' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23766' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80657' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '38439' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60957' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86197' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42085' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61348' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '370' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61702' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80245' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80468' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13646' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19030' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74909' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52074' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69998' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73573' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58654' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28781' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53603' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15222' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60295' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82584' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71622' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47732' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29390' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86040' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46166' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71002' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74912' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52819' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36971' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39159' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26134' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57068' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8529' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73652' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56313' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83431' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29759' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88053' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10548' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89087' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57515' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85989' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53231' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70681' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22149' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49957' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61145' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46550' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94709' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414', '2414')
+-
+SELECT * FROM "tweets" WHERE uid = '39450' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23213' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30255' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52204' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98096' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32457' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91161' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10343' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87212' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99036' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53800' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30117' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55517' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61188' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '337' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63098' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('18244', '32141', '34361', '46833', '48569', '57542', '62936', '64039', '66588', '80305', '91949', '91949', '91949', '91949', '91949', '91949', '91949', '91949', '91949', '91949')
+-
+SELECT * FROM "tweets" WHERE uid = '38819' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61655' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93527' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28778' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('9732', '34682', '45466', '57292', '58902', '79321', '80603', '84106', '98637', '98637', '98637', '98637', '98637', '98637', '98637', '98637', '98637', '98637', '98637', '98637')
+-
+SELECT * FROM "tweets" WHERE uid = '40687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52119' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76457' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94843' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72445' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23184' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27700' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69114' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459', '77459')
+-
+-
+SELECT * FROM "tweets" WHERE uid = '61394' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44851' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87787' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93816' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17189' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43890' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90767' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '46755' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54134' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78944' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26316' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81982' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3018' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25821' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11962' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22865' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88057' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13814' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63092' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34418' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95023' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7282' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53014' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62136' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98390' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69217' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5282' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75496' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20102' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1646' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56259' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87031' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79990' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72369' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17897' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1747' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43425' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47471' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31640' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37372' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15776' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65086' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('58902', '87245', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613', '87613')
+-
+SELECT * FROM "tweets" WHERE uid = '72256' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11335' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13065' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23585' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56212' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53706' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34909' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44491' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9945' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6431' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19427' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45786' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62657' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15791' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81640' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80708' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35535' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65111' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39195' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93720' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56181' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51984' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41899' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62396' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10847' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9238' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15014' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71806' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91924' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83957' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62341' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22201' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902', '58902')
+-
+SELECT * FROM "tweets" WHERE uid = '28344' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98251' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72094' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91448' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480', '9480')
+-
+SELECT * FROM "tweets" WHERE uid = '51473' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45382' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31475' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54766' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73171' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44501' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '26733' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42782' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74550' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58380' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24819' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('41517', '49098', '52262', '68641', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898')
+-
+SELECT * FROM "tweets" WHERE uid = '32000' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51260' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35978' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34782' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29163' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19410' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63682' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63839' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64654' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5805' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5577' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35791' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41495' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8013' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66799' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '635' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '517' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13167' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97531' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18991' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89447' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66091' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35422' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54168' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91294' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7275' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52660' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39928' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13025' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51979' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54413' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93643' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99589' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49638' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51781' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84058' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54094' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45193' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82915' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95692' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41388' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53375' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75769' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86853' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78422' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64066' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '847' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57857' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32899' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78018' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84822' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13175' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47364' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31302' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99831' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80324' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61514' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99624' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74400' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20587' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19881' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20985' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64170' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44370' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75069' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('36018', '56985', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665', '64665')
+-
+SELECT * FROM "tweets" WHERE uid = '49362' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77481' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28819' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32720' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47859' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43688' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25390' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006')
+-
+SELECT * FROM "tweets" WHERE uid = '80509' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6415' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73582' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '39372' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82591' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49590' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74669' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2922' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18115' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42350' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75342' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042', '27042')
+-
+SELECT * FROM "tweets" WHERE uid = '51784' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56485' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33188' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51070' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99669' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('50941', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262', '52262')
+-
+SELECT * FROM "tweets" WHERE uid = '27830' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95180' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('38846', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290')
+-
+SELECT * FROM "tweets" WHERE uid = '98950' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9276' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28447' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91911' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62306' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36995' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41341' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72788' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12888' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67614' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36044' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22553' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22661' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67757' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '378' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32796' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56387' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8996' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82138' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19049' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68211' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91831' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43568' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '75314' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26304' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26437' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57242' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58302' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92670' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44168' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39910' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45571' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67490' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28567' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44772' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27278' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12311' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67591' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2952' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78385' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72666' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84970' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31545' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40409' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59143' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48272' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('21572', '22912', '27105', '30062', '34361', '47288', '63387', '65683', '71213', '92549', '97876', '97876', '97876', '97876', '97876', '97876', '97876', '97876', '97876', '97876')
+-
+SELECT * FROM "tweets" WHERE uid = '20514' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55086' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27578' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('24037', '36300', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098')
+-
+-
+SELECT * FROM "tweets" WHERE uid = '15172' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22116' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40441' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '15396' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '87972' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '49079' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48000' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31108' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24344' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14298' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83042' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84330' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41653' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68506' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5996' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55399' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54388' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40414' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75323' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65405' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81778' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76327' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84432' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18940' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34242' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39819' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27836' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14507' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73896' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7644' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8577' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22955' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28159' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26128' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9179' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26381' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55490' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76000' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36316' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89433' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11265' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52703' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50658' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24283' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41651' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79222' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38174' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31681' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18909' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48937' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38397' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65013' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33617' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19124' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75445' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78071' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82962' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75436' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86943' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70918' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '961' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84452' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13724' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52042' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39020' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17022' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69943' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29329' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86432' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96605' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '10811', 'Lb{~H3+#TyxEuwtH-\fI /I6=iNxS> v3.''t.', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '69505' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79577' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37090' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48706' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82802' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62158' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90430' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '77511' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60975' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7586' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96445' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25941' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16025' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67859' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52900' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74421' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61453' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48321' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76075' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24161' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88095' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65355' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52526' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50670' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '17294' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86126' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85829' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92478' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67894' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82419' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51555' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70235' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96333' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45685' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90619' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42379' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32603' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19343' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63532' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50764' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39211' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32864' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76977' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91099' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10962' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98521' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20026' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78032' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28975' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12042' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71568' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9211' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14318' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75818' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91024' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59715' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65430' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('48468', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685', '77685')
+-
+SELECT * FROM "tweets" WHERE uid = '96519' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18338' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29872' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63742' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77360' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71673' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63552' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25454' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86902' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90512' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85581' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47074' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30601' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '84483' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55261' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13392' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96985' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22010' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23428' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70277' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41340' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5237' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39451' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907')
+-
+SELECT * FROM "tweets" WHERE uid = '78407' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30126' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53968' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42746' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20087' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95695' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19428' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60008' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18454' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88318' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70559' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51720' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17814' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88933' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28372' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14848' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11868' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19156' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1051' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36352' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40288' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98262' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('32141', '34361', '39295', '42009', '46111', '60656', '77632', '79104', '86425', '87613', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006', '99006')
+-
+SELECT * FROM "tweets" WHERE uid = '33843' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92792' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94579' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42278' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11194' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44361' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78526' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71688' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40153' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50265' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36459' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78070' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33060' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63329' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32932' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39862' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58458' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '19287' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41104' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53277' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('58541', '60799', '62037', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735')
+-
+SELECT * FROM "tweets" WHERE uid = '73616' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2628' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('22589', '25683', '42870', '58638', '70761', '72458', '77379', '92549', '92549', '92549', '92549', '92549', '92549', '92549', '92549', '92549', '92549', '92549', '92549', '92549')
+-
+SELECT * FROM "tweets" WHERE uid = '1955' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43048' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89106' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9774' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '38014' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17155' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39149' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99602' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16037' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83404' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '43830' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94731' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37846' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91313' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22460' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96872' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25260' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40688' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26913' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52215' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47149' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5704' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14291' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '84025' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41791' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '7978', '*PigVWuZ6CLNN&_@8`fK[L5E5HN4G]w/FKF29t)Q,VrW6rhe4.6wFn:F^1wl`Pa \}j6@e<MqEE%y=13JFv/6^ws@O8!#?/AR6<#H]NO8G]ifAV[t]l?A%{Nw(-9DU?Dkl3}mxwSsF1O', '2012-09-13 +08:00:00')
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('6929', '9480', '34361', '41517', '45466', '49098', '75098', '76898', '80603', '89328', '93933', '93933', '93933', '93933', '93933', '93933', '93933', '93933', '93933', '93933')
+-
+SELECT * FROM "tweets" WHERE uid = '17292' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46319' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71546' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22356' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96792' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36737' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97228' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2542' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '78340', 'su$_HR.YAvT.$ho69<G0=u\!P&kXRBga#|6V]xf~m', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '11730' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589', '22589')
+-
+SELECT * FROM "tweets" WHERE uid = '23924' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('76898', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379', '77379')
+-
+SELECT * FROM "tweets" WHERE uid = '31399' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('95', '1243', '1634', '2131', '2414', '3249', '3310', '3582', '3662', '3709', '4115', '4224', '4374', '4430', '4712', '4804', '4960', '5385', '6235', '6402')
+-
+SELECT * FROM "tweets" WHERE uid = '64967' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9767' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13429' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93856' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50902' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37192' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('33815', '37956', '45120', '57292', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193', '69193')
+-
+SELECT * FROM "tweets" WHERE uid = '82856' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '26219', 'N[OQrCz:g1/nU1!F7}:!', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '44774' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1879' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '97584', '@`K!lLCD/j]/$*z_HDr`<gS-1bfw8jNN0EdX.CzNyw+-0s[M,v( 3^tq|4$-jrt#$DuV,Pyx(*tTz/-T2n$ju4JQ\#VV);rz4{3a`|$[&V Wd$:V-+QuMu>Y$ EJ9;,& p-q0gG=v2),', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '61571' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52407' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '81122' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73704' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32902' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34957' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34707' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53343' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14221' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95947' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48210' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74018' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51080' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48759' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46512' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79210' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33784' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14321' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37127' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64171' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4070' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52779' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32667' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25367' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45299' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3748' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8571' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93588' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '59151' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56449' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22386' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27013' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75028' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '63051' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '19868' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '23815', 'yZSzm_hJ|Zvx]]gHqdhVG:s8x)LkFnF[aeI4goFPg/a:60s,UmYZfnE?=n''l^}*$y', '2012-09-13 +08:00:00')
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('28294', '43805', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723', '65723')
+-
+SELECT * FROM "tweets" WHERE uid = '11063' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8785' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71795' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72486' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82172' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96969' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56621' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7525' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30078' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52495' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69994' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72903' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12194' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20623' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99447' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86348' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1678' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61700' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88844' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73949' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '74760', 'qi>9KAE`voH`S%J #I6;d[ogT2y>qK"Pvvc!9,YqS}*AF=Z+^t_5E$Ud$lx1&;DGDe^~*@]f,pa`wr8U~6WsRy~', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '45183' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24453' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77191' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41927' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4139' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60670' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3204' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50898' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47013' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9083' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18789' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50926' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81558' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35168' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34566' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90282' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98239' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40949' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '34545' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69176' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14526' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '54980' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94360' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '3122', '3582', '3709', '4115', '6929', '7524', '7664', '9117', '9480', '9557', '10159', '10851', '12115', '12146', '13977', '14906', '17464', '18219', '18244')
+-
+SELECT * FROM "tweets" WHERE uid = '95995' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96488' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79431' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11626' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75141' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90432' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70808' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45102' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5559' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23206' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23331' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45362' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83886' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92455' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76885' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '50792' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('32141', '76306', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898', '76898')
+-
+SELECT * FROM "tweets" WHERE uid = '25135' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65911' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9851' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1837' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1733' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2284' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17203' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57646' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24324' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21077' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8753' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33776' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61679' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10652' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('10162', '21572', '50702', '64039', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098', '75098')
+-
+SELECT * FROM "tweets" WHERE uid = '14869' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60575' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25307' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88005' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30220' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91535' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '53009' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29049' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30623' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72385' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '79469' LIMIT 10
+-
+INSERT INTO "added_tweets" VALUES (default, '58133', 'rf)+^s''`}dU7+;|YggF)qh 0Zr/\W6HwZ\$WDM|SHZ{@Q[f02zf+\L*e(2*UaTz$rybKt"l8^sHZ''"*=1O4CBbpI])!O:7H=+V2AM2h', '2012-09-13 +08:00:00')
+-
+SELECT * FROM "tweets" WHERE uid = '61960' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24063' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32998' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '49687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32279' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40799' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41268' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14016' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37497' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '16739' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55615' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10864' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85943' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67655' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44054' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35574' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '3574' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10530' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '5768' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10691' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62035' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88593' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14423' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86084' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45764' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13200' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35969' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24866' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52498' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39276' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20043' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18448' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35977' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33891' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70250' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32155' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982', '47982')
+-
+SELECT * FROM "tweets" WHERE uid = '82468' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35434' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18344' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31704' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45725' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77186' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22328' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70914' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36225' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '40268' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62064' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2260' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7379' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '32215' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '94526' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('4115', '6929', '31907', '42870', '50368', '57292', '59754', '65683', '72884', '83976', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040', '95040')
+-
+SELECT * FROM "tweets" WHERE uid = '35700' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92172' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '67665' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '41200' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78510' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '72434' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28325' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65240' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73182' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47134' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92917' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70252' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74608' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '51273' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85378' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13054' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8075' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73537' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86156' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '8205' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12979' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39688' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91169' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39489' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10105' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24244' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27400' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2818' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9491' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60315' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90561' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96989' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97096' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45056' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37623' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60582' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44318' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '88834' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '77866' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17867' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '64958' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85702' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33115' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30218' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98985' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9359' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '76240' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47203' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73064' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1977' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66469' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '78479' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73155' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '21043' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2369' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '24356' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10955' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '46991' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '39142' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70092' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '44095' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65027' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '97253' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57728' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '80948' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '86791' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11573' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9405' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47346' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '9767' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25994' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '73238' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82447' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48142' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23056' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4284' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '91005' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93853' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '36246' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6747' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31687' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61062' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '4923' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '92630' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99793' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29560' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37838' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290', '84290')
+-
+SELECT * FROM "tweets" WHERE uid = '42451' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56709' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '25785' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '33421' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58048' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '66373' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '99222' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '1972' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13883' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47099' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '93771' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37837' LIMIT 10
+-
+-
+SELECT * FROM "tweets" WHERE uid = '40903' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('31907', '49394', '64039', '91949', '99151', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735', '99735')
+-
+SELECT * FROM "tweets" WHERE uid = '23676' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68674' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '56874' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '197' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45596' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81744' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('2414', '3582', '9480', '20972', '22984', '65723', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731', '65731')
+-
+SELECT * FROM "tweets" WHERE uid = '32962' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '68927' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23115' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '20882' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11766' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25990' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58048' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37250' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69263' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '90659' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '52945' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63377' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '13605' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '82625' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2715' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '85420' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95224' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74284' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '14422' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53372' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '29928' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '83148' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '48010' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '89920' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('47782', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014', '60014')
+-
+SELECT * FROM "tweets" WHERE uid = '25731' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11278' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '70644' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '69517' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '75299' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '55005' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37120' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '2290' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '61667' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '95067' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '63649' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '28164' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '30592' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '60185' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11119' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '81974' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('7664', '14906', '22589', '31907', '40054', '41517', '46833', '58638', '59754', '60164', '60799', '64787', '64928', '81682', '84106', '87158', '87158', '87158', '87158', '87158')
+-
+SELECT * FROM "tweets" WHERE uid = '89390' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '31040' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '96063' LIMIT 10
+-
+SELECT uid, name FROM "user_profiles" WHERE uid IN ('31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907', '31907')
+-
+SELECT * FROM "tweets" WHERE uid = '68876' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57839' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '26297' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '65487' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '57570' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '37145' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '11233' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '42234' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27147' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47927' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '22081' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18643' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '62155' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '71260' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '23317' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '6560' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '58242' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '74473' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '45973' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '35882' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10041' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '17813' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '53997' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '98859' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '12354' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '10233' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '18668' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '25031' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27226' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '7780' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '27222' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '92676' LIMIT 10
+-
+SELECT * FROM "tweets" WHERE uid = '47913' LIMIT 10
+-

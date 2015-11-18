@@ -1,0 +1,2431 @@
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'tq+\|F%DbU0n:pvLx3Ob)(Y^(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '30'
+SELECT * FROM ipblocks WHERE ipb_address = '2.245.235.221'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '30'    AND page_id = '30'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '238' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '35.29.250.201'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '137.193.187.218'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'ta06af%f42' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8428'
+SELECT * FROM ipblocks WHERE ipb_address = '128.201.173.14'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8428'    AND page_id = '8428'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '98183' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '76.7.52.165'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'u`B8E+ePj2R+]utbKKlI63G7O9h' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '428'
+SELECT * FROM ipblocks WHERE ipb_address = '238.136.133.101'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '428'    AND page_id = '428'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5737' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '&U%MD"@t^yhz6U>{3' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '19'
+SELECT * FROM ipblocks WHERE ipb_address = '102.139.29.116'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '19'    AND page_id = '19'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118879' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '2Y@N!Jc= 4kFj<+3&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8'
+SELECT * FROM ipblocks WHERE ipb_address = '221.250.108.243'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8'    AND page_id = '8'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118766' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '2Y@N!Jc= 4kFj<+3&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8'
+SELECT * FROM ipblocks WHERE ipb_address = '237.189.62.9'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8'    AND page_id = '8'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118766' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '0|~\Zm{Aw&2W=:*C' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '41'
+SELECT * FROM ipblocks WHERE ipb_address = '108.173.134.235'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '41'    AND page_id = '41'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118750' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'pdK)\-t[S"\bnzJ,{d;N?O\l}$I4' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '39'
+SELECT * FROM ipblocks WHERE ipb_address = '145.87.65.128'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '39'    AND page_id = '39'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118616' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '$3*9&yvr~q^w' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '12'
+SELECT * FROM ipblocks WHERE ipb_address = '242.167.185.140'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '12'    AND page_id = '12'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118639' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '66.201.105.96'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'f{U}L+ W9V' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '547'
+SELECT * FROM ipblocks WHERE ipb_address = '61.34.86.108'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '547'    AND page_id = '547'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118702' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'R8''lOcs>''' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1533'
+SELECT * FROM ipblocks WHERE ipb_address = '134.51.230.105'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1533'    AND page_id = '1533'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '17838' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '&U%MD"@t^yhz6U>{3' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '19'
+SELECT * FROM ipblocks WHERE ipb_address = '222.145.162.3'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '19'    AND page_id = '19'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118879' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '111.138.216.230'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '165.150.212.195'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ')(J}Ceguk\[bZ5' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '14'
+SELECT * FROM ipblocks WHERE ipb_address = '239.194.34.2'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '14'    AND page_id = '14'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '137' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'kJ8JaSO5PbKx[0NUGE<H`,y>-X' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '18'
+SELECT * FROM ipblocks WHERE ipb_address = '206.116.34.230'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '18'    AND page_id = '18'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118843' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '2.20.183.203'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'cHTGWH$7?' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '343'
+SELECT * FROM ipblocks WHERE ipb_address = '124.180.111.156'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '343'    AND page_id = '343'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4857' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '~_O_@\.-[\_)>XR' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '10'
+SELECT * FROM ipblocks WHERE ipb_address = '101.217.47.116'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '10'    AND page_id = '10'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118722' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '166.120.64.80'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'CT\VS]jY{=F' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '355'
+SELECT * FROM ipblocks WHERE ipb_address = '72.75.136.166'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '355'    AND page_id = '355'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5218' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '#Y)Qyyu)L[vj!Zhdr^B(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '24'
+SELECT * FROM ipblocks WHERE ipb_address = '6.58.246.55'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '24'    AND page_id = '24'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '203' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '59.97.101.10'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Gq4P\?O},''|' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3132'
+SELECT * FROM ipblocks WHERE ipb_address = '178.215.9.254'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3132'    AND page_id = '3132'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '36650' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ')(J}Ceguk\[bZ5' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '14'
+SELECT * FROM ipblocks WHERE ipb_address = '101.39.135.161'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '14'    AND page_id = '14'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '137' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 's_Da|;K?} 9!p4/-mX$?g%EPF[Uf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '20'
+SELECT * FROM ipblocks WHERE ipb_address = '28.202.38.172'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '20'    AND page_id = '20'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118840' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '59.59.134.59'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '6kOWSwz''?R3MX/I/p' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '13'
+SELECT * FROM ipblocks WHERE ipb_address = '42.48.83.180'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '13'    AND page_id = '13'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118488' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '75.186.62.162'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'Sj>Z3@P6edK}[RNLL7ISC3~<s[6' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9'
+SELECT * FROM ipblocks WHERE ipb_address = '99.106.201.57'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9'    AND page_id = '9'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118741' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',H''HX++$FD' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '219'
+SELECT * FROM ipblocks WHERE ipb_address = '98.211.173.4'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '219'    AND page_id = '219'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2788' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '149.189.210.252'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '28.142.54.22'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '227.68.80.145'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '252.33.199.141'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '202.127.94.129'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '7' AND page_title = '9}L.mWJq0Rv(9t5&-8;;' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '804'
+SELECT * FROM ipblocks WHERE ipb_address = '205.29.216.84'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '804'    AND page_id = '804'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9831' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'a$93zDLL#u(GW/2hCSf>`g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '56'
+SELECT * FROM ipblocks WHERE ipb_address = '149.251.186.96'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '56'    AND page_id = '56'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '397' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '4' AND page_title = 's;Mrzuk*F(:tQ/g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7955'
+SELECT * FROM ipblocks WHERE ipb_address = '178.202.86.170'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7955'    AND page_id = '7955'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '91509' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '|!QExhED67UB.Q' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1407'
+SELECT * FROM ipblocks WHERE ipb_address = '200.63.76.151'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1407'    AND page_id = '1407'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '17025' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ')(J}Ceguk\[bZ5' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '14'
+SELECT * FROM ipblocks WHERE ipb_address = '58.83.12.151'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '14'    AND page_id = '14'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '137' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{gZNZn\$fC,Mkq' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '286'
+SELECT * FROM ipblocks WHERE ipb_address = '37.74.22.185'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '286'    AND page_id = '286'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4082' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '137.20.45.15'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '\og171?@HQmyd0' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1248'
+SELECT * FROM ipblocks WHERE ipb_address = '85.96.58.29'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1248'    AND page_id = '1248'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '14801' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Rc''F+3-''G;J;QoqT~3,fE{_HL+-!jN&|@' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1558'
+SELECT * FROM ipblocks WHERE ipb_address = '191.123.9.31'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1558'    AND page_id = '1558'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '18243' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'S&LM;/T2''myHP$Ed3-1T' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '88'
+SELECT * FROM ipblocks WHERE ipb_address = '192.21.104.221'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '88'    AND page_id = '88'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1342' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '205.70.13.166'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '-uc~:L\-5Z&LH;' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '708'
+SELECT * FROM ipblocks WHERE ipb_address = '119.151.71.61'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '708'    AND page_id = '708'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '8711' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'h}Za_I4NksYD!Y' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '181'
+SELECT * FROM ipblocks WHERE ipb_address = '70.107.94.210'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '181'    AND page_id = '181'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118780' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '\}=;O<\pI.<IYi' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '11'
+SELECT * FROM ipblocks WHERE ipb_address = '76.24.181.92'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '11'    AND page_id = '11'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118723' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '37.34.131.172'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '@kWK2Q6{?TXFh6~' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '90'
+SELECT * FROM ipblocks WHERE ipb_address = '248.74.140.204'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '90'    AND page_id = '90'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118725' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '6HO/' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9549'
+SELECT * FROM ipblocks WHERE ipb_address = '87.223.119.210'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9549'    AND page_id = '9549'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '112008' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = '6~kU)6(O_qW%oE4229ex[mf.7(,sny#dd7/;Cb4pWeKz' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4368'
+SELECT * FROM ipblocks WHERE ipb_address = '142.241.116.183'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4368'    AND page_id = '4368'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '52625' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'SSyYC#`-pRexgv=n(g[t$1j|(g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '40'
+SELECT * FROM ipblocks WHERE ipb_address = '65.19.174.21'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '40'    AND page_id = '40'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118861' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'M!["G9(VmF|:=?)''' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '250'
+SELECT * FROM ipblocks WHERE ipb_address = '91.85.205.98'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '250'    AND page_id = '250'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3791' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '128.134.167.98'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'O^ptpTN*RvOmg.h2] v' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1499'
+SELECT * FROM ipblocks WHERE ipb_address = '102.234.204.83'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1499'    AND page_id = '1499'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '17556' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'tqEGjpo' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4890'
+SELECT * FROM ipblocks WHERE ipb_address = '79.112.28.68'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4890'    AND page_id = '4890'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '58025' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'E[dG<g(V1%H/eBd''2eC$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4896'
+SELECT * FROM ipblocks WHERE ipb_address = '20.180.48.131'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4896'    AND page_id = '4896'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118458' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JVB5{''LE6q)~Pl' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '170'
+SELECT * FROM ipblocks WHERE ipb_address = '185.91.255.2'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '170'    AND page_id = '170'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2007' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '42.78.167.42'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '11.4.159.112'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '8hIOC5%vkAt9@HNf:*s{`[s2,+$ Y' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1121'
+SELECT * FROM ipblocks WHERE ipb_address = '245.225.117.54'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1121'    AND page_id = '1121'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '13067' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '43.91.142.250'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'R>G@=Kjnowsq+&1pe\' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '26'
+SELECT * FROM ipblocks WHERE ipb_address = '44.96.240.234'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '26'    AND page_id = '26'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118663' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '>7|uJ/DEV7|' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2044'
+SELECT * FROM ipblocks WHERE ipb_address = '12.7.114.57'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2044'    AND page_id = '2044'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '24203' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'ORYGOP~!Rb;`' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '119'
+SELECT * FROM ipblocks WHERE ipb_address = '238.50.150.238'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '119'    AND page_id = '119'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1649' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '87.68.53.2'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '116.99.228.90'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '215.125.32.244'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = 'C<OOg67ZS:F' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1665'
+SELECT * FROM ipblocks WHERE ipb_address = '233.176.100.182'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1665'    AND page_id = '1665'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '19214' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'Sj>Z3@P6edK}[RNLL7ISC3~<s[6' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9'
+SELECT * FROM ipblocks WHERE ipb_address = '203.204.198.184'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9'    AND page_id = '9'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118741' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'S+|^VO}5B,1%EzznlDA' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '851'
+SELECT * FROM ipblocks WHERE ipb_address = '107.200.139.187'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '851'    AND page_id = '851'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '10170' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'PCT9c[w' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1850'
+SELECT * FROM ipblocks WHERE ipb_address = '247.217.126.72'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1850'    AND page_id = '1850'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '21215' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '-J]>mIFouD*-"C{}..Px?EsS' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '759'
+SELECT * FROM ipblocks WHERE ipb_address = '49.151.52.188'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '759'    AND page_id = '759'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9476' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'a+!55//m_~> dg>tNaPl0myFN k{QxY2;2r]pM2dB~KO' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '72'
+SELECT * FROM ipblocks WHERE ipb_address = '73.228.12.104'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '72'    AND page_id = '72'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1047' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '|cZhTn^5XHse%Qj@~XOE+rGC<`O''I$ [''WMhs/#,Lw[Uz#4($\j(Fph' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '51'
+SELECT * FROM ipblocks WHERE ipb_address = '33.222.59.128'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '51'    AND page_id = '51'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '390' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '{_pD%`=e&V[S>A#lTLXQ+a' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '16'
+SELECT * FROM ipblocks WHERE ipb_address = '97.75.95.207'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '16'    AND page_id = '16'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118797' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'SSyYC#`-pRexgv=n(g[t$1j|(g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '40'
+SELECT * FROM ipblocks WHERE ipb_address = '240.251.81.209'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '40'    AND page_id = '40'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118861' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'mb)>_syM\=w*kZH,5rwThj2c=Vg>''1PQp_xn&4[7K]S0L' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '64'
+SELECT * FROM ipblocks WHERE ipb_address = '20.246.181.186'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '64'    AND page_id = '64'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '485' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ')J]thR(3Q' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '37'
+SELECT * FROM ipblocks WHERE ipb_address = '62.98.106.157'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '37'    AND page_id = '37'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118821' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '10.247.8.49'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'bt\!B2mT~2BeSqOngWl''INtL%*(xIu7;NnL<dPt"xHH(eV@V6/pz6`|{{i' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '187'
+SELECT * FROM ipblocks WHERE ipb_address = '254.231.12.250'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '187'    AND page_id = '187'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2164' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'J~e(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3642'
+SELECT * FROM ipblocks WHERE ipb_address = '31.188.207.1'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3642'    AND page_id = '3642'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '43659' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'H-DMH}aR!NJXY|' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '94'
+SELECT * FROM ipblocks WHERE ipb_address = '14.125.134.97'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '94'    AND page_id = '94'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118737' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '197.51.82.231'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '2Y@N!Jc= 4kFj<+3&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8'
+SELECT * FROM ipblocks WHERE ipb_address = '81.234.95.69'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8'    AND page_id = '8'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118766' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '!Cd6H*(Y/3XL' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '369'
+SELECT * FROM ipblocks WHERE ipb_address = '51.42.13.142'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '369'    AND page_id = '369'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5305' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '''~3"<CRPV}69P"7z%zQm]Q7''U%(MlMT:L+#h>CN6SDnC5_' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8067'
+SELECT * FROM ipblocks WHERE ipb_address = '31.222.147.189'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8067'    AND page_id = '8067'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '93738' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '&ENGT*=Fv"C' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '60'
+SELECT * FROM ipblocks WHERE ipb_address = '251.236.201.182'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '60'    AND page_id = '60'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118624' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '8<dTVP+_0mMG4*~wuu|/Bx&VkmCobOQGq1I#EO`jJ''^O<F*KF`s' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '386'
+SELECT * FROM ipblocks WHERE ipb_address = '149.159.6.36'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '386'    AND page_id = '386'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5349' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{  vq9^SpEMTR@/woG' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '378'
+SELECT * FROM ipblocks WHERE ipb_address = '107.177.36.70'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '378'    AND page_id = '378'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5324' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '&U%MD"@t^yhz6U>{3' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '19'
+SELECT * FROM ipblocks WHERE ipb_address = '84.220.146.57'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '19'    AND page_id = '19'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118879' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '53.58.204.212'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'i{N0"qvK)%o>gacaNk}QHfg[<s")3fIW,"i79F.P' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '306'
+SELECT * FROM ipblocks WHERE ipb_address = '231.92.19.98'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '306'    AND page_id = '306'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4312' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '!Xs]RwD>(Q/dMsS#Pz' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '25'
+SELECT * FROM ipblocks WHERE ipb_address = '139.216.178.202'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '25'    AND page_id = '25'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '204' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}F;MUX;+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '549'
+SELECT * FROM ipblocks WHERE ipb_address = '219.231.186.169'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '549'    AND page_id = '549'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '6779' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '{_pD%`=e&V[S>A#lTLXQ+a' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '16'
+SELECT * FROM ipblocks WHERE ipb_address = '222.145.48.104'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '16'    AND page_id = '16'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118797' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '\}=;O<\pI.<IYi' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '11'
+SELECT * FROM ipblocks WHERE ipb_address = '107.162.59.27'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '11'    AND page_id = '11'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118723' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '"]>@y{-|S)YD}x' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4385'
+SELECT * FROM ipblocks WHERE ipb_address = '131.248.2.65'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4385'    AND page_id = '4385'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '52757' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'e_]FKnOL@xG9*|TS8r|x' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '68'
+SELECT * FROM ipblocks WHERE ipb_address = '158.162.197.18'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '68'    AND page_id = '68'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1036' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '172.135.216.143'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '10.38.1.194'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '`F}wFw@' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '136'
+SELECT * FROM ipblocks WHERE ipb_address = '177.193.62.203'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '136'    AND page_id = '136'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1875' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'i{N0"qvK)%o>gacaNk}QHfg[<s")3fIW,"i79F.P' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '306'
+SELECT * FROM ipblocks WHERE ipb_address = '143.24.227.205'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '306'    AND page_id = '306'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4312' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '9.174.121.122'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'FQuH)E~bz@Ifu`8([Zjy3' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '53'
+SELECT * FROM ipblocks WHERE ipb_address = '205.109.252.31'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '53'    AND page_id = '53'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '392' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'kJ8JaSO5PbKx[0NUGE<H`,y>-X' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '18'
+SELECT * FROM ipblocks WHERE ipb_address = '89.137.241.40'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '18'    AND page_id = '18'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118843' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'aHA`/m.}\SHX#cU' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '243'
+SELECT * FROM ipblocks WHERE ipb_address = '139.11.39.166'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '243'    AND page_id = '243'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3751' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'kJ8JaSO5PbKx[0NUGE<H`,y>-X' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '18'
+SELECT * FROM ipblocks WHERE ipb_address = '62.87.122.0'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '18'    AND page_id = '18'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118843' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'a|}kNp"WE:@:J$.J/n72CrsF@4=sY)[)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '98'
+SELECT * FROM ipblocks WHERE ipb_address = '169.170.18.27'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '98'    AND page_id = '98'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1370' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '"c[C''AP&s}W' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '461'
+SELECT * FROM ipblocks WHERE ipb_address = '63.252.75.250'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '461'    AND page_id = '461'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5883' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '146.134.203.184'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = '%W2-z*''0b35_L.' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1286'
+SELECT * FROM ipblocks WHERE ipb_address = '23.141.133.132'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1286'    AND page_id = '1286'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '15045' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'O`ODTd=nZ4h6m' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1067'
+SELECT * FROM ipblocks WHERE ipb_address = '105.230.216.32'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1067'    AND page_id = '1067'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '12590' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '15' AND page_title = '`vP`_`-' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '892'
+SELECT * FROM ipblocks WHERE ipb_address = '85.220.43.239'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '892'    AND page_id = '892'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '10321' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'ygv#)3<8A%~2<ja' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '238'
+SELECT * FROM ipblocks WHERE ipb_address = '157.170.89.112'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '238'    AND page_id = '238'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3737' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '|\Oan%YEZc}#55O' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '731'
+SELECT * FROM ipblocks WHERE ipb_address = '55.235.199.38'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '731'    AND page_id = '731'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9120' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'x9Qj<0kEc' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '57'
+SELECT * FROM ipblocks WHERE ipb_address = '29.199.94.224'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '57'    AND page_id = '57'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '400' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'kJ8JaSO5PbKx[0NUGE<H`,y>-X' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '18'
+SELECT * FROM ipblocks WHERE ipb_address = '169.60.80.81'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '18'    AND page_id = '18'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118843' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '189.7.182.105'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'TQJI7=l{\8dPR1' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '28'
+SELECT * FROM ipblocks WHERE ipb_address = '59.0.169.18'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '28'    AND page_id = '28'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118686' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '^hC]IJj=fd~_''hr' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '34'
+SELECT * FROM ipblocks WHERE ipb_address = '29.65.151.150'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '34'    AND page_id = '34'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118885' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '#h|2s#ML^cW''sG' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2921'
+SELECT * FROM ipblocks WHERE ipb_address = '179.101.191.249'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2921'    AND page_id = '2921'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '32482' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '?1n`C3 A VE$7i' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2534'
+SELECT * FROM ipblocks WHERE ipb_address = '40.210.235.7'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2534'    AND page_id = '2534'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '29027' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Aw<^jUe&lu]U2b' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5268'
+SELECT * FROM ipblocks WHERE ipb_address = '45.116.230.181'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5268'    AND page_id = '5268'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '61260' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'I''(8;xecC+*' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1987'
+SELECT * FROM ipblocks WHERE ipb_address = '37.4.2.2'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1987'    AND page_id = '1987'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '23387' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = ',njNn_gDLwNNY!dbW}!n[y8sNmy,zuW)vp,@]ZmQz.' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8714'
+SELECT * FROM ipblocks WHERE ipb_address = '69.218.48.88'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8714'    AND page_id = '8714'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '101061' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '72.51.146.205'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '26.188.47.50'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U2A\&?.|J|h!' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '33'
+SELECT * FROM ipblocks WHERE ipb_address = '7.22.145.183'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '33'    AND page_id = '33'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '250' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '6kOWSwz''?R3MX/I/p' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '13'
+SELECT * FROM ipblocks WHERE ipb_address = '207.74.84.226'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '13'    AND page_id = '13'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118488' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '+X&?ck3i}1PI|~]<J=kO+=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9787'
+SELECT * FROM ipblocks WHERE ipb_address = '200.1.129.119'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9787'    AND page_id = '9787'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '115236' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '(bT+C=[' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5752'
+SELECT * FROM ipblocks WHERE ipb_address = '165.191.216.68'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5752'    AND page_id = '5752'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '69016' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'i''/o#R}*WQ&%!' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3572'
+SELECT * FROM ipblocks WHERE ipb_address = '80.126.29.252'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3572'    AND page_id = '3572'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '43288' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'xrkQ^m@6w=]T{wR&Jc#[ByyT./OEG{&g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '253'
+SELECT * FROM ipblocks WHERE ipb_address = '181.29.241.89'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '253'    AND page_id = '253'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3794' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '232.243.71.0'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'Sj>Z3@P6edK}[RNLL7ISC3~<s[6' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9'
+SELECT * FROM ipblocks WHERE ipb_address = '93.244.103.251'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9'    AND page_id = '9'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118741' LIMIT 1
+-
+SELECT * FROM useracct WHERE user_id = '16740' LIMIT 1
+SELECT ug_group FROM user_groups WHERE ug_user = '16740'
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '{_pD%`=e&V[S>A#lTLXQ+a' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '16'
+SELECT * FROM ipblocks WHERE ipb_user = '16740'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '16'    AND page_id = '16'    AND rev_id = page_latest LIMIT 1
+SELECT old_text,old_flags FROM text WHERE old_id = '118797' LIMIT 1
+-
+SELECT * FROM useracct WHERE user_id = '14139' LIMIT 1
+SELECT ug_group FROM user_groups WHERE ug_user = '14139'
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '$3*9&yvr~q^w' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '12'
+SELECT * FROM ipblocks WHERE ipb_user = '14139'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '12'    AND page_id = '12'    AND rev_id = page_latest LIMIT 1
+SELECT old_text,old_flags FROM text WHERE old_id = '118639' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '234.103.50.210'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'Bd Ipcbjvm&,8b' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '523'
+SELECT * FROM ipblocks WHERE ipb_address = '196.30.107.184'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '523'    AND page_id = '523'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '6607' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@cc749e4
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@5c392fe8
+UPDATE page   SET page_latest = '118888', page_touched = '20120905223240', page_is_new = 0, page_is_redirect = 0, page_len = '5400'  WHERE page_id = '523'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223240', '20120905223240', '1', 'Bd Ipcbjvm&,8b', '0', '0', '523', '6330', '196.30.107.184', '', '118888', '6607', '0', '0', '', '196.30.107.184', '5400', '5400')
+SELECT wl_user FROM watchlist WHERE wl_title = 'Bd Ipcbjvm&,8b'   AND wl_namespace = '1'   AND wl_user != '6330'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'LpG/*:qv\SS5gs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '29'
+SELECT * FROM ipblocks WHERE ipb_address = '194.110.19.121'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '29'    AND page_id = '29'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118655' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '13.198.39.248'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '9sK"Z&Uv{.fQ' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1554'
+SELECT * FROM ipblocks WHERE ipb_address = '139.102.117.45'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1554'    AND page_id = '1554'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '18195' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'sAMXG=F>n!.30`' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '135'
+SELECT * FROM ipblocks WHERE ipb_address = '114.222.101.30'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '135'    AND page_id = '135'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1874' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Z#a[G+0rW};}){U/G/`(!N,!2' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '99'
+SELECT * FROM ipblocks WHERE ipb_address = '227.197.217.109'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '99'    AND page_id = '99'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1375' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@51bfa303
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3ea763a
+UPDATE page   SET page_latest = '118890', page_touched = '20120905223241', page_is_new = 0, page_is_redirect = 0, page_len = '700'  WHERE page_id = '99'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223241', '20120905223241', '0', 'Z#a[G+0rW};}){U/G/`(!N,!2', '0', '0', '99', '0', '227.197.217.109', 'J?fzLR\bKWWd1~o_Qs*hA["e9&+y_D,X[7;Y|LHe?XiM?wrdebp~\&=QncKax/PPtcJ0Q+R~t?CWVA>[M3FfC)wY4L]H]* -c(\<H&s3q-n0&lQ 1-}"D/ A"q1|3Rhi>uw/h_Ia6R-+>', '118891', '1375', '0', '0', '', '227.197.217.109', '700', '700')
+SELECT wl_user FROM watchlist WHERE wl_title = 'Z#a[G+0rW};}){U/G/`(!N,!2'   AND wl_namespace = '0'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '\-iXo47{' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '964'
+SELECT * FROM ipblocks WHERE ipb_address = '170.183.65.239'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '964'    AND page_id = '964'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118446' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '254.72.44.105'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '}}S61U6ZmD_ 7wq''P[~3M''uYd ~!vgY27$ca6n{`=,' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '638'
+SELECT * FROM ipblocks WHERE ipb_address = '183.171.87.39'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '638'    AND page_id = '638'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '8294' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '11.244.97.140'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '42.49.241.68'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'N,Oo-lNj1b*R)oTxTR6mol*qU_)Uji' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '209'
+SELECT * FROM ipblocks WHERE ipb_address = '211.107.220.199'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '209'    AND page_id = '209'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2708' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'yP$B\/z{QA*5(z' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3496'
+SELECT * FROM ipblocks WHERE ipb_address = '152.58.35.111'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3496'    AND page_id = '3496'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '41500' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U2A\&?.|J|h!' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '33'
+SELECT * FROM ipblocks WHERE ipb_address = '188.172.121.220'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '33'    AND page_id = '33'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '250' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@79b2591c
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@49c88f2b
+UPDATE page   SET page_latest = '118891', page_touched = '20120905223241', page_is_new = 0, page_is_redirect = 0, page_len = '4400'  WHERE page_id = '33'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223241', '20120905223241', '3', 'U2A\&?.|J|h!', '0', '0', '33', '0', '188.172.121.220', '#Hs''Kb\HM/~6>m?ULy8QcTle%S|VLK"g6i"~kMMGzs<W~y;?:a/2>1,50//@', '118890', '250', '0', '0', '', '188.172.121.220', '4400', '4400')
+SELECT wl_user FROM watchlist WHERE wl_title = 'U2A\&?.|J|h!'   AND wl_namespace = '3'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '77.58.119.88'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '$3*9&yvr~q^w' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '12'
+SELECT * FROM ipblocks WHERE ipb_address = '194.50.82.45'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '12'    AND page_id = '12'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118639' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'GHTHCpt' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '50'
+SELECT * FROM ipblocks WHERE ipb_address = '106.243.180.165'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '50'    AND page_id = '50'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '389' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '243.252.11.106'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '125.109.2.137'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'SSyYC#`-pRexgv=n(g[t$1j|(g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '40'
+SELECT * FROM ipblocks WHERE ipb_address = '192.198.226.59'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '40'    AND page_id = '40'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118861' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ')(J}Ceguk\[bZ5' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '14'
+SELECT * FROM ipblocks WHERE ipb_address = '75.22.146.170'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '14'    AND page_id = '14'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '137' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '<p2\agya$?@' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '102'
+SELECT * FROM ipblocks WHERE ipb_address = '75.144.37.102'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '102'    AND page_id = '102'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1416' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'tq+\|F%DbU0n:pvLx3Ob)(Y^(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '30'
+SELECT * FROM ipblocks WHERE ipb_address = '134.52.246.159'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '30'    AND page_id = '30'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '238' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '6ja^oS@*}JT~-i7y\Unxk' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '891'
+SELECT * FROM ipblocks WHERE ipb_address = '37.167.236.253'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '891'    AND page_id = '891'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '10320' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '234.242.222.114'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '~_O_@\.-[\_)>XR' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '10'
+SELECT * FROM ipblocks WHERE ipb_address = '255.251.129.129'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '10'    AND page_id = '10'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118722' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'W<yzXj_tVCx"X' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '487'
+SELECT * FROM ipblocks WHERE ipb_address = '14.53.234.89'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '487'    AND page_id = '487'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118591' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'y!xDTErlB' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '454'
+SELECT * FROM ipblocks WHERE ipb_address = '53.180.244.248'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '454'    AND page_id = '454'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5842' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '_B0F^A6NB<L!b' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '96'
+SELECT * FROM ipblocks WHERE ipb_address = '148.45.220.14'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '96'    AND page_id = '96'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1366' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '$3*9&yvr~q^w' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '12'
+SELECT * FROM ipblocks WHERE ipb_address = '215.202.77.248'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '12'    AND page_id = '12'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118639' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '137.128.181.26'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '9.178.143.107'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Aw<^jUe&lu]U2b' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5268'
+SELECT * FROM ipblocks WHERE ipb_address = '124.39.167.22'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5268'    AND page_id = '5268'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '61260' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '180.246.74.97'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '134.118.161.97'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '197.124.24.221'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '181.49.13.56'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '6>D@=~ii:,<TBJ' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '330'
+SELECT * FROM ipblocks WHERE ipb_address = '127.141.102.182'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '330'    AND page_id = '330'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4605' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'dc}g9@zl)c-x dO{h!pOVo''3\' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '305'
+SELECT * FROM ipblocks WHERE ipb_address = '49.204.244.70'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '305'    AND page_id = '305'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4310' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '2.12.39.139'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '116.229.64.154'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'f}T4KbfGJEw' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '38'
+SELECT * FROM ipblocks WHERE ipb_address = '146.244.185.250'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '38'    AND page_id = '38'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118805' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '@kWK2Q6{?TXFh6~' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '90'
+SELECT * FROM ipblocks WHERE ipb_address = '13.50.128.60'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '90'    AND page_id = '90'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118725' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U%d9-''~Iu3B)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6'
+SELECT * FROM ipblocks WHERE ipb_address = '147.109.9.23'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6'    AND page_id = '6'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118856' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'AbT`z y' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '23'
+SELECT * FROM ipblocks WHERE ipb_address = '94.47.146.82'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '23'    AND page_id = '23'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118827' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'Vr<R%''}\;RPO1f^' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3335'
+SELECT * FROM ipblocks WHERE ipb_address = '179.249.213.45'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3335'    AND page_id = '3335'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '40042' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'cr=K~F%>2' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '148'
+SELECT * FROM ipblocks WHERE ipb_address = '39.169.126.246'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '148'    AND page_id = '148'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1917' LIMIT 1
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223240'  WHERE wl_title = 'Bd Ipcbjvm&,8b'   AND wl_namespace = '1'   AND wl_user = '59'
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '[t+\a7rMab)\#S' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '164'
+SELECT * FROM ipblocks WHERE ipb_address = '225.66.137.68'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '164'    AND page_id = '164'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118604' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'pRDvwy/i' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2501'
+SELECT * FROM ipblocks WHERE ipb_address = '249.41.171.174'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2501'    AND page_id = '2501'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118700' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = '6&eP,Ec\ON%GBEq_;t(%9Gb3^3UL.,BED}&aYuzY@' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '66'
+SELECT * FROM ipblocks WHERE ipb_address = '122.80.107.129'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '66'    AND page_id = '66'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118575' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'tq+\|F%DbU0n:pvLx3Ob)(Y^(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '30'
+SELECT * FROM ipblocks WHERE ipb_address = '151.129.28.223'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '30'    AND page_id = '30'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '238' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = 'q_W&m#}SBjOoaTPZ@#W?' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6994'
+SELECT * FROM ipblocks WHERE ipb_address = '184.31.251.56'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6994'    AND page_id = '6994'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '83139' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'xWIDK^y? [>qX`_2uoR%FyG=IojH}Ufi&LDx T h+N-9v+MW' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '248'
+SELECT * FROM ipblocks WHERE ipb_address = '171.199.22.226'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '248'    AND page_id = '248'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3786' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'O?;!820M`W<"LB' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '70'
+SELECT * FROM ipblocks WHERE ipb_address = '30.43.197.244'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '70'    AND page_id = '70'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1045' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'z1-od,4r~ExupBJj''@eXDF%U<xsOf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '103'
+SELECT * FROM ipblocks WHERE ipb_address = '45.29.215.192'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '103'    AND page_id = '103'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1436' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'FQv,`>*n=3b3V8_HtV0z^F%uvVaPlBhg^JcI6[?d''=n' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6661'
+SELECT * FROM ipblocks WHERE ipb_address = '15.195.82.37'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6661'    AND page_id = '6661'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '80084' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '1n@{#X&Y[x=_}`)(}8' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7512'
+SELECT * FROM ipblocks WHERE ipb_address = '147.168.10.37'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7512'    AND page_id = '7512'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '87355' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'DuOT X /s|nL[' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9593'
+SELECT * FROM ipblocks WHERE ipb_address = '11.105.56.146'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9593'    AND page_id = '9593'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '112830' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '212.131.122.147'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'm)~Fk20&F0?Hvqq_:tY,b17g{''<WdEU' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '81'
+SELECT * FROM ipblocks WHERE ipb_address = '187.219.175.97'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '81'    AND page_id = '81'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1108' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '3.228.67.150'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM useracct WHERE user_id = '219' LIMIT 1
+SELECT ug_group FROM user_groups WHERE ug_user = '219'
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'Sj>Z3@P6edK}[RNLL7ISC3~<s[6' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9'
+SELECT * FROM ipblocks WHERE ipb_user = '219'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9'    AND page_id = '9'    AND rev_id = page_latest LIMIT 1
+SELECT old_text,old_flags FROM text WHERE old_id = '118741' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'U*J&3EWM' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3731'
+SELECT * FROM ipblocks WHERE ipb_address = '179.221.214.142'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3731'    AND page_id = '3731'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '44610' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'hyh [-E\R<<wAhs' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7'
+SELECT * FROM ipblocks WHERE ipb_address = '60.186.57.170'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7'    AND page_id = '7'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118873' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'a1qqCA;`o^."e&&vt!' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1050'
+SELECT * FROM ipblocks WHERE ipb_address = '213.116.78.172'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1050'    AND page_id = '1050'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '12357' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'fU.kSYNM8hI]}tZn1G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4821'
+SELECT * FROM ipblocks WHERE ipb_address = '255.216.31.105'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4821'    AND page_id = '4821'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '57206' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '108.215.69.89'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '171.54.167.248'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '213.225.201.78'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'dc}g9@zl)c-x dO{h!pOVo''3\' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '305'
+SELECT * FROM ipblocks WHERE ipb_address = '94.105.207.71'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '305'    AND page_id = '305'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4310' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '~<TPM>^^|RuA0Po"L' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '588'
+SELECT * FROM ipblocks WHERE ipb_address = '129.66.63.117'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '588'    AND page_id = '588'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '7226' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '{_pD%`=e&V[S>A#lTLXQ+a' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '16'
+SELECT * FROM ipblocks WHERE ipb_address = '172.183.130.143'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '16'    AND page_id = '16'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118797' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '|\Oan%YEZc}#55O' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '731'
+SELECT * FROM ipblocks WHERE ipb_address = '241.223.28.103'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '731'    AND page_id = '731'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9120' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'i%"`:]gJQ8Zc(~wLi`' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '507'
+SELECT * FROM ipblocks WHERE ipb_address = '38.20.99.56'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '507'    AND page_id = '507'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '6526' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U2A\&?.|J|h!' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '33'
+SELECT * FROM ipblocks WHERE ipb_address = '207.163.26.229'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '33'    AND page_id = '33'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '250' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '15' AND page_title = 'D-lwY3`qBW*mi62qrK2YgO' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '722'
+SELECT * FROM ipblocks WHERE ipb_address = '101.124.194.1'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '722'    AND page_id = '722'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9070' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'Sj>Z3@P6edK}[RNLL7ISC3~<s[6' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9'
+SELECT * FROM ipblocks WHERE ipb_address = '231.92.53.95'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9'    AND page_id = '9'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118741' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '1v+k2h*r_7,+ !;2Mzl*`''3\OlS3Bj0y$#0d{MV0!rJRey(6kA_D' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '772'
+SELECT * FROM ipblocks WHERE ipb_address = '169.131.48.54'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '772'    AND page_id = '772'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9625' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = '),[(ELF''5K' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '795'
+SELECT * FROM ipblocks WHERE ipb_address = '118.68.217.112'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '795'    AND page_id = '795'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9791' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '158.218.44.33'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'kZJZi)-mM W7rx7' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '194'
+SELECT * FROM ipblocks WHERE ipb_address = '218.243.26.175'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '194'    AND page_id = '194'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2584' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = 'BC*L>X6_EjL(BXf*' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '55'
+SELECT * FROM ipblocks WHERE ipb_address = '183.167.47.219'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '55'    AND page_id = '55'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '396' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'HR#)sj.@~<$&VkUw&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '49'
+SELECT * FROM ipblocks WHERE ipb_address = '36.75.195.125'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '49'    AND page_id = '49'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118876' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '#Y)Qyyu)L[vj!Zhdr^B(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '24'
+SELECT * FROM ipblocks WHERE ipb_address = '20.120.93.41'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '24'    AND page_id = '24'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '203' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = ':eVQ71mq g=O' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2254'
+SELECT * FROM ipblocks WHERE ipb_address = '154.18.99.244'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2254'    AND page_id = '2254'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '26057' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '4' AND page_title = '`R''5!1y\%yY)''b' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3341'
+SELECT * FROM ipblocks WHERE ipb_address = '18.123.108.129'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3341'    AND page_id = '3341'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '40059' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '17.186.238.178'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'i!?w.Sj]X.VdZ' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '459'
+SELECT * FROM ipblocks WHERE ipb_address = '86.50.115.220'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '459'    AND page_id = '459'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118746' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '$%"`bNeQLsAW_N$|' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '267'
+SELECT * FROM ipblocks WHERE ipb_address = '170.100.35.200'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '267'    AND page_id = '267'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3872' LIMIT 1
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223241'  WHERE wl_title = 'Z#a[G+0rW};}){U/G/`(!N,!2'   AND wl_namespace = '0'   AND wl_user = '19980'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223241'  WHERE wl_title = 'U2A\&?.|J|h!'   AND wl_namespace = '3'   AND wl_user = '19980'
+-
+SELECT * FROM page WHERE page_namespace = '7' AND page_title = '`Op,4''9ZpIR\rK7scv''f[6"pRro1@Mr9f' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '116'
+SELECT * FROM ipblocks WHERE ipb_address = '136.64.10.188'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '116'    AND page_id = '116'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1637' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '6kOWSwz''?R3MX/I/p' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '13'
+SELECT * FROM ipblocks WHERE ipb_address = '45.190.136.209'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '13'    AND page_id = '13'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118488' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ']NJm"8`PKw''' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '374'
+SELECT * FROM ipblocks WHERE ipb_address = '226.87.16.130'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '374'    AND page_id = '374'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5318' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'P{C#upFsgcg0B[' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3308'
+SELECT * FROM ipblocks WHERE ipb_address = '120.82.121.70'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3308'    AND page_id = '3308'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '39553' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '!,p\<4BZn3@:/' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6105'
+SELECT * FROM ipblocks WHERE ipb_address = '4.45.129.10'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6105'    AND page_id = '6105'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '72984' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '7kx&-Mn-r6wtNju7$''P' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3373'
+SELECT * FROM ipblocks WHERE ipb_address = '139.184.89.137'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3373'    AND page_id = '3373'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '40334' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'jq/smadoiDUk{AfF' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2238'
+SELECT * FROM ipblocks WHERE ipb_address = '73.141.104.81'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2238'    AND page_id = '2238'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118525' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = '*#|hO\n=-Of:<IhV7d,vf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7586'
+SELECT * FROM ipblocks WHERE ipb_address = '143.120.224.7'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7586'    AND page_id = '7586'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '88112' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '&#sp''vScxAEO' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1111'
+SELECT * FROM ipblocks WHERE ipb_address = '183.82.136.144'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1111'    AND page_id = '1111'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '12981' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'm?kNG: enHGM&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1742'
+SELECT * FROM ipblocks WHERE ipb_address = '237.104.26.113'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1742'    AND page_id = '1742'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118436' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '. &fl8I9l lmA$;kMGC~sx`4' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8568'
+SELECT * FROM ipblocks WHERE ipb_address = '113.248.191.38'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8568'    AND page_id = '8568'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '99692' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'Na[mMV }"OVPs:T}pz +Ca0nzp' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4738'
+SELECT * FROM ipblocks WHERE ipb_address = '226.119.131.238'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4738'    AND page_id = '4738'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '56134' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'AT,UkW|oCex "U' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2641'
+SELECT * FROM ipblocks WHERE ipb_address = '114.165.227.30'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2641'    AND page_id = '2641'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '29803' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '2N3e0+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1993'
+SELECT * FROM ipblocks WHERE ipb_address = '189.10.67.140'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1993'    AND page_id = '1993'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '23407' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@591bfcbe
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3834a1c8
+UPDATE page   SET page_latest = '118889', page_touched = '20120905223241', page_is_new = 0, page_is_redirect = 0, page_len = '1200'  WHERE page_id = '1993'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223241', '20120905223241', '3', '2N3e0+', '0', '0', '1993', '6582', '189.10.67.140', 'JOAZsl{<JeOhY''H+I&csku@Q*GL #eeb^%eU\B)|!ko6=S''l@/w{r<JIKs#K,0>3)1^hK.}L', '118889', '23407', '0', '0', '', '189.10.67.140', '1200', '1200')
+SELECT wl_user FROM watchlist WHERE wl_title = '2N3e0+'   AND wl_namespace = '3'   AND wl_user != '6582'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '4vXguFZ;RP5!SVb' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2308'
+SELECT * FROM ipblocks WHERE ipb_address = '81.234.48.13'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2308'    AND page_id = '2308'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '26571' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ')(J}Ceguk\[bZ5' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '14'
+SELECT * FROM ipblocks WHERE ipb_address = '187.65.58.161'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '14'    AND page_id = '14'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '137' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3fa9b4a4
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3b961a84
+UPDATE page   SET page_latest = '118892', page_touched = '20120905223243', page_is_new = 0, page_is_redirect = 0, page_len = '18400'  WHERE page_id = '14'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223243', '20120905223243', '10', ')(J}Ceguk\[bZ5', '0', '0', '14', '12551', '187.65.58.161', '', '118893', '137', '0', '0', '', '187.65.58.161', '18400', '18400')
+SELECT wl_user FROM watchlist WHERE wl_title = ')(J}Ceguk\[bZ5'   AND wl_namespace = '10'   AND wl_user != '12551'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'RsqL>FJ;Jf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5025'
+SELECT * FROM ipblocks WHERE ipb_address = '41.184.67.148'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5025'    AND page_id = '5025'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '59266' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'SSyYC#`-pRexgv=n(g[t$1j|(g' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '40'
+SELECT * FROM ipblocks WHERE ipb_address = '142.246.161.4'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '40'    AND page_id = '40'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118861' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'Y*(XF(5*~KRhB 2Umufvx 5zybPUkSvmqp''+C&S' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '207'
+SELECT * FROM ipblocks WHERE ipb_address = '166.212.213.40'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '207'    AND page_id = '207'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2671' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '42.147.113.97'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'I:^''yeGqP' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '137'
+SELECT * FROM ipblocks WHERE ipb_address = '109.58.140.49'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '137'    AND page_id = '137'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1887' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ')(J}Ceguk\[bZ5' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '14'
+SELECT * FROM ipblocks WHERE ipb_address = '170.252.191.70'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '14'    AND page_id = '14'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '137' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = 'C0o!o#HOsRfEEPaV71A0h' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '318'
+SELECT * FROM ipblocks WHERE ipb_address = '156.129.187.177'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '318'    AND page_id = '318'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118485' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'j#"mF$eqZ~Le)9%' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1695'
+SELECT * FROM ipblocks WHERE ipb_address = '61.240.48.209'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1695'    AND page_id = '1695'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '19441' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '5' AND page_title = 'dr(**TYcUc,8T<Y<3?P[8Bap' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6962'
+SELECT * FROM ipblocks WHERE ipb_address = '175.31.193.158'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6962'    AND page_id = '6962'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '82551' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'G*D-I:x8?D|:j$%F;' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3148'
+SELECT * FROM ipblocks WHERE ipb_address = '58.190.1.195'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3148'    AND page_id = '3148'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '36750' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '_&kPTbyxO*n' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '288'
+SELECT * FROM ipblocks WHERE ipb_address = '62.165.22.24'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '288'    AND page_id = '288'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4104' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '119.202.219.41'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '0<B=M>a+0(je' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '315'
+SELECT * FROM ipblocks WHERE ipb_address = '249.84.102.145'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '315'    AND page_id = '315'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4343' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U%d9-''~Iu3B)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6'
+SELECT * FROM ipblocks WHERE ipb_address = '236.130.199.209'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6'    AND page_id = '6'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118856' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '>~%*y9G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '46'
+SELECT * FROM ipblocks WHERE ipb_address = '243.138.29.8'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '46'    AND page_id = '46'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118544' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '73.100.129.126'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = '0,"''`})zn}*' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '186'
+SELECT * FROM ipblocks WHERE ipb_address = '169.102.81.239'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '186'    AND page_id = '186'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118760' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'k&]l-w6q|&>ZB@NCl81yX4j,!w{' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '872'
+SELECT * FROM ipblocks WHERE ipb_address = '56.229.51.185'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '872'    AND page_id = '872'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '10289' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '139.171.142.140'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3e29b849
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@55444319
+UPDATE page   SET page_latest = '118896', page_touched = '20120905223242', page_is_new = 0, page_is_redirect = 0, page_len = '24500'  WHERE page_id = '3'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223242', '20120905223242', '6', '}mc}VmMV-\G$', '0', '0', '3', '19469', '139.171.142.140', ']"*:.,vtQh@BA#3''(^\jN.}''-Wz?[|.R*Wg};^!', '118896', '118853', '0', '0', '', '139.171.142.140', '24500', '24500')
+SELECT wl_user FROM watchlist WHERE wl_title = '}mc}VmMV-\G$'   AND wl_namespace = '6'   AND wl_user != '19469'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'pr)Nq8' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3790'
+SELECT * FROM ipblocks WHERE ipb_address = '196.135.65.157'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3790'    AND page_id = '3790'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '45041' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '10' AND page_title = ':t>-U}q[W' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '319'
+SELECT * FROM ipblocks WHERE ipb_address = '176.169.129.26'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '319'    AND page_id = '319'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4418' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'B)s[g-A_rg.h' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1312'
+SELECT * FROM ipblocks WHERE ipb_address = '10.135.114.217'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1312'    AND page_id = '1312'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '15447' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '$)+9EY>$>x#o}' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '786'
+SELECT * FROM ipblocks WHERE ipb_address = '101.191.158.251'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '786'    AND page_id = '786'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9733' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '161.83.10.106'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U%d9-''~Iu3B)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6'
+SELECT * FROM ipblocks WHERE ipb_address = '182.140.51.66'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6'    AND page_id = '6'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118856' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '46.230.21.198'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '100' AND page_title = 'jxpLfzxc|JfUdw' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '75'
+SELECT * FROM ipblocks WHERE ipb_address = '146.26.10.184'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '75'    AND page_id = '75'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118884' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'kJ8JaSO5PbKx[0NUGE<H`,y>-X' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '18'
+SELECT * FROM ipblocks WHERE ipb_address = '51.8.208.196'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '18'    AND page_id = '18'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118843' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '2ES#89Xw' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2365'
+SELECT * FROM ipblocks WHERE ipb_address = '181.181.208.94'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2365'    AND page_id = '2365'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '26899' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '6kOWSwz''?R3MX/I/p' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '13'
+SELECT * FROM ipblocks WHERE ipb_address = '11.133.146.138'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '13'    AND page_id = '13'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118488' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = ')kC\P?),_' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1060'
+SELECT * FROM ipblocks WHERE ipb_address = '252.248.107.62'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1060'    AND page_id = '1060'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '12573' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '242.33.126.51'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = '0,"''`})zn}*' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '186'
+SELECT * FROM ipblocks WHERE ipb_address = '131.111.30.246'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '186'    AND page_id = '186'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118760' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 's_Da|;K?} 9!p4/-mX$?g%EPF[Uf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '20'
+SELECT * FROM ipblocks WHERE ipb_address = '120.95.223.59'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '20'    AND page_id = '20'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118840' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '>~%*y9G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '46'
+SELECT * FROM ipblocks WHERE ipb_address = '190.131.61.16'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '46'    AND page_id = '46'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118544' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@9f6f3dc
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@7d1050be
+UPDATE page   SET page_latest = '118897', page_touched = '20120905223243', page_is_new = 0, page_is_redirect = 0, page_len = '21400'  WHERE page_id = '46'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223243', '20120905223243', '3', '>~%*y9G', '0', '0', '46', '11871', '190.131.61.16', '', '118894', '118544', '0', '0', '', '190.131.61.16', '21400', '21400')
+SELECT wl_user FROM watchlist WHERE wl_title = '>~%*y9G'   AND wl_namespace = '3'   AND wl_user != '11871'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'IULKB7=>/@[D' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '130'
+SELECT * FROM ipblocks WHERE ipb_address = '67.231.56.187'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '130'    AND page_id = '130'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1868' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'Hu{.8J&<UTM0.wJij>1}+F"-C' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '555'
+SELECT * FROM ipblocks WHERE ipb_address = '174.187.206.156'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '555'    AND page_id = '555'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '6921' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'QyvUDl/Mv' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '247'
+SELECT * FROM ipblocks WHERE ipb_address = '5.164.80.12'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '247'    AND page_id = '247'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3781' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@69c5a33b
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@7a315068
+UPDATE page   SET page_latest = '118893', page_touched = '20120905223242', page_is_new = 0, page_is_redirect = 0, page_len = '9300'  WHERE page_id = '247'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223242', '20120905223242', '3', 'QyvUDl/Mv', '0', '0', '247', '4756', '5.164.80.12', '-X/ Ytneh[>:\7Nu#3,toV', '118892', '3781', '0', '0', '', '5.164.80.12', '9300', '9300')
+SELECT wl_user FROM watchlist WHERE wl_title = 'QyvUDl/Mv'   AND wl_namespace = '3'   AND wl_user != '4756'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'SCmCXq515f!N~53JP5N8f' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4965'
+SELECT * FROM ipblocks WHERE ipb_address = '168.172.116.168'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4965'    AND page_id = '4965'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '58604' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '/PNuH}UjuaU(anCu5j=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '310'
+SELECT * FROM ipblocks WHERE ipb_address = '177.152.91.205'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '310'    AND page_id = '310'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118645' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '166.231.208.210'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = '5t%48=mlxShxLg' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '31'
+SELECT * FROM ipblocks WHERE ipb_address = '72.53.214.81'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '31'    AND page_id = '31'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '243' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = '?SavFu7#2Ap>+x{`l[' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '163'
+SELECT * FROM ipblocks WHERE ipb_address = '236.36.80.206'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '163'    AND page_id = '163'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1978' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U%d9-''~Iu3B)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6'
+SELECT * FROM ipblocks WHERE ipb_address = '31.249.203.33'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6'    AND page_id = '6'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118856' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'FV]p;6+Qc]$"Y' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '403'
+SELECT * FROM ipblocks WHERE ipb_address = '187.159.128.173'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '403'    AND page_id = '403'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118419' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@6dca1837
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3ad8326d
+UPDATE page   SET page_latest = '118898', page_touched = '20120905223244', page_is_new = 0, page_is_redirect = 0, page_len = '14300'  WHERE page_id = '403'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223244', '20120905223244', '1', 'FV]p;6+Qc]$"Y', '0', '0', '403', '0', '187.159.128.173', 'yjKhS|q', '118898', '118419', '0', '0', '', '187.159.128.173', '14300', '14300')
+SELECT wl_user FROM watchlist WHERE wl_title = 'FV]p;6+Qc]$"Y'   AND wl_namespace = '1'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = ']2JXd>zr~|0H' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '353'
+SELECT * FROM ipblocks WHERE ipb_address = '1.167.134.97'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '353'    AND page_id = '353'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '5215' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 's_Da|;K?} 9!p4/-mX$?g%EPF[Uf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '20'
+SELECT * FROM ipblocks WHERE ipb_address = '37.85.247.114'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '20'    AND page_id = '20'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118840' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'M}!`N=snbLTNKaJ' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '35'
+SELECT * FROM ipblocks WHERE ipb_address = '59.184.230.222'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '35'    AND page_id = '35'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '272' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@5fcfad77
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@4c3fe94a
+UPDATE page   SET page_latest = '118900', page_touched = '20120905223245', page_is_new = 0, page_is_redirect = 0, page_len = '600'  WHERE page_id = '35'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223245', '20120905223245', '6', 'M}!`N=snbLTNKaJ', '0', '0', '35', '0', '59.184.230.222', 'RA!$OxlSszF[', '118901', '272', '0', '0', '', '59.184.230.222', '600', '600')
+SELECT wl_user FROM watchlist WHERE wl_title = 'M}!`N=snbLTNKaJ'   AND wl_namespace = '6'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '4' AND page_title = 'N#{S' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1404'
+SELECT * FROM ipblocks WHERE ipb_address = '7.145.224.78'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1404'    AND page_id = '1404'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '16982' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '\Q] D3_:m' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '293'
+SELECT * FROM ipblocks WHERE ipb_address = '255.51.69.113'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '293'    AND page_id = '293'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118346' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '169.194.59.47'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118896' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U%d9-''~Iu3B)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6'
+SELECT * FROM ipblocks WHERE ipb_address = '86.72.111.251'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6'    AND page_id = '6'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118856' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '2Y@N!Jc= 4kFj<+3&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8'
+SELECT * FROM ipblocks WHERE ipb_address = '162.81.133.174'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8'    AND page_id = '8'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118766' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'WQtfDFgRpm80?' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '937'
+SELECT * FROM ipblocks WHERE ipb_address = '69.92.17.94'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '937'    AND page_id = '937'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '10802' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'M!["G9(VmF|:=?)''' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '250'
+SELECT * FROM ipblocks WHERE ipb_address = '128.46.208.215'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '250'    AND page_id = '250'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3791' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ';I$XrVRD~wq}`Lf^Rj' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '632'
+SELECT * FROM ipblocks WHERE ipb_address = '4.219.143.83'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '632'    AND page_id = '632'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '8276' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '217.128.183.71'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Z;X5]qo' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '313'
+SELECT * FROM ipblocks WHERE ipb_address = '26.251.170.82'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '313'    AND page_id = '313'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4341' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'aXxD8y.B9n)`' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '269'
+SELECT * FROM ipblocks WHERE ipb_address = '245.82.94.75'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '269'    AND page_id = '269'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '3907' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'uk?QM^4{m{DCId<pdH8''_(|u@m5MJu' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '215'
+SELECT * FROM ipblocks WHERE ipb_address = '187.111.249.189'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '215'    AND page_id = '215'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118705' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '0''{3=9~1"%(' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5300'
+SELECT * FROM ipblocks WHERE ipb_address = '83.85.8.184'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5300'    AND page_id = '5300'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '61879' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '4*roajOp9Hh' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '162'
+SELECT * FROM ipblocks WHERE ipb_address = '226.59.17.211'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '162'    AND page_id = '162'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1963' LIMIT 1
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223243'  WHERE wl_title = ')(J}Ceguk\[bZ5'   AND wl_namespace = '10'   AND wl_user = '19980'
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Qm3zhd~M`k1UUX/' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '52'
+SELECT * FROM ipblocks WHERE ipb_address = '188.6.236.88'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '52'    AND page_id = '52'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118581' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'ubVF{`0D)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1330'
+SELECT * FROM ipblocks WHERE ipb_address = '224.64.15.84'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1330'    AND page_id = '1330'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '15659' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'JmDLX6BIU+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '5'
+SELECT * FROM ipblocks WHERE ipb_address = '112.55.156.133'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '5'    AND page_id = '5'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118865' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '<p2\agya$?@' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '102'
+SELECT * FROM ipblocks WHERE ipb_address = '51.158.154.17'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '102'    AND page_id = '102'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1416' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 's<(PC~@[xS#_V1H,l)KAT6b]={' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1220'
+SELECT * FROM ipblocks WHERE ipb_address = '87.210.156.172'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1220'    AND page_id = '1220'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '14514' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '4*roajOp9Hh' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '162'
+SELECT * FROM ipblocks WHERE ipb_address = '41.131.31.108'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '162'    AND page_id = '162'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1963' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '~_O_@\.-[\_)>XR' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '10'
+SELECT * FROM ipblocks WHERE ipb_address = '205.254.144.134'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '10'    AND page_id = '10'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118722' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = ';EGUE$MNP9=hJ' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '21'
+SELECT * FROM ipblocks WHERE ipb_address = '118.74.20.65'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '21'    AND page_id = '21'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118806' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'vc*A{6kvg&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3665'
+SELECT * FROM ipblocks WHERE ipb_address = '43.14.77.98'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3665'    AND page_id = '3665'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '43828' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '222.27.246.136'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '&b''8yZ~@$5E' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '126'
+SELECT * FROM ipblocks WHERE ipb_address = '2.199.6.104'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '126'    AND page_id = '126'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118563' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '~_O_@\.-[\_)>XR' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '10'
+SELECT * FROM ipblocks WHERE ipb_address = '123.213.232.95'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '10'    AND page_id = '10'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118722' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '\}=;O<\pI.<IYi' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '11'
+SELECT * FROM ipblocks WHERE ipb_address = '12.65.142.177'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '11'    AND page_id = '11'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118723' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '89.92.36.217'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '<}VP g3h~<' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '658'
+SELECT * FROM ipblocks WHERE ipb_address = '5.188.63.210'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '658'    AND page_id = '658'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '8396' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'O^ptpTN*RvOmg.h2] v' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1499'
+SELECT * FROM ipblocks WHERE ipb_address = '236.58.66.21'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1499'    AND page_id = '1499'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '17556' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 't}|YoZj#sqUkV' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '27'
+SELECT * FROM ipblocks WHERE ipb_address = '233.115.117.98'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '27'    AND page_id = '27'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '207' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '!ddK(V6L(X;,lNZ+3i' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '84'
+SELECT * FROM ipblocks WHERE ipb_address = '180.104.66.197'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '84'    AND page_id = '84'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118777' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Q 8CU' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '17'
+SELECT * FROM ipblocks WHERE ipb_address = '74.0.198.117'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '17'    AND page_id = '17'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118834' LIMIT 1
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223241'  WHERE wl_title = '2N3e0+'   AND wl_namespace = '3'   AND wl_user = '1456'
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 's_Da|;K?} 9!p4/-mX$?g%EPF[Uf' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '20'
+SELECT * FROM ipblocks WHERE ipb_address = '189.3.29.45'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '20'    AND page_id = '20'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118840' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '35.225.116.85'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223242'  WHERE wl_title = '}mc}VmMV-\G$'   AND wl_namespace = '6'   AND wl_user = '19953'
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '6kOWSwz''?R3MX/I/p' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '13'
+SELECT * FROM ipblocks WHERE ipb_address = '132.188.149.51'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '13'    AND page_id = '13'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118488' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '238.2.18.34'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118853' LIMIT 1
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223243'  WHERE wl_title = '>~%*y9G'   AND wl_namespace = '3'   AND wl_user = '19971'
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '154.136.15.130'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@25927275
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@5d8a2977
+UPDATE page   SET page_latest = '118901', page_touched = '20120905223245', page_is_new = 0, page_is_redirect = 0, page_len = '48600'  WHERE page_id = '2'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223245', '20120905223245', '0', ',_^t`)u6?-MY9@o=', '0', '0', '2', '13888', '154.136.15.130', '"22~B^{#_;*H', '118906', '118862', '0', '0', '', '154.136.15.130', '48600', '48600')
+SELECT wl_user FROM watchlist WHERE wl_title = ',_^t`)u6?-MY9@o='   AND wl_namespace = '0'   AND wl_user != '13888'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM useracct WHERE user_id = '5612' LIMIT 1
+SELECT ug_group FROM user_groups WHERE ug_user = '5612'
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '$jD77>k' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '262'
+SELECT * FROM ipblocks WHERE ipb_user = '5612'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '262'    AND page_id = '262'    AND rev_id = page_latest LIMIT 1
+SELECT old_text,old_flags FROM text WHERE old_id = '3830' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '\+H)k?mpLc#]`#y31<~' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '216'
+SELECT * FROM ipblocks WHERE ipb_address = '136.134.139.75'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '216'    AND page_id = '216'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '2748' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = '6&eP,Ec\ON%GBEq_;t(%9Gb3^3UL.,BED}&aYuzY@' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '66'
+SELECT * FROM ipblocks WHERE ipb_address = '60.175.80.7'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '66'    AND page_id = '66'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118575' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '{Iv2!! G' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4'
+SELECT * FROM ipblocks WHERE ipb_address = '57.186.67.55'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4'    AND page_id = '4'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118784' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = ',_^t`)u6?-MY9@o=' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2'
+SELECT * FROM ipblocks WHERE ipb_address = '196.186.165.136'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2'    AND page_id = '2'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118862' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '?P?Iwj' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '32'
+SELECT * FROM ipblocks WHERE ipb_address = '30.225.119.224'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '32'    AND page_id = '32'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118748' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = 'f}T4KbfGJEw' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '38'
+SELECT * FROM ipblocks WHERE ipb_address = '244.145.3.82'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '38'    AND page_id = '38'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118805' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '229.203.253.163'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118896' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '&b''8yZ~@$5E' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '126'
+SELECT * FROM ipblocks WHERE ipb_address = '69.82.134.236'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '126'    AND page_id = '126'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118563' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'U%d9-''~Iu3B)' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6'
+SELECT * FROM ipblocks WHERE ipb_address = '246.4.108.180'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6'    AND page_id = '6'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118856' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '}mc}VmMV-\G$' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3'
+SELECT * FROM ipblocks WHERE ipb_address = '223.110.13.134'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3'    AND page_id = '3'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118896' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'Q 8CU' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '17'
+SELECT * FROM ipblocks WHERE ipb_address = '34.208.187.98'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '17'    AND page_id = '17'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118834' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = 'TkwA=Pmxl4@ohBF:Fww52+d' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '80'
+SELECT * FROM ipblocks WHERE ipb_address = '110.100.102.128'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '80'    AND page_id = '80'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118855' LIMIT 1
+-
+SELECT * FROM useracct WHERE user_id = '12985' LIMIT 1
+SELECT ug_group FROM user_groups WHERE ug_user = '12985'
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '2Y@N!Jc= 4kFj<+3&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '8'
+SELECT * FROM ipblocks WHERE ipb_user = '12985'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '8'    AND page_id = '8'    AND rev_id = page_latest LIMIT 1
+SELECT old_text,old_flags FROM text WHERE old_id = '118766' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '&ENGT*=Fv"C' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '60'
+SELECT * FROM ipblocks WHERE ipb_address = '136.133.180.74'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '60'    AND page_id = '60'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '118624' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'y iQHJwVHMbk]' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2593'
+SELECT * FROM ipblocks WHERE ipb_address = '13.55.54.116'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2593'    AND page_id = '2593'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '29550' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'Q}#aH\+{K:' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2600'
+SELECT * FROM ipblocks WHERE ipb_address = '241.42.79.233'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2600'    AND page_id = '2600'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '29564' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '!2TeWOJHUUI@23prz=y $z' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1776'
+SELECT * FROM ipblocks WHERE ipb_address = '3.54.81.160'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1776'    AND page_id = '1776'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '20342' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '?Iq[<g"0+`' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2481'
+SELECT * FROM ipblocks WHERE ipb_address = '217.62.94.223'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2481'    AND page_id = '2481'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '28533' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '2' AND page_title = 'QgOVnX8%"4Mpy\7?$7~u,x~g9zE;' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '323'
+SELECT * FROM ipblocks WHERE ipb_address = '162.192.110.30'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '323'    AND page_id = '323'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '4427' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@31987298
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@47fe1e26
+UPDATE page   SET page_latest = '118905', page_touched = '20120905223245', page_is_new = 0, page_is_redirect = 0, page_len = '55200'  WHERE page_id = '323'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223245', '20120905223245', '2', 'QgOVnX8%"4Mpy\7?$7~u,x~g9zE;', '0', '0', '323', '0', '162.192.110.30', '(BdG60>1(mfe3a9"B}<cjR*YvSG\pd*Tl={aU\69\ V25:T8f@*6.F#8fkzsLi}.||tPW>k%"%djqwODA]2&)9OM#;j!L=>Kqi&a?C''p_%7_~/R<G2r=?=^pm}liA@(LJh?OlIuJ3LL 3`RE|rzYh \>p6eXmX,^",OmI .', '118904', '4427', '0', '0', '', '162.192.110.30', '55200', '55200')
+SELECT wl_user FROM watchlist WHERE wl_title = 'QgOVnX8%"4Mpy\7?$7~u,x~g9zE;'   AND wl_namespace = '2'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '#of(Pa}ROpn/3b_' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '85'
+SELECT * FROM ipblocks WHERE ipb_address = '12.208.56.185'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '85'    AND page_id = '85'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1336' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'NYLYkk~HFa&gn^E,;bg=nKg8k_fT.K[hM3X0O!#3RRf8{xgbHCfjWL%NLA' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '9777'
+SELECT * FROM ipblocks WHERE ipb_address = '111.4.246.221'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '9777'    AND page_id = '9777'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '115134' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'eo[d0/jLO~BFmFLJBrQm;OFuN[qQ"' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2523'
+SELECT * FROM ipblocks WHERE ipb_address = '23.220.207.62'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2523'    AND page_id = '2523'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '28994' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '1' AND page_title = '.pAYgKe&6Lxg,$&' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '4627'
+SELECT * FROM ipblocks WHERE ipb_address = '253.206.56.112'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '4627'    AND page_id = '4627'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '54797' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '<?.K`DB`F''rzf% rjaR,Dkla~&q=;I7fFu7p.%B1L$(l!^K7JKQ\%ZZ*CPMz`Ox`vhpDi+' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '101'
+SELECT * FROM ipblocks WHERE ipb_address = '80.13.93.252'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '101'    AND page_id = '101'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1413' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@32552379
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@3f8771dc
+UPDATE page   SET page_latest = '118895', page_touched = '20120905223244', page_is_new = 0, page_is_redirect = 0, page_len = '3600'  WHERE page_id = '101'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223244', '20120905223244', '0', '<?.K`DB`F''rzf% rjaR,Dkla~&q=;I7fFu7p.%B1L$(l!^K7JKQ\%ZZ*CPMz`Ox`vhpDi+', '0', '0', '101', '0', '80.13.93.252', 'E>k7cj^85kL', '118897', '1413', '0', '0', '', '80.13.93.252', '3600', '3600')
+SELECT wl_user FROM watchlist WHERE wl_title = '<?.K`DB`F''rzf% rjaR,Dkla~&q=;I7fFu7p.%B1L$(l!^K7JKQ\%ZZ*CPMz`Ox`vhpDi+'   AND wl_namespace = '0'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '6' AND page_title = '^P]zxP,=^[906''\?' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '730'
+SELECT * FROM ipblocks WHERE ipb_address = '78.195.172.30'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '730'    AND page_id = '730'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '9116' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@be389b8
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@5dbb6a69
+UPDATE page   SET page_latest = '118899', page_touched = '20120905223243', page_is_new = 0, page_is_redirect = 0, page_len = '10500'  WHERE page_id = '730'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223243', '20120905223243', '6', '^P]zxP,=^[906''\?', '0', '0', '730', '18762', '78.195.172.30', '', '118899', '9116', '0', '0', '', '78.195.172.30', '10500', '10500')
+SELECT wl_user FROM watchlist WHERE wl_title = '^P]zxP,=^[906''\?'   AND wl_namespace = '6'   AND wl_user != '18762'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'a1m:C>/W1m)G\T4qr]' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '7175'
+SELECT * FROM ipblocks WHERE ipb_address = '159.109.232.252'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '7175'    AND page_id = '7175'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '84554' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'yeViQL^k''E~yy' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6223'
+SELECT * FROM ipblocks WHERE ipb_address = '145.88.132.89'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6223'    AND page_id = '6223'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '74246' LIMIT 1
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223240','6330','Bd Ipcbjvm&,8b','1','196.30.107.184','523','','118888
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '6330'
+UPDATE useracct   SET user_touched = '20120905223240' WHERE user_id = '6330'
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = 'L?nnZnlN<s''' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '501'
+SELECT * FROM ipblocks WHERE ipb_address = '220.56.155.34'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '501'    AND page_id = '501'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '6114' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@22e1469c
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@2bbef4c6
+UPDATE page   SET page_latest = '118908', page_touched = '20120905223248', page_is_new = 0, page_is_redirect = 0, page_len = '6700'  WHERE page_id = '501'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223248', '20120905223248', '3', 'L?nnZnlN<s''', '0', '0', '501', '7494', '220.56.155.34', 'EJ;@J', '118908', '6114', '0', '0', '', '220.56.155.34', '6700', '6700')
+SELECT wl_user FROM watchlist WHERE wl_title = 'L?nnZnlN<s'''   AND wl_namespace = '3'   AND wl_user != '7494'   AND wl_notificationtimestamp IS NULL
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223245'  WHERE wl_title = 'QgOVnX8%"4Mpy\7?$7~u,x~g9zE;'   AND wl_namespace = '2'   AND wl_user = '54'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223242'  WHERE wl_title = 'QyvUDl/Mv'   AND wl_namespace = '3'   AND wl_user = '59'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223244'  WHERE wl_title = '<?.K`DB`F''rzf% rjaR,Dkla~&q=;I7fFu7p.%B1L$(l!^K7JKQ\%ZZ*CPMz`Ox`vhpDi+'   AND wl_namespace = '0'   AND wl_user = '19972'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223245'  WHERE wl_title = 'M}!`N=snbLTNKaJ'   AND wl_namespace = '6'   AND wl_user = '19980'
+-
+SELECT * FROM page WHERE page_namespace = '14' AND page_title = 'm!.Fnve-%6l(_(]*' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '114'
+SELECT * FROM ipblocks WHERE ipb_address = '35.13.14.89'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '114'    AND page_id = '114'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '1565' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@47d6b049
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@7ddc6a9d
+UPDATE page   SET page_latest = '118902', page_touched = '20120905223245', page_is_new = 0, page_is_redirect = 0, page_len = '20100'  WHERE page_id = '114'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223245', '20120905223245', '14', 'm!.Fnve-%6l(_(]*', '0', '0', '114', '0', '35.13.14.89', '', '118900', '1565', '0', '0', '', '35.13.14.89', '20100', '20100')
+SELECT wl_user FROM watchlist WHERE wl_title = 'm!.Fnve-%6l(_(]*'   AND wl_namespace = '14'   AND wl_user != '0'   AND wl_notificationtimestamp IS NULL
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223244'  WHERE wl_title = 'FV]p;6+Qc]$"Y'   AND wl_namespace = '1'   AND wl_user = '790'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223243'  WHERE wl_title = '^P]zxP,=^[906''\?'   AND wl_namespace = '6'   AND wl_user = '501'
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'N{nw6Ko;(;R"*igd&n7gip' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '1856'
+SELECT * FROM ipblocks WHERE ipb_address = '3.86.42.226'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '1856'    AND page_id = '1856'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '21755' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '$rZm7nf%vmw;' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '6516'
+SELECT * FROM ipblocks WHERE ipb_address = '95.26.3.74'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '6516'    AND page_id = '6516'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '78141' LIMIT 1
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '*z$)=qPXn[aob' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '2459'
+SELECT * FROM ipblocks WHERE ipb_address = '11.250.86.34'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '2459'    AND page_id = '2459'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '28455' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@27e3bfb6
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@45d18084
+UPDATE page   SET page_latest = '118907', page_touched = '20120905223246', page_is_new = 0, page_is_redirect = 0, page_len = '23800'  WHERE page_id = '2459'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223246', '20120905223246', '3', '*z$)=qPXn[aob', '0', '0', '2459', '13211', '11.250.86.34', 'FHv/7v3UgJho|8(9gz[9`?=+w{', '118907', '28455', '0', '0', '', '11.250.86.34', '23800', '23800')
+SELECT wl_user FROM watchlist WHERE wl_title = '*z$)=qPXn[aob'   AND wl_namespace = '3'   AND wl_user != '13211'   AND wl_notificationtimestamp IS NULL
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = '#&EVJEQ;~WIV(@k' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '42'
+SELECT * FROM ipblocks WHERE ipb_address = '47.128.225.137'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '42'    AND page_id = '42'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '342' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@c106121
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@31438dbe
+UPDATE page   SET page_latest = '118906', page_touched = '20120905223245', page_is_new = 0, page_is_redirect = 0, page_len = '58200'  WHERE page_id = '42'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223245', '20120905223245', '0', '#&EVJEQ;~WIV(@k', '0', '0', '42', '19633', '47.128.225.137', 'ZwkY$>`Fj', '118905', '342', '0', '0', '', '47.128.225.137', '58200', '58200')
+SELECT wl_user FROM watchlist WHERE wl_title = '#&EVJEQ;~WIV(@k'   AND wl_namespace = '0'   AND wl_user != '19633'   AND wl_notificationtimestamp IS NULL
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223246'  WHERE wl_title = '*z$)=qPXn[aob'   AND wl_namespace = '3'   AND wl_user = '84'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223248'  WHERE wl_title = 'L?nnZnlN<s'''   AND wl_namespace = '3'   AND wl_user = '338'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223245'  WHERE wl_title = 'm!.Fnve-%6l(_(]*'   AND wl_namespace = '14'   AND wl_user = '111'
+-
+SELECT * FROM page WHERE page_namespace = '0' AND page_title = 'AnxJ)v!/I_S3`jQ' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '63'
+SELECT * FROM ipblocks WHERE ipb_address = '89.84.94.154'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '63'    AND page_id = '63'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '426' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@19a8739b
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@41264666
+UPDATE page   SET page_latest = '118909', page_touched = '20120905223248', page_is_new = 0, page_is_redirect = 0, page_len = '30800'  WHERE page_id = '63'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223248', '20120905223248', '0', 'AnxJ)v!/I_S3`jQ', '0', '0', '63', '6506', '89.84.94.154', 'zd?G=&|', '118909', '426', '0', '0', '', '89.84.94.154', '30800', '30800')
+SELECT wl_user FROM watchlist WHERE wl_title = 'AnxJ)v!/I_S3`jQ'   AND wl_namespace = '0'   AND wl_user != '6506'   AND wl_notificationtimestamp IS NULL
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223245'  WHERE wl_title = '#&EVJEQ;~WIV(@k'   AND wl_namespace = '0'   AND wl_user = '19980'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223248'  WHERE wl_title = 'AnxJ)v!/I_S3`jQ'   AND wl_namespace = '0'   AND wl_user = '19948'
+-
+SELECT * FROM page WHERE page_namespace = '3' AND page_title = '!u@BFPVUapix7' LIMIT 1
+SELECT * FROM page_restrictions WHERE pr_page = '3274'
+SELECT * FROM ipblocks WHERE ipb_address = '119.115.212.90'
+SELECT *   FROM page, revision WHERE page_id = rev_page    AND rev_page = '3274'    AND page_id = '3274'    AND rev_id = page_latest LIMIT 1
+SELECT old_text, old_flags FROM text WHERE old_id = '38854' LIMIT 1
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@6745934e
+com.oltpbenchmark.jdbc.AutoIncrementPreparedStatement@73cb4cae
+UPDATE page   SET page_latest = '118911', page_touched = '20120905223250', page_is_new = 0, page_is_redirect = 0, page_len = '34600'  WHERE page_id = '3274'
+INSERT INTO recentchanges (rc_timestamp, rc_cur_time, rc_namespace, rc_title, rc_type, rc_minor, rc_cur_id, rc_user, rc_user_text, rc_comment, rc_this_oldid, rc_last_oldid, rc_bot, rc_moved_to_ns, rc_moved_to_title, rc_ip, rc_old_len, rc_new_len ) VALUES ('20120905223250', '20120905223250', '3', '!u@BFPVUapix7', '0', '0', '3274', '6604', '119.115.212.90', '', '118911', '38854', '0', '0', '', '119.115.212.90', '34600', '34600')
+SELECT wl_user FROM watchlist WHERE wl_title = '!u@BFPVUapix7'   AND wl_namespace = '3'   AND wl_user != '6604'   AND wl_notificationtimestamp IS NULL
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223241','6582','2N3e0+','3','189.10.67.140','1993','','118889
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '6582'
+UPDATE useracct   SET user_touched = '20120905223241' WHERE user_id = '6582'
+-
+UPDATE watchlist   SET wl_notificationtimestamp = '20120905223250'  WHERE wl_title = '!u@BFPVUapix7'   AND wl_namespace = '3'   AND wl_user = '1031'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223246','13211','*z$)=qPXn[aob','3','11.250.86.34','2459','','118907
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '13211'
+UPDATE useracct   SET user_touched = '20120905223246' WHERE user_id = '13211'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223244','0','FV]p;6+Qc]$"Y','1','187.159.128.173','403','','118898
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223244' WHERE user_id = '0'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223245','0','QgOVnX8%"4Mpy\7?$7~u,x~g9zE;','2','162.192.110.30','323','','118905
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223245' WHERE user_id = '0'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223250','6604','!u@BFPVUapix7','3','119.115.212.90','3274','','118911
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '6604'
+UPDATE useracct   SET user_touched = '20120905223250' WHERE user_id = '6604'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223241','0','Z#a[G+0rW};}){U/G/`(!N,!2','0','227.197.217.109','99','','118890
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223241' WHERE user_id = '0'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223241','0','U2A\&?.|J|h!','3','188.172.121.220','33','','118891
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223241' WHERE user_id = '0'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223244','0','<?.K`DB`F''rzf% rjaR,Dkla~&q=;I7fFu7p.%B1L$(l!^K7JKQ\%ZZ*CPMz`Ox`vhpDi+','0','80.13.93.252','101','','118895
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223244' WHERE user_id = '0'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223245','0','m!.Fnve-%6l(_(]*','14','35.13.14.89','114','','118902
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223245' WHERE user_id = '0'
+-
+INSERT INTO logging (log_type, log_action, log_timestamp, log_user, log_user_text, log_namespace, log_title, log_page, log_comment, log_params) VALUES ('patrol','patrol','20120905223245','0','M}!`N=snbLTNKaJ','6','59.184.230.222','35','','118900
+UPDATE useracct   SET user_editcount=user_editcount+1 WHERE user_id = '0'
+UPDATE useracct   SET user_touched = '20120905223245' WHERE user_id = '0'
+-

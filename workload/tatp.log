@@ -12245,3 +12245,4 @@ SELECT s_id, sub_nbr, bit_1, bit_2, bit_3, bit_4, bit_5, bit_6, bit_7, bit_8, bi
 SELECT cf.numberx FROM special_facility AS sf, call_forwarding AS cf WHERE (sf.s_id = 4112 AND sf.sf_type = 3 AND sf.is_active = 1) AND (cf.s_id = sf.s_id AND cf.sf_type = sf.sf_type) AND (cf.start_time <= 16 AND 19 < cf.end_time)
 -
 UPDATE subscriber SET bit_1 = 0 WHERE s_id = 7327
+-

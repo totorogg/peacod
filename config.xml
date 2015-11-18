@@ -11,19 +11,19 @@
       <name>workload.tatp</name>
       <value>workload/tatp.log</value>
       <value>tatp</value>
-      <value>5877</value>
+      <value>2000</value>
       <value>15</value>
    </property>
    <property>
       <name>workload.epinions</name>
-      <value>workload/epinions.log</value>
-      <value>epinions</value>
-      <value>202</value>
+      <value>workload/wikipedia.workload.log</value>
+      <value>wiki</value>
+      <value>1000</value>
       <value>6</value>
    </property>
    <property>
       <name>database.ip</name>
-      <value>152.62.40.141</value>
+      <value>192.168.199.128</value>
    </property>
    <property>
       <name>database.port</name>
@@ -35,6 +35,6 @@
    </property>
    <property>
       <name>database.password</name>
-      <value>123456</value>
+      <value>postgres</value>
    </property>
 </config>
